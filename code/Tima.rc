@@ -108,6 +108,7 @@ BEGIN
     PUSHBUTTON      "&Help",ID_HELP,263,44,50,16
     CTEXT           "TODO: Place dialog controls here.",IDC_STATIC,10,96,300,
                     8
+    PUSHBUTTON      "Button1",IDC_BUTTON1,15,25,80,45
 END
 
 

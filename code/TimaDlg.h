@@ -25,14 +25,15 @@ public:
 protected:
 	HICON m_hIcon;
 
-	// Generated message map functions
 	virtual BOOL OnInitDialog();
-	afx_msg void OnPaint();
-	afx_msg HCURSOR OnQueryDragIcon();
 
+	// Generated message map functions
 protected:
 	//{{AFX_MSG(CTimaDlg)
-
+	afx_msg void OnPaint();
+	afx_msg HCURSOR OnQueryDragIcon();
 	//}}AFX_MSG
 	DECLARE_MESSAGE_MAP()
+public:
+	CButton m_btnTest;
 };

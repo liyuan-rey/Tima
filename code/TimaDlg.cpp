@@ -19,6 +19,7 @@ CTimaDlg::CTimaDlg(CWnd* pParent /*=NULL*/)
 void CTimaDlg::DoDataExchange(CDataExchange* pDX)
 {
 	CSkinDialog::DoDataExchange(pDX);
+	DDX_Control(pDX, IDC_BUTTON1, m_btnTest);
 }
 
 BEGIN_MESSAGE_MAP(CTimaDlg, CSkinDialog)
