@@ -826,6 +826,10 @@ inline bool CSettings::Save(CSettingsStorage &Storage)
 	virtual bool InternalSaveLoad(bool Continue, Mortimer::CSettingsStorage *pStorage, bool bSave, bool bOnlyInit) { \
 	bool bResult = true;
 
+#define BEGIN_SETTING_MAP_NOCTOR(CLASS_NAME) \
+	virtual bool InternalSaveLoad(bool Continue, Mortimer::CSettingsStorage *pStorage, bool bSave, bool bOnlyInit) { \
+	bool bResult = true;
+
 #define END_SETTING_MAP() return bResult; }
 
 
@@ -836,10 +840,17 @@ inline bool CSettings::Save(CSettingsStorage &Storage)
 				bResult &= !bSave;}
 
 #define SETTING_ITEM_DEFAULT(variable, DEFAULT_VALUE) \
-			if (bOnlyInit) variable = DEFAULT_VALUE; else \
+			if (bOnlyInit) variable = (DEFAULT_VALUE); else \
 			if (!pStorage->SaveLoadItem(_T(#variable), variable, bSave)) { \
 				if (!Continue) return false; \
-				if (!bSave) variable = DEFAULT_VALUE; \
+				if (!bSave) variable = (DEFAULT_VALUE); \
+				bResult &= !bSave;}
+
+#define SETTING_ITEM_DEFAULT_EX(variable, DEFAULT_VALUE, VALUE_MODEL) \
+	if (bOnlyInit) variable = VALUE_MODEL ? VALUE_MODEL##->##variable : (DEFAULT_VALUE); else \
+			if (!pStorage->SaveLoadItem(_T(#variable), variable, bSave)) { \
+				if (!Continue) return false; \
+				if (!bSave) variable = VALUE_MODEL ? VALUE_MODEL##->##variable : (DEFAULT_VALUE); \
 				bResult &= !bSave;}
 
 #define SETTING_ITEM_REQUIRE(variable) \

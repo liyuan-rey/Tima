@@ -163,7 +163,7 @@ public:
 			if (0 == GetPrivateProfileString(m_SectionName, szName, &Null, Value, MAX_PATH, m_IniFileName))
 				return false;
 
-			return 1 == _stscanf(Value, token, &(Variable.x), &(Variable.y));
+			return 2 == _stscanf(Value, token, &(Variable.x), &(Variable.y));
 		}
 	}
 
@@ -181,7 +181,7 @@ public:
 			if (0 == GetPrivateProfileString(m_SectionName, szName, &Null, Value, MAX_PATH, m_IniFileName))
 				return false;
 
-			return 1 == _stscanf(Value, token, &(Variable.cx), &(Variable.cy));
+			return 2 == _stscanf(Value, token, &(Variable.cx), &(Variable.cy));
 		}
 	}
 
@@ -199,7 +199,7 @@ public:
 			if (0 == GetPrivateProfileString(m_SectionName, szName, &Null, Value, MAX_PATH, m_IniFileName))
 				return false;
 
-			return 1 == _stscanf(Value, token, &(Variable.left), &(Variable.top), &(Variable.right), &(Variable.bottom));
+			return 4 == _stscanf(Value, token, &(Variable.left), &(Variable.top), &(Variable.right), &(Variable.bottom));
 		}
 	}
 
