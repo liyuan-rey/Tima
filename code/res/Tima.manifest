@@ -6,7 +6,7 @@
     name="Microsoft.Windows.Tima"
     type="win32" 
 /> 
-<description>Your app description here</description> 
+<description>Tima is more than clock!</description> 
 <dependency> 
     <dependentAssembly> 
         <assemblyIdentity 

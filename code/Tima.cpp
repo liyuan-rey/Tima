@@ -41,6 +41,12 @@ BOOL CTimaApp::InitInstance()
 
 	CWinApp::InitInstance();
 
+	if (!AfxSocketInit())
+	{
+		AfxMessageBox(IDP_SOCKETS_INIT_FAILED);
+		return FALSE;
+	}
+
 	AfxEnableControlContainer();
 
 	// Initialize skin configration

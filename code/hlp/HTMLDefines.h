@@ -2,13 +2,14 @@
 // 命令(ID_* 和 IDM_*) 
  
 // 提示(IDP_*) 
+#define HIDP_SOCKETS_INIT_FAILED                0x30081
  
 // 资源(IDR_*) 
 #define HIDR_MAINFRAME                          0x20080
  
 // 对话框(IDD_*) 
 #define HIDD_TIMA_DIALOG                        0x20066
-#define HIDD_ATOMICCLOCK                        0x20082
+#define HIDD_ATOMICCLOCK                        0x20067
  
 // 框架控件(IDW_*) 
 // This is a part of the Microsoft Foundation Classes C++ library.
