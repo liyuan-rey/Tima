@@ -11,9 +11,6 @@
 #include "..\include\memdc\memdc.h"
 #include ".\skinpicture.h"
 
-extern AFX_INLINE CSkinManager* SkinManager();
-
-
 // CSkinPicture
 
 CSkinPicture::CSkinPicture() : m_pSettings(NULL)
@@ -68,7 +65,15 @@ void CSkinPicture::ApplySkin()
 	}
 
 	// Apply position and size
-	MoveWindow(&(m_pSettings->Area), TRUE);
+	CRect rcArea(m_pSettings->Area);
+	if (0 == rcArea.top && 0 == rcArea.left)
+	{
+		CRect rcWnd;
+		GetWindowRect(rcWnd);
+		rcArea.OffsetRect(rcWnd.TopLeft());
+	}
+
+	MoveWindow(rcArea, TRUE);
 }
 
 void CSkinPicture::PreSubclassWindow()

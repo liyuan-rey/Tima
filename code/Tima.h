@@ -9,6 +9,7 @@
 
 #include "resource.h"		// main symbols
 
+#include "TimaSettings.h"
 
 // CTimaApp:
 // See Tima.cpp for the implementation of this class
@@ -28,7 +29,24 @@ public:
 	//{{AFX_MSG(CTimaApp)
 
 	//}}AFX_MSG
-DECLARE_MESSAGE_MAP()
+	DECLARE_MESSAGE_MAP()
+
+public:
+	static const TCHAR defaultSettingsFolder[];
+	static const TCHAR defaultSettingsFile[];
+
+	inline const CTimaSettings* const GetSettings() const {
+		return &m_settings;
+	}
+
+	CPath GetSettingsPath();
+
+protected:
+	int LoadSettings();
+	BOOL SaveSettings();
+
+	CPath m_pthAppRoot;
+	CTimaSettings m_settings;
 };
 
 extern CTimaApp theApp;

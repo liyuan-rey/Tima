@@ -12,9 +12,6 @@
 #include "SkinButton.h"
 
 
-extern AFX_INLINE CSkinManager* SkinManager();
-
-
 // CSkinDialog
 
 CSkinDialog::CSkinDialog() : m_pSettings(NULL), m_rcCaption(0,0,0,0)

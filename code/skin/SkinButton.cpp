@@ -11,8 +11,6 @@
 #include "..\include\memdc\memdc.h"
 #include ".\skinbutton.h"
 
-extern AFX_INLINE CSkinManager* SkinManager();
-
 // CSkinButton
 
 CSkinButton::CSkinButton() : m_pSettings(NULL), m_bHover(FALSE),

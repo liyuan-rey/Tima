@@ -59,4 +59,8 @@ public:
 		GCSRect
 	};
 	BOOL GetCustomSetting(GCSType nType, UINT id, void* pData);
+
+	COLORREF GetWindowBgColor() {
+		return m_settings.Window.BGColor;
+	}
 };

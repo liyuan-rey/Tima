@@ -156,6 +156,9 @@
 			<File
 				RelativePath=".\TimaDlg.cpp">
 			</File>
+			<File
+				RelativePath=".\TimaSettings.cpp">
+			</File>
 		</Filter>
 		<Filter
 			Name="Í·ÎÄ¼þ"
@@ -223,6 +226,9 @@ makehm /h /a afxhh.h IDW_,HIDW_,0x50000 &quot;$(InputFileName)&quot; &gt;&gt; &q
 			</File>
 			<File
 				RelativePath=".\TimaDlg.h">
+			</File>
+			<File
+				RelativePath=".\TimaSettings.h">
 			</File>
 		</Filter>
 		<Filter
@@ -316,6 +322,9 @@ echo.
 			Name="Skin"
 			Filter="">
 			<File
+				RelativePath=".\skin\SettingUtil.h">
+			</File>
+			<File
 				RelativePath=".\skin\Skin.cpp">
 			</File>
 			<File
@@ -366,6 +375,60 @@ echo.
 			Filter="">
 			<File
 				RelativePath=".\include\OOEnum\Enumeration.h">
+			</File>
+		</Filter>
+		<Filter
+			Name="HtmlLite"
+			Filter="">
+			<File
+				RelativePath=".\HtmlLite\HtmlLite.cpp">
+			</File>
+			<File
+				RelativePath=".\HtmlLite\HtmlLite.h">
+			</File>
+		</Filter>
+		<Filter
+			Name="PPHtmlDrawer"
+			Filter="">
+			<File
+				RelativePath=".\include\PPHtmlDrawer\CeXDib.cpp">
+			</File>
+			<File
+				RelativePath=".\include\PPHtmlDrawer\CeXDib.h">
+			</File>
+			<File
+				RelativePath=".\include\PPHtmlDrawer\PPDrawManager.cpp">
+			</File>
+			<File
+				RelativePath=".\include\PPHtmlDrawer\PPDrawManager.h">
+			</File>
+			<File
+				RelativePath=".\include\PPHtmlDrawer\PPHtmlDrawer.cpp">
+			</File>
+			<File
+				RelativePath=".\include\PPHtmlDrawer\PPHtmlDrawer.h">
+			</File>
+		</Filter>
+		<Filter
+			Name="w3mfc"
+			Filter="">
+			<File
+				RelativePath=".\include\w3mfc\Base64.cpp">
+			</File>
+			<File
+				RelativePath=".\include\w3mfc\Base64.h">
+			</File>
+			<File
+				RelativePath=".\include\w3mfc\Sntp.cpp">
+			</File>
+			<File
+				RelativePath=".\include\w3mfc\Sntp.h">
+			</File>
+			<File
+				RelativePath=".\include\w3mfc\SocMFC.cpp">
+			</File>
+			<File
+				RelativePath=".\include\w3mfc\SocMFC.h">
 			</File>
 		</Filter>
 		<File

@@ -10,6 +10,9 @@
 // ¶Ô»°¿ò(IDD_*) 
 #define HIDD_TIMA_DIALOG                        0x20066
 #define HIDD_ATOMICCLOCK                        0x20067
+#define HIDD_TRAYCLOCK                          0x20068
+#define HIDD_WEATHER                            0x20069
+#define HIDD_CALENDAR                           0x2006A
  
 // ¿ò¼Ü¿Ø¼þ(IDW_*) 
 // This is a part of the Microsoft Foundation Classes C++ library.

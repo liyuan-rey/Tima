@@ -101,7 +101,6 @@ BEGIN
                     WS_TABSTOP,7,144,42,10
     CONTROL         "About Tima",IDC_RBN_ABOUT,"Button",BS_AUTORADIOBUTTON | 
                     WS_TABSTOP,7,162,52,10
-    PUSHBUTTON      "&Help",ID_HELP,74,177,50,16
 END
 
 IDD_ATOMICCLOCK DIALOGEX 0, 0, 295, 264
@@ -109,66 +108,74 @@ STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
 EXSTYLE WS_EX_TRANSPARENT
 FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
-    EDITTEXT        IDC_EDIT5,86,145,40,13,ES_RIGHT | ES_AUTOHSCROLL | 
-                    WS_GROUP
-    CONTROL         "",IDC_SPIN1,"msctls_updown32",UDS_SETBUDDYINT | 
+    PUSHBUTTON      "&Check",IDC_BTN_ACCHECK,92,98,50,14
+    PUSHBUTTON      "&Adjust",IDC_BTN_ACADJUST,148,98,50,14
+    CONTROL         "Adjust on startup",IDC_CHK_ACSTART,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,25,131,72,10
+    CONTROL         "Adjust when connection is established",IDC_CHK_ACESTAB,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,130,131,137,10
+    CONTROL         "Adjust every ",IDC_CHK_ACEVERY,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,25,146,59,10
+    EDITTEXT        IDC_EDT_ACEVERYNUM,86,145,40,13,ES_RIGHT | 
+                    ES_AUTOHSCROLL | WS_GROUP
+    CONTROL         "",IDC_SPN_ACEVERYNUM,"msctls_updown32",UDS_SETBUDDYINT | 
                     UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | 
-                    UDS_HOTTRACK,127,145,11,13
-    COMBOBOX        IDC_COMBO1,144,145,44,30,CBS_DROPDOWNLIST | CBS_SORT | 
+                    UDS_HOTTRACK,116,145,11,13
+    COMBOBOX        IDC_CMB_ACEVERYUNIT,129,145,44,30,CBS_DROPDOWNLIST | 
                     WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    CONTROL         "",IDC_LST_ACSERVER,"SysListView32",LVS_REPORT | 
+                    LVS_ALIGNLEFT | WS_TABSTOP,11,177,223,50,
+                    WS_EX_STATICEDGE
+    PUSHBUTTON      "S&elect...",IDC_BTN_ACSELECT,238,177,50,14
+    EDITTEXT        IDC_EDT_ACOFFHOUR,81,246,34,13,ES_RIGHT | WS_GROUP
+    CONTROL         "",IDC_SPN_ACOFFHOUR,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | 
+                    UDS_HOTTRACK,105,246,11,12
+    EDITTEXT        IDC_EDT_ACOFFMIN,139,246,34,13,ES_RIGHT | WS_GROUP
+    CONTROL         "",IDC_SPN_ACOFFMIN,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | 
+                    UDS_HOTTRACK,163,246,11,12
+    EDITTEXT        IDC_EDT_ACOFFSEC,190,246,34,13,ES_RIGHT | WS_GROUP
+    CONTROL         "",IDC_SPN_ACOFFSEC,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | 
+                    UDS_HOTTRACK,214,246,11,12
+    EDITTEXT        IDC_EDT_ACOFFMS,241,246,34,13,ES_RIGHT | WS_GROUP
+    CONTROL         "",IDC_SPN_ACOFFMS,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | 
+                    UDS_HOTTRACK,264,247,11,12
+    LTEXT           "",IDC_PICT_AC1,10,10,21,20
+    CONTROL         "<b>Atomic Clock</b>",IDC_HTMCTL_AC1,"HtmlLite",0x0,36,7,
+                    58,8
     LTEXT           "Adjust system clock via several internet server and auto-update by user specified time interval.",
                     IDC_STATIC,36,17,252,16
-    ICON            IDR_MAINFRAME,IDC_STATIC,10,12,21,20
-    LTEXT           "Atomic Clock",IDC_STATIC,36,7,41,8
     CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,7,36,281,1
-    EDITTEXT        IDC_EDIT1,61,43,137,14,ES_CENTER | ES_READONLY | NOT 
-                    WS_TABSTOP,WS_EX_TRANSPARENT
     RTEXT           "System time:",IDC_STATIC,14,46,42,8
-    EDITTEXT        IDC_EDIT3,61,61,137,14,ES_CENTER | ES_READONLY | NOT 
-                    WS_TABSTOP
+    CONTROL         "",IDC_HTMCTL_ACSYSTIME,"HtmlLite",0x12,60,43,137,14
     RTEXT           "Atomic time:",IDC_STATIC,14,64,42,8
-    EDITTEXT        IDC_EDIT4,61,79,137,14,ES_CENTER | ES_READONLY | NOT 
-                    WS_TABSTOP
+    CONTROL         "",IDC_HTMCTL_ACSVRTIME,"HtmlLite",0x12,60,61,137,14
     RTEXT           "Difference:",IDC_STATIC,14,82,42,8
-    PUSHBUTTON      "&Check",IDC_BUTTON1,127,98,50,14
-    PUSHBUTTON      "&Adjust",IDC_BUTTON2,183,98,50,14
-    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,69,119,219,1
-    LTEXT           "Auto Adjust",IDC_STATIC,26,115,39,8
-    CONTROL         "",IDC_STATIC,"Static",SS_WHITEFRAME,11,114,10,10
-    CONTROL         "Adjust on startup",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | 
-                    WS_TABSTOP,25,131,72,10
-    CONTROL         "Adjust when connection is established",IDC_CHECK2,
-                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,130,131,137,10
-    CONTROL         "Adjust every ",IDC_CHECK3,"Button",BS_AUTOCHECKBOX | 
-                    WS_TABSTOP,25,146,59,10
-    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,93,167,195,1
-    LTEXT           "Atomic Time Server",IDC_STATIC,26,163,62,8
-    CONTROL         "",IDC_STATIC,"Static",SS_WHITEFRAME,11,162,10,10
-    CONTROL         "",IDC_LIST1,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | 
-                    WS_TABSTOP,11,177,221,50,WS_EX_STATICEDGE
-    CTEXT           "Last adjust in \n 2004-03-25 17:10:53\n\nNext will be\n2005-03-25 18:00:00",
-                    IDC_STATIC,201,44,87,45
-    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,63,238,225,1
-    LTEXT           "Advanced",IDC_STATIC,26,234,33,8
-    CONTROL         "",IDC_STATIC,"Static",SS_WHITEFRAME,11,233,10,10
-    PUSHBUTTON      "S&elect...",IDC_BUTTON3,238,177,50,14
-    EDITTEXT        IDC_EDIT6,65,245,40,12,ES_RIGHT | WS_GROUP
-    CONTROL         "",IDC_SPIN2,"msctls_updown32",UDS_SETBUDDYINT | 
-                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | 
-                    UDS_HOTTRACK,107,245,11,12
-    EDITTEXT        IDC_EDIT7,122,245,40,12,ES_RIGHT | WS_GROUP
-    CONTROL         "",IDC_SPIN3,"msctls_updown32",UDS_SETBUDDYINT | 
-                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | 
-                    UDS_HOTTRACK,163,245,11,12
-    EDITTEXT        IDC_EDIT8,179,245,40,12,ES_RIGHT | WS_GROUP
-    CONTROL         "",IDC_SPIN4,"msctls_updown32",UDS_SETBUDDYINT | 
-                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | 
-                    UDS_HOTTRACK,221,245,11,12
-    EDITTEXT        IDC_EDIT9,236,245,40,12,ES_RIGHT | WS_GROUP
-    CONTROL         "",IDC_SPIN5,"msctls_updown32",UDS_SETBUDDYINT | 
-                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | 
-                    UDS_HOTTRACK,277,245,11,12
-    LTEXT           "Offset  +/-",IDC_STATIC,23,247,36,8
+    CONTROL         "",IDC_HTMCTL_ACDIFFTIME,"HtmlLite",0x12,60,79,137,14
+    CONTROL         "",IDC_HTMCTL_ACSTATUS,"HtmlLite",0x0,201,43,87,50
+    LTEXT           "",IDC_PICT_AC2,11,114,10,10
+    CONTROL         "<b>Auto Adjust</b>",IDC_HTMCTL_AC2,"HtmlLite",0x0,26,
+                    115,52,8
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,83,119,205,1
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,99,167,189,1
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,120,238,168,1
+    CONTROL         "<b>Active Servers</b>",IDC_HTMCTL_AC3,"HtmlLite",0x0,26,
+                    163,68,8
+    CONTROL         "<b>User-defined offset</b>",IDC_HTMCTL_AC4,"HtmlLite",
+                    0x0,26,234,89,8
+    LTEXT           "",IDC_PICT_AC3,11,162,10,10
+    LTEXT           "",IDC_PICT_AC4,11,233,10,10
+    LTEXT           "hours",IDC_STATIC,118,247,19,8
+    LTEXT           "min",IDC_STATIC,176,248,12,8
+    LTEXT           "sec",IDC_STATIC,227,248,10,8
+    LTEXT           "ms",IDC_STATIC,277,248,8,8
+    COMBOBOX        IDC_CMB_ACOFFSIGN,53,246,25,30,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Offset:",IDC_CHK_ACOFFSET,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,15,249,34,10
 END
 
 IDD_TRAYCLOCK DIALOGEX 0, 0, 295, 264
@@ -323,7 +330,7 @@ BEGIN
         LEFTMARGIN, 7
         RIGHTMARGIN, 288
         TOPMARGIN, 7
-        BOTTOMMARGIN, 257
+        BOTTOMMARGIN, 259
     END
 
     IDD_TRAYCLOCK, DIALOG
@@ -399,12 +406,16 @@ END
 
 IDD_ATOMICCLOCK DLGINIT
 BEGIN
-    IDC_COMBO1, 0x403, 6, 0
+    IDC_CMB_ACEVERYUNIT, 0x403, 6, 0
 0x6f68, 0x7275, 0x0073, 
-    IDC_COMBO1, 0x403, 8, 0
+    IDC_CMB_ACEVERYUNIT, 0x403, 8, 0
 0x696d, 0x756e, 0x6573, 0x0073, 
-    IDC_COMBO1, 0x403, 8, 0
+    IDC_CMB_ACEVERYUNIT, 0x403, 8, 0
 0x6573, 0x6f63, 0x646e, 0x0073, 
+    IDC_CMB_ACOFFSIGN, 0x403, 2, 0
+0x002b, 
+    IDC_CMB_ACOFFSIGN, 0x403, 2, 0
+0x002d, 
     0
 END
 
@@ -429,8 +440,10 @@ STRINGTABLE
 BEGIN
     IDP_SOCKETS_INIT_FAILED "Windows sockets initialization failed."
     IDS_LOADSKINFAILED      "Loading skin failed, application will exit."
-    IDS_LOADSKININERROR     "Loading skin with error, application may not function cerect."
+    IDS_LOADSKINWITHERROR   "Loading skin with error, application may not function cerect."
     IDS_BINDINGSKINERROR    "Binding skin info error, application may not function cerect."
+    IDS_LOADSETTINGSFAILED  "Loading application's settings failed, application will exit."
+    IDS_LOADSETTINGSWITHERROR "Loading application's settings with error."
 END
 
 #endif    // 非特定语言(默认) resources

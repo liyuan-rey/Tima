@@ -8,7 +8,6 @@
 
 #include "skin\SkinManager.h"
 #include "skin\Skin.h"
-// extern AFX_INLINE CSkinManager* SkinManager();
 
 #include "DlgAtomicClock.h"
 
