@@ -19604,18 +19604,18 @@
 								    default_color 	TRUE)
 								label      	(object ItemLabel
 								    Parent_View 	@191
-								    location   	(1000, 62)
+								    location   	(955, 58)
 								    fill_color 	13434879
 								    nlines     	1
-								    max_width  	336
+								    max_width  	444
 								    justify    	0
 								    label      	"CWnd")
 								icon_style 	"Icon"
 								line_color 	3342489
 								fill_color 	13434879
 								quidu      	"365C7A74001A"
-								width      	354
-								height     	124
+								width      	444
+								height     	132
 								annotation 	8
 								autoResize 	TRUE)
 							    (object InheritView "" @192
@@ -20648,18 +20648,18 @@
 								    default_color 	TRUE)
 								label      	(object ItemLabel
 								    Parent_View 	@205
-								    location   	(1304, 78)
+								    location   	(1259, 74)
 								    fill_color 	13434879
 								    nlines     	1
-								    max_width  	336
+								    max_width  	444
 								    justify    	0
 								    label      	"CWnd")
 								icon_style 	"Icon"
 								line_color 	3342489
 								fill_color 	13434879
 								quidu      	"365C7A74001A"
-								width      	354
-								height     	124
+								width      	444
+								height     	132
 								annotation 	8
 								autoResize 	TRUE)
 							    (object InheritView "" @206
@@ -21017,18 +21017,18 @@
 								    default_color 	TRUE)
 								label      	(object ItemLabel
 								    Parent_View 	@214
-								    location   	(312, 158)
+								    location   	(267, 154)
 								    fill_color 	13434879
 								    nlines     	1
-								    max_width  	336
+								    max_width  	444
 								    justify    	0
 								    label      	"CWnd")
 								icon_style 	"Icon"
 								line_color 	3342489
 								fill_color 	13434879
 								quidu      	"365C7A74001A"
-								width      	354
-								height     	124
+								width      	444
+								height     	132
 								annotation 	8
 								autoResize 	TRUE)
 							    (object InheritView "" @215
@@ -23196,18 +23196,18 @@
 								    default_color 	TRUE)
 								label      	(object ItemLabel
 								    Parent_View 	@238
-								    location   	(1896, 13)
+								    location   	(1851, 10)
 								    fill_color 	13434879
 								    nlines     	1
-								    max_width  	336
+								    max_width  	444
 								    justify    	0
 								    label      	"CWnd")
 								icon_style 	"Icon"
 								line_color 	3342489
 								fill_color 	13434879
 								quidu      	"365C7A74001A"
-								width      	354
-								height     	124
+								width      	444
+								height     	132
 								annotation 	8
 								autoResize 	TRUE)
 							    (object InheritView "" @239
@@ -26526,18 +26526,18 @@
 								    default_color 	TRUE)
 								label      	(object ItemLabel
 								    Parent_View 	@272
-								    location   	(1848, 14)
+								    location   	(1803, 10)
 								    fill_color 	13434879
 								    nlines     	1
-								    max_width  	336
+								    max_width  	444
 								    justify    	0
 								    label      	"CWnd")
 								icon_style 	"Icon"
 								line_color 	3342489
 								fill_color 	13434879
 								quidu      	"365C7A74001A"
-								width      	354
-								height     	124
+								width      	444
+								height     	132
 								annotation 	8
 								autoResize 	TRUE)
 							    (object InheritView "" @273
@@ -29825,18 +29825,35 @@
 								    default_color 	TRUE)
 								label      	(object ItemLabel
 								    Parent_View 	@287
-								    location   	(2434, 1037)
+								    location   	(2590, 1118)
 								    fill_color 	13434879
 								    nlines     	1
-								    max_width  	540
+								    max_width  	246
 								    justify    	0
 								    label      	"CButton")
 								icon_style 	"Icon"
 								line_color 	3342489
 								fill_color 	13434879
 								quidu      	"365C7A7700A9"
-								width      	558
-								height     	286
+								compartment 	(object Compartment
+								    Parent_View 	@287
+								    location   	(2590, 1179)
+								    font       	(object Font
+									size       	10
+									face       	"Arial"
+									bold       	FALSE
+									italics    	FALSE
+									underline  	FALSE
+									strike     	FALSE
+									color      	0
+									default_color 	TRUE)
+								    icon_style 	"Icon"
+								    fill_color 	16777215
+								    anchor     	2
+								    nlines     	4
+								    max_width  	0)
+								width      	246
+								height     	124
 								annotation 	8
 								autoResize 	TRUE)
 							    (object ClassView "Class" "Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Controls::CCheckListBox" @288
@@ -30125,18 +30142,35 @@
 								    default_color 	TRUE)
 								label      	(object ItemLabel
 								    Parent_View 	@297
-								    location   	(7550, 1487)
+								    location   	(7531, 1490)
 								    fill_color 	13434879
 								    nlines     	1
-								    max_width  	452
+								    max_width  	508
 								    justify    	0
 								    label      	"CStatic")
 								icon_style 	"Icon"
 								line_color 	3342489
 								fill_color 	13434879
 								quidu      	"365C7A78017C"
-								width      	470
-								height     	186
+								compartment 	(object Compartment
+								    Parent_View 	@297
+								    location   	(7531, 1551)
+								    font       	(object Font
+									size       	10
+									face       	"Arial"
+									bold       	FALSE
+									italics    	FALSE
+									underline  	FALSE
+									strike     	FALSE
+									color      	0
+									default_color 	TRUE)
+								    icon_style 	"Icon"
+								    fill_color 	16777215
+								    anchor     	2
+								    nlines     	2
+								    max_width  	414)
+								width      	508
+								height     	180
 								annotation 	8
 								autoResize 	TRUE)
 							    (object ClassView "Class" "Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Controls::CToolBarCtrl" @298
@@ -30247,18 +30281,18 @@
 								    default_color 	TRUE)
 								label      	(object ItemLabel
 								    Parent_View 	@301
-								    location   	(4232, 14)
+								    location   	(4187, 10)
 								    fill_color 	13434879
 								    nlines     	1
-								    max_width  	336
+								    max_width  	444
 								    justify    	0
 								    label      	"CWnd")
 								icon_style 	"Icon"
 								line_color 	3342489
 								fill_color 	13434879
 								quidu      	"365C7A74001A"
-								width      	354
-								height     	124
+								width      	444
+								height     	132
 								annotation 	8
 								autoResize 	TRUE)
 							    (object ClassView "Class" "Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Controls::CHotKeyCtrl" @302
@@ -30992,18 +31026,35 @@
 							    default_color 	TRUE)
 							label      	(object ItemLabel
 							    Parent_View 	@348
-							    location   	(89, 522)
+							    location   	(40, 568)
 							    fill_color 	13434879
 							    nlines     	1
-							    max_width  	718
+							    max_width  	834
 							    justify    	0
 							    label      	"CWnd")
 							icon_style 	"Icon"
 							line_color 	3342489
 							fill_color 	13434879
 							quidu      	"365C7A74001A"
-							width      	736
-							height     	1636
+							compartment 	(object Compartment
+							    Parent_View 	@348
+							    location   	(40, 629)
+							    font       	(object Font
+								size       	10
+								face       	"Arial"
+								bold       	FALSE
+								italics    	FALSE
+								underline  	FALSE
+								strike     	FALSE
+								color      	0
+								default_color 	TRUE)
+							    icon_style 	"Icon"
+							    fill_color 	16777215
+							    anchor     	2
+							    nlines     	31
+							    max_width  	693)
+							width      	834
+							height     	1544
 							annotation 	8
 							autoResize 	TRUE))))))
 				logical_presentations 	(list unit_reference_list
@@ -36181,18 +36232,18 @@
 				    default_color 	TRUE)
 				label      	(object ItemLabel
 				    Parent_View 	@460
-				    location   	(3160, 270)
+				    location   	(3115, 266)
 				    fill_color 	13434879
 				    nlines     	1
-				    max_width  	336
+				    max_width  	444
 				    justify    	0
 				    label      	"CWnd")
 				icon_style 	"Icon"
 				line_color 	3342489
 				fill_color 	16777088
 				quidu      	"365C7A74001A"
-				width      	354
-				height     	124
+				width      	444
+				height     	132
 				annotation 	8
 				autoResize 	TRUE)
 			    (object ClassView "Class" "Logical View::MFC 6.0::CObject Classes::Application Architecture::COleDocument" @461
@@ -36890,18 +36941,18 @@
 				    default_color 	TRUE)
 				label      	(object ItemLabel
 				    Parent_View 	@505
-				    location   	(6296, 15)
+				    location   	(6251, 10)
 				    fill_color 	13434879
 				    nlines     	1
-				    max_width  	336
+				    max_width  	444
 				    justify    	0
 				    label      	"CWnd")
 				icon_style 	"Icon"
 				line_color 	3342489
 				fill_color 	13434879
 				quidu      	"365C7A74001A"
-				width      	354
-				height     	122
+				width      	444
+				height     	132
 				annotation 	8
 				autoResize 	TRUE)
 			    (object ClassView "Class" "Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Frame Windows::CFrameWnd" @506
@@ -37146,18 +37197,18 @@
 				    default_color 	TRUE)
 				label      	(object ItemLabel
 				    Parent_View 	@513
-				    location   	(148, 479)
+				    location   	(142, 482)
 				    fill_color 	13434879
 				    nlines     	1
-				    max_width  	216
+				    max_width  	246
 				    justify    	0
 				    label      	"CButton")
 				icon_style 	"Icon"
 				line_color 	3342489
 				fill_color 	13434879
 				quidu      	"365C7A7700A9"
-				width      	234
-				height     	122
+				width      	246
+				height     	117
 				annotation 	8
 				autoResize 	TRUE)
 			    (object ClassView "Class" "Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Controls::CComboBox" @514
@@ -37530,18 +37581,18 @@
 				    default_color 	TRUE)
 				label      	(object ItemLabel
 				    Parent_View 	@525
-				    location   	(9908, 511)
+				    location   	(9876, 506)
 				    fill_color 	13434879
 				    nlines     	1
-				    max_width  	216
+				    max_width  	298
 				    justify    	0
 				    label      	"CStatic")
 				icon_style 	"Icon"
 				line_color 	3342489
 				fill_color 	13434879
 				quidu      	"365C7A78017C"
-				width      	234
-				height     	122
+				width      	298
+				height     	132
 				annotation 	8
 				autoResize 	TRUE)
 			    (object ClassView "Class" "Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Controls::CStatusBarCtrl" @526
@@ -41640,7 +41691,7 @@
 			    (object Attribute
 				tool       	"VC++"
 				name       	"AfxBaseClass"
-				value      	"CDialog:CDialog"))
+				value      	""))
 			quid       	"422F11CC03DF"
 			superclasses 	(list inheritance_relationship_list
 			    (object Inheritance_Relationship
@@ -41738,7 +41789,7 @@
 			    (object Attribute
 				tool       	"VC++"
 				name       	"AfxBaseClass"
-				value      	"CWinApp:CWinApp"))
+				value      	""))
 			quid       	"422F11CD0029"
 			superclasses 	(list inheritance_relationship_list
 			    (object Inheritance_Relationship
@@ -41772,6 +41823,11 @@
 			quidu      	"422F116802C6"
 			language   	"VC++")
 		    (object Class "CWindowSettings"
+			attributes 	(list Attribute_Set
+			    (object Attribute
+				tool       	"VC++"
+				name       	"AfxSupportMacro"
+				value      	""))
 			quid       	"422F06970110"
 			superclasses 	(list inheritance_relationship_list
 			    (object Inheritance_Relationship
@@ -41779,35 +41835,52 @@
 				supplier   	"Logical View::Tima::CSettings"
 				quidu      	"422F11CC01EB"))
 			class_attributes 	(list class_attribute_list
+			    (object ClassAttribute "Size"
+				quid       	"422F290C01EB"
+				type       	"CSize"
+				quidu      	"365C7A7A008E"
+				exportControl 	"Public")
 			    (object ClassAttribute "BackgroundColor"
 				quid       	"422F1AAD0045"
 				type       	"COLORREF"
 				exportControl 	"Public")
-			    (object ClassAttribute "CaptionRect"
-				quid       	"422F290C01EB"
+			    (object ClassAttribute "Frames[_fp_count][_fs_count]"
+				quid       	"422F1B9E02A6"
 				type       	"CRect"
 				quidu      	"365C7A7A0052"
 				exportControl 	"Public")
-			    (object ClassAttribute "Frames"
-				quid       	"422F1B9E02A6"
-				type       	"CRect[][]"
-				quidu      	"365C7A7A0052"
-				initv      	"CRect[FramePart._count][FrameState._count]"
-				exportControl 	"Public")
-			    (object ClassAttribute "Buttons"
+			    (object ClassAttribute "Buttons[_wbp_count][_bs_count]"
 				quid       	"422F241703C0"
-				type       	"CRect[][]"
+				type       	"CRect"
 				quidu      	"365C7A7A0052"
-				initv      	"CRect[WindowButtonPart._count][ButtonState._count]"
 				exportControl 	"Public"))
+			module     	"Component View::Tima"
+			quidu      	"422F116802C6"
 			language   	"VC++")
 		    (object Class "CSkinDialog"
+			attributes 	(list Attribute_Set
+			    (object Attribute
+				tool       	"VC++"
+				name       	"LastAppliedTemplate"
+				value      	"D:\\Rational\\Rose\\vc\\templates")
+			    (object Attribute
+				tool       	"VC++"
+				name       	"Generate"
+				value      	TRUE)
+			    (object Attribute
+				tool       	"VC++"
+				name       	"AfxSupportMacro"
+				value      	"Dynamic")
+			    (object Attribute
+				tool       	"VC++"
+				name       	"GenerateMessageMap"
+				value      	FALSE)
+			    (object Attribute
+				tool       	"VC++"
+				name       	"AfxBaseClass"
+				value      	""))
 			quid       	"422ED2DF015E"
 			superclasses 	(list inheritance_relationship_list
-			    (object Inheritance_Relationship
-				quid       	"422F2FB1018D"
-				supplier   	"Logical View::Tima::ISkinComponent"
-				quidu      	"422F16D302B6")
 			    (object Inheritance_Relationship
 				quid       	"422F30BB02B6"
 				supplier   	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Dialog Boxes::CDialog"
@@ -41822,6 +41895,124 @@
 				quid       	"422F2FBB0352"
 				supplier   	"Logical View::Tima::ISkinComponent"
 				quidu      	"422F16D302B6"))
+			operations 	(list Operations
+			    (object Operation "PreCreateWindow"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"VC++"
+					name       	"DefaultBody"
+					value      	(value Text 
+| 
+|// ToDo:  Add your specialized code here and/or call the base class
+| 
+|return CWnd::PreCreateWindow(cs);
+|
+					))
+				    (object Attribute
+					tool       	"VC++"
+					name       	"AfxVirtual"
+					value      	"True")
+				    (object Attribute
+					tool       	"VC++"
+					name       	"Inline"
+					value      	FALSE))
+				quid       	"422FD95E0393"
+				stereotype 	"virtual"
+				parameters 	(list Parameters
+				    (object Parameter "cs"
+					quid       	"422FD95E03B3"
+					type       	"CREATESTRUCT&"))
+				result     	"BOOL"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "PreInitDialog"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"VC++"
+					name       	"DefaultBody"
+					value      	(value Text 
+|// ToDo: Add your specialized code here or after the call to base class
+|
+|CDialog::PreInitDialog();
+					))
+				    (object Attribute
+					tool       	"VC++"
+					name       	"AfxVirtual"
+					value      	"True")
+				    (object Attribute
+					tool       	"VC++"
+					name       	"Inline"
+					value      	FALSE))
+				quid       	"422FDA1100E4"
+				stereotype 	"virtual"
+				result     	"void"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "PostNcDestroy"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"VC++"
+					name       	"DefaultBody"
+					value      	(value Text 
+|// ToDo: Add your specialized code here or after the call to base class
+|
+|CWnd::PostNcDestroy();
+					))
+				    (object Attribute
+					tool       	"VC++"
+					name       	"AfxVirtual"
+					value      	"True")
+				    (object Attribute
+					tool       	"VC++"
+					name       	"Inline"
+					value      	FALSE))
+				quid       	"422FDA7E0153"
+				stereotype 	"virtual"
+				result     	"void"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "OnWndMsg"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"VC++"
+					name       	"DefaultBody"
+					value      	(value Text 
+|// ToDo: Add your specialized code here or after the call to base class
+|
+|return CWnd::OnWndMsg(message, wParam, lParam, pResult);
+					))
+				    (object Attribute
+					tool       	"VC++"
+					name       	"AfxVirtual"
+					value      	"True")
+				    (object Attribute
+					tool       	"VC++"
+					name       	"Inline"
+					value      	FALSE))
+				quid       	"422FF7180142"
+				stereotype 	"virtual"
+				parameters 	(list Parameters
+				    (object Parameter "message"
+					quid       	"422FF7180161"
+					type       	"UINT")
+				    (object Parameter "wParam"
+					quid       	"422FF71801BF"
+					type       	"WPARAM")
+				    (object Parameter "lParam"
+					quid       	"422FF718020D"
+					type       	"LPARAM")
+				    (object Parameter "pResult"
+					quid       	"422FF718025B"
+					type       	"LRESULT*"))
+				result     	"BOOL"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0))
+			module     	"Component View::Tima"
+			quidu      	"422F116802C6"
 			language   	"VC++")
 		    (object Class "CSkin"
 			attributes 	(list Attribute_Set
@@ -41832,7 +42023,11 @@
 			    (object Attribute
 				tool       	"Java"
 				name       	"Final"
-				value      	FALSE))
+				value      	FALSE)
+			    (object Attribute
+				tool       	"VC++"
+				name       	"AfxSupportMacro"
+				value      	""))
 			quid       	"422ED2AF0120"
 			used_nodes 	(list uses_relationship_list
 			    (object Uses_Relationship
@@ -41845,21 +42040,41 @@
 				friend     	TRUE))
 			operations 	(list Operations
 			    (object Operation "Load"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"VC++"
+					name       	"Inline"
+					value      	FALSE))
 				quid       	"422F2FED0381"
 				concurrency 	"Sequential"
 				opExportControl 	"Public"
 				uid        	0)
 			    (object Operation "Save"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"VC++"
+					name       	"Inline"
+					value      	FALSE))
 				quid       	"422F2FF2018D"
 				concurrency 	"Sequential"
 				opExportControl 	"Public"
 				uid        	0)
 			    (object Operation "GetPath"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"VC++"
+					name       	"Inline"
+					value      	FALSE))
 				quid       	"422F2FF80239"
 				concurrency 	"Sequential"
 				opExportControl 	"Public"
 				uid        	0)
 			    (object Operation "BindSkinInfo"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"VC++"
+					name       	"Inline"
+					value      	FALSE))
 				quid       	"422F313B01FB"
 				parameters 	(list Parameters
 				    (object Parameter "szType"
@@ -41875,86 +42090,123 @@
 				result     	"BOOL"
 				concurrency 	"Sequential"
 				opExportControl 	"Public"
-				uid        	0))
-			language   	"VC++")
-		    (object Class "CSkinManager"
-			quid       	"422ED2D7015E"
-			operations 	(list Operations
-			    (object Operation "CSkinManager"
-				quid       	"422EFAB901CC"
+				uid        	0)
+			    (object Operation "CSkin"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"VC++"
+					name       	"Inline"
+					value      	FALSE))
+				quid       	"4230045302A9"
 				concurrency 	"Sequential"
 				opExportControl 	"Protected"
 				uid        	0)
-			    (object Operation "~CSkinManager"
-				quid       	"422EFAE903DF"
+			    (object Operation "~CSkin"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"VC++"
+					name       	"Inline"
+					value      	FALSE))
+				quid       	"4230045302F7"
+				stereotype 	"virtual"
 				concurrency 	"Sequential"
 				opExportControl 	"Public"
-				uid        	0)
-			    (object Operation "SetSkinRoot"
-				quid       	"422EFEC703B0"
+				uid        	0))
+			module     	"Component View::Tima"
+			quidu      	"422F116802C6"
+			language   	"VC++")
+		    (object Class "CSkinManager"
+			attributes 	(list Attribute_Set
+			    (object Attribute
+				tool       	"VC++"
+				name       	"AfxSupportMacro"
+				value      	""))
+			quid       	"422ED2D7015E"
+			operations 	(list Operations
+			    (object Operation "CSkinManager"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"VC++"
+					name       	"Inline"
+					value      	FALSE))
+				quid       	"422EFAB901CC"
 				parameters 	(list Parameters
-				    (object Parameter "LPCTSTR szPath"
-					quid       	"422F00200304"))
-				result     	"BOOL"
+				    (object Parameter ""
+					quid       	"4230045301BF"
+					type       	"void"))
+				concurrency 	"Sequential"
+				opExportControl 	"Private"
+				uid        	0)
+			    (object Operation "~CSkinManager"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"VC++"
+					name       	"Inline"
+					value      	FALSE))
+				quid       	"422EFAE903DF"
+				stereotype 	"virtual"
+				parameters 	(list Parameters
+				    (object Parameter ""
+					quid       	"42300453021C"
+					type       	"void"))
 				concurrency 	"Sequential"
 				opExportControl 	"Public"
 				uid        	0)
 			    (object Operation "GetSkinRoot"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"VC++"
+					name       	"Inline"
+					value      	FALSE))
 				quid       	"422F02EE01AC"
 				result     	"CString"
 				concurrency 	"Sequential"
 				opExportControl 	"Public"
 				uid        	0
 				quidu      	"365C7A7A00C0")
-			    (object Operation "GetAllSkinName"
-				quid       	"422EFDBA0110"
-				parameters 	(list Parameters
-				    (object Parameter "CStringArray& skinNames"
-					quid       	"422EFEC703C0"))
-				result     	"void"
-				concurrency 	"Sequential"
-				opExportControl 	"Public"
-				uid        	0)
-			    (object Operation "GetSkinSetting"
-				quid       	"422F002002E5"
-				parameters 	(list Parameters
-				    (object Parameter "LPCTSTR szSkinName"
-					quid       	"422F016602C6"))
-				result     	"CSkinSettings*"
-				concurrency 	"Sequential"
-				opExportControl 	"Public"
-				uid        	0
-				quidu      	"422F06C10343")
-			    (object Operation "LoadSkin"
-				quid       	"422EFD5603B0"
-				parameters 	(list Parameters
-				    (object Parameter "LPCTSTR szSkinName"
-					quid       	"422EFD980278"))
-				result     	"CSkin*"
-				concurrency 	"Sequential"
-				opExportControl 	"Public"
-				uid        	0
-				quidu      	"422ED2AF0120")
 			    (object Operation "GetCurrentSkin"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"VC++"
+					name       	"Inline"
+					value      	FALSE))
 				quid       	"422EFF400064"
 				result     	"CSkin*"
 				concurrency 	"Sequential"
 				opExportControl 	"Public"
 				uid        	0
-				quidu      	"422ED2AF0120"))
+				quidu      	"422ED2AF0120")
+			    (object Operation "SkinManager"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"VC++"
+					name       	"Inline"
+					value      	FALSE))
+				quid       	"423013C80299"
+				stereotype 	"friend"
+				result     	"class CSkinManager*"
+				concurrency 	"Sequential"
+				opExportControl 	"Private"
+				uid        	0))
 			class_attributes 	(list class_attribute_list
 			    (object ClassAttribute "s_instance"
 				quid       	"422EFAF70391"
 				type       	"CSkinManager"
 				quidu      	"422ED2D7015E"
 				static     	TRUE))
+			module     	"Component View::Tima"
+			quidu      	"422F116802C6"
 			language   	"VC++")
 		    (object Class "CSkinSettings"
 			attributes 	(list Attribute_Set
 			    (object Attribute
 				tool       	"VC++"
 				name       	"LastAppliedTemplate"
-				value      	"D:\\Rational\\Rose\\vc\\templates"))
+				value      	"D:\\Rational\\Rose\\vc\\templates")
+			    (object Attribute
+				tool       	"VC++"
+				name       	"AfxSupportMacro"
+				value      	""))
 			quid       	"422F06C10343"
 			superclasses 	(list inheritance_relationship_list
 			    (object Inheritance_Relationship
@@ -41964,24 +42216,47 @@
 			class_attributes 	(list class_attribute_list
 			    (object ClassAttribute "Version"
 				quid       	"422F18CC0026"
+				type       	"DWORD"
 				exportControl 	"Public")
 			    (object ClassAttribute "Name"
 				quid       	"422F19D603DF"
+				type       	"CString"
+				quidu      	"365C7A7A00C0"
 				exportControl 	"Public")
 			    (object ClassAttribute "Maker"
 				quid       	"422F19DC0391"
+				type       	"CString"
+				quidu      	"365C7A7A00C0"
 				exportControl 	"Public")
 			    (object ClassAttribute "Time"
 				quid       	"422F19FF0297"
+				type       	"CString"
+				quidu      	"365C7A7A00C0"
+				exportControl 	"Public")
+			    (object ClassAttribute "SkinImage"
+				quid       	"422FD18A0172"
+				type       	"CString"
+				quidu      	"365C7A7A00C0"
 				exportControl 	"Public")
 			    (object ClassAttribute "PreviewImage"
 				quid       	"422F1A0702E5"
+				type       	"CString"
+				quidu      	"365C7A7A00C0"
 				exportControl 	"Public")
 			    (object ClassAttribute "Remark"
 				quid       	"422F1A440352"
+				type       	"CString"
+				quidu      	"365C7A7A00C0"
 				exportControl 	"Public"))
+			module     	"Component View::Tima"
+			quidu      	"422F116802C6"
 			language   	"VC++")
 		    (object Class "CButtonSettings"
+			attributes 	(list Attribute_Set
+			    (object Attribute
+				tool       	"VC++"
+				name       	"AfxSupportMacro"
+				value      	""))
 			quid       	"422F163D01FB"
 			superclasses 	(list inheritance_relationship_list
 			    (object Inheritance_Relationship
@@ -41994,13 +42269,20 @@
 				type       	"CRect"
 				quidu      	"365C7A7A0052"
 				exportControl 	"Public")
-			    (object ClassAttribute "States"
+			    (object ClassAttribute "States[_bs_count]"
 				quid       	"422F29BB0239"
-				type       	"CRect[]"
+				type       	"CRect"
 				quidu      	"365C7A7A0052"
-				initv      	"CRect[ButtonState._count]"
-				exportControl 	"Public")))
+				exportControl 	"Public"))
+			module     	"Component View::Tima"
+			quidu      	"422F116802C6"
+			language   	"VC++")
 		    (object Class "CPictureSettings"
+			attributes 	(list Attribute_Set
+			    (object Attribute
+				tool       	"VC++"
+				name       	"AfxSupportMacro"
+				value      	""))
 			quid       	"422F1655016E"
 			superclasses 	(list inheritance_relationship_list
 			    (object Inheritance_Relationship
@@ -42012,13 +42294,26 @@
 				quid       	"422F299902B6"
 				type       	"CRect"
 				quidu      	"365C7A7A0052"
-				exportControl 	"Public")))
+				exportControl 	"Public"))
+			module     	"Component View::Tima"
+			quidu      	"422F116802C6"
+			language   	"VC++")
 		    (object Class "ISkinComponent"
+			attributes 	(list Attribute_Set
+			    (object Attribute
+				tool       	"VC++"
+				name       	"AfxSupportMacro"
+				value      	""))
 			quid       	"422F16D302B6"
-			stereotype 	"Interface"
 			operations 	(list Operations
 			    (object Operation "SetSkinInfo"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"VC++"
+					name       	"Inline"
+					value      	FALSE))
 				quid       	"422F3202013F"
+				stereotype 	"abstract"
 				parameters 	(list Parameters
 				    (object Parameter "info"
 					quid       	"422F32100084"
@@ -42029,11 +42324,21 @@
 				opExportControl 	"Public"
 				uid        	0)
 			    (object Operation "SkinChanged"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"VC++"
+					name       	"Inline"
+					value      	FALSE))
 				quid       	"422F323C0278"
+				stereotype 	"abstract"
 				result     	"void"
 				concurrency 	"Sequential"
 				opExportControl 	"Public"
-				uid        	0)))
+				uid        	0))
+			module     	"Component View::Tima"
+			quidu      	"422F116802C6"
+			language   	"VC++"
+			abstract   	TRUE)
 		    (object Class "FramePart"
 			attributes 	(list Attribute_Set
 			    (object Attribute
@@ -42047,206 +42352,442 @@
 			quid       	"422F231C0318"
 			stereotype 	"enum"
 			class_attributes 	(list class_attribute_list
-			    (object ClassAttribute "TopLeft"
+			    (object ClassAttribute "FPTopLeft"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"VC++"
+					name       	"Ordinal"
+					value      	"0"))
+				quid       	"423013C5026A"
+				initv      	"0")
+			    (object ClassAttribute "FPTop"
 				attributes 	(list Attribute_Set
 				    (object Attribute
 					tool       	"VC++"
 					name       	"Ordinal"
 					value      	"1"))
-				quid       	"422F231C0324"
-				initv      	"0")
-			    (object ClassAttribute "Top"
+				quid       	"423013C50326")
+			    (object ClassAttribute "FPTopRight"
 				attributes 	(list Attribute_Set
 				    (object Attribute
 					tool       	"VC++"
 					name       	"Ordinal"
 					value      	"2"))
-				quid       	"422F231C0325")
-			    (object ClassAttribute "TopRight"
+				quid       	"423013C50374")
+			    (object ClassAttribute "FPRight"
 				attributes 	(list Attribute_Set
 				    (object Attribute
 					tool       	"VC++"
 					name       	"Ordinal"
 					value      	"3"))
-				quid       	"422F231C0326")
-			    (object ClassAttribute "Right"
+				quid       	"423013C503D2")
+			    (object ClassAttribute "FPBottomRight"
 				attributes 	(list Attribute_Set
 				    (object Attribute
 					tool       	"VC++"
 					name       	"Ordinal"
 					value      	"4"))
-				quid       	"422F231C0333")
-			    (object ClassAttribute "BottomRight"
+				quid       	"423013C60038")
+			    (object ClassAttribute "FPBottom"
 				attributes 	(list Attribute_Set
 				    (object Attribute
 					tool       	"VC++"
 					name       	"Ordinal"
 					value      	"5"))
-				quid       	"422F231C0334")
-			    (object ClassAttribute "Bottom"
+				quid       	"423013C60096")
+			    (object ClassAttribute "FPBotomLeft"
 				attributes 	(list Attribute_Set
 				    (object Attribute
 					tool       	"VC++"
 					name       	"Ordinal"
 					value      	"6"))
-				quid       	"422F231C0343")
-			    (object ClassAttribute "BotomLeft"
+				quid       	"423013C600E4")
+			    (object ClassAttribute "FPLeft"
 				attributes 	(list Attribute_Set
 				    (object Attribute
 					tool       	"VC++"
 					name       	"Ordinal"
 					value      	"7"))
-				quid       	"422F231C0344")
-			    (object ClassAttribute "Left"
+				quid       	"423013C60122")
+			    (object ClassAttribute "_fp_count"
 				attributes 	(list Attribute_Set
 				    (object Attribute
 					tool       	"VC++"
 					name       	"Ordinal"
 					value      	"8"))
-				quid       	"422F231C0345")
-			    (object ClassAttribute "_count"
-				attributes 	(list Attribute_Set
-				    (object Attribute
-					tool       	"VC++"
-					name       	"Ordinal"
-					value      	"9"))
-				quid       	"422F231C0352"))
+				quid       	"423013C60170"))
 			module     	"Component View::Tima"
 			quidu      	"422F116802C6"
 			language   	"VC++")
 		    (object Class "FrameState"
+			attributes 	(list Attribute_Set
+			    (object Attribute
+				tool       	"VC++"
+				name       	"AfxSupportMacro"
+				value      	""))
 			quid       	"422F25500258"
 			stereotype 	"enum"
 			class_attributes 	(list class_attribute_list
-			    (object ClassAttribute "Active"
+			    (object ClassAttribute "FSActive"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"VC++"
+					name       	"Ordinal"
+					value      	"0"))
+				quid       	"423013C602B9"
+				initv      	"0")
+			    (object ClassAttribute "FSInactive"
 				attributes 	(list Attribute_Set
 				    (object Attribute
 					tool       	"VC++"
 					name       	"Ordinal"
 					value      	"1"))
-				quid       	"422F26660045"
-				initv      	"0")
-			    (object ClassAttribute "Inactive"
+				quid       	"423013C60326")
+			    (object ClassAttribute "FSDisabled"
 				attributes 	(list Attribute_Set
 				    (object Attribute
 					tool       	"VC++"
 					name       	"Ordinal"
 					value      	"2"))
-				quid       	"422F2675014F")
-			    (object ClassAttribute "Disabled"
+				quid       	"423013C60374")
+			    (object ClassAttribute "_fs_count"
 				attributes 	(list Attribute_Set
 				    (object Attribute
 					tool       	"VC++"
 					name       	"Ordinal"
 					value      	"3"))
-				quid       	"422F267C0110")
-			    (object ClassAttribute "_count"
-				attributes 	(list Attribute_Set
-				    (object Attribute
-					tool       	"VC++"
-					name       	"Ordinal"
-					value      	"4"))
-				quid       	"422F268C015E"))
+				quid       	"423013C603B3"))
 			module     	"Component View::Tima"
 			quidu      	"422F116802C6"
 			language   	"VC++")
 		    (object Class "WindowButtonPart"
+			attributes 	(list Attribute_Set
+			    (object Attribute
+				tool       	"VC++"
+				name       	"AfxSupportMacro"
+				value      	""))
 			quid       	"422F26C402E5"
 			stereotype 	"enum"
 			class_attributes 	(list class_attribute_list
-			    (object ClassAttribute "SysButton"
+			    (object ClassAttribute "WBPSysButton"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"VC++"
+					name       	"Ordinal"
+					value      	"0"))
+				quid       	"423013C70067"
+				initv      	"0")
+			    (object ClassAttribute "WBPHelpButton"
 				attributes 	(list Attribute_Set
 				    (object Attribute
 					tool       	"VC++"
 					name       	"Ordinal"
 					value      	"1"))
-				quid       	"422F270C03B0"
-				initv      	"0")
-			    (object ClassAttribute "HelpButton"
+				quid       	"423013C700B5")
+			    (object ClassAttribute "WBPMinButton"
 				attributes 	(list Attribute_Set
 				    (object Attribute
 					tool       	"VC++"
 					name       	"Ordinal"
 					value      	"2"))
-				quid       	"422F272C03DF")
-			    (object ClassAttribute "MinButton"
+				quid       	"423013C700F3")
+			    (object ClassAttribute "WBPRestoreButton"
 				attributes 	(list Attribute_Set
 				    (object Attribute
 					tool       	"VC++"
 					name       	"Ordinal"
 					value      	"3"))
-				quid       	"422F2732012F")
-			    (object ClassAttribute "RestoreButton"
+				quid       	"423013C70132")
+			    (object ClassAttribute "WBPMaxButton"
 				attributes 	(list Attribute_Set
 				    (object Attribute
 					tool       	"VC++"
 					name       	"Ordinal"
 					value      	"4"))
-				quid       	"422F27400239")
-			    (object ClassAttribute "MaxButton"
+				quid       	"423013C70180")
+			    (object ClassAttribute "WBPCloseButton"
 				attributes 	(list Attribute_Set
 				    (object Attribute
 					tool       	"VC++"
 					name       	"Ordinal"
 					value      	"5"))
-				quid       	"422F274C00F1")
-			    (object ClassAttribute "CloseButton"
+				quid       	"423013C701CE")
+			    (object ClassAttribute "_wbp_count"
 				attributes 	(list Attribute_Set
 				    (object Attribute
 					tool       	"VC++"
 					name       	"Ordinal"
 					value      	"6"))
-				quid       	"422F277502A6")
-			    (object ClassAttribute "_count"
-				attributes 	(list Attribute_Set
-				    (object Attribute
-					tool       	"VC++"
-					name       	"Ordinal"
-					value      	"7"))
-				quid       	"422F27790362"))
+				quid       	"423013C7021C"))
 			module     	"Component View::Tima"
 			quidu      	"422F116802C6"
 			language   	"VC++")
 		    (object Class "ButtonState"
+			attributes 	(list Attribute_Set
+			    (object Attribute
+				tool       	"VC++"
+				name       	"AfxSupportMacro"
+				value      	""))
 			quid       	"422F278C013F"
 			stereotype 	"enum"
 			class_attributes 	(list class_attribute_list
-			    (object ClassAttribute "Normal"
+			    (object ClassAttribute "BSNormal"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"VC++"
+					name       	"Ordinal"
+					value      	"0"))
+				quid       	"423013C70316"
+				initv      	"0")
+			    (object ClassAttribute "BSHot"
 				attributes 	(list Attribute_Set
 				    (object Attribute
 					tool       	"VC++"
 					name       	"Ordinal"
 					value      	"1"))
-				quid       	"422F27B70362"
-				initv      	"0")
-			    (object ClassAttribute "Hot"
+				quid       	"423013C70355")
+			    (object ClassAttribute "BSPushed"
 				attributes 	(list Attribute_Set
 				    (object Attribute
 					tool       	"VC++"
 					name       	"Ordinal"
 					value      	"2"))
-				quid       	"422F27C80035")
-			    (object ClassAttribute "Pushed"
+				quid       	"423013C70393")
+			    (object ClassAttribute "BSDisabled"
 				attributes 	(list Attribute_Set
 				    (object Attribute
 					tool       	"VC++"
 					name       	"Ordinal"
 					value      	"3"))
-				quid       	"422F27C90343")
-			    (object ClassAttribute "Disabled"
+				quid       	"423013C703E1")
+			    (object ClassAttribute "_bs_count"
 				attributes 	(list Attribute_Set
 				    (object Attribute
 					tool       	"VC++"
 					name       	"Ordinal"
 					value      	"4"))
-				quid       	"422F27D000C2")
-			    (object ClassAttribute "_count"
+				quid       	"423013C80048"))
+			module     	"Component View::Tima"
+			quidu      	"422F116802C6"
+			language   	"VC++")
+		    (object Class "CGenericSettings"
+			attributes 	(list Attribute_Set
+			    (object Attribute
+				tool       	"VC++"
+				name       	"AfxSupportMacro"
+				value      	"")
+			    (object Attribute
+				tool       	"VC++"
+				name       	"LastAppliedTemplate"
+				value      	"D:\\Rational\\Rose\\vc\\templates"))
+			quid       	"422FD25500A6"
+			superclasses 	(list inheritance_relationship_list
+			    (object Inheritance_Relationship
+				quid       	"422FD2E400B5"
+				supplier   	"Logical View::Tima::CSettings"
+				quidu      	"422F11CC01EB"))
+			class_attributes 	(list class_attribute_list
+			    (object ClassAttribute "ColorKey"
+				quid       	"422FD2760307"
+				type       	"COLORREF"
+				exportControl 	"Public")
+			    (object ClassAttribute "FontName"
+				quid       	"422FD29102A9"
+				type       	"CString"
+				quidu      	"365C7A7A00C0"
+				exportControl 	"Public")
+			    (object ClassAttribute "FontSize"
+				quid       	"422FD29B03E2"
+				type       	"UINT"
+				exportControl 	"Public"))
+			module     	"Component View::Tima"
+			quidu      	"422F116802C6"
+			language   	"VC++")
+		    (object Class "CSkinButton"
+			attributes 	(list Attribute_Set
+			    (object Attribute
+				tool       	"VC++"
+				name       	"LastAppliedTemplate"
+				value      	"D:\\Rational\\Rose\\vc\\templates")
+			    (object Attribute
+				tool       	"VC++"
+				name       	"GenerateMessageMap"
+				value      	FALSE)
+			    (object Attribute
+				tool       	"VC++"
+				name       	"AfxSupportMacro"
+				value      	"Dynamic")
+			    (object Attribute
+				tool       	"VC++"
+				name       	"AfxBaseClass"
+				value      	""))
+			quid       	"422FE1980364"
+			superclasses 	(list inheritance_relationship_list
+			    (object Inheritance_Relationship
+				quid       	"422FE24E027A"
+				supplier   	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Controls::CButton"
+				quidu      	"365C7A7700A9"))
+			realized_interfaces 	(list realize_rel_list
+			    (object Realize_Relationship
+				quid       	"422FE29D02B9"
+				supplier   	"Logical View::Tima::ISkinComponent"
+				quidu      	"422F16D302B6"))
+			operations 	(list Operations
+			    (object Operation "PreSubclassWindow"
 				attributes 	(list Attribute_Set
 				    (object Attribute
 					tool       	"VC++"
-					name       	"Ordinal"
-					value      	"5"))
-				quid       	"422F27D40064"))
+					name       	"DefaultBody"
+					value      	(value Text 
+|// ToDo: Add your specialized code here or after the call to base class
+|
+|CWnd::PreSubclassWindow();
+					))
+				    (object Attribute
+					tool       	"VC++"
+					name       	"AfxVirtual"
+					value      	"True")
+				    (object Attribute
+					tool       	"VC++"
+					name       	"Inline"
+					value      	FALSE))
+				quid       	"422FE36502AB"
+				stereotype 	"virtual"
+				result     	"void"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "OnWndMsg"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"VC++"
+					name       	"DefaultBody"
+					value      	(value Text 
+|// ToDo: Add your specialized code here or after the call to base class
+|
+|return CWnd::OnWndMsg(message, wParam, lParam, pResult);
+					))
+				    (object Attribute
+					tool       	"VC++"
+					name       	"AfxVirtual"
+					value      	"True")
+				    (object Attribute
+					tool       	"VC++"
+					name       	"Inline"
+					value      	FALSE))
+				quid       	"422FF7EF0106"
+				stereotype 	"virtual"
+				parameters 	(list Parameters
+				    (object Parameter "message"
+					quid       	"422FF7EF0122"
+					type       	"UINT")
+				    (object Parameter "wParam"
+					quid       	"422FF7EF0170"
+					type       	"WPARAM")
+				    (object Parameter "lParam"
+					quid       	"422FF7EF01AF"
+					type       	"LPARAM")
+				    (object Parameter "pResult"
+					quid       	"422FF7EF01FD"
+					type       	"LRESULT*"))
+				result     	"BOOL"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0))
+			module     	"Component View::Tima"
+			quidu      	"422F116802C6"
+			language   	"VC++")
+		    (object Class "CSkinPicture"
+			attributes 	(list Attribute_Set
+			    (object Attribute
+				tool       	"VC++"
+				name       	"LastAppliedTemplate"
+				value      	"D:\\Rational\\Rose\\vc\\templates")
+			    (object Attribute
+				tool       	"VC++"
+				name       	"AfxSupportMacro"
+				value      	"Dynamic")
+			    (object Attribute
+				tool       	"VC++"
+				name       	"GenerateMessageMap"
+				value      	FALSE)
+			    (object Attribute
+				tool       	"VC++"
+				name       	"AfxBaseClass"
+				value      	""))
+			quid       	"422FE1A003E1"
+			superclasses 	(list inheritance_relationship_list
+			    (object Inheritance_Relationship
+				quid       	"422FE250026A"
+				supplier   	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::CWnd"
+				quidu      	"365C7A74001A"))
+			realized_interfaces 	(list realize_rel_list
+			    (object Realize_Relationship
+				quid       	"422FE2A1022C"
+				supplier   	"Logical View::Tima::ISkinComponent"
+				quidu      	"422F16D302B6"))
+			operations 	(list Operations
+			    (object Operation "PreSubclassWindow"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"VC++"
+					name       	"DefaultBody"
+					value      	(value Text 
+|// ToDo: Add your specialized code here or after the call to base class
+|
+|CWnd::PreSubclassWindow();
+					))
+				    (object Attribute
+					tool       	"VC++"
+					name       	"AfxVirtual"
+					value      	"True")
+				    (object Attribute
+					tool       	"VC++"
+					name       	"Inline"
+					value      	FALSE))
+				quid       	"422FE3F9022C"
+				stereotype 	"virtual"
+				result     	"void"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "OnWndMsg"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"VC++"
+					name       	"DefaultBody"
+					value      	(value Text 
+|// ToDo: Add your specialized code here or after the call to base class
+|
+|return CWnd::OnWndMsg(message, wParam, lParam, pResult);
+					))
+				    (object Attribute
+					tool       	"VC++"
+					name       	"AfxVirtual"
+					value      	"True")
+				    (object Attribute
+					tool       	"VC++"
+					name       	"Inline"
+					value      	FALSE))
+				quid       	"422FF816026A"
+				stereotype 	"virtual"
+				parameters 	(list Parameters
+				    (object Parameter "message"
+					quid       	"422FF8160299"
+					type       	"UINT")
+				    (object Parameter "wParam"
+					quid       	"422FF81602D8"
+					type       	"WPARAM")
+				    (object Parameter "lParam"
+					quid       	"422FF8160316"
+					type       	"LPARAM")
+				    (object Parameter "pResult"
+					quid       	"422FF8160364"
+					type       	"LRESULT*"))
+				result     	"BOOL"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0))
 			module     	"Component View::Tima"
 			quidu      	"422F116802C6"
 			language   	"VC++")
@@ -42343,21 +42884,6 @@
 				exportControl 	"Protected"
 				is_navigable 	TRUE)))
 		    (object Association "$UNNAMED$14"
-			quid       	"422F160600F1"
-			roles      	(list role_list
-			    (object Role "m_skin"
-				quid       	"422F16060391"
-				label      	"m_skin"
-				supplier   	"Logical View::Tima::CSkin"
-				quidu      	"422ED2AF0120"
-				exportControl 	"Protected"
-				is_navigable 	TRUE
-				friend     	TRUE)
-			    (object Role "$UNNAMED$15"
-				quid       	"422F16060393"
-				supplier   	"Logical View::Tima::CSkinManager"
-				quidu      	"422ED2D7015E")))
-		    (object Association "$UNNAMED$16"
 			quid       	"422F2DDA02A6"
 			roles      	(list role_list
 			    (object Role "m_settings"
@@ -42367,11 +42893,11 @@
 				quidu      	"422F06C10343"
 				exportControl 	"Protected"
 				is_navigable 	TRUE)
-			    (object Role "$UNNAMED$17"
+			    (object Role "$UNNAMED$15"
 				quid       	"422F2DDC00F3"
 				supplier   	"Logical View::Tima::CSkin"
 				quidu      	"422ED2AF0120")))
-		    (object Association "$UNNAMED$18"
+		    (object Association "$UNNAMED$16"
 			quid       	"422F2E3E03DF"
 			roles      	(list role_list
 			    (object Role "m_winSettings"
@@ -42380,11 +42906,12 @@
 				supplier   	"Logical View::Tima::CWindowSettings"
 				quidu      	"422F06970110"
 				is_navigable 	TRUE)
-			    (object Role "$UNNAMED$19"
+			    (object Role "$UNNAMED$17"
 				quid       	"422F2E3F023B"
 				supplier   	"Logical View::Tima::CSkinSettings"
-				quidu      	"422F06C10343")))
-		    (object Association "$UNNAMED$20"
+				quidu      	"422F06C10343"
+				is_aggregate 	TRUE)))
+		    (object Association "$UNNAMED$18"
 			quid       	"422F2EBD012F"
 			roles      	(list role_list
 			    (object Role "m_btnSettings"
@@ -42393,11 +42920,12 @@
 				supplier   	"Logical View::Tima::CButtonSettings"
 				quidu      	"422F163D01FB"
 				is_navigable 	TRUE)
-			    (object Role "$UNNAMED$21"
+			    (object Role "$UNNAMED$19"
 				quid       	"422F2EBF0007"
 				supplier   	"Logical View::Tima::CSkinSettings"
-				quidu      	"422F06C10343")))
-		    (object Association "$UNNAMED$22"
+				quidu      	"422F06C10343"
+				is_aggregate 	TRUE)))
+		    (object Association "$UNNAMED$20"
 			quid       	"422F2ED30362"
 			roles      	(list role_list
 			    (object Role "m_pictSettings"
@@ -42406,10 +42934,84 @@
 				supplier   	"Logical View::Tima::CPictureSettings"
 				quidu      	"422F1655016E"
 				is_navigable 	TRUE)
-			    (object Role "$UNNAMED$23"
+			    (object Role "$UNNAMED$21"
 				quid       	"422F2ED500C2"
 				supplier   	"Logical View::Tima::CSkinSettings"
-				quidu      	"422F06C10343"))))
+				quidu      	"422F06C10343"
+				is_aggregate 	TRUE)))
+		    (object Association "$UNNAMED$22"
+			quid       	"422FD2E900E4"
+			roles      	(list role_list
+			    (object Role "m_genSettings"
+				quid       	"422FD2E90336"
+				label      	"m_genSettings"
+				supplier   	"Logical View::Tima::CGenericSettings"
+				quidu      	"422FD25500A6"
+				is_navigable 	TRUE)
+			    (object Role "$UNNAMED$23"
+				quid       	"422FD2E90338"
+				supplier   	"Logical View::Tima::CSkinSettings"
+				quidu      	"422F06C10343"
+				is_aggregate 	TRUE)))
+		    (object Association "$UNNAMED$24"
+			quid       	"422FE0CB0384"
+			roles      	(list role_list
+			    (object Role "m_settings"
+				quid       	"422FE0CC02F7"
+				label      	"m_settings"
+				supplier   	"Logical View::Tima::CWindowSettings"
+				quidu      	"422F06970110"
+				exportControl 	"Protected"
+				is_navigable 	TRUE)
+			    (object Role "$UNNAMED$25"
+				quid       	"422FE0CC02F9"
+				supplier   	"Logical View::Tima::CSkinDialog"
+				quidu      	"422ED2DF015E"
+				Containment 	"By Reference")))
+		    (object Association "$UNNAMED$26"
+			quid       	"422FE25F020D"
+			roles      	(list role_list
+			    (object Role "m_settings"
+				quid       	"422FE2600028"
+				label      	"m_settings"
+				supplier   	"Logical View::Tima::CButtonSettings"
+				quidu      	"422F163D01FB"
+				exportControl 	"Protected"
+				is_navigable 	TRUE)
+			    (object Role "$UNNAMED$27"
+				quid       	"422FE2600038"
+				supplier   	"Logical View::Tima::CSkinButton"
+				quidu      	"422FE1980364"
+				Containment 	"By Reference")))
+		    (object Association "$UNNAMED$28"
+			quid       	"422FE27C0028"
+			roles      	(list role_list
+			    (object Role "m_settings"
+				quid       	"422FE27C02C8"
+				label      	"m_settings"
+				supplier   	"Logical View::Tima::CPictureSettings"
+				quidu      	"422F1655016E"
+				exportControl 	"Protected"
+				is_navigable 	TRUE)
+			    (object Role "$UNNAMED$29"
+				quid       	"422FE27C02CA"
+				supplier   	"Logical View::Tima::CSkinPicture"
+				quidu      	"422FE1A003E1"
+				Containment 	"By Reference")))
+		    (object Association "$UNNAMED$30"
+			quid       	"423013C8025B"
+			roles      	(list role_list
+			    (object Role "m_pSkin"
+				quid       	"423013C8026A"
+				label      	"m_pSkin"
+				supplier   	"Logical View::Tima::CSkin"
+				quidu      	"422ED2AF0120"
+				exportControl 	"Protected"
+				is_navigable 	TRUE)
+			    (object Role "$UNNAMED$31"
+				quid       	"423013C8026C"
+				supplier   	"Logical View::Tima::CSkinManager"
+				quidu      	"422ED2D7015E"))))
 		logical_presentations 	(list unit_reference_list
 		    (object ClassDiagram "Main"
 			quid       	"422ED29F0084"
@@ -42417,14 +43019,14 @@
 			zoom       	100
 			max_height 	28350
 			max_width  	21600
-			origin_x   	3226
-			origin_y   	0
+			origin_x   	0
+			origin_y   	1772
 			items      	(list diagram_item_list
-			    (object ClassView "Class" "Logical View::Tima::CSkinDialog" @658
+			    (object ClassView "Class" "Logical View::Tima::CSettings" @658
 				ShowCompartmentStereotypes 	TRUE
 				IncludeAttribute 	TRUE
 				IncludeOperation 	TRUE
-				location   	(3984, 2000)
+				location   	(2224, 368)
 				font       	(object Font
 				    size       	10
 				    face       	"Arial"
@@ -42436,37 +43038,7 @@
 				    default_color 	TRUE)
 				label      	(object ItemLabel
 				    Parent_View 	@658
-				    location   	(3831, 1949)
-				    fill_color 	13434879
-				    nlines     	1
-				    max_width  	306
-				    justify    	0
-				    label      	"CSkinDialog")
-				icon_style 	"Icon"
-				line_color 	3342489
-				fill_color 	13434879
-				quidu      	"422ED2DF015E"
-				width      	324
-				height     	126
-				annotation 	8
-				autoResize 	TRUE)
-			    (object ClassView "Class" "Logical View::Tima::CSettings" @659
-				ShowCompartmentStereotypes 	TRUE
-				IncludeAttribute 	TRUE
-				IncludeOperation 	TRUE
-				location   	(2928, 368)
-				font       	(object Font
-				    size       	10
-				    face       	"Arial"
-				    bold       	FALSE
-				    italics    	FALSE
-				    underline  	FALSE
-				    strike     	FALSE
-				    color      	0
-				    default_color 	TRUE)
-				label      	(object ItemLabel
-				    Parent_View 	@659
-				    location   	(2550, 137)
+				    location   	(1846, 137)
 				    fill_color 	13434879
 				    nlines     	1
 				    max_width  	756
@@ -42474,11 +43046,11 @@
 				    label      	"CSettings")
 				icon_style 	"Icon"
 				line_color 	3342489
-				fill_color 	13434879
+				fill_color 	16766378
 				quidu      	"422F11CC01EB"
 				compartment 	(object Compartment
-				    Parent_View 	@659
-				    location   	(2550, 198)
+				    Parent_View 	@658
+				    location   	(1846, 198)
 				    font       	(object Font
 					size       	10
 					face       	"Arial"
@@ -42492,113 +43064,64 @@
 				    fill_color 	13434879
 				    anchor     	2
 				    nlines     	8
-				    max_width  	641)
+				    max_width  	650)
 				width      	774
 				height     	486
 				annotation 	8
 				autoResize 	TRUE)
-			    (object ClassView "Class" "Logical View::Tima::CSkinManager" @660
+			    (object ClassView "Class" "Logical View::Tima::ISkinComponent" @659
 				ShowCompartmentStereotypes 	TRUE
 				IncludeAttribute 	TRUE
 				IncludeOperation 	TRUE
-				ShowOperationSignature 	TRUE
-				location   	(2928, 2608)
+				location   	(4032, 2688)
 				font       	(object Font
 				    size       	10
 				    face       	"Arial"
 				    bold       	FALSE
-				    italics    	FALSE
+				    italics    	TRUE
 				    underline  	FALSE
 				    strike     	FALSE
 				    color      	0
 				    default_color 	TRUE)
 				label      	(object ItemLabel
-				    Parent_View 	@660
-				    location   	(2290, 2327)
-				    fill_color 	13434879
+				    Parent_View 	@659
+				    location   	(3689, 2582)
+				    fill_color 	16777215
 				    nlines     	1
-				    max_width  	1276
-				    justify    	0
-				    label      	"CSkinManager")
-				icon_style 	"Icon"
-				line_color 	3342489
-				fill_color 	13434879
-				quidu      	"422ED2D7015E"
-				compartment 	(object Compartment
-				    Parent_View 	@660
-				    location   	(2290, 2388)
-				    font       	(object Font
-					size       	10
-					face       	"Arial"
-					bold       	FALSE
-					italics    	FALSE
-					underline  	FALSE
-					strike     	FALSE
-					color      	0
-					default_color 	TRUE)
-				    icon_style 	"Icon"
-				    fill_color 	13434879
-				    anchor     	2
-				    nlines     	10
-				    max_width  	1093)
-				width      	1294
-				height     	586
-				annotation 	8
-				autoResize 	TRUE)
-			    (object ClassView "Class" "Logical View::Tima::ISkinComponent" @661
-				ShowCompartmentStereotypes 	TRUE
-				IncludeAttribute 	TRUE
-				IncludeOperation 	TRUE
-				location   	(3984, 2480)
-				font       	(object Font
-				    size       	10
-				    face       	"Arial"
-				    bold       	FALSE
-				    italics    	FALSE
-				    underline  	FALSE
-				    strike     	FALSE
-				    color      	0
-				    default_color 	TRUE)
-				label      	(object ItemLabel
-				    Parent_View 	@661
-				    location   	(3983, 2588)
-				    anchor_loc 	1
-				    nlines     	1
-				    max_width  	306
+				    max_width  	686
 				    justify    	0
 				    label      	"ISkinComponent")
-				icon       	"Interface"
 				icon_style 	"Icon"
 				line_color 	3342489
 				fill_color 	13434879
 				quidu      	"422F16D302B6"
 				compartment 	(object Compartment
-				    Parent_View 	@661
-				    location   	(3824, 2629)
+				    Parent_View 	@659
+				    location   	(3689, 2643)
 				    font       	(object Font
 					size       	10
 					face       	"Arial"
 					bold       	FALSE
-					italics    	FALSE
+					italics    	TRUE
 					underline  	FALSE
 					strike     	FALSE
 					color      	0
 					default_color 	TRUE)
 				    icon_style 	"Icon"
+				    fill_color 	16777215
 				    anchor     	2
 				    nlines     	3
-				    max_width  	316
-				    justify    	0)
-				width      	58
-				height     	58
+				    max_width  	582)
+				width      	704
+				height     	236
 				annotation 	8
 				autoResize 	TRUE)
-			    (object ClassView "Class" "Logical View::Tima::FramePart" @662
+			    (object ClassView "Class" "Logical View::Tima::FramePart" @660
 				ShowCompartmentStereotypes 	TRUE
 				SuppressOperation 	TRUE
 				IncludeAttribute 	TRUE
 				IncludeOperation 	TRUE
-				location   	(2256, 3344)
+				location   	(1552, 3248)
 				font       	(object Font
 				    size       	10
 				    face       	"Arial"
@@ -42609,20 +43132,20 @@
 				    color      	0
 				    default_color 	TRUE)
 				label      	(object ItemLabel
-				    Parent_View 	@662
-				    location   	(2092, 3110)
+				    Parent_View 	@660
+				    location   	(1357, 3014)
 				    fill_color 	13434879
 				    nlines     	1
-				    max_width  	328
+				    max_width  	390
 				    justify    	0
 				    label      	"FramePart")
 				stereotype 	(object ItemLabel
-				    Parent_View 	@662
-				    location   	(2092, 3060)
+				    Parent_View 	@660
+				    location   	(1357, 2964)
 				    fill_color 	13434879
 				    anchor     	10
 				    nlines     	1
-				    max_width  	328
+				    max_width  	390
 				    justify    	0
 				    label      	"<<enum>>")
 				icon_style 	"Icon"
@@ -42630,8 +43153,8 @@
 				fill_color 	13434879
 				quidu      	"422F231C0318"
 				compartment 	(object Compartment
-				    Parent_View 	@662
-				    location   	(2092, 3171)
+				    Parent_View 	@660
+				    location   	(1357, 3075)
 				    font       	(object Font
 					size       	10
 					face       	"Arial"
@@ -42645,17 +43168,17 @@
 				    fill_color 	13434879
 				    anchor     	2
 				    nlines     	9
-				    max_width  	275)
-				width      	346
+				    max_width  	328)
+				width      	408
 				height     	592
 				annotation 	8
 				autoResize 	TRUE)
-			    (object ClassView "Class" "Logical View::Tima::FrameState" @663
+			    (object ClassView "Class" "Logical View::Tima::FrameState" @661
 				ShowCompartmentStereotypes 	TRUE
 				SuppressOperation 	TRUE
 				IncludeAttribute 	TRUE
 				IncludeOperation 	TRUE
-				location   	(2864, 3344)
+				location   	(2144, 3248)
 				font       	(object Font
 				    size       	10
 				    face       	"Arial"
@@ -42666,20 +43189,20 @@
 				    color      	0
 				    default_color 	TRUE)
 				label      	(object ItemLabel
-				    Parent_View 	@663
-				    location   	(2714, 3235)
+				    Parent_View 	@661
+				    location   	(1974, 3139)
 				    fill_color 	13434879
 				    nlines     	1
-				    max_width  	300
+				    max_width  	340
 				    justify    	0
 				    label      	"FrameState")
 				stereotype 	(object ItemLabel
-				    Parent_View 	@663
-				    location   	(2714, 3185)
+				    Parent_View 	@661
+				    location   	(1974, 3089)
 				    fill_color 	13434879
 				    anchor     	10
 				    nlines     	1
-				    max_width  	300
+				    max_width  	340
 				    justify    	0
 				    label      	"<<enum>>")
 				icon_style 	"Icon"
@@ -42687,8 +43210,8 @@
 				fill_color 	13434879
 				quidu      	"422F25500258"
 				compartment 	(object Compartment
-				    Parent_View 	@663
-				    location   	(2714, 3296)
+				    Parent_View 	@661
+				    location   	(1974, 3200)
 				    font       	(object Font
 					size       	10
 					face       	"Arial"
@@ -42702,17 +43225,17 @@
 				    fill_color 	13434879
 				    anchor     	2
 				    nlines     	4
-				    max_width  	232)
-				width      	318
+				    max_width  	285)
+				width      	358
 				height     	342
 				annotation 	8
 				autoResize 	TRUE)
-			    (object ClassView "Class" "Logical View::Tima::WindowButtonPart" @664
+			    (object ClassView "Class" "Logical View::Tima::WindowButtonPart" @662
 				ShowCompartmentStereotypes 	TRUE
 				SuppressOperation 	TRUE
 				IncludeAttribute 	TRUE
 				IncludeOperation 	TRUE
-				location   	(3456, 3344)
+				location   	(2752, 3248)
 				font       	(object Font
 				    size       	10
 				    face       	"Arial"
@@ -42723,20 +43246,20 @@
 				    color      	0
 				    default_color 	TRUE)
 				label      	(object ItemLabel
-				    Parent_View 	@664
-				    location   	(3233, 3160)
+				    Parent_View 	@662
+				    location   	(2509, 3064)
 				    fill_color 	13434879
 				    nlines     	1
-				    max_width  	446
+				    max_width  	486
 				    justify    	0
 				    label      	"WindowButtonPart")
 				stereotype 	(object ItemLabel
-				    Parent_View 	@664
-				    location   	(3233, 3110)
+				    Parent_View 	@662
+				    location   	(2509, 3014)
 				    fill_color 	13434879
 				    anchor     	10
 				    nlines     	1
-				    max_width  	446
+				    max_width  	486
 				    justify    	0
 				    label      	"<<enum>>")
 				icon_style 	"Icon"
@@ -42744,8 +43267,8 @@
 				fill_color 	13434879
 				quidu      	"422F26C402E5"
 				compartment 	(object Compartment
-				    Parent_View 	@664
-				    location   	(3233, 3221)
+				    Parent_View 	@662
+				    location   	(2509, 3125)
 				    font       	(object Font
 					size       	10
 					face       	"Arial"
@@ -42759,17 +43282,17 @@
 				    fill_color 	13434879
 				    anchor     	2
 				    nlines     	7
-				    max_width  	321)
-				width      	464
+				    max_width  	410)
+				width      	504
 				height     	492
 				annotation 	8
 				autoResize 	TRUE)
-			    (object ClassView "Class" "Logical View::Tima::ButtonState" @665
+			    (object ClassView "Class" "Logical View::Tima::ButtonState" @663
 				ShowCompartmentStereotypes 	TRUE
 				SuppressOperation 	TRUE
 				IncludeAttribute 	TRUE
 				IncludeOperation 	TRUE
-				location   	(4064, 3344)
+				location   	(3344, 3248)
 				font       	(object Font
 				    size       	10
 				    face       	"Arial"
@@ -42780,20 +43303,20 @@
 				    color      	0
 				    default_color 	TRUE)
 				label      	(object ItemLabel
-				    Parent_View 	@665
-				    location   	(3913, 3210)
+				    Parent_View 	@663
+				    location   	(3162, 3114)
 				    fill_color 	13434879
 				    nlines     	1
-				    max_width  	302
+				    max_width  	364
 				    justify    	0
 				    label      	"ButtonState")
 				stereotype 	(object ItemLabel
-				    Parent_View 	@665
-				    location   	(3913, 3160)
+				    Parent_View 	@663
+				    location   	(3162, 3064)
 				    fill_color 	13434879
 				    anchor     	10
 				    nlines     	1
-				    max_width  	302
+				    max_width  	364
 				    justify    	0
 				    label      	"<<enum>>")
 				icon_style 	"Icon"
@@ -42801,8 +43324,8 @@
 				fill_color 	13434879
 				quidu      	"422F278C013F"
 				compartment 	(object Compartment
-				    Parent_View 	@665
-				    location   	(3913, 3271)
+				    Parent_View 	@663
+				    location   	(3162, 3175)
 				    font       	(object Font
 					size       	10
 					face       	"Arial"
@@ -42816,16 +43339,14 @@
 				    fill_color 	13434879
 				    anchor     	2
 				    nlines     	5
-				    max_width  	251)
-				width      	320
+				    max_width  	307)
+				width      	382
 				height     	392
 				annotation 	8
 				autoResize 	TRUE)
-			    (object ClassView "Class" "Logical View::Tima::CSkin" @666
+			    (object ClassView "Class" "Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Dialog Boxes::CDialog" @664
 				ShowCompartmentStereotypes 	TRUE
-				IncludeAttribute 	TRUE
-				IncludeOperation 	TRUE
-				location   	(2928, 2000)
+				location   	(2896, 1616)
 				font       	(object Font
 				    size       	10
 				    face       	"Arial"
@@ -42836,97 +43357,26 @@
 				    color      	0
 				    default_color 	TRUE)
 				label      	(object ItemLabel
-				    Parent_View 	@666
-				    location   	(2749, 1844)
+				    Parent_View 	@664
+				    location   	(2725, 1542)
 				    fill_color 	13434879
 				    nlines     	1
-				    max_width  	358
+				    max_width  	342
 				    justify    	0
-				    label      	"CSkin")
+				    label      	"CDialog")
 				icon_style 	"Icon"
 				line_color 	3342489
-				fill_color 	13434879
-				quidu      	"422ED2AF0120"
-				compartment 	(object Compartment
-				    Parent_View 	@666
-				    location   	(2749, 1905)
-				    font       	(object Font
-					size       	10
-					face       	"Arial"
-					bold       	FALSE
-					italics    	FALSE
-					underline  	FALSE
-					strike     	FALSE
-					color      	0
-					default_color 	TRUE)
-				    icon_style 	"Icon"
-				    fill_color 	16777215
-				    anchor     	2
-				    nlines     	5
-				    max_width  	300)
-				width      	376
-				height     	336
+				fill_color 	14671839
+				quidu      	"365C7A7500B1"
+				width      	360
+				height     	172
 				annotation 	8
 				autoResize 	TRUE)
-			    (object AssociationViewNew "$UNNAMED$14" @667
-				location   	(2928, 2241)
-				stereotype 	TRUE
-				line_color 	3342489
-				quidu      	"422F160600F1"
-				roleview_list 	(list RoleViews
-				    (object RoleView "m_skin" @668
-					Parent_View 	@667
-					location   	(1360, 1857)
-					font       	(object Font
-					    size       	10
-					    face       	"Arial"
-					    bold       	FALSE
-					    italics    	FALSE
-					    underline  	FALSE
-					    strike     	FALSE
-					    color      	0
-					    default_color 	TRUE)
-					label      	(object SegLabel @669
-					    Parent_View 	@668
-					    location   	(2970, 2183)
-					    font       	(object Font
-						size       	10
-						face       	"Arial"
-						bold       	FALSE
-						italics    	FALSE
-						underline  	FALSE
-						strike     	FALSE
-						color      	0
-						default_color 	TRUE)
-					    anchor     	1
-					    anchor_loc 	1
-					    nlines     	1
-					    max_width  	171
-					    justify    	0
-					    label      	"#m_skin"
-					    pctDist    	0.800000
-					    height     	42
-					    orientation 	1)
-					stereotype 	TRUE
-					line_color 	3342489
-					quidu      	"422F16060391"
-					client     	@667
-					supplier   	@666
-					line_style 	0)
-				    (object RoleView "$UNNAMED$15" @670
-					Parent_View 	@667
-					location   	(1360, 1857)
-					stereotype 	TRUE
-					line_color 	3342489
-					quidu      	"422F16060393"
-					client     	@667
-					supplier   	@660
-					line_style 	0)))
-			    (object ClassView "Class" "Logical View::Tima::CWindowSettings" @671
+			    (object ClassView "Class" "Logical View::Tima::CSkinSettings" @665
 				ShowCompartmentStereotypes 	TRUE
 				IncludeAttribute 	TRUE
 				IncludeOperation 	TRUE
-				location   	(912, 928)
+				location   	(1776, 992)
 				font       	(object Font
 				    size       	10
 				    face       	"Arial"
@@ -42937,119 +43387,11 @@
 				    color      	0
 				    default_color 	TRUE)
 				label      	(object ItemLabel
-				    Parent_View 	@671
-				    location   	(73, 772)
+				    Parent_View 	@665
+				    location   	(1499, 761)
 				    fill_color 	13434879
 				    nlines     	1
-				    max_width  	1678
-				    justify    	0
-				    label      	"CWindowSettings")
-				icon_style 	"Icon"
-				line_color 	3342489
-				fill_color 	13434879
-				quidu      	"422F06970110"
-				compartment 	(object Compartment
-				    Parent_View 	@671
-				    location   	(73, 833)
-				    font       	(object Font
-					size       	10
-					face       	"Arial"
-					bold       	FALSE
-					italics    	FALSE
-					underline  	FALSE
-					strike     	FALSE
-					color      	0
-					default_color 	TRUE)
-				    icon_style 	"Icon"
-				    fill_color 	16777215
-				    anchor     	2
-				    nlines     	5
-				    max_width  	1434)
-				width      	1696
-				height     	336
-				annotation 	8
-				autoResize 	TRUE)
-			    (object InheritView "" @672
-				stereotype 	TRUE
-				line_color 	3342489
-				quidu      	"422F12A90278"
-				client     	@671
-				supplier   	@659
-				line_style 	0)
-			    (object ClassView "Class" "Logical View::Tima::CButtonSettings" @673
-				ShowCompartmentStereotypes 	TRUE
-				IncludeAttribute 	TRUE
-				IncludeOperation 	TRUE
-				location   	(2560, 928)
-				font       	(object Font
-				    size       	10
-				    face       	"Arial"
-				    bold       	FALSE
-				    italics    	FALSE
-				    underline  	FALSE
-				    strike     	FALSE
-				    color      	0
-				    default_color 	TRUE)
-				label      	(object ItemLabel
-				    Parent_View 	@673
-				    location   	(2040, 822)
-				    fill_color 	13434879
-				    nlines     	1
-				    max_width  	1040
-				    justify    	0
-				    label      	"CButtonSettings")
-				icon_style 	"Icon"
-				line_color 	3342489
-				fill_color 	13434879
-				quidu      	"422F163D01FB"
-				compartment 	(object Compartment
-				    Parent_View 	@673
-				    location   	(2040, 883)
-				    font       	(object Font
-					size       	10
-					face       	"Arial"
-					bold       	FALSE
-					italics    	FALSE
-					underline  	FALSE
-					strike     	FALSE
-					color      	0
-					default_color 	TRUE)
-				    icon_style 	"Icon"
-				    fill_color 	13434879
-				    anchor     	2
-				    nlines     	3
-				    max_width  	890)
-				width      	1058
-				height     	236
-				annotation 	8
-				autoResize 	TRUE)
-			    (object InheritView "" @674
-				stereotype 	TRUE
-				line_color 	3342489
-				quidu      	"422F16B002C6"
-				client     	@673
-				supplier   	@659
-				line_style 	0)
-			    (object ClassView "Class" "Logical View::Tima::CSkinSettings" @675
-				ShowCompartmentStereotypes 	TRUE
-				IncludeAttribute 	TRUE
-				IncludeOperation 	TRUE
-				location   	(2928, 1456)
-				font       	(object Font
-				    size       	10
-				    face       	"Arial"
-				    bold       	FALSE
-				    italics    	FALSE
-				    underline  	FALSE
-				    strike     	FALSE
-				    color      	0
-				    default_color 	TRUE)
-				label      	(object ItemLabel
-				    Parent_View 	@675
-				    location   	(2751, 1250)
-				    fill_color 	13434879
-				    nlines     	1
-				    max_width  	354
+				    max_width  	554
 				    justify    	0
 				    label      	"CSkinSettings")
 				icon_style 	"Icon"
@@ -43057,8 +43399,8 @@
 				fill_color 	13434879
 				quidu      	"422F06C10343"
 				compartment 	(object Compartment
-				    Parent_View 	@675
-				    location   	(2751, 1311)
+				    Parent_View 	@665
+				    location   	(1499, 822)
 				    font       	(object Font
 					size       	10
 					face       	"Arial"
@@ -43071,28 +43413,82 @@
 				    icon_style 	"Icon"
 				    fill_color 	16777215
 				    anchor     	2
-				    nlines     	7
-				    max_width  	306)
-				width      	372
-				height     	436
+				    nlines     	8
+				    max_width  	478)
+				width      	572
+				height     	486
 				annotation 	8
 				autoResize 	TRUE)
-			    (object InheritView "" @676
+			    (object InheritView "" @666
 				stereotype 	TRUE
 				line_color 	3342489
 				quidu      	"422F12A800B2"
-				client     	@675
-				supplier   	@659
+				client     	@665
+				supplier   	@658
 				line_style 	0)
-			    (object AssociationViewNew "$UNNAMED$16" @677
-				location   	(2928, 1752)
+			    (object ClassView "Class" "Logical View::Tima::CGenericSettings" @667
+				ShowCompartmentStereotypes 	TRUE
+				IncludeAttribute 	TRUE
+				IncludeOperation 	TRUE
+				location   	(352, 1616)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object ItemLabel
+				    Parent_View 	@667
+				    location   	(71, 1460)
+				    fill_color 	13434879
+				    nlines     	2
+				    max_width  	562
+				    justify    	0
+				    label      	"CGenericSettings")
+				icon_style 	"Icon"
+				line_color 	3342489
+				fill_color 	13434879
+				quidu      	"422FD25500A6"
+				compartment 	(object Compartment
+				    Parent_View 	@667
+				    location   	(71, 1521)
+				    font       	(object Font
+					size       	10
+					face       	"Arial"
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    icon_style 	"Icon"
+				    fill_color 	13434879
+				    anchor     	2
+				    nlines     	4
+				    max_width  	484)
+				width      	580
+				height     	336
+				annotation 	8
+				autoResize 	TRUE)
+			    (object InheritView "" @668
 				stereotype 	TRUE
 				line_color 	3342489
-				quidu      	"422F2DDA02A6"
+				quidu      	"422FD2E400B5"
+				client     	@667
+				supplier   	@658
+				line_style 	0)
+			    (object AssociationViewNew "$UNNAMED$22" @669
+				location   	(1065, 1301)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"422FD2E900E4"
 				roleview_list 	(list RoleViews
-				    (object RoleView "m_settings" @678
-					Parent_View 	@677
-					location   	(1120, 904)
+				    (object RoleView "m_genSettings" @670
+					Parent_View 	@669
+					location   	(-1863, -155)
 					font       	(object Font
 					    size       	10
 					    face       	"Arial"
@@ -43102,9 +43498,9 @@
 					    strike     	FALSE
 					    color      	0
 					    default_color 	TRUE)
-					label      	(object SegLabel @679
-					    Parent_View 	@678
-					    location   	(2970, 1690)
+					label      	(object SegLabel @671
+					    Parent_View 	@670
+					    location   	(744, 1489)
 					    font       	(object Font
 						size       	10
 						face       	"Arial"
@@ -43117,36 +43513,151 @@
 					    anchor     	1
 					    anchor_loc 	1
 					    nlines     	1
-					    max_width  	232
+					    max_width  	313
 					    justify    	0
-					    label      	"#m_settings"
+					    label      	"+m_genSettings"
 					    pctDist    	0.800000
 					    height     	42
-					    orientation 	1)
+					    orientation 	0)
 					stereotype 	TRUE
 					line_color 	3342489
-					quidu      	"422F2DDC00F1"
-					client     	@677
-					supplier   	@675
+					quidu      	"422FD2E90336"
+					client     	@669
+					supplier   	@667
 					line_style 	0)
-				    (object RoleView "$UNNAMED$17" @680
-					Parent_View 	@677
-					location   	(1120, 904)
+				    (object RoleView "$UNNAMED$23" @672
+					Parent_View 	@669
+					location   	(-1863, -155)
 					stereotype 	TRUE
 					line_color 	3342489
-					quidu      	"422F2DDC00F3"
-					client     	@677
-					supplier   	@666
+					quidu      	"422FD2E90338"
+					client     	@669
+					supplier   	@665
 					line_style 	0)))
-			    (object AssociationViewNew "$UNNAMED$18" @681
-				location   	(2147, 1251)
+			    (object ClassView "Class" "Logical View::Tima::CSkinDialog" @673
+				ShowCompartmentStereotypes 	TRUE
+				IncludeAttribute 	TRUE
+				IncludeOperation 	TRUE
+				location   	(2448, 2192)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object ItemLabel
+				    Parent_View 	@673
+				    location   	(2085, 2036)
+				    fill_color 	13434879
+				    nlines     	1
+				    max_width  	726
+				    justify    	0
+				    label      	"CSkinDialog")
+				icon_style 	"Icon"
+				line_color 	3342489
+				fill_color 	13434879
+				quidu      	"422ED2DF015E"
+				compartment 	(object Compartment
+				    Parent_View 	@673
+				    location   	(2085, 2097)
+				    font       	(object Font
+					size       	10
+					face       	"Arial"
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    icon_style 	"Icon"
+				    fill_color 	16777215
+				    anchor     	2
+				    nlines     	5
+				    max_width  	625)
+				width      	744
+				height     	336
+				annotation 	8
+				autoResize 	TRUE)
+			    (object RealizeView "" @674
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"422F2FBB0352"
+				client     	@673
+				supplier   	@659
+				line_style 	0)
+			    (object InheritView "" @675
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"422F30BB02B6"
+				client     	@673
+				supplier   	@664
+				line_style 	0)
+			    (object ClassView "Class" "Logical View::Tima::CWindowSettings" @676
+				ShowCompartmentStereotypes 	TRUE
+				IncludeAttribute 	TRUE
+				IncludeOperation 	TRUE
+				location   	(2000, 1616)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object ItemLabel
+				    Parent_View 	@676
+				    location   	(1547, 1456)
+				    fill_color 	13434879
+				    nlines     	1
+				    max_width  	907
+				    justify    	0
+				    label      	"CWindowSettings")
+				icon_style 	"Icon"
+				line_color 	3342489
+				fill_color 	13434879
+				quidu      	"422F06970110"
+				compartment 	(object Compartment
+				    Parent_View 	@676
+				    location   	(1547, 1517)
+				    font       	(object Font
+					size       	10
+					face       	"Arial"
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    icon_style 	"Icon"
+				    fill_color 	16777215
+				    anchor     	2
+				    nlines     	5
+				    max_width  	1834)
+				width      	925
+				height     	344
+				annotation 	8
+				autoResize 	TRUE)
+			    (object InheritView "" @677
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"422F12A90278"
+				client     	@676
+				supplier   	@658
+				line_style 	0)
+			    (object AssociationViewNew "$UNNAMED$16" @678
+				location   	(1900, 1339)
 				stereotype 	TRUE
 				line_color 	3342489
 				quidu      	"422F2E3E03DF"
 				roleview_list 	(list RoleViews
-				    (object RoleView "m_winSettings" @682
-					Parent_View 	@681
-					location   	(1907, 147)
+				    (object RoleView "m_winSettings" @679
+					Parent_View 	@678
+					location   	(1660, 235)
 					font       	(object Font
 					    size       	10
 					    face       	"Arial"
@@ -43156,9 +43667,9 @@
 					    strike     	FALSE
 					    color      	0
 					    default_color 	TRUE)
-					label      	(object SegLabel @683
-					    Parent_View 	@682
-					    location   	(1662, 1168)
+					label      	(object SegLabel @680
+					    Parent_View 	@679
+					    location   	(1969, 1409)
 					    font       	(object Font
 						size       	10
 						face       	"Arial"
@@ -43180,27 +43691,27 @@
 					stereotype 	TRUE
 					line_color 	3342489
 					quidu      	"422F2E3F0239"
-					client     	@681
-					supplier   	@671
+					client     	@678
+					supplier   	@676
 					line_style 	0)
-				    (object RoleView "$UNNAMED$19" @684
-					Parent_View 	@681
-					location   	(1907, 147)
+				    (object RoleView "$UNNAMED$17" @681
+					Parent_View 	@678
+					location   	(1660, 235)
 					stereotype 	TRUE
 					line_color 	3342489
 					quidu      	"422F2E3F023B"
-					client     	@681
-					supplier   	@675
+					client     	@678
+					supplier   	@665
 					line_style 	0)))
-			    (object AssociationViewNew "$UNNAMED$20" @685
-				location   	(2708, 1141)
+			    (object AssociationViewNew "$UNNAMED$24" @682
+				location   	(2224, 1905)
 				stereotype 	TRUE
 				line_color 	3342489
-				quidu      	"422F2EBD012F"
+				quidu      	"422FE0CB0384"
 				roleview_list 	(list RoleViews
-				    (object RoleView "m_btnSettings" @686
-					Parent_View 	@685
-					location   	(2468, 37)
+				    (object RoleView "m_settings" @683
+					Parent_View 	@682
+					location   	(1296, -255)
 					font       	(object Font
 					    size       	10
 					    face       	"Arial"
@@ -43210,9 +43721,227 @@
 					    strike     	FALSE
 					    color      	0
 					    default_color 	TRUE)
-					label      	(object SegLabel @687
-					    Parent_View 	@686
-					    location   	(2690, 1042)
+					label      	(object SegLabel @684
+					    Parent_View 	@683
+					    location   	(2120, 1838)
+					    font       	(object Font
+						size       	10
+						face       	"Arial"
+						bold       	FALSE
+						italics    	FALSE
+						underline  	FALSE
+						strike     	FALSE
+						color      	0
+						default_color 	TRUE)
+					    anchor     	1
+					    anchor_loc 	1
+					    nlines     	1
+					    max_width  	232
+					    justify    	0
+					    label      	"#m_settings"
+					    pctDist    	0.800000
+					    height     	42
+					    orientation 	0)
+					stereotype 	TRUE
+					line_color 	3342489
+					quidu      	"422FE0CC02F7"
+					client     	@682
+					supplier   	@676
+					line_style 	0)
+				    (object RoleView "$UNNAMED$25" @685
+					Parent_View 	@682
+					location   	(1296, -255)
+					stereotype 	TRUE
+					line_color 	3342489
+					quidu      	"422FE0CC02F9"
+					client     	@682
+					supplier   	@673
+					line_style 	0)))
+			    (object ClassView "Class" "Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Controls::CButton" @686
+				ShowCompartmentStereotypes 	TRUE
+				location   	(4400, 1616)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object ItemLabel
+				    Parent_View 	@686
+				    location   	(4273, 1541)
+				    fill_color 	13434879
+				    nlines     	1
+				    max_width  	254
+				    justify    	0
+				    label      	"CButton")
+				icon_style 	"Icon"
+				line_color 	3342489
+				fill_color 	14671839
+				quidu      	"365C7A7700A9"
+				width      	272
+				height     	174
+				annotation 	8
+				autoResize 	TRUE)
+			    (object ClassView "Class" "Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::CWnd" @687
+				ShowCompartmentStereotypes 	TRUE
+				location   	(5600, 1616)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object ItemLabel
+				    Parent_View 	@687
+				    location   	(5402, 1541)
+				    fill_color 	13434879
+				    nlines     	1
+				    max_width  	396
+				    justify    	0
+				    label      	"CWnd")
+				icon_style 	"Icon"
+				line_color 	3342489
+				fill_color 	14671839
+				quidu      	"365C7A74001A"
+				width      	414
+				height     	174
+				annotation 	8
+				autoResize 	TRUE)
+			    (object ClassView "Class" "Logical View::Tima::CSkinButton" @688
+				ShowCompartmentStereotypes 	TRUE
+				IncludeAttribute 	TRUE
+				IncludeOperation 	TRUE
+				location   	(4032, 2192)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object ItemLabel
+				    Parent_View 	@688
+				    location   	(3640, 2086)
+				    fill_color 	13434879
+				    nlines     	1
+				    max_width  	784
+				    justify    	0
+				    label      	"CSkinButton")
+				icon_style 	"Icon"
+				line_color 	3342489
+				fill_color 	13434879
+				quidu      	"422FE1980364"
+				compartment 	(object Compartment
+				    Parent_View 	@688
+				    location   	(3640, 2147)
+				    font       	(object Font
+					size       	10
+					face       	"Arial"
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    icon_style 	"Icon"
+				    fill_color 	13434879
+				    anchor     	2
+				    nlines     	3
+				    max_width  	666)
+				width      	802
+				height     	236
+				annotation 	8
+				autoResize 	TRUE)
+			    (object InheritView "" @689
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"422FE24E027A"
+				client     	@688
+				supplier   	@686
+				line_style 	0)
+			    (object ClassView "Class" "Logical View::Tima::CButtonSettings" @690
+				ShowCompartmentStereotypes 	TRUE
+				IncludeAttribute 	TRUE
+				IncludeOperation 	TRUE
+				location   	(3648, 1616)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object ItemLabel
+				    Parent_View 	@690
+				    location   	(3332, 1513)
+				    fill_color 	13434879
+				    nlines     	1
+				    max_width  	632
+				    justify    	0
+				    label      	"CButtonSettings")
+				icon_style 	"Icon"
+				line_color 	3342489
+				fill_color 	13434879
+				quidu      	"422F163D01FB"
+				compartment 	(object Compartment
+				    Parent_View 	@690
+				    location   	(3332, 1574)
+				    font       	(object Font
+					size       	10
+					face       	"Arial"
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    icon_style 	"Icon"
+				    fill_color 	13434879
+				    anchor     	2
+				    nlines     	3
+				    max_width  	1073)
+				width      	650
+				height     	231
+				annotation 	8
+				autoResize 	TRUE)
+			    (object InheritView "" @691
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"422F16B002C6"
+				client     	@690
+				supplier   	@658
+				line_style 	0)
+			    (object AssociationViewNew "$UNNAMED$18" @692
+				location   	(2692, 1296)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"422F2EBD012F"
+				roleview_list 	(list RoleViews
+				    (object RoleView "m_btnSettings" @693
+					Parent_View 	@692
+					location   	(2452, 192)
+					font       	(object Font
+					    size       	10
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object SegLabel @694
+					    Parent_View 	@693
+					    location   	(3183, 1504)
 					    font       	(object Font
 						size       	10
 						face       	"Arial"
@@ -43234,23 +43963,77 @@
 					stereotype 	TRUE
 					line_color 	3342489
 					quidu      	"422F2EBE03DF"
-					client     	@685
-					supplier   	@673
+					client     	@692
+					supplier   	@690
 					line_style 	0)
-				    (object RoleView "$UNNAMED$21" @688
-					Parent_View 	@685
-					location   	(2468, 37)
+				    (object RoleView "$UNNAMED$19" @695
+					Parent_View 	@692
+					location   	(2452, 192)
 					stereotype 	TRUE
 					line_color 	3342489
 					quidu      	"422F2EBF0007"
-					client     	@685
-					supplier   	@675
+					client     	@692
+					supplier   	@665
 					line_style 	0)))
-			    (object ClassView "Class" "Logical View::Tima::CPictureSettings" @689
+			    (object AssociationViewNew "$UNNAMED$26" @696
+				location   	(3839, 1902)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"422FE25F020D"
+				roleview_list 	(list RoleViews
+				    (object RoleView "m_settings" @697
+					Parent_View 	@696
+					location   	(1839, 110)
+					font       	(object Font
+					    size       	10
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object SegLabel @698
+					    Parent_View 	@697
+					    location   	(3714, 1789)
+					    font       	(object Font
+						size       	10
+						face       	"Arial"
+						bold       	FALSE
+						italics    	FALSE
+						underline  	FALSE
+						strike     	FALSE
+						color      	0
+						default_color 	TRUE)
+					    anchor     	1
+					    anchor_loc 	1
+					    nlines     	1
+					    max_width  	232
+					    justify    	0
+					    label      	"#m_settings"
+					    pctDist    	0.800000
+					    height     	42
+					    orientation 	0)
+					stereotype 	TRUE
+					line_color 	3342489
+					quidu      	"422FE2600028"
+					client     	@696
+					supplier   	@690
+					line_style 	0)
+				    (object RoleView "$UNNAMED$27" @699
+					Parent_View 	@696
+					location   	(1839, 110)
+					stereotype 	TRUE
+					line_color 	3342489
+					quidu      	"422FE2600038"
+					client     	@696
+					supplier   	@688
+					line_style 	0)))
+			    (object ClassView "Class" "Logical View::Tima::CSkinPicture" @700
 				ShowCompartmentStereotypes 	TRUE
 				IncludeAttribute 	TRUE
 				IncludeOperation 	TRUE
-				location   	(3760, 928)
+				location   	(5296, 2192)
 				font       	(object Font
 				    size       	10
 				    face       	"Arial"
@@ -43261,8 +44044,55 @@
 				    color      	0
 				    default_color 	TRUE)
 				label      	(object ItemLabel
-				    Parent_View 	@689
-				    location   	(3553, 847)
+				    Parent_View 	@700
+				    location   	(4904, 2086)
+				    fill_color 	13434879
+				    nlines     	1
+				    max_width  	784
+				    justify    	0
+				    label      	"CSkinPicture")
+				icon_style 	"Icon"
+				line_color 	3342489
+				fill_color 	13434879
+				quidu      	"422FE1A003E1"
+				compartment 	(object Compartment
+				    Parent_View 	@700
+				    location   	(4904, 2147)
+				    font       	(object Font
+					size       	10
+					face       	"Arial"
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    icon_style 	"Icon"
+				    fill_color 	13434879
+				    anchor     	2
+				    nlines     	3
+				    max_width  	675)
+				width      	802
+				height     	236
+				annotation 	8
+				autoResize 	TRUE)
+			    (object ClassView "Class" "Logical View::Tima::CPictureSettings" @701
+				ShowCompartmentStereotypes 	TRUE
+				IncludeAttribute 	TRUE
+				IncludeOperation 	TRUE
+				location   	(5008, 1616)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object ItemLabel
+				    Parent_View 	@701
+				    location   	(4801, 1535)
 				    fill_color 	13434879
 				    nlines     	1
 				    max_width  	414
@@ -43273,8 +44103,8 @@
 				fill_color 	13434879
 				quidu      	"422F1655016E"
 				compartment 	(object Compartment
-				    Parent_View 	@689
-				    location   	(3553, 908)
+				    Parent_View 	@701
+				    location   	(4801, 1596)
 				    font       	(object Font
 					size       	10
 					face       	"Arial"
@@ -43293,22 +44123,22 @@
 				height     	186
 				annotation 	8
 				autoResize 	TRUE)
-			    (object InheritView "" @690
+			    (object InheritView "" @702
 				stereotype 	TRUE
 				line_color 	3342489
 				quidu      	"422F16B20229"
-				client     	@689
-				supplier   	@659
+				client     	@701
+				supplier   	@658
 				line_style 	0)
-			    (object AssociationViewNew "$UNNAMED$22" @691
-				location   	(3362, 1179)
+			    (object AssociationViewNew "$UNNAMED$20" @703
+				location   	(3426, 1309)
 				stereotype 	TRUE
 				line_color 	3342489
 				quidu      	"422F2ED30362"
 				roleview_list 	(list RoleViews
-				    (object RoleView "m_pictSettings" @692
-					Parent_View 	@691
-					location   	(3122, 75)
+				    (object RoleView "m_pictSettings" @704
+					Parent_View 	@703
+					location   	(3186, 205)
 					font       	(object Font
 					    size       	10
 					    face       	"Arial"
@@ -43318,9 +44148,9 @@
 					    strike     	FALSE
 					    color      	0
 					    default_color 	TRUE)
-					label      	(object SegLabel @693
-					    Parent_View 	@692
-					    location   	(3539, 1019)
+					label      	(object SegLabel @705
+					    Parent_View 	@704
+					    location   	(4526, 1480)
 					    font       	(object Font
 						size       	10
 						face       	"Arial"
@@ -43342,28 +44172,91 @@
 					stereotype 	TRUE
 					line_color 	3342489
 					quidu      	"422F2ED500B2"
-					client     	@691
-					supplier   	@689
+					client     	@703
+					supplier   	@701
 					line_style 	0)
-				    (object RoleView "$UNNAMED$23" @694
-					Parent_View 	@691
-					location   	(3122, 75)
+				    (object RoleView "$UNNAMED$21" @706
+					Parent_View 	@703
+					location   	(3186, 205)
 					stereotype 	TRUE
 					line_color 	3342489
 					quidu      	"422F2ED500C2"
-					client     	@691
-					supplier   	@675
+					client     	@703
+					supplier   	@665
 					line_style 	0)))
-			    (object RealizeView "" @695
+			    (object AssociationViewNew "$UNNAMED$28" @707
+				location   	(5145, 1891)
 				stereotype 	TRUE
 				line_color 	3342489
-				quidu      	"422F2FBB0352"
-				client     	@658
-				supplier   	@661
+				quidu      	"422FE27C0028"
+				roleview_list 	(list RoleViews
+				    (object RoleView "m_settings" @708
+					Parent_View 	@707
+					location   	(2617, 99)
+					font       	(object Font
+					    size       	10
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object SegLabel @709
+					    Parent_View 	@708
+					    location   	(5036, 1766)
+					    font       	(object Font
+						size       	10
+						face       	"Arial"
+						bold       	FALSE
+						italics    	FALSE
+						underline  	FALSE
+						strike     	FALSE
+						color      	0
+						default_color 	TRUE)
+					    anchor     	1
+					    anchor_loc 	1
+					    nlines     	1
+					    max_width  	232
+					    justify    	0
+					    label      	"#m_settings"
+					    pctDist    	0.800000
+					    height     	42
+					    orientation 	0)
+					stereotype 	TRUE
+					line_color 	3342489
+					quidu      	"422FE27C02C8"
+					client     	@707
+					supplier   	@701
+					line_style 	0)
+				    (object RoleView "$UNNAMED$29" @710
+					Parent_View 	@707
+					location   	(2617, 99)
+					stereotype 	TRUE
+					line_color 	3342489
+					quidu      	"422FE27C02CA"
+					client     	@707
+					supplier   	@700
+					line_style 	0)))
+			    (object RealizeView "" @711
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"422FE29D02B9"
+				client     	@688
+				supplier   	@659
 				line_style 	0)
-			    (object ClassView "Class" "Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Dialog Boxes::CDialog" @696
+			    (object RealizeView "" @712
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"422FE2A1022C"
+				client     	@700
+				supplier   	@659
+				line_style 	0)
+			    (object ClassView "Class" "Logical View::Tima::CSkin" @713
 				ShowCompartmentStereotypes 	TRUE
-				location   	(3984, 1456)
+				IncludeAttribute 	TRUE
+				IncludeOperation 	TRUE
+				location   	(1104, 1616)
 				font       	(object Font
 				    size       	10
 				    face       	"Arial"
@@ -43374,27 +44267,231 @@
 				    color      	0
 				    default_color 	TRUE)
 				label      	(object ItemLabel
-				    Parent_View 	@696
-				    location   	(3813, 1382)
+				    Parent_View 	@713
+				    location   	(853, 1410)
 				    fill_color 	13434879
 				    nlines     	1
-				    max_width  	342
+				    max_width  	502
 				    justify    	0
-				    label      	"CDialog")
+				    label      	"CSkin")
 				icon_style 	"Icon"
 				line_color 	3342489
-				fill_color 	14671839
-				quidu      	"365C7A7500B1"
-				width      	360
-				height     	172
+				fill_color 	13434879
+				quidu      	"422ED2AF0120"
+				compartment 	(object Compartment
+				    Parent_View 	@713
+				    location   	(853, 1471)
+				    font       	(object Font
+					size       	10
+					face       	"Arial"
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    icon_style 	"Icon"
+				    fill_color 	16777215
+				    anchor     	2
+				    nlines     	7
+				    max_width  	434)
+				width      	520
+				height     	436
 				annotation 	8
 				autoResize 	TRUE)
-			    (object InheritView "" @697
+			    (object AssociationViewNew "$UNNAMED$14" @714
+				location   	(1425, 1316)
 				stereotype 	TRUE
 				line_color 	3342489
-				quidu      	"422F30BB02B6"
-				client     	@658
-				supplier   	@696
+				quidu      	"422F2DDA02A6"
+				roleview_list 	(list RoleViews
+				    (object RoleView "m_settings" @715
+					Parent_View 	@714
+					location   	(-383, 468)
+					font       	(object Font
+					    size       	10
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object SegLabel @716
+					    Parent_View 	@715
+					    location   	(1524, 1282)
+					    font       	(object Font
+						size       	10
+						face       	"Arial"
+						bold       	FALSE
+						italics    	FALSE
+						underline  	FALSE
+						strike     	FALSE
+						color      	0
+						default_color 	TRUE)
+					    anchor     	1
+					    anchor_loc 	1
+					    nlines     	1
+					    max_width  	232
+					    justify    	0
+					    label      	"#m_settings"
+					    pctDist    	0.800000
+					    height     	42
+					    orientation 	1)
+					stereotype 	TRUE
+					line_color 	3342489
+					quidu      	"422F2DDC00F1"
+					client     	@714
+					supplier   	@665
+					line_style 	0)
+				    (object RoleView "$UNNAMED$15" @717
+					Parent_View 	@714
+					location   	(-383, 468)
+					stereotype 	TRUE
+					line_color 	3342489
+					quidu      	"422F2DDC00F3"
+					client     	@714
+					supplier   	@713
+					line_style 	0)))
+			    (object ClassView "Class" "Logical View::Tima::CSkinManager" @718
+				ShowCompartmentStereotypes 	TRUE
+				IncludeAttribute 	TRUE
+				IncludeOperation 	TRUE
+				ShowOperationSignature 	TRUE
+				location   	(1104, 2192)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object ItemLabel
+				    Parent_View 	@718
+				    location   	(591, 1985)
+				    fill_color 	13434879
+				    nlines     	1
+				    max_width  	1026
+				    justify    	0
+				    label      	"CSkinManager")
+				icon_style 	"Icon"
+				line_color 	3342489
+				fill_color 	13434879
+				quidu      	"422ED2D7015E"
+				compartment 	(object Compartment
+				    Parent_View 	@718
+				    location   	(591, 2046)
+				    font       	(object Font
+					size       	10
+					face       	"Arial"
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    icon_style 	"Icon"
+				    fill_color 	13434879
+				    anchor     	2
+				    nlines     	7
+				    max_width  	959)
+				width      	1044
+				height     	438
+				annotation 	8
+				autoResize 	TRUE)
+			    (object AssociationViewNew "$UNNAMED$30" @719
+				location   	(1104, 1903)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"423013C8025B"
+				roleview_list 	(list RoleViews
+				    (object RoleView "$UNNAMED$31" @720
+					Parent_View 	@719
+					location   	(0, 287)
+					font       	(object Font
+					    size       	10
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object SegLabel @721
+					    Parent_View 	@720
+					    location   	(1063, 1957)
+					    font       	(object Font
+						size       	10
+						face       	"Arial"
+						bold       	FALSE
+						italics    	FALSE
+						underline  	FALSE
+						strike     	FALSE
+						color      	0
+						default_color 	TRUE)
+					    hidden     	TRUE
+					    anchor     	1
+					    anchor_loc 	1
+					    nlines     	1
+					    max_width  	450
+					    justify    	0
+					    label      	""
+					    pctDist    	0.800000
+					    height     	42
+					    orientation 	1)
+					stereotype 	TRUE
+					line_color 	3342489
+					quidu      	"423013C8026C"
+					client     	@719
+					supplier   	@718
+					line_style 	0)
+				    (object RoleView "m_pSkin" @722
+					Parent_View 	@719
+					location   	(0, 287)
+					font       	(object Font
+					    size       	10
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object SegLabel @723
+					    Parent_View 	@722
+					    location   	(1063, 1849)
+					    font       	(object Font
+						size       	10
+						face       	"Arial"
+						bold       	FALSE
+						italics    	FALSE
+						underline  	FALSE
+						strike     	FALSE
+						color      	0
+						default_color 	TRUE)
+					    anchor     	1
+					    anchor_loc 	1
+					    nlines     	1
+					    max_width  	181
+					    justify    	0
+					    label      	"#m_pSkin"
+					    pctDist    	0.800000
+					    height     	42
+					    orientation 	0)
+					stereotype 	TRUE
+					line_color 	3342489
+					quidu      	"423013C8026A"
+					client     	@719
+					supplier   	@713
+					line_style 	0)))
+			    (object InheritView "" @724
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"422FE250026A"
+				client     	@700
+				supplier   	@687
 				line_style 	0)))
 		    (object ClassDiagram "Tima Model Update Overview"
 			quid       	"422F11CD0045"
@@ -43405,7 +44502,7 @@
 			origin_x   	1500
 			origin_y   	0
 			items      	(list diagram_item_list
-			    (object Label @698
+			    (object Label @725
 				font       	(object Font
 				    size       	10
 				    face       	"Arial"
@@ -43422,7 +44519,7 @@
 |This diagram was automatically created by Rational Rose Model Update Tool.
 |2005年3月9日 23:10:05
 				)
-			    (object ClassView "Class" "Logical View::Tima::CSettingsStorageRegistry" @699
+			    (object ClassView "Class" "Logical View::Tima::CSettingsStorageRegistry" @726
 				ShowCompartmentStereotypes 	TRUE
 				location   	(304, 656)
 				font       	(object Font
@@ -43435,7 +44532,7 @@
 				    color      	0
 				    default_color 	TRUE)
 				label      	(object ItemLabel
-				    Parent_View 	@699
+				    Parent_View 	@726
 				    location   	(12, 605)
 				    fill_color 	13434879
 				    nlines     	1
@@ -43450,7 +44547,7 @@
 				height     	126
 				annotation 	8
 				autoResize 	TRUE)
-			    (object ClassView "Class" "Logical View::Tima::CSettingsStorageMSXML" @700
+			    (object ClassView "Class" "Logical View::Tima::CSettingsStorageMSXML" @727
 				ShowCompartmentStereotypes 	TRUE
 				location   	(928, 656)
 				font       	(object Font
@@ -43463,7 +44560,7 @@
 				    color      	0
 				    default_color 	TRUE)
 				label      	(object ItemLabel
-				    Parent_View 	@700
+				    Parent_View 	@727
 				    location   	(641, 605)
 				    fill_color 	13434879
 				    nlines     	1
@@ -43478,7 +44575,7 @@
 				height     	126
 				annotation 	8
 				autoResize 	TRUE)
-			    (object ClassView "Class" "Logical View::Tima::CSettingsStorageMSXMLFile" @701
+			    (object ClassView "Class" "Logical View::Tima::CSettingsStorageMSXMLFile" @728
 				ShowCompartmentStereotypes 	TRUE
 				location   	(928, 928)
 				font       	(object Font
@@ -43491,7 +44588,7 @@
 				    color      	0
 				    default_color 	TRUE)
 				label      	(object ItemLabel
-				    Parent_View 	@701
+				    Parent_View 	@728
 				    location   	(596, 877)
 				    fill_color 	13434879
 				    nlines     	1
@@ -43506,14 +44603,14 @@
 				height     	126
 				annotation 	8
 				autoResize 	TRUE)
-			    (object InheritView "" @702
+			    (object InheritView "" @729
 				stereotype 	TRUE
 				line_color 	3342489
 				quidu      	"422F11CC0140"
-				client     	@701
-				supplier   	@700
+				client     	@728
+				supplier   	@727
 				line_style 	0)
-			    (object ClassView "Class" "Logical View::Tima::CSettingsStorageIniFile" @703
+			    (object ClassView "Class" "Logical View::Tima::CSettingsStorageIniFile" @730
 				ShowCompartmentStereotypes 	TRUE
 				location   	(1520, 656)
 				font       	(object Font
@@ -43526,7 +44623,7 @@
 				    color      	0
 				    default_color 	TRUE)
 				label      	(object ItemLabel
-				    Parent_View 	@703
+				    Parent_View 	@730
 				    location   	(1249, 605)
 				    fill_color 	13434879
 				    nlines     	1
@@ -43541,7 +44638,7 @@
 				height     	126
 				annotation 	8
 				autoResize 	TRUE)
-			    (object ClassView "Class" "Logical View::Tima::CSettings" @704
+			    (object ClassView "Class" "Logical View::Tima::CSettings" @731
 				ShowCompartmentStereotypes 	TRUE
 				location   	(1840, 1216)
 				font       	(object Font
@@ -43554,7 +44651,7 @@
 				    color      	0
 				    default_color 	TRUE)
 				label      	(object ItemLabel
-				    Parent_View 	@704
+				    Parent_View 	@731
 				    location   	(1708, 1165)
 				    fill_color 	13434879
 				    nlines     	1
@@ -43569,7 +44666,7 @@
 				height     	126
 				annotation 	8
 				autoResize 	TRUE)
-			    (object ClassView "Class" "Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Dialog Boxes::CDialog" @705
+			    (object ClassView "Class" "Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Dialog Boxes::CDialog" @732
 				ShowCompartmentStereotypes 	TRUE
 				location   	(1616, 320)
 				font       	(object Font
@@ -43582,7 +44679,7 @@
 				    color      	0
 				    default_color 	TRUE)
 				label      	(object ItemLabel
-				    Parent_View 	@705
+				    Parent_View 	@732
 				    location   	(1445, 246)
 				    fill_color 	13434879
 				    nlines     	1
@@ -43597,7 +44694,7 @@
 				height     	172
 				annotation 	8
 				autoResize 	TRUE)
-			    (object ClassView "Class" "Logical View::Tima::CTimaDlg" @706
+			    (object ClassView "Class" "Logical View::Tima::CTimaDlg" @733
 				ShowCompartmentStereotypes 	TRUE
 				location   	(1952, 656)
 				font       	(object Font
@@ -43610,7 +44707,7 @@
 				    color      	0
 				    default_color 	TRUE)
 				label      	(object ItemLabel
-				    Parent_View 	@706
+				    Parent_View 	@733
 				    location   	(1832, 605)
 				    fill_color 	13434879
 				    nlines     	1
@@ -43625,14 +44722,14 @@
 				height     	126
 				annotation 	8
 				autoResize 	TRUE)
-			    (object InheritView "" @707
+			    (object InheritView "" @734
 				stereotype 	TRUE
 				line_color 	3342489
 				quidu      	"422F11CD0007"
-				client     	@706
-				supplier   	@705
+				client     	@733
+				supplier   	@732
 				line_style 	0)
-			    (object ClassView "Class" "Logical View::MFC 6.0::CObject Classes::Application Architecture::CWinApp" @708
+			    (object ClassView "Class" "Logical View::MFC 6.0::CObject Classes::Application Architecture::CWinApp" @735
 				ShowCompartmentStereotypes 	TRUE
 				location   	(2256, 368)
 				font       	(object Font
@@ -43645,7 +44742,7 @@
 				    color      	0
 				    default_color 	TRUE)
 				label      	(object ItemLabel
-				    Parent_View 	@708
+				    Parent_View 	@735
 				    location   	(1993, 294)
 				    fill_color 	13434879
 				    nlines     	1
@@ -43660,7 +44757,7 @@
 				height     	172
 				annotation 	8
 				autoResize 	TRUE)
-			    (object ClassView "Class" "Logical View::Tima::CTimaApp" @709
+			    (object ClassView "Class" "Logical View::Tima::CTimaApp" @736
 				ShowCompartmentStereotypes 	TRUE
 				location   	(2256, 656)
 				font       	(object Font
@@ -43673,7 +44770,7 @@
 				    color      	0
 				    default_color 	TRUE)
 				label      	(object ItemLabel
-				    Parent_View 	@709
+				    Parent_View 	@736
 				    location   	(2120, 605)
 				    fill_color 	13434879
 				    nlines     	1
@@ -43688,14 +44785,14 @@
 				height     	126
 				annotation 	8
 				autoResize 	TRUE)
-			    (object InheritView "" @710
+			    (object InheritView "" @737
 				stereotype 	TRUE
 				line_color 	3342489
 				quidu      	"422F11CD0035"
-				client     	@709
-				supplier   	@708
+				client     	@736
+				supplier   	@735
 				line_style 	0)
-			    (object ClassView "Class" "Logical View::Tima::CSettingsStorage" @711
+			    (object ClassView "Class" "Logical View::Tima::CSettingsStorage" @738
 				ShowCompartmentStereotypes 	TRUE
 				location   	(816, 256)
 				font       	(object Font
@@ -43708,7 +44805,7 @@
 				    color      	0
 				    default_color 	TRUE)
 				label      	(object ItemLabel
-				    Parent_View 	@711
+				    Parent_View 	@738
 				    location   	(603, 205)
 				    fill_color 	13434879
 				    nlines     	1
@@ -43723,27 +44820,1023 @@
 				height     	126
 				annotation 	8
 				autoResize 	TRUE)
-			    (object InheritView "" @712
+			    (object InheritView "" @739
 				stereotype 	TRUE
 				line_color 	3342489
 				quidu      	"422F11CB02C6"
-				client     	@699
-				supplier   	@711
+				client     	@726
+				supplier   	@738
 				line_style 	0)
-			    (object InheritView "" @713
+			    (object InheritView "" @740
 				stereotype 	TRUE
 				line_color 	3342489
 				quidu      	"422F11CB03A0"
-				client     	@700
-				supplier   	@711
+				client     	@727
+				supplier   	@738
 				line_style 	0)
-			    (object InheritView "" @714
+			    (object InheritView "" @741
 				stereotype 	TRUE
 				line_color 	3342489
 				quidu      	"422F11CC018D"
-				client     	@703
-				supplier   	@711
-				line_style 	0))))))
+				client     	@730
+				supplier   	@738
+				line_style 	0)))))
+	    (object Class_Category "VC++ Reverse Engineered"
+		quid       	"423013E20299"
+		exportControl 	"Public"
+		logical_models 	(list unit_reference_list
+		    (object Class_Category "Tima"
+			quid       	"423013E202BA"
+			exportControl 	"Public"
+			logical_models 	(list unit_reference_list)
+			logical_presentations 	(list unit_reference_list
+			    (object ClassDiagram "Tima Model Update Overview"
+				quid       	"423013E202BC"
+				title      	"Tima Model Update Overview"
+				zoom       	100
+				max_height 	28350
+				max_width  	21600
+				origin_x   	0
+				origin_y   	0
+				items      	(list diagram_item_list
+				    (object Label @742
+					font       	(object Font
+					    size       	10
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					nlines     	3
+					max_width  	1998
+					label      	
+|Tima Model Update Overview
+|This diagram was automatically created by Rational Rose Model Update Tool.
+|2005年3月10日 17:31:14
+					)
+				    (object ClassView "Class" "Logical View::Tima::CSettingsStorage" @743
+					ShowCompartmentStereotypes 	TRUE
+					location   	(2240, 656)
+					font       	(object Font
+					    size       	10
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object ItemLabel
+					    Parent_View 	@743
+					    location   	(2027, 606)
+					    fill_color 	13434879
+					    nlines     	1
+					    max_width  	426
+					    justify    	0
+					    label      	"CSettingsStorage")
+					icon_style 	"Icon"
+					line_color 	3342489
+					fill_color 	13434879
+					quidu      	"422F11CC0287"
+					width      	444
+					height     	124
+					annotation 	8
+					autoResize 	TRUE)
+				    (object ClassView "Class" "Logical View::Tima::CSettingsStorageRegistry" @744
+					ShowCompartmentStereotypes 	TRUE
+					location   	(1296, 928)
+					font       	(object Font
+					    size       	10
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object ItemLabel
+					    Parent_View 	@744
+					    location   	(1004, 878)
+					    fill_color 	13434879
+					    nlines     	1
+					    max_width  	584
+					    justify    	0
+					    label      	"CSettingsStorageRegistry")
+					icon_style 	"Icon"
+					line_color 	3342489
+					fill_color 	13434879
+					quidu      	"422F11CB02BA"
+					width      	602
+					height     	124
+					annotation 	8
+					autoResize 	TRUE)
+				    (object InheritView "" @745
+					stereotype 	TRUE
+					line_color 	3342489
+					quidu      	"422F11CB02C6"
+					client     	@744
+					supplier   	@743
+					line_style 	0)
+				    (object ClassView "Class" "Logical View::Tima::CSettingsStorageMSXML" @746
+					ShowCompartmentStereotypes 	TRUE
+					location   	(2848, 928)
+					font       	(object Font
+					    size       	10
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object ItemLabel
+					    Parent_View 	@746
+					    location   	(2562, 878)
+					    fill_color 	13434879
+					    nlines     	1
+					    max_width  	572
+					    justify    	0
+					    label      	"CSettingsStorageMSXML")
+					icon_style 	"Icon"
+					line_color 	3342489
+					fill_color 	13434879
+					quidu      	"422F11CB0391"
+					width      	590
+					height     	124
+					annotation 	8
+					autoResize 	TRUE)
+				    (object InheritView "" @747
+					stereotype 	TRUE
+					line_color 	3342489
+					quidu      	"422F11CB03A0"
+					client     	@746
+					supplier   	@743
+					line_style 	0)
+				    (object ClassView "Class" "Logical View::Tima::CSettingsStorageMSXMLFile" @748
+					ShowCompartmentStereotypes 	TRUE
+					location   	(2848, 1216)
+					font       	(object Font
+					    size       	10
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object ItemLabel
+					    Parent_View 	@748
+					    location   	(2518, 1166)
+					    fill_color 	13434879
+					    nlines     	1
+					    max_width  	660
+					    justify    	0
+					    label      	"CSettingsStorageMSXMLFile")
+					icon_style 	"Icon"
+					line_color 	3342489
+					fill_color 	13434879
+					quidu      	"422F11CC013F"
+					width      	678
+					height     	124
+					annotation 	8
+					autoResize 	TRUE)
+				    (object InheritView "" @749
+					stereotype 	TRUE
+					line_color 	3342489
+					quidu      	"422F11CC0140"
+					client     	@748
+					supplier   	@746
+					line_style 	0)
+				    (object ClassView "Class" "Logical View::Tima::CSettingsStorageIniFile" @750
+					ShowCompartmentStereotypes 	TRUE
+					location   	(2240, 928)
+					font       	(object Font
+					    size       	10
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object ItemLabel
+					    Parent_View 	@750
+					    location   	(1969, 878)
+					    fill_color 	13434879
+					    nlines     	1
+					    max_width  	542
+					    justify    	0
+					    label      	"CSettingsStorageIniFile")
+					icon_style 	"Icon"
+					line_color 	3342489
+					fill_color 	13434879
+					quidu      	"422F11CC017E"
+					width      	560
+					height     	124
+					annotation 	8
+					autoResize 	TRUE)
+				    (object InheritView "" @751
+					stereotype 	TRUE
+					line_color 	3342489
+					quidu      	"422F11CC018D"
+					client     	@750
+					supplier   	@743
+					line_style 	0)
+				    (object ClassView "Class" "Logical View::Tima::CSettings" @752
+					ShowCompartmentStereotypes 	TRUE
+					location   	(4288, 656)
+					font       	(object Font
+					    size       	10
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object ItemLabel
+					    Parent_View 	@752
+					    location   	(4156, 606)
+					    fill_color 	13434879
+					    nlines     	1
+					    max_width  	264
+					    justify    	0
+					    label      	"CSettings")
+					icon_style 	"Icon"
+					line_color 	3342489
+					fill_color 	13434879
+					quidu      	"422F11CC01EB"
+					width      	282
+					height     	124
+					annotation 	8
+					autoResize 	TRUE)
+				    (object ClassView "Class" "Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Dialog Boxes::CDialog" @753
+					ShowCompartmentStereotypes 	TRUE
+					location   	(672, 656)
+					font       	(object Font
+					    size       	10
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object ItemLabel
+					    Parent_View 	@753
+					    location   	(570, 606)
+					    fill_color 	13434879
+					    nlines     	1
+					    max_width  	204
+					    justify    	0
+					    label      	"CDialog")
+					icon_style 	"Icon"
+					line_color 	3342489
+					fill_color 	14671839
+					quidu      	"365C7A7500B1"
+					width      	222
+					height     	124
+					annotation 	8
+					autoResize 	TRUE)
+				    (object ClassView "Class" "Logical View::Tima::CTimaDlg" @754
+					ShowCompartmentStereotypes 	TRUE
+					location   	(480, 928)
+					font       	(object Font
+					    size       	10
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object ItemLabel
+					    Parent_View 	@754
+					    location   	(360, 878)
+					    fill_color 	13434879
+					    nlines     	1
+					    max_width  	240
+					    justify    	0
+					    label      	"CTimaDlg")
+					icon_style 	"Icon"
+					line_color 	3342489
+					fill_color 	13434879
+					quidu      	"422F11CC03DF"
+					width      	258
+					height     	124
+					annotation 	8
+					autoResize 	TRUE)
+				    (object InheritView "" @755
+					stereotype 	TRUE
+					line_color 	3342489
+					quidu      	"422F11CD0007"
+					client     	@754
+					supplier   	@753
+					line_style 	0)
+				    (object ClassView "Class" "Logical View::MFC 6.0::CObject Classes::Application Architecture::CWinApp" @756
+					ShowCompartmentStereotypes 	TRUE
+					location   	(5696, 656)
+					font       	(object Font
+					    size       	10
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object ItemLabel
+					    Parent_View 	@756
+					    location   	(5568, 606)
+					    fill_color 	13434879
+					    nlines     	1
+					    max_width  	256
+					    justify    	0
+					    label      	"CWinApp")
+					icon_style 	"Icon"
+					line_color 	3342489
+					fill_color 	14671839
+					quidu      	"365C7A720187"
+					width      	274
+					height     	124
+					annotation 	8
+					autoResize 	TRUE)
+				    (object ClassView "Class" "Logical View::Tima::CTimaApp" @757
+					ShowCompartmentStereotypes 	TRUE
+					location   	(5696, 928)
+					font       	(object Font
+					    size       	10
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object ItemLabel
+					    Parent_View 	@757
+					    location   	(5560, 878)
+					    fill_color 	13434879
+					    nlines     	1
+					    max_width  	272
+					    justify    	0
+					    label      	"CTimaApp")
+					icon_style 	"Icon"
+					line_color 	3342489
+					fill_color 	13434879
+					quidu      	"422F11CD0029"
+					width      	290
+					height     	124
+					annotation 	8
+					autoResize 	TRUE)
+				    (object InheritView "" @758
+					stereotype 	TRUE
+					line_color 	3342489
+					quidu      	"422F11CD0035"
+					client     	@757
+					supplier   	@756
+					line_style 	0)
+				    (object ClassView "Class" "Logical View::Tima::FramePart" @759
+					ShowCompartmentStereotypes 	TRUE
+					SuppressOperation 	TRUE
+					location   	(1888, 1536)
+					font       	(object Font
+					    size       	10
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object ItemLabel
+					    Parent_View 	@759
+					    location   	(1751, 1508)
+					    fill_color 	13434879
+					    nlines     	1
+					    max_width  	274
+					    justify    	0
+					    label      	"FramePart")
+					stereotype 	(object ItemLabel
+					    Parent_View 	@759
+					    location   	(1751, 1458)
+					    fill_color 	13434879
+					    anchor     	10
+					    nlines     	1
+					    max_width  	274
+					    justify    	0
+					    label      	"<<enum>>")
+					icon_style 	"Icon"
+					line_color 	3342489
+					fill_color 	13434879
+					quidu      	"422F231C0318"
+					width      	292
+					height     	180
+					annotation 	8
+					autoResize 	TRUE)
+				    (object ClassView "Class" "Logical View::Tima::FrameState" @760
+					ShowCompartmentStereotypes 	TRUE
+					SuppressOperation 	TRUE
+					location   	(2224, 1536)
+					font       	(object Font
+					    size       	10
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object ItemLabel
+					    Parent_View 	@760
+					    location   	(2074, 1508)
+					    fill_color 	13434879
+					    nlines     	1
+					    max_width  	300
+					    justify    	0
+					    label      	"FrameState")
+					stereotype 	(object ItemLabel
+					    Parent_View 	@760
+					    location   	(2074, 1458)
+					    fill_color 	13434879
+					    anchor     	10
+					    nlines     	1
+					    max_width  	300
+					    justify    	0
+					    label      	"<<enum>>")
+					icon_style 	"Icon"
+					line_color 	3342489
+					fill_color 	13434879
+					quidu      	"422F25500258"
+					width      	318
+					height     	180
+					annotation 	8
+					autoResize 	TRUE)
+				    (object ClassView "Class" "Logical View::Tima::WindowButtonPart" @761
+					ShowCompartmentStereotypes 	TRUE
+					SuppressOperation 	TRUE
+					location   	(2624, 1536)
+					font       	(object Font
+					    size       	10
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object ItemLabel
+					    Parent_View 	@761
+					    location   	(2407, 1508)
+					    fill_color 	13434879
+					    nlines     	1
+					    max_width  	434
+					    justify    	0
+					    label      	"WindowButtonPart")
+					stereotype 	(object ItemLabel
+					    Parent_View 	@761
+					    location   	(2407, 1458)
+					    fill_color 	13434879
+					    anchor     	10
+					    nlines     	1
+					    max_width  	434
+					    justify    	0
+					    label      	"<<enum>>")
+					icon_style 	"Icon"
+					line_color 	3342489
+					fill_color 	13434879
+					quidu      	"422F26C402E5"
+					width      	452
+					height     	180
+					annotation 	8
+					autoResize 	TRUE)
+				    (object ClassView "Class" "Logical View::Tima::ButtonState" @762
+					ShowCompartmentStereotypes 	TRUE
+					SuppressOperation 	TRUE
+					location   	(3040, 1536)
+					font       	(object Font
+					    size       	10
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object ItemLabel
+					    Parent_View 	@762
+					    location   	(2890, 1508)
+					    fill_color 	13434879
+					    nlines     	1
+					    max_width  	300
+					    justify    	0
+					    label      	"ButtonState")
+					stereotype 	(object ItemLabel
+					    Parent_View 	@762
+					    location   	(2890, 1458)
+					    fill_color 	13434879
+					    anchor     	10
+					    nlines     	1
+					    max_width  	300
+					    justify    	0
+					    label      	"<<enum>>")
+					icon_style 	"Icon"
+					line_color 	3342489
+					fill_color 	13434879
+					quidu      	"422F278C013F"
+					width      	318
+					height     	180
+					annotation 	8
+					autoResize 	TRUE)
+				    (object ClassView "Class" "Logical View::Tima::ISkinComponent" @763
+					ShowCompartmentStereotypes 	TRUE
+					location   	(800, 1216)
+					font       	(object Font
+					    size       	10
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	TRUE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object ItemLabel
+					    Parent_View 	@763
+					    location   	(598, 1166)
+					    fill_color 	13434879
+					    nlines     	1
+					    max_width  	404
+					    justify    	0
+					    label      	"ISkinComponent")
+					icon_style 	"Icon"
+					line_color 	3342489
+					fill_color 	13434879
+					quidu      	"422F16D302B6"
+					width      	422
+					height     	124
+					annotation 	8
+					autoResize 	TRUE)
+				    (object ClassView "Class" "Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::CWnd" @764
+					ShowCompartmentStereotypes 	TRUE
+					location   	(672, 368)
+					font       	(object Font
+					    size       	10
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object ItemLabel
+					    Parent_View 	@764
+					    location   	(576, 318)
+					    fill_color 	13434879
+					    nlines     	1
+					    max_width  	192
+					    justify    	0
+					    label      	"CWnd")
+					icon_style 	"Icon"
+					line_color 	3342489
+					fill_color 	14671839
+					quidu      	"365C7A74001A"
+					width      	210
+					height     	124
+					annotation 	8
+					autoResize 	TRUE)
+				    (object InheritView "" @765
+					stereotype 	TRUE
+					line_color 	3342489
+					quidu      	"36CCD66301EC"
+					client     	@753
+					supplier   	@764
+					line_style 	0)
+				    (object ClassView "Class" "Logical View::Tima::CWindowSettings" @766
+					ShowCompartmentStereotypes 	TRUE
+					location   	(3376, 928)
+					font       	(object Font
+					    size       	10
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object ItemLabel
+					    Parent_View 	@766
+					    location   	(3168, 878)
+					    fill_color 	13434879
+					    nlines     	1
+					    max_width  	416
+					    justify    	0
+					    label      	"CWindowSettings")
+					icon_style 	"Icon"
+					line_color 	3342489
+					fill_color 	13434879
+					quidu      	"422F06970110"
+					width      	434
+					height     	124
+					annotation 	8
+					autoResize 	TRUE)
+				    (object InheritView "" @767
+					stereotype 	TRUE
+					line_color 	3342489
+					quidu      	"422F12A90278"
+					client     	@766
+					supplier   	@752
+					line_style 	0)
+				    (object ClassView "Class" "Logical View::Tima::CSkinDialog" @768
+					ShowCompartmentStereotypes 	TRUE
+					location   	(1776, 928)
+					font       	(object Font
+					    size       	10
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object ItemLabel
+					    Parent_View 	@768
+					    location   	(1623, 878)
+					    fill_color 	13434879
+					    nlines     	1
+					    max_width  	306
+					    justify    	0
+					    label      	"CSkinDialog")
+					icon_style 	"Icon"
+					line_color 	3342489
+					fill_color 	13434879
+					quidu      	"422ED2DF015E"
+					width      	324
+					height     	124
+					annotation 	8
+					autoResize 	TRUE)
+				    (object InheritView "" @769
+					stereotype 	TRUE
+					line_color 	3342489
+					quidu      	"422F30BB02B6"
+					client     	@768
+					supplier   	@753
+					line_style 	0)
+				    (object RealizeView "" @770
+					stereotype 	TRUE
+					line_color 	3342489
+					quidu      	"422F2FBB0352"
+					client     	@768
+					supplier   	@763
+					line_style 	0)
+				    (object ClassView "Class" "Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Controls::CButton" @771
+					ShowCompartmentStereotypes 	TRUE
+					location   	(176, 656)
+					font       	(object Font
+					    size       	10
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object ItemLabel
+					    Parent_View 	@771
+					    location   	(62, 606)
+					    fill_color 	13434879
+					    nlines     	1
+					    max_width  	228
+					    justify    	0
+					    label      	"CButton")
+					icon_style 	"Icon"
+					line_color 	3342489
+					fill_color 	14671839
+					quidu      	"365C7A7700A9"
+					width      	246
+					height     	124
+					annotation 	8
+					autoResize 	TRUE)
+				    (object InheritView "" @772
+					stereotype 	TRUE
+					line_color 	3342489
+					quidu      	"36CCD6680276"
+					client     	@771
+					supplier   	@764
+					line_style 	0)
+				    (object ClassView "Class" "Logical View::Tima::CSkin" @773
+					ShowCompartmentStereotypes 	TRUE
+					location   	(5424, 928)
+					font       	(object Font
+					    size       	10
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object ItemLabel
+					    Parent_View 	@773
+					    location   	(5328, 878)
+					    fill_color 	13434879
+					    nlines     	1
+					    max_width  	192
+					    justify    	0
+					    label      	"CSkin")
+					icon_style 	"Icon"
+					line_color 	3342489
+					fill_color 	13434879
+					quidu      	"422ED2AF0120"
+					width      	210
+					height     	124
+					annotation 	8
+					autoResize 	TRUE)
+				    (object ClassView "Class" "Logical View::Tima::CSkinManager" @774
+					ShowCompartmentStereotypes 	TRUE
+					location   	(4624, 656)
+					font       	(object Font
+					    size       	10
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object ItemLabel
+					    Parent_View 	@774
+					    location   	(4448, 606)
+					    fill_color 	13434879
+					    nlines     	1
+					    max_width  	352
+					    justify    	0
+					    label      	"CSkinManager")
+					icon_style 	"Icon"
+					line_color 	3342489
+					fill_color 	13434879
+					quidu      	"422ED2D7015E"
+					width      	370
+					height     	124
+					annotation 	8
+					autoResize 	TRUE)
+				    (object UsesView "" @775
+					stereotype 	TRUE
+					line_color 	3342489
+					quidu      	"422F12E600F1"
+					client     	@768
+					supplier   	@774
+					line_style 	0)
+				    (object UsesView "m_skin" @776
+					font       	(object Font
+					    size       	10
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object ItemLabel
+					    Parent_View 	@776
+					    location   	(5063, 805)
+					    anchor_loc 	1
+					    nlines     	1
+					    max_width  	142
+					    justify    	0
+					    label      	"m_skin")
+					stereotype 	TRUE
+					line_color 	3342489
+					quidu      	"422F047801AC"
+					client     	@773
+					supplier   	@774
+					line_style 	0)
+				    (object ClassView "Class" "Logical View::Tima::CPictureSettings" @777
+					ShowCompartmentStereotypes 	TRUE
+					location   	(4288, 928)
+					font       	(object Font
+					    size       	10
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object ItemLabel
+					    Parent_View 	@777
+					    location   	(4081, 878)
+					    fill_color 	13434879
+					    nlines     	1
+					    max_width  	414
+					    justify    	0
+					    label      	"CPictureSettings")
+					icon_style 	"Icon"
+					line_color 	3342489
+					fill_color 	13434879
+					quidu      	"422F1655016E"
+					width      	432
+					height     	124
+					annotation 	8
+					autoResize 	TRUE)
+				    (object ClassView "Class" "Logical View::Tima::CSkinPicture" @778
+					ShowCompartmentStereotypes 	TRUE
+					location   	(800, 928)
+					font       	(object Font
+					    size       	10
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object ItemLabel
+					    Parent_View 	@778
+					    location   	(642, 878)
+					    fill_color 	13434879
+					    nlines     	1
+					    max_width  	316
+					    justify    	0
+					    label      	"CSkinPicture")
+					icon_style 	"Icon"
+					line_color 	3342489
+					fill_color 	13434879
+					quidu      	"422FE1A003E1"
+					width      	334
+					height     	124
+					annotation 	8
+					autoResize 	TRUE)
+				    (object InheritView "" @779
+					stereotype 	TRUE
+					line_color 	3342489
+					quidu      	"422FE250026A"
+					client     	@778
+					supplier   	@764
+					line_style 	0)
+				    (object RealizeView "" @780
+					stereotype 	TRUE
+					line_color 	3342489
+					quidu      	"422FE2A1022C"
+					client     	@778
+					supplier   	@763
+					line_style 	0)
+				    (object InheritView "" @781
+					stereotype 	TRUE
+					line_color 	3342489
+					quidu      	"422F16B20229"
+					client     	@777
+					supplier   	@752
+					line_style 	0)
+				    (object ClassView "Class" "Logical View::Tima::CGenericSettings" @782
+					ShowCompartmentStereotypes 	TRUE
+					location   	(3824, 928)
+					font       	(object Font
+					    size       	10
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object ItemLabel
+					    Parent_View 	@782
+					    location   	(3615, 878)
+					    fill_color 	13434879
+					    nlines     	1
+					    max_width  	418
+					    justify    	0
+					    label      	"CGenericSettings")
+					icon_style 	"Icon"
+					line_color 	3342489
+					fill_color 	13434879
+					quidu      	"422FD25500A6"
+					width      	436
+					height     	124
+					annotation 	8
+					autoResize 	TRUE)
+				    (object InheritView "" @783
+					stereotype 	TRUE
+					line_color 	3342489
+					quidu      	"422FD2E400B5"
+					client     	@782
+					supplier   	@752
+					line_style 	0)
+				    (object ClassView "Class" "Logical View::Tima::CSkinSettings" @784
+					ShowCompartmentStereotypes 	TRUE
+					location   	(5120, 928)
+					font       	(object Font
+					    size       	10
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object ItemLabel
+					    Parent_View 	@784
+					    location   	(4950, 878)
+					    fill_color 	13434879
+					    nlines     	1
+					    max_width  	340
+					    justify    	0
+					    label      	"CSkinSettings")
+					icon_style 	"Icon"
+					line_color 	3342489
+					fill_color 	13434879
+					quidu      	"422F06C10343"
+					width      	358
+					height     	124
+					annotation 	8
+					autoResize 	TRUE)
+				    (object InheritView "" @785
+					stereotype 	TRUE
+					line_color 	3342489
+					quidu      	"422F12A800B2"
+					client     	@784
+					supplier   	@752
+					line_style 	0)
+				    (object ClassView "Class" "Logical View::Tima::CButtonSettings" @786
+					ShowCompartmentStereotypes 	TRUE
+					location   	(4720, 928)
+					font       	(object Font
+					    size       	10
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object ItemLabel
+					    Parent_View 	@786
+					    location   	(4527, 878)
+					    fill_color 	13434879
+					    nlines     	1
+					    max_width  	386
+					    justify    	0
+					    label      	"CButtonSettings")
+					icon_style 	"Icon"
+					line_color 	3342489
+					fill_color 	13434879
+					quidu      	"422F163D01FB"
+					width      	404
+					height     	124
+					annotation 	8
+					autoResize 	TRUE)
+				    (object ClassView "Class" "Logical View::Tima::CSkinButton" @787
+					ShowCompartmentStereotypes 	TRUE
+					location   	(176, 928)
+					font       	(object Font
+					    size       	10
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object ItemLabel
+					    Parent_View 	@787
+					    location   	(20, 878)
+					    fill_color 	13434879
+					    nlines     	1
+					    max_width  	312
+					    justify    	0
+					    label      	"CSkinButton")
+					icon_style 	"Icon"
+					line_color 	3342489
+					fill_color 	13434879
+					quidu      	"422FE1980364"
+					width      	330
+					height     	124
+					annotation 	8
+					autoResize 	TRUE)
+				    (object InheritView "" @788
+					stereotype 	TRUE
+					line_color 	3342489
+					quidu      	"422FE24E027A"
+					client     	@787
+					supplier   	@771
+					line_style 	0)
+				    (object RealizeView "" @789
+					stereotype 	TRUE
+					line_color 	3342489
+					quidu      	"422FE29D02B9"
+					client     	@787
+					supplier   	@763
+					line_style 	0)
+				    (object InheritView "" @790
+					stereotype 	TRUE
+					line_color 	3342489
+					quidu      	"422F16B002C6"
+					client     	@786
+					supplier   	@752
+					line_style 	0))))))
+		logical_presentations 	(list unit_reference_list)))
 	logical_presentations 	(list unit_reference_list
 	    (object ClassDiagram "Main"
 		quid       	"365C7A6603C1"
@@ -43754,7 +45847,7 @@
 		origin_x   	509
 		origin_y   	803
 		items      	(list diagram_item_list
-		    (object CategoryView "Logical View::MFC 6.0" @715
+		    (object CategoryView "Logical View::MFC 6.0" @791
 			location   	(464, 432)
 			font       	(object Font
 			    size       	10
@@ -43766,7 +45859,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@715
+			    Parent_View 	@791
 			    location   	(320, 348)
 			    fill_color 	13434879
 			    nlines     	2
@@ -43779,7 +45872,7 @@
 			quidu      	"365C7A6F006A"
 			width      	300
 			height     	180)
-		    (object NoteView @716
+		    (object NoteView @792
 			location   	(1552, 432)
 			font       	(object Font
 			    size       	10
@@ -43791,7 +45884,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@716
+			    Parent_View 	@792
 			    location   	(1030, 273)
 			    fill_color 	13434879
 			    nlines     	6
@@ -43801,11 +45894,11 @@
 			fill_color 	8585215
 			width      	1069
 			height     	331)
-		    (object AttachView "" @717
+		    (object AttachView "" @793
 			stereotype 	TRUE
 			line_color 	3342489
-			client     	@715
-			supplier   	@716
+			client     	@791
+			supplier   	@792
 			line_style 	0)))))
     root_subsystem 	(object SubSystem "Component View"
 	quid       	"365C7A6603BD"
@@ -43935,6 +46028,7 @@
 |源文件
 |头文件
 |SettingsStorage
+|Skin
 |
 			))
 		    (object Attribute
@@ -51306,7 +53400,11 @@
 		    (object Attribute
 			tool       	"VC++"
 			name       	"CodeFileName"
-			value      	"")))
+			value      	"")
+		    (object Attribute
+			tool       	"VC++"
+			name       	"Pattern applied"
+			value      	"False")))
 	    (object Attribute
 		tool       	"VC++"
 		name       	"default__Module-Spec"
