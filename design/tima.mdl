@@ -1,7 +1,7 @@
 
 (object Petal
-    version    	47
-    _written   	"Rose 8.0.0303.1400"
+    version    	50
+    _written   	"Rose 8.3.0407.2800"
     charSet    	134)
 
 (object Design "Logical View"
@@ -13,6 +13,7 @@
 	    name       	"Scripting"
 	    value      	FALSE))
     quid       	"365C7A6603BA"
+    enforceClosureAutoLoad 	FALSE
     defaults   	(object defaults
 	rightMargin 	0.250000
 	leftMargin 	0.250000
@@ -1230,6 +1231,9 @@
 						quidu      	"36CCD64E0278"
 						client     	@9
 						supplier   	@10
+						vertices   	(list Points
+						    (1597, 880)
+						    (1585, 126))
 						line_style 	0)
 					    (object InheritView "" @12
 						stereotype 	TRUE
@@ -1237,6 +1241,9 @@
 						quidu      	"36CCD64E02B5"
 						client     	@8
 						supplier   	@10
+						vertices   	(list Points
+						    (2192, 229)
+						    (1758, 111))
 						line_style 	0)
 					    (object InheritView "" @13
 						stereotype 	TRUE
@@ -1244,6 +1251,9 @@
 						quidu      	"36CCD64E03AF"
 						client     	@1
 						supplier   	@10
+						vertices   	(list Points
+						    (1026, 416)
+						    (1484, 126))
 						line_style 	0)
 					    (object InheritView "" @14
 						stereotype 	TRUE
@@ -1251,6 +1261,9 @@
 						quidu      	"36CCD64F00D5"
 						client     	@6
 						supplier   	@10
+						vertices   	(list Points
+						    (1339, 608)
+						    (1555, 126))
 						line_style 	0)
 					    (object InheritView "" @15
 						stereotype 	TRUE
@@ -1258,6 +1271,9 @@
 						quidu      	"36CCD64F003F"
 						client     	@3
 						supplier   	@1
+						vertices   	(list Points
+						    (416, 1365)
+						    (476, 1165))
 						line_style 	0)
 					    (object InheritView "" @16
 						stereotype 	TRUE
@@ -1265,6 +1281,9 @@
 						quidu      	"36CCD64F0085"
 						client     	@5
 						supplier   	@1
+						vertices   	(list Points
+						    (936, 1355)
+						    (849, 1165))
 						line_style 	0)
 					    (object InheritView "" @17
 						stereotype 	TRUE
@@ -1272,6 +1291,9 @@
 						quidu      	"36CCD64E030F"
 						client     	@2
 						supplier   	@8
+						vertices   	(list Points
+						    (2217, 560)
+						    (2350, 422))
 						line_style 	0)
 					    (object InheritView "" @18
 						stereotype 	TRUE
@@ -1279,6 +1301,9 @@
 						quidu      	"36CCD64E0337"
 						client     	@4
 						supplier   	@8
+						vertices   	(list Points
+						    (2489, 880)
+						    (2469, 422))
 						line_style 	0)
 					    (object InheritView "" @19
 						stereotype 	TRUE
@@ -1286,6 +1311,9 @@
 						quidu      	"36CCD64E0355"
 						client     	@7
 						supplier   	@8
+						vertices   	(list Points
+						    (2744, 544)
+						    (2602, 422))
 						line_style 	0)))))
 			    (object Class_Category "Windows Sockets"
 				quid       	"365C7A6F01BF"
@@ -1945,6 +1973,9 @@
 						quidu      	"36CCD64F0111"
 						client     	@20
 						supplier   	@22
+						vertices   	(list Points
+						    (416, 411)
+						    (416, 206))
 						line_style 	0)
 					    (object InheritView "" @24
 						stereotype 	TRUE
@@ -1952,6 +1983,9 @@
 						quidu      	"36CCD64F018A"
 						client     	@21
 						supplier   	@20
+						vertices   	(list Points
+						    (416, 1615)
+						    (416, 1348))
 						line_style 	0)))))
 			    (object Class_Category "Maps"
 				quid       	"365C7A6F024B"
@@ -2456,6 +2490,9 @@
 						quidu      	"36CCD64F01D0"
 						client     	@25
 						supplier   	@33
+						vertices   	(list Points
+						    (2109, 231)
+						    (1358, 134))
 						line_style 	0)
 					    (object InheritView "" @35
 						stereotype 	TRUE
@@ -2463,6 +2500,9 @@
 						quidu      	"36CCD64F01E4"
 						client     	@26
 						supplier   	@33
+						vertices   	(list Points
+						    (456, 283)
+						    (1009, 152))
 						line_style 	0)
 					    (object InheritView "" @36
 						stereotype 	TRUE
@@ -2470,6 +2510,9 @@
 						quidu      	"36CCD64F01EE"
 						client     	@32
 						supplier   	@33
+						vertices   	(list Points
+						    (2183, 576)
+						    (1319, 174))
 						line_style 	0)
 					    (object InheritView "" @37
 						stereotype 	TRUE
@@ -2477,6 +2520,9 @@
 						quidu      	"36CCD64F0202"
 						client     	@27
 						supplier   	@33
+						vertices   	(list Points
+						    (409, 576)
+						    (1078, 174))
 						line_style 	0)
 					    (object InheritView "" @38
 						stereotype 	TRUE
@@ -2484,6 +2530,9 @@
 						quidu      	"36CCD64F0216"
 						client     	@31
 						supplier   	@33
+						vertices   	(list Points
+						    (1859, 576)
+						    (1275, 174))
 						line_style 	0)
 					    (object InheritView "" @39
 						stereotype 	TRUE
@@ -2491,6 +2540,9 @@
 						quidu      	"36CCD64F022A"
 						client     	@29
 						supplier   	@33
+						vertices   	(list Points
+						    (1127, 576)
+						    (1176, 174))
 						line_style 	0)
 					    (object InheritView "" @40
 						stereotype 	TRUE
@@ -2498,6 +2550,9 @@
 						quidu      	"36CCD64F0234"
 						client     	@28
 						supplier   	@33
+						vertices   	(list Points
+						    (762, 576)
+						    (1126, 174))
 						line_style 	0)
 					    (object InheritView "" @41
 						stereotype 	TRUE
@@ -2505,6 +2560,9 @@
 						quidu      	"36CCD64F0248"
 						client     	@30
 						supplier   	@33
+						vertices   	(list Points
+						    (1507, 576)
+						    (1227, 174))
 						line_style 	0)))))
 			    (object Class_Category "Synchronization"
 				quid       	"365C7A6F02BA"
@@ -2914,6 +2972,9 @@
 						quidu      	"36CCD64F02CA"
 						client     	@42
 						supplier   	@46
+						vertices   	(list Points
+						    (538, 1234)
+						    (1068, 914))
 						line_style 	0)
 					    (object InheritView "" @48
 						stereotype 	TRUE
@@ -2921,6 +2982,9 @@
 						quidu      	"36CCD64F02E8"
 						client     	@43
 						supplier   	@46
+						vertices   	(list Points
+						    (1134, 1234)
+						    (1282, 938))
 						line_style 	0)
 					    (object InheritView "" @49
 						stereotype 	TRUE
@@ -2928,6 +2992,9 @@
 						quidu      	"36CCD64F02FC"
 						client     	@44
 						supplier   	@46
+						vertices   	(list Points
+						    (1648, 1234)
+						    (1501, 938))
 						line_style 	0)
 					    (object InheritView "" @50
 						stereotype 	TRUE
@@ -2935,6 +3002,9 @@
 						quidu      	"36CCD64F031A"
 						client     	@45
 						supplier   	@46
+						vertices   	(list Points
+						    (2167, 1232)
+						    (1715, 933))
 						line_style 	0)
 					    (object ClassView "Class" "Logical View::MFC 6.0::CObject Classes::CObject" @51
 						ShowCompartmentStereotypes 	TRUE
@@ -2974,6 +3044,9 @@
 						quidu      	"36CCD64F027A"
 						client     	@46
 						supplier   	@51
+						vertices   	(list Points
+						    (1392, 501)
+						    (1392, 206))
 						line_style 	0)))))
 			    (object Class_Category "DAO Database Support"
 				quid       	"365C7A6F0327"
@@ -4066,6 +4139,9 @@
 						quidu      	"36CCD64F0342"
 						client     	@53
 						supplier   	@58
+						vertices   	(list Points
+						    (767, 417)
+						    (1078, 302))
 						line_style 	0)
 					    (object InheritView "" @60
 						stereotype 	TRUE
@@ -4073,6 +4149,9 @@
 						quidu      	"36CCD64F037E"
 						client     	@54
 						supplier   	@58
+						vertices   	(list Points
+						    (799, 847)
+						    (1201, 302))
 						line_style 	0)
 					    (object InheritView "" @61
 						stereotype 	TRUE
@@ -4080,6 +4159,9 @@
 						quidu      	"36CCD64F03E2"
 						client     	@55
 						supplier   	@58
+						vertices   	(list Points
+						    (1261, 845)
+						    (1249, 302))
 						line_style 	0)
 					    (object InheritView "" @62
 						stereotype 	TRUE
@@ -4087,6 +4169,9 @@
 						quidu      	"36CCD6500091"
 						client     	@56
 						supplier   	@58
+						vertices   	(list Points
+						    (1784, 844)
+						    (1303, 302))
 						line_style 	0)
 					    (object InheritView "" @63
 						stereotype 	TRUE
@@ -4094,6 +4179,9 @@
 						quidu      	"36CCD65000C3"
 						client     	@57
 						supplier   	@58
+						vertices   	(list Points
+						    (1760, 414)
+						    (1422, 298))
 						line_style 	0)))))
 			    (object Class_Category "Menus"
 				quid       	"365C7A70006C"
@@ -4274,6 +4362,9 @@
 						quidu      	"36CCD65000FF"
 						client     	@64
 						supplier   	@65
+						vertices   	(list Points
+						    (400, 606)
+						    (400, 334))
 						line_style 	0)))))
 			    (object Class_Category "ODBC Database Support"
 				quid       	"365C7A70008C"
@@ -4943,6 +5034,9 @@
 						quidu      	"36CCD6500131"
 						client     	@67
 						supplier   	@70
+						vertices   	(list Points
+						    (727, 550)
+						    (1154, 206))
 						line_style 	0)
 					    (object InheritView "" @72
 						stereotype 	TRUE
@@ -4950,6 +5044,9 @@
 						quidu      	"36CCD650018B"
 						client     	@69
 						supplier   	@70
+						vertices   	(list Points
+						    (1668, 682)
+						    (1282, 206))
 						line_style 	0)
 					    (object InheritView "" @73
 						stereotype 	TRUE
@@ -4957,6 +5054,9 @@
 						quidu      	"36CCD65001F9"
 						client     	@68
 						supplier   	@70
+						vertices   	(list Points
+						    (1197, 496)
+						    (1226, 206))
 						line_style 	0)))))
 			    (object Class_Category "Arrays"
 				quid       	"365C7A70012C"
@@ -5466,6 +5566,9 @@
 						quidu      	"36CCD650020D"
 						client     	@81
 						supplier   	@82
+						vertices   	(list Points
+						    (1893, 784)
+						    (1256, 334))
 						line_style 	0)
 					    (object InheritView "" @84
 						stereotype 	TRUE
@@ -5473,6 +5576,9 @@
 						quidu      	"36CCD6500221"
 						client     	@74
 						supplier   	@82
+						vertices   	(list Points
+						    (2003, 513)
+						    (1342, 322))
 						line_style 	0)
 					    (object InheritView "" @85
 						stereotype 	TRUE
@@ -5480,6 +5586,9 @@
 						quidu      	"36CCD6500235"
 						client     	@75
 						supplier   	@82
+						vertices   	(list Points
+						    (358, 531)
+						    (993, 327))
 						line_style 	0)
 					    (object InheritView "" @86
 						stereotype 	TRUE
@@ -5487,6 +5596,9 @@
 						quidu      	"36CCD6500249"
 						client     	@76
 						supplier   	@82
+						vertices   	(list Points
+						    (455, 784)
+						    (1080, 334))
 						line_style 	0)
 					    (object InheritView "" @87
 						stereotype 	TRUE
@@ -5494,6 +5606,9 @@
 						quidu      	"36CCD650025D"
 						client     	@77
 						supplier   	@82
+						vertices   	(list Points
+						    (769, 784)
+						    (1119, 334))
 						line_style 	0)
 					    (object InheritView "" @88
 						stereotype 	TRUE
@@ -5501,6 +5616,9 @@
 						quidu      	"36CCD6500267"
 						client     	@78
 						supplier   	@82
+						vertices   	(list Points
+						    (1039, 784)
+						    (1152, 334))
 						line_style 	0)
 					    (object InheritView "" @89
 						stereotype 	TRUE
@@ -5508,6 +5626,9 @@
 						quidu      	"36CCD650027B"
 						client     	@79
 						supplier   	@82
+						vertices   	(list Points
+						    (1323, 784)
+						    (1186, 334))
 						line_style 	0)
 					    (object InheritView "" @90
 						stereotype 	TRUE
@@ -5515,6 +5636,9 @@
 						quidu      	"36CCD650028F"
 						client     	@80
 						supplier   	@82
+						vertices   	(list Points
+						    (1608, 784)
+						    (1221, 334))
 						line_style 	0)))))
 			    (object Class_Category "Lists"
 				quid       	"365C7A7001B6"
@@ -5797,6 +5921,9 @@
 						quidu      	"36CCD65002A3"
 						client     	@91
 						supplier   	@95
+						vertices   	(list Points
+						    (1392, 536)
+						    (907, 206))
 						line_style 	0)
 					    (object InheritView "" @97
 						stereotype 	TRUE
@@ -5804,6 +5931,9 @@
 						quidu      	"36CCD65002AD"
 						client     	@93
 						supplier   	@95
+						vertices   	(list Points
+						    (525, 544)
+						    (770, 206))
 						line_style 	0)
 					    (object InheritView "" @98
 						stereotype 	TRUE
@@ -5811,6 +5941,9 @@
 						quidu      	"36CCD65002D5"
 						client     	@92
 						supplier   	@95
+						vertices   	(list Points
+						    (221, 544)
+						    (722, 206))
 						line_style 	0)
 					    (object InheritView "" @99
 						stereotype 	TRUE
@@ -5818,6 +5951,9 @@
 						quidu      	"36CCD65002E9"
 						client     	@94
 						supplier   	@95
+						vertices   	(list Points
+						    (857, 544)
+						    (822, 206))
 						line_style 	0)))))
 			    (object Class_Category "Graphical Drawing Objects"
 				quid       	"365C7A7001FD"
@@ -6338,6 +6474,9 @@
 						quidu      	"36CCD6500362"
 						client     	@100
 						supplier   	@103
+						vertices   	(list Points
+						    (651, 825)
+						    (1031, 607))
 						line_style 	0)
 					    (object InheritView "" @108
 						stereotype 	TRUE
@@ -6345,6 +6484,9 @@
 						quidu      	"36CCD6500380"
 						client     	@101
 						supplier   	@103
+						vertices   	(list Points
+						    (928, 1113)
+						    (1202, 607))
 						line_style 	0)
 					    (object InheritView "" @109
 						stereotype 	TRUE
@@ -6352,6 +6494,9 @@
 						quidu      	"36CCD650039E"
 						client     	@102
 						supplier   	@103
+						vertices   	(list Points
+						    (1428, 1113)
+						    (1312, 607))
 						line_style 	0)
 					    (object ClassView "Class" "Logical View::MFC 6.0::CObject Classes::CObject" @110
 						ShowCompartmentStereotypes 	TRUE
@@ -6391,6 +6536,9 @@
 						quidu      	"36CCD6500326"
 						client     	@103
 						supplier   	@110
+						vertices   	(list Points
+						    (1280, 320)
+						    (1280, 158))
 						line_style 	0)
 					    (object InheritView "" @112
 						stereotype 	TRUE
@@ -6398,6 +6546,9 @@
 						quidu      	"36CCD65003BC"
 						client     	@104
 						supplier   	@103
+						vertices   	(list Points
+						    (646, 613)
+						    (956, 540))
 						line_style 	0)
 					    (object InheritView "" @113
 						stereotype 	TRUE
@@ -6405,6 +6556,9 @@
 						quidu      	"36CCD65003D0"
 						client     	@105
 						supplier   	@103
+						vertices   	(list Points
+						    (1929, 1113)
+						    (1423, 607))
 						line_style 	0)
 					    (object InheritView "" @114
 						stereotype 	TRUE
@@ -6412,6 +6566,9 @@
 						quidu      	"36CCD6510006"
 						client     	@106
 						supplier   	@103
+						vertices   	(list Points
+						    (1885, 754)
+						    (1578, 607))
 						line_style 	0)))))
 			    (object Class_Category "Control Support"
 				quid       	"365C7A7002B1"
@@ -6629,6 +6786,9 @@
 						quidu      	"36CCD651001A"
 						client     	@115
 						supplier   	@117
+						vertices   	(list Points
+						    (360, 754)
+						    (617, 334))
 						line_style 	0)
 					    (object InheritView "" @119
 						stereotype 	TRUE
@@ -6636,6 +6796,9 @@
 						quidu      	"36CCD6510038"
 						client     	@116
 						supplier   	@117
+						vertices   	(list Points
+						    (939, 752)
+						    (692, 334))
 						line_style 	0)))))
 			    (object Class_Category "Graphical Drawing"
 				quid       	"365C7A7002E5"
@@ -7668,6 +7831,9 @@
 						quidu      	"36CCD65101A0"
 						client     	@120
 						supplier   	@121
+						vertices   	(list Points
+						    (626, 2080)
+						    (953, 1606))
 						line_style 	0)
 					    (object ClassView "Class" "Logical View::MFC 6.0::CObject Classes::CObject" @126
 						ShowCompartmentStereotypes 	TRUE
@@ -7707,6 +7873,9 @@
 						quidu      	"36CCD6510100"
 						client     	@121
 						supplier   	@126
+						vertices   	(list Points
+						    (1280, 367)
+						    (1280, 174))
 						line_style 	0)
 					    (object InheritView "" @128
 						stereotype 	TRUE
@@ -7714,6 +7883,9 @@
 						quidu      	"36CCD651006A"
 						client     	@122
 						supplier   	@121
+						vertices   	(list Points
+						    (689, 1238)
+						    (953, 1192))
 						line_style 	0)
 					    (object InheritView "" @129
 						stereotype 	TRUE
@@ -7721,6 +7893,9 @@
 						quidu      	"36CCD65101BE"
 						client     	@124
 						supplier   	@121
+						vertices   	(list Points
+						    (1932, 2080)
+						    (1606, 1607))
 						line_style 	0)
 					    (object InheritView "" @130
 						stereotype 	TRUE
@@ -7728,6 +7903,9 @@
 						quidu      	"36CCD65101DD"
 						client     	@123
 						supplier   	@121
+						vertices   	(list Points
+						    (1280, 2080)
+						    (1280, 1904))
 						line_style 	0)))))
 			    (object Class_Category "File Services"
 				quid       	"365C7A71001D"
@@ -10406,6 +10584,9 @@
 						quidu      	"36CCD65202B0"
 						client     	@131
 						supplier   	@139
+						vertices   	(list Points
+						    (425, 2837)
+						    (427, 2702))
 						line_style 	0)
 					    (object InheritView "" @146
 						stereotype 	TRUE
@@ -10413,6 +10594,9 @@
 						quidu      	"36CCD652036F"
 						client     	@133
 						supplier   	@131
+						vertices   	(list Points
+						    (416, 4236)
+						    (416, 4074))
 						line_style 	0)
 					    (object InheritView "" @147
 						stereotype 	TRUE
@@ -10420,6 +10604,9 @@
 						quidu      	"36CCD65203B5"
 						client     	@132
 						supplier   	@133
+						vertices   	(list Points
+						    (416, 4878)
+						    (416, 4723))
 						line_style 	0)
 					    (object ClassView "Class" "Logical View::MFC 6.0::CObject Classes::CObject" @148
 						ShowCompartmentStereotypes 	TRUE
@@ -10459,6 +10646,9 @@
 						quidu      	"36CCD65102E1"
 						client     	@134
 						supplier   	@148
+						vertices   	(list Points
+						    (1649, 383)
+						    (1962, 190))
 						line_style 	0)
 					    (object InheritView "" @150
 						stereotype 	TRUE
@@ -10466,6 +10656,9 @@
 						quidu      	"36CCD6520039"
 						client     	@138
 						supplier   	@148
+						vertices   	(list Points
+						    (2475, 414)
+						    (2153, 190))
 						line_style 	0)
 					    (object InheritView "" @151
 						stereotype 	TRUE
@@ -10473,6 +10666,9 @@
 						quidu      	"36CCD652012A"
 						client     	@140
 						supplier   	@134
+						vertices   	(list Points
+						    (806, 1078)
+						    (974, 916))
 						line_style 	0)
 					    (object InheritView "" @152
 						stereotype 	TRUE
@@ -10480,6 +10676,9 @@
 						quidu      	"36CCD65203E7"
 						client     	@143
 						supplier   	@134
+						vertices   	(list Points
+						    (1302, 1371)
+						    (1304, 1185))
 						line_style 	0)
 					    (object InheritView "" @153
 						stereotype 	TRUE
@@ -10487,6 +10686,9 @@
 						quidu      	"36CCD653008B"
 						client     	@144
 						supplier   	@134
+						vertices   	(list Points
+						    (1755, 1127)
+						    (1649, 999))
 						line_style 	0)
 					    (object InheritView "" @154
 						stereotype 	TRUE
@@ -10494,6 +10696,9 @@
 						quidu      	"36CCD6530185"
 						client     	@135
 						supplier   	@137
+						vertices   	(list Points
+						    (1813, 3166)
+						    (1895, 2978))
 						line_style 	0)
 					    (object InheritView "" @155
 						stereotype 	TRUE
@@ -10501,6 +10706,9 @@
 						quidu      	"36CCD65301B7"
 						client     	@136
 						supplier   	@137
+						vertices   	(list Points
+						    (2358, 3166)
+						    (2272, 2978))
 						line_style 	0)
 					    (object InheritView "" @156
 						stereotype 	TRUE
@@ -10508,6 +10716,9 @@
 						quidu      	"36CCD653012B"
 						client     	@137
 						supplier   	@144
+						vertices   	(list Points
+						    (2080, 2141)
+						    (2080, 1963))
 						line_style 	0)
 					    (object InheritView "" @157
 						stereotype 	TRUE
@@ -10515,6 +10726,9 @@
 						quidu      	"36CCD65200A8"
 						client     	@142
 						supplier   	@138
+						vertices   	(list Points
+						    (2800, 1383)
+						    (2800, 1208))
 						line_style 	0)
 					    (object InheritView "" @158
 						stereotype 	TRUE
@@ -10522,6 +10736,9 @@
 						quidu      	"36CCD65201FC"
 						client     	@139
 						supplier   	@140
+						vertices   	(list Points
+						    (432, 2065)
+						    (432, 1908))
 						line_style 	0)))))
 			    (object Class_Category "Exceptions"
 				quid       	"365C7A710390"
@@ -11494,6 +11711,9 @@
 						quidu      	"36CCD65301E9"
 						client     	@159
 						supplier   	@162
+						vertices   	(list Points
+						    (770, 729)
+						    (1316, 642))
 						line_style 	0)
 					    (object InheritView "" @172
 						stereotype 	TRUE
@@ -11501,6 +11721,9 @@
 						quidu      	"36CCD65302B2"
 						client     	@160
 						supplier   	@162
+						vertices   	(list Points
+						    (1332, 1545)
+						    (1586, 735))
 						line_style 	0)
 					    (object InheritView "" @173
 						stereotype 	TRUE
@@ -11508,6 +11731,9 @@
 						quidu      	"36CCD65302E4"
 						client     	@161
 						supplier   	@162
+						vertices   	(list Points
+						    (737, 1008)
+						    (1324, 735))
 						line_style 	0)
 					    (object ClassView "Class" "Logical View::MFC 6.0::CObject Classes::CObject" @174
 						ShowCompartmentStereotypes 	TRUE
@@ -11545,6 +11771,9 @@
 						quidu      	"36CCD653024E"
 						client     	@162
 						supplier   	@174
+						vertices   	(list Points
+						    (1632, 448)
+						    (1632, 254))
 						line_style 	0)
 					    (object InheritView "" @176
 						stereotype 	TRUE
@@ -11552,6 +11781,9 @@
 						quidu      	"36CCD6530302"
 						client     	@163
 						supplier   	@162
+						vertices   	(list Points
+						    (701, 1360)
+						    (1456, 735))
 						line_style 	0)
 					    (object InheritView "" @177
 						stereotype 	TRUE
@@ -11559,6 +11791,9 @@
 						quidu      	"36CCD6530320"
 						client     	@164
 						supplier   	@162
+						vertices   	(list Points
+						    (709, 1865)
+						    (1527, 735))
 						line_style 	0)
 					    (object InheritView "" @178
 						stereotype 	TRUE
@@ -11566,6 +11801,9 @@
 						quidu      	"36CCD653033E"
 						client     	@165
 						supplier   	@162
+						vertices   	(list Points
+						    (1632, 1890)
+						    (1632, 735))
 						line_style 	0)
 					    (object InheritView "" @179
 						stereotype 	TRUE
@@ -11573,6 +11811,9 @@
 						quidu      	"36CCD653035C"
 						client     	@166
 						supplier   	@162
+						vertices   	(list Points
+						    (2605, 1378)
+						    (1809, 735))
 						line_style 	0)
 					    (object InheritView "" @180
 						stereotype 	TRUE
@@ -11580,6 +11821,9 @@
 						quidu      	"36CCD6530370"
 						client     	@170
 						supplier   	@162
+						vertices   	(list Points
+						    (1937, 1554)
+						    (1676, 735))
 						line_style 	0)
 					    (object InheritView "" @181
 						stereotype 	TRUE
@@ -11587,6 +11831,9 @@
 						quidu      	"36CCD653038E"
 						client     	@169
 						supplier   	@162
+						vertices   	(list Points
+						    (2541, 994)
+						    (1947, 731))
 						line_style 	0)
 					    (object InheritView "" @182
 						stereotype 	TRUE
@@ -11594,6 +11841,9 @@
 						quidu      	"36CCD65303AC"
 						client     	@168
 						supplier   	@162
+						vertices   	(list Points
+						    (2420, 717)
+						    (1947, 641))
 						line_style 	0)
 					    (object InheritView "" @183
 						stereotype 	TRUE
@@ -11601,6 +11851,9 @@
 						quidu      	"36CCD65303CA"
 						client     	@167
 						supplier   	@162
+						vertices   	(list Points
+						    (2509, 1849)
+						    (1732, 735))
 						line_style 	0)))))
 			    (object Class_Category "Application Architecture"
 				quid       	"365C7A720109"
@@ -19624,6 +19877,9 @@
 								quidu      	"36CCD66100DB"
 								client     	@184
 								supplier   	@191
+								vertices   	(list Points
+								    (1324, 379)
+								    (1207, 178))
 								line_style 	0)
 							    (object InheritView "" @193
 								stereotype 	TRUE
@@ -19631,6 +19887,9 @@
 								quidu      	"36CCD66101FE"
 								client     	@185
 								supplier   	@184
+								vertices   	(list Points
+								    (846, 2031)
+								    (1324, 1484))
 								line_style 	0)
 							    (object InheritView "" @194
 								stereotype 	TRUE
@@ -19638,6 +19897,9 @@
 								quidu      	"36CCD661026C"
 								client     	@186
 								supplier   	@184
+								vertices   	(list Points
+								    (2054, 2036)
+								    (1959, 1758))
 								line_style 	0)
 							    (object InheritView "" @195
 								stereotype 	TRUE
@@ -19645,6 +19907,9 @@
 								quidu      	"36CCD66102DA"
 								client     	@187
 								supplier   	@184
+								vertices   	(list Points
+								    (2813, 2041)
+								    (2099, 1392))
 								line_style 	0)
 							    (object InheritView "" @196
 								stereotype 	TRUE
@@ -19652,6 +19917,9 @@
 								quidu      	"36CCD661033E"
 								client     	@189
 								supplier   	@184
+								vertices   	(list Points
+								    (1464, 2029)
+								    (1531, 1758))
 								line_style 	0)
 							    (object InheritView "" @197
 								stereotype 	TRUE
@@ -19659,6 +19927,9 @@
 								quidu      	"36CCD66200AB"
 								client     	@188
 								supplier   	@189
+								vertices   	(list Points
+								    (1348, 3004)
+								    (1351, 2866))
 								line_style 	0)
 							    (object InheritView "" @198
 								stereotype 	TRUE
@@ -19666,6 +19937,9 @@
 								quidu      	"36CCD66103DE"
 								client     	@190
 								supplier   	@191
+								vertices   	(list Points
+								    (858, 555)
+								    (1121, 178))
 								line_style 	0)))))
 					    (object Class_Category "Control Bars"
 						quid       	"365C7A7402E8"
@@ -20668,6 +20942,9 @@
 								quidu      	"36CCD662015F"
 								client     	@199
 								supplier   	@205
+								vertices   	(list Points
+								    (1472, 393)
+								    (1472, 194))
 								line_style 	0)
 							    (object InheritView "" @207
 								stereotype 	TRUE
@@ -20675,6 +20952,9 @@
 								quidu      	"36CCD6620231"
 								client     	@200
 								supplier   	@199
+								vertices   	(list Points
+								    (680, 1233)
+								    (1119, 1054))
 								line_style 	0)
 							    (object InheritView "" @208
 								stereotype 	TRUE
@@ -20682,6 +20962,9 @@
 								quidu      	"36CCD662026D"
 								client     	@201
 								supplier   	@199
+								vertices   	(list Points
+								    (558, 1673)
+								    (1119, 1205))
 								line_style 	0)
 							    (object InheritView "" @209
 								stereotype 	TRUE
@@ -20689,6 +20972,9 @@
 								quidu      	"36CCD66202A9"
 								client     	@203
 								supplier   	@199
+								vertices   	(list Points
+								    (2267, 1683)
+								    (1824, 1254))
 								line_style 	0)
 							    (object InheritView "" @210
 								stereotype 	TRUE
@@ -20696,6 +20982,9 @@
 								quidu      	"36CCD6620317"
 								client     	@204
 								supplier   	@199
+								vertices   	(list Points
+								    (1736, 1674)
+								    (1652, 1430))
 								line_style 	0)
 							    (object InheritView "" @211
 								stereotype 	TRUE
@@ -20703,6 +20992,9 @@
 								quidu      	"36CCD6620368"
 								client     	@202
 								supplier   	@199
+								vertices   	(list Points
+								    (1177, 1678)
+								    (1272, 1430))
 								line_style 	0)))))
 					    (object Class_Category "Property Sheets"
 						quid       	"365C7A750047"
@@ -21037,6 +21329,9 @@
 								quidu      	"36CCD66203CC"
 								client     	@212
 								supplier   	@214
+								vertices   	(list Points
+								    (480, 449)
+								    (480, 274))
 								line_style 	0)
 							    (object InheritView "" @216
 								stereotype 	TRUE
@@ -21044,6 +21339,9 @@
 								quidu      	"36CCD6630048"
 								client     	@213
 								supplier   	@212
+								vertices   	(list Points
+								    (480, 1255)
+								    (480, 1086))
 								line_style 	0)))))
 					    (object Class_Category "Dialog Boxes"
 						quid       	"365C7A7500AF"
@@ -23216,6 +23514,9 @@
 								quidu      	"36CCD6640220"
 								client     	@217
 								supplier   	@218
+								vertices   	(list Points
+								    (2529, 1872)
+								    (2155, 1382))
 								line_style 	0)
 							    (object InheritView "" @240
 								stereotype 	TRUE
@@ -23223,6 +23524,9 @@
 								quidu      	"36CCD66400DF"
 								client     	@218
 								supplier   	@219
+								vertices   	(list Points
+								    (2064, 1145)
+								    (2064, 1033))
 								line_style 	0)
 							    (object InheritView "" @241
 								stereotype 	TRUE
@@ -23230,6 +23534,9 @@
 								quidu      	"36CCD6640266"
 								client     	@220
 								supplier   	@218
+								vertices   	(list Points
+								    (944, 1420)
+								    (1818, 1297))
 								line_style 	0)
 							    (object InheritView "" @242
 								stereotype 	TRUE
@@ -23237,6 +23544,9 @@
 								quidu      	"36CCD66402B6"
 								client     	@221
 								supplier   	@218
+								vertices   	(list Points
+								    (1902, 1881)
+								    (2032, 1382))
 								line_style 	0)
 							    (object InheritView "" @243
 								stereotype 	TRUE
@@ -23244,6 +23554,9 @@
 								quidu      	"36CCD66402FC"
 								client     	@222
 								supplier   	@218
+								vertices   	(list Points
+								    (895, 1881)
+								    (1837, 1382))
 								line_style 	0)
 							    (object InheritView "" @244
 								stereotype 	TRUE
@@ -23251,6 +23564,9 @@
 								quidu      	"36CCD66403C5"
 								client     	@227
 								supplier   	@218
+								vertices   	(list Points
+								    (2281, 2194)
+								    (2091, 1382))
 								line_style 	0)
 							    (object InheritView "" @245
 								stereotype 	TRUE
@@ -23258,6 +23574,9 @@
 								quidu      	"36CCD66502D6"
 								client     	@234
 								supplier   	@218
+								vertices   	(list Points
+								    (1421, 1879)
+								    (1939, 1382))
 								line_style 	0)
 							    (object InheritView "" @246
 								stereotype 	TRUE
@@ -23265,6 +23584,9 @@
 								quidu      	"36CCD6650326"
 								client     	@235
 								supplier   	@218
+								vertices   	(list Points
+								    (3022, 1872)
+								    (2251, 1382))
 								line_style 	0)
 							    (object InheritView "" @247
 								stereotype 	TRUE
@@ -23272,6 +23594,9 @@
 								quidu      	"36CCD66301EC"
 								client     	@219
 								supplier   	@238
+								vertices   	(list Points
+								    (2064, 246)
+								    (2064, 130))
 								line_style 	0)
 							    (object InheritView "" @248
 								stereotype 	TRUE
@@ -23279,6 +23604,9 @@
 								quidu      	"36CCD6650362"
 								client     	@232
 								supplier   	@219
+								vertices   	(list Points
+								    (1484, 791)
+								    (1711, 731))
 								line_style 	0)
 							    (object InheritView "" @249
 								stereotype 	TRUE
@@ -23286,6 +23614,9 @@
 								quidu      	"36CCD66503C6"
 								client     	@236
 								supplier   	@219
+								vertices   	(list Points
+								    (2799, 780)
+								    (2416, 707))
 								line_style 	0)
 							    (object InheritView "" @250
 								stereotype 	TRUE
@@ -23293,6 +23624,9 @@
 								quidu      	"36CCD665009B"
 								client     	@223
 								supplier   	@227
+								vertices   	(list Points
+								    (1765, 2585)
+								    (2134, 2381))
 								line_style 	0)
 							    (object InheritView "" @251
 								stereotype 	TRUE
@@ -23300,6 +23634,9 @@
 								quidu      	"36CCD66500D7"
 								client     	@224
 								supplier   	@227
+								vertices   	(list Points
+								    (1771, 2992)
+								    (2232, 2381))
 								line_style 	0)
 							    (object InheritView "" @252
 								stereotype 	TRUE
@@ -23307,6 +23644,9 @@
 								quidu      	"36CCD6650113"
 								client     	@225
 								supplier   	@227
+								vertices   	(list Points
+								    (2981, 2990)
+								    (2393, 2381))
 								line_style 	0)
 							    (object InheritView "" @253
 								stereotype 	TRUE
@@ -23314,6 +23654,9 @@
 								quidu      	"36CCD665014F"
 								client     	@226
 								supplier   	@227
+								vertices   	(list Points
+								    (2383, 2992)
+								    (2314, 2381))
 								line_style 	0)
 							    (object InheritView "" @254
 								stereotype 	TRUE
@@ -23321,6 +23664,9 @@
 								quidu      	"36CCD6650195"
 								client     	@228
 								supplier   	@227
+								vertices   	(list Points
+								    (1200, 2585)
+								    (2032, 2360))
 								line_style 	0)
 							    (object InheritView "" @255
 								stereotype 	TRUE
@@ -23328,6 +23674,9 @@
 								quidu      	"36CCD66501E5"
 								client     	@229
 								supplier   	@227
+								vertices   	(list Points
+								    (3612, 2326)
+								    (2575, 2295))
 								line_style 	0)
 							    (object InheritView "" @256
 								stereotype 	TRUE
@@ -23335,6 +23684,9 @@
 								quidu      	"36CCD6650253"
 								client     	@230
 								supplier   	@227
+								vertices   	(list Points
+								    (3609, 2607)
+								    (2575, 2354))
 								line_style 	0)
 							    (object InheritView "" @257
 								stereotype 	TRUE
@@ -23342,6 +23694,9 @@
 								quidu      	"36CCD665029A"
 								client     	@231
 								supplier   	@227
+								vertices   	(list Points
+								    (2924, 2571)
+								    (2508, 2381))
 								line_style 	0)
 							    (object InheritView "" @258
 								stereotype 	TRUE
@@ -23349,6 +23704,9 @@
 								quidu      	"36CCD6650221"
 								client     	@233
 								supplier   	@228
+								vertices   	(list Points
+								    (880, 2992)
+								    (880, 2815))
 								line_style 	0)
 							    (object InheritView "" @259
 								stereotype 	TRUE
@@ -23356,6 +23714,9 @@
 								quidu      	"36CCD6660042"
 								client     	@237
 								supplier   	@236
+								vertices   	(list Points
+								    (3323, 1401)
+								    (3288, 1291))
 								line_style 	0)))))
 					    (object Class_Category "Views"
 						quid       	"365C7A7600BD"
@@ -26546,6 +26907,9 @@
 								quidu      	"36CCD66603D1"
 								client     	@260
 								supplier   	@271
+								vertices   	(list Points
+								    (1624, 1895)
+								    (1682, 1760))
 								line_style 	0)
 							    (object InheritView "" @274
 								stereotype 	TRUE
@@ -26553,6 +26917,9 @@
 								quidu      	"36CCD667009E"
 								client     	@262
 								supplier   	@260
+								vertices   	(list Points
+								    (1663, 2427)
+								    (1603, 2232))
 								line_style 	0)
 							    (object InheritView "" @275
 								stereotype 	TRUE
@@ -26560,6 +26927,9 @@
 								quidu      	"36CCD667010C"
 								client     	@265
 								supplier   	@260
+								vertices   	(list Points
+								    (670, 2428)
+								    (1228, 2197))
 								line_style 	0)
 							    (object InheritView "" @276
 								stereotype 	TRUE
@@ -26567,6 +26937,9 @@
 								quidu      	"36CCD6670166"
 								client     	@268
 								supplier   	@260
+								vertices   	(list Points
+								    (1368, 2430)
+								    (1467, 2232))
 								line_style 	0)
 							    (object InheritView "" @277
 								stereotype 	TRUE
@@ -26574,6 +26947,9 @@
 								quidu      	"36CCD66701E8"
 								client     	@270
 								supplier   	@260
+								vertices   	(list Points
+								    (670, 2216)
+								    (1228, 2119))
 								line_style 	0)
 							    (object InheritView "" @278
 								stereotype 	TRUE
@@ -26581,6 +26957,9 @@
 								quidu      	"36CCD66800B3"
 								client     	@261
 								supplier   	@263
+								vertices   	(list Points
+								    (2030, 3557)
+								    (2276, 3317))
 								line_style 	0)
 							    (object InheritView "" @279
 								stereotype 	TRUE
@@ -26588,6 +26967,9 @@
 								quidu      	"36CCD66703DD"
 								client     	@263
 								supplier   	@269
+								vertices   	(list Points
+								    (2576, 2730)
+								    (2576, 2556))
 								line_style 	0)
 							    (object InheritView "" @280
 								stereotype 	TRUE
@@ -26595,6 +26977,9 @@
 								quidu      	"36CCD66800F9"
 								client     	@267
 								supplier   	@263
+								vertices   	(list Points
+								    (3126, 3264)
+								    (2928, 3177))
 								line_style 	0)
 							    (object InheritView "" @281
 								stereotype 	TRUE
@@ -26602,6 +26987,9 @@
 								quidu      	"36CCD668015D"
 								client     	@264
 								supplier   	@263
+								vertices   	(list Points
+								    (2576, 3553)
+								    (2576, 3317))
 								line_style 	0)
 							    (object InheritView "" @282
 								stereotype 	TRUE
@@ -26609,6 +26997,9 @@
 								quidu      	"36CCD66801FE"
 								client     	@266
 								supplier   	@263
+								vertices   	(list Points
+								    (3242, 3840)
+								    (2814, 3317))
 								line_style 	0)
 							    (object InheritView "" @283
 								stereotype 	TRUE
@@ -26616,6 +27007,9 @@
 								quidu      	"36CCD667029C"
 								client     	@269
 								supplier   	@271
+								vertices   	(list Points
+								    (2459, 2019)
+								    (2347, 1760))
 								line_style 	0)
 							    (object InheritView "" @284
 								stereotype 	TRUE
@@ -26623,6 +27017,9 @@
 								quidu      	"36CCD66601AB"
 								client     	@271
 								supplier   	@272
+								vertices   	(list Points
+								    (2016, 223)
+								    (2016, 130))
 								line_style 	0)))))
 					    (object Class_Category "Controls"
 						quid       	"365C7A770080"
@@ -30627,6 +31024,9 @@
 								quidu      	"36CCD6680230"
 								client     	@285
 								supplier   	@301
+								vertices   	(list Points
+								    (736, 463)
+								    (4177, 87))
 								line_style 	0)
 							    (object InheritView "" @315
 								stereotype 	TRUE
@@ -30634,6 +31034,9 @@
 								quidu      	"36CCD66802BC"
 								client     	@286
 								supplier   	@287
+								vertices   	(list Points
+								    (2681, 1520)
+								    (2700, 1230))
 								line_style 	0)
 							    (object InheritView "" @316
 								stereotype 	TRUE
@@ -30641,6 +31044,9 @@
 								quidu      	"36CCD6680276"
 								client     	@287
 								supplier   	@301
+								vertices   	(list Points
+								    (2798, 1105)
+								    (4297, 130))
 								line_style 	0)
 							    (object InheritView "" @317
 								stereotype 	TRUE
@@ -30648,6 +31054,9 @@
 								quidu      	"36CCD66900D3"
 								client     	@288
 								supplier   	@295
+								vertices   	(list Points
+								    (5033, 1534)
+								    (5087, 1356))
 								line_style 	0)
 							    (object InheritView "" @318
 								stereotype 	TRUE
@@ -30655,6 +31064,9 @@
 								quidu      	"36CCD6680320"
 								client     	@289
 								supplier   	@301
+								vertices   	(list Points
+								    (3585, 981)
+								    (4340, 130))
 								line_style 	0)
 							    (object InheritView "" @319
 								stereotype 	TRUE
@@ -30662,6 +31074,9 @@
 								quidu      	"36CCD66A02B5"
 								client     	@290
 								supplier   	@289
+								vertices   	(list Points
+								    (3392, 1586)
+								    (3392, 1418))
 								line_style 	0)
 							    (object InheritView "" @320
 								stereotype 	TRUE
@@ -30669,6 +31084,9 @@
 								quidu      	"36CCD66A0283"
 								client     	@291
 								supplier   	@301
+								vertices   	(list Points
+								    (939, 976)
+								    (4177, 122))
 								line_style 	0)
 							    (object InheritView "" @321
 								stereotype 	TRUE
@@ -30676,6 +31094,9 @@
 								quidu      	"36CCD6690119"
 								client     	@292
 								supplier   	@295
+								vertices   	(list Points
+								    (5513, 1491)
+								    (5398, 1356))
 								line_style 	0)
 							    (object InheritView "" @322
 								stereotype 	TRUE
@@ -30683,6 +31104,9 @@
 								quidu      	"36CCD6680370"
 								client     	@293
 								supplier   	@301
+								vertices   	(list Points
+								    (1530, 1000)
+								    (4194, 130))
 								line_style 	0)
 							    (object InheritView "" @323
 								stereotype 	TRUE
@@ -30690,6 +31114,9 @@
 								quidu      	"36CCD66803A2"
 								client     	@294
 								supplier   	@301
+								vertices   	(list Points
+								    (2231, 984)
+								    (4244, 130))
 								line_style 	0)
 							    (object InheritView "" @324
 								stereotype 	TRUE
@@ -30697,6 +31124,9 @@
 								quidu      	"36CCD6690050"
 								client     	@295
 								supplier   	@301
+								vertices   	(list Points
+								    (4966, 819)
+								    (4449, 130))
 								line_style 	0)
 							    (object InheritView "" @325
 								stereotype 	TRUE
@@ -30704,6 +31134,9 @@
 								quidu      	"36CCD66A0052"
 								client     	@296
 								supplier   	@301
+								vertices   	(list Points
+								    (6984, 1490)
+								    (4520, 130))
 								line_style 	0)
 							    (object InheritView "" @326
 								stereotype 	TRUE
@@ -30711,6 +31144,9 @@
 								quidu      	"36CCD66A00AC"
 								client     	@297
 								supplier   	@301
+								vertices   	(list Points
+								    (7575, 1477)
+								    (4549, 130))
 								line_style 	0)
 							    (object InheritView "" @327
 								stereotype 	TRUE
@@ -30718,6 +31154,9 @@
 								quidu      	"36CCD66A0156"
 								client     	@298
 								supplier   	@301
+								vertices   	(list Points
+								    (6949, 870)
+								    (4610, 130))
 								line_style 	0)
 							    (object InheritView "" @328
 								stereotype 	TRUE
@@ -30725,6 +31164,9 @@
 								quidu      	"36CCD66A0188"
 								client     	@299
 								supplier   	@301
+								vertices   	(list Points
+								    (7646, 892)
+								    (4622, 120))
 								line_style 	0)
 							    (object InheritView "" @329
 								stereotype 	TRUE
@@ -30732,6 +31174,9 @@
 								quidu      	"36CCD66A01C4"
 								client     	@300
 								supplier   	@301
+								vertices   	(list Points
+								    (6979, 427)
+								    (4622, 95))
 								line_style 	0)
 							    (object InheritView "" @330
 								stereotype 	TRUE
@@ -30739,6 +31184,9 @@
 								quidu      	"36CCD66803D4"
 								client     	@302
 								supplier   	@301
+								vertices   	(list Points
+								    (1417, 457)
+								    (4177, 92))
 								line_style 	0)
 							    (object InheritView "" @331
 								stereotype 	TRUE
@@ -30746,6 +31194,9 @@
 								quidu      	"36CCD66A0251"
 								client     	@303
 								supplier   	@301
+								vertices   	(list Points
+								    (2163, 443)
+								    (4177, 100))
 								line_style 	0)
 							    (object InheritView "" @332
 								stereotype 	TRUE
@@ -30753,6 +31204,9 @@
 								quidu      	"36CCD6690169"
 								client     	@304
 								supplier   	@301
+								vertices   	(list Points
+								    (2871, 455)
+								    (4177, 121))
 								line_style 	0)
 							    (object InheritView "" @333
 								stereotype 	TRUE
@@ -30760,6 +31214,9 @@
 								quidu      	"36CCD66A021F"
 								client     	@305
 								supplier   	@301
+								vertices   	(list Points
+								    (3569, 402)
+								    (4237, 130))
 								line_style 	0)
 							    (object InheritView "" @334
 								stereotype 	TRUE
@@ -30767,6 +31224,9 @@
 								quidu      	"36CCD6690213"
 								client     	@306
 								supplier   	@301
+								vertices   	(list Points
+								    (4373, 402)
+								    (4394, 130))
 								line_style 	0)
 							    (object InheritView "" @335
 								stereotype 	TRUE
@@ -30774,6 +31234,9 @@
 								quidu      	"36CCD66A002A"
 								client     	@307
 								supplier   	@301
+								vertices   	(list Points
+								    (6342, 429)
+								    (4622, 105))
 								line_style 	0)
 							    (object InheritView "" @336
 								stereotype 	TRUE
@@ -30781,6 +31244,9 @@
 								quidu      	"36CCD66A0084"
 								client     	@308
 								supplier   	@301
+								vertices   	(list Points
+								    (6353, 1490)
+								    (4491, 130))
 								line_style 	0)
 							    (object InheritView "" @337
 								stereotype 	TRUE
@@ -30788,6 +31254,9 @@
 								quidu      	"36CCD66A00DE"
 								client     	@309
 								supplier   	@301
+								vertices   	(list Points
+								    (5609, 816)
+								    (4506, 130))
 								line_style 	0)
 							    (object InheritView "" @338
 								stereotype 	TRUE
@@ -30795,6 +31264,9 @@
 								quidu      	"36CCD66A011A"
 								client     	@310
 								supplier   	@301
+								vertices   	(list Points
+								    (6264, 856)
+								    (4556, 130))
 								line_style 	0)
 							    (object InheritView "" @339
 								stereotype 	TRUE
@@ -30802,6 +31274,9 @@
 								quidu      	"36CCD66903AE"
 								client     	@311
 								supplier   	@301
+								vertices   	(list Points
+								    (4846, 386)
+								    (4492, 130))
 								line_style 	0)
 							    (object InheritView "" @340
 								stereotype 	TRUE
@@ -30809,6 +31284,9 @@
 								quidu      	"36CCD66A01F6"
 								client     	@312
 								supplier   	@301
+								vertices   	(list Points
+								    (5360, 417)
+								    (4582, 130))
 								line_style 	0)
 							    (object InheritView "" @341
 								stereotype 	TRUE
@@ -30816,6 +31294,9 @@
 								quidu      	"36CCD66903E0"
 								client     	@313
 								supplier   	@301
+								vertices   	(list Points
+								    (5693, 403)
+								    (4622, 122))
 								line_style 	0))))))
 					logical_presentations 	(list unit_reference_list
 					    (object ClassDiagram "Main"
@@ -31964,6 +32445,9 @@
 						quidu      	"36CCD66A02DD"
 						client     	@376
 						supplier   	@377
+						vertices   	(list Points
+						    (384, 770)
+						    (384, 414))
 						line_style 	0))))))
 			logical_presentations 	(list unit_reference_list
 			    (object ClassDiagram "Main"
@@ -35194,6 +35678,9 @@
 						quidu      	"36CCD66A03C3"
 						client     	@425
 						supplier   	@420
+						vertices   	(list Points
+						    (480, 615)
+						    (480, 408))
 						line_style 	0)))))
 			    (object Class_Category "Synchronization"
 				quid       	"365C7A7B0298"
@@ -36673,6 +37160,9 @@
 				line_color 	3342489
 				client     	@476
 				supplier   	@460
+				vertices   	(list Points
+				    (3372, 152)
+				    (3345, 253))
 				line_style 	0)
 			    (object InheritView "" @478
 				stereotype 	TRUE
@@ -36680,6 +37170,9 @@
 				quidu      	"36CCD6560202"
 				client     	@449
 				supplier   	@448
+				vertices   	(list Points
+				    (2048, 257)
+				    (2048, 141))
 				line_style 	0)
 			    (object InheritView "" @479
 				stereotype 	TRUE
@@ -36687,6 +37180,9 @@
 				quidu      	"36CCD65900B2"
 				client     	@450
 				supplier   	@449
+				vertices   	(list Points
+				    (474, 695)
+				    (1813, 375))
 				line_style 	0)
 			    (object InheritView "" @480
 				stereotype 	TRUE
@@ -36694,6 +37190,9 @@
 				quidu      	"36CCD659027E"
 				client     	@451
 				supplier   	@449
+				vertices   	(list Points
+				    (1623, 689)
+				    (1975, 382))
 				line_style 	0)
 			    (object InheritView "" @481
 				stereotype 	TRUE
@@ -36701,6 +37200,9 @@
 				quidu      	"36CCD65A0009"
 				client     	@475
 				supplier   	@449
+				vertices   	(list Points
+				    (2705, 689)
+				    (2160, 382))
 				line_style 	0)
 			    (object InheritView "" @482
 				stereotype 	TRUE
@@ -36708,6 +37210,9 @@
 				quidu      	"36CCD65A0095"
 				client     	@452
 				supplier   	@449
+				vertices   	(list Points
+				    (3144, 689)
+				    (2235, 382))
 				line_style 	0)
 			    (object InheritView "" @483
 				stereotype 	TRUE
@@ -36715,6 +37220,9 @@
 				quidu      	"36CCD65A00DB"
 				client     	@453
 				supplier   	@449
+				vertices   	(list Points
+				    (2764, 1185)
+				    (2099, 382))
 				line_style 	0)
 			    (object InheritView "" @484
 				stereotype 	TRUE
@@ -36722,6 +37230,9 @@
 				quidu      	"36CCD65A0121"
 				client     	@454
 				supplier   	@449
+				vertices   	(list Points
+				    (3242, 1185)
+				    (2134, 382))
 				line_style 	0)
 			    (object InheritView "" @485
 				stereotype 	TRUE
@@ -36729,6 +37240,9 @@
 				quidu      	"36CCD65A017B"
 				client     	@455
 				supplier   	@449
+				vertices   	(list Points
+				    (3253, 480)
+				    (2282, 350))
 				line_style 	0)
 			    (object InheritView "" @486
 				stereotype 	TRUE
@@ -36736,6 +37250,9 @@
 				quidu      	"36CCD65A01CB"
 				client     	@456
 				supplier   	@449
+				vertices   	(list Points
+				    (3621, 695)
+				    (2282, 375))
 				line_style 	0)
 			    (object InheritView "" @487
 				stereotype 	TRUE
@@ -36743,6 +37260,9 @@
 				quidu      	"36CCD65A02D0"
 				client     	@457
 				supplier   	@449
+				vertices   	(list Points
+				    (992, 689)
+				    (1866, 382))
 				line_style 	0)
 			    (object InheritView "" @488
 				stereotype 	TRUE
@@ -36750,6 +37270,9 @@
 				quidu      	"36CCD65C012E"
 				client     	@458
 				supplier   	@449
+				vertices   	(list Points
+				    (2062, 1185)
+				    (2049, 382))
 				line_style 	0)
 			    (object InheritView "" @489
 				stereotype 	TRUE
@@ -36757,6 +37280,9 @@
 				quidu      	"36CCD65D00F3"
 				client     	@459
 				supplier   	@449
+				vertices   	(list Points
+				    (2267, 689)
+				    (2085, 382))
 				line_style 	0)
 			    (object InheritView "" @490
 				stereotype 	TRUE
@@ -36764,6 +37290,9 @@
 				quidu      	"36CCD65F007E"
 				client     	@460
 				supplier   	@449
+				vertices   	(list Points
+				    (3105, 320)
+				    (2282, 320))
 				line_style 	0)
 			    (object InheritView "" @491
 				stereotype 	TRUE
@@ -36771,6 +37300,9 @@
 				quidu      	"36CCD6590198"
 				client     	@470
 				supplier   	@450
+				vertices   	(list Points
+				    (240, 961)
+				    (240, 814))
 				line_style 	0)
 			    (object InheritView "" @492
 				stereotype 	TRUE
@@ -36778,6 +37310,9 @@
 				quidu      	"36CCD659033D"
 				client     	@472
 				supplier   	@451
+				vertices   	(list Points
+				    (1749, 961)
+				    (1611, 814))
 				line_style 	0)
 			    (object InheritView "" @493
 				stereotype 	TRUE
@@ -36785,6 +37320,9 @@
 				quidu      	"36CCD659038D"
 				client     	@473
 				supplier   	@451
+				vertices   	(list Points
+				    (1367, 961)
+				    (1496, 814))
 				line_style 	0)
 			    (object InheritView "" @494
 				stereotype 	TRUE
@@ -36792,6 +37330,9 @@
 				quidu      	"36CCD65B00BE"
 				client     	@461
 				supplier   	@457
+				vertices   	(list Points
+				    (816, 961)
+				    (816, 814))
 				line_style 	0)
 			    (object InheritView "" @495
 				stereotype 	TRUE
@@ -36799,6 +37340,9 @@
 				quidu      	"36CCD65C026F"
 				client     	@465
 				supplier   	@458
+				vertices   	(list Points
+				    (1876, 1473)
+				    (2011, 1310))
 				line_style 	0)
 			    (object InheritView "" @496
 				stereotype 	TRUE
@@ -36806,6 +37350,9 @@
 				quidu      	"36CCD65D0003"
 				client     	@466
 				supplier   	@458
+				vertices   	(list Points
+				    (2276, 1473)
+				    (2122, 1310))
 				line_style 	0)
 			    (object InheritView "" @497
 				stereotype 	TRUE
@@ -36813,6 +37360,9 @@
 				quidu      	"36CCD65B021D"
 				client     	@462
 				supplier   	@461
+				vertices   	(list Points
+				    (816, 1249)
+				    (816, 1086))
 				line_style 	0)
 			    (object InheritView "" @498
 				stereotype 	TRUE
@@ -36820,6 +37370,9 @@
 				quidu      	"36CCD65B032B"
 				client     	@463
 				supplier   	@462
+				vertices   	(list Points
+				    (816, 1537)
+				    (816, 1374))
 				line_style 	0)
 			    (object InheritView "" @499
 				stereotype 	TRUE
@@ -36827,6 +37380,9 @@
 				quidu      	"36CCD65C0020"
 				client     	@464
 				supplier   	@463
+				vertices   	(list Points
+				    (816, 1809)
+				    (816, 1662))
 				line_style 	0)
 			    (object InheritView "" @500
 				stereotype 	TRUE
@@ -36834,6 +37390,9 @@
 				quidu      	"36CCD65C0373"
 				client     	@467
 				supplier   	@465
+				vertices   	(list Points
+				    (1577, 1745)
+				    (1750, 1598))
 				line_style 	0)
 			    (object InheritView "" @501
 				stereotype 	TRUE
@@ -36841,6 +37400,9 @@
 				quidu      	"36CCD65D013A"
 				client     	@468
 				supplier   	@465
+				vertices   	(list Points
+				    (1971, 1745)
+				    (1868, 1598))
 				line_style 	0)
 			    (object InheritView "" @502
 				stereotype 	TRUE
@@ -36848,6 +37410,9 @@
 				quidu      	"36CCD65D00AD"
 				client     	@469
 				supplier   	@466
+				vertices   	(list Points
+				    (2483, 1745)
+				    (2380, 1598))
 				line_style 	0)
 			    (object InheritView "" @503
 				stereotype 	TRUE
@@ -36855,6 +37420,9 @@
 				quidu      	"36CCD6590210"
 				client     	@471
 				supplier   	@470
+				vertices   	(list Points
+				    (240, 1249)
+				    (240, 1086))
 				line_style 	0)
 			    (object InheritView "" @504
 				stereotype 	TRUE
@@ -36862,6 +37430,9 @@
 				quidu      	"36CCD65A0059"
 				client     	@474
 				supplier   	@475
+				vertices   	(list Points
+				    (2816, 961)
+				    (2816, 814))
 				line_style 	0)))
 		    (object ClassDiagram "CWnd classes"
 			quid       	"365C99EF02A0"
@@ -39342,6 +39913,9 @@
 				quidu      	"36CCD66100DB"
 				client     	@506
 				supplier   	@505
+				vertices   	(list Points
+				    (5836, 482)
+				    (6363, 130))
 				line_style 	0)
 			    (object InheritView "" @583
 				stereotype 	TRUE
@@ -39349,6 +39923,9 @@
 				quidu      	"36CCD66103DE"
 				client     	@507
 				supplier   	@505
+				vertices   	(list Points
+				    (9394, 531)
+				    (6686, 98))
 				line_style 	0)
 			    (object InheritView "" @584
 				stereotype 	TRUE
@@ -39356,6 +39933,9 @@
 				quidu      	"36CCD662015F"
 				client     	@508
 				supplier   	@505
+				vertices   	(list Points
+				    (1602, 513)
+				    (6241, 83))
 				line_style 	0)
 			    (object InheritView "" @585
 				stereotype 	TRUE
@@ -39363,6 +39943,9 @@
 				quidu      	"36CCD66203CC"
 				client     	@509
 				supplier   	@505
+				vertices   	(list Points
+				    (7762, 486)
+				    (6668, 130))
 				line_style 	0)
 			    (object InheritView "" @586
 				stereotype 	TRUE
@@ -39370,6 +39953,9 @@
 				quidu      	"36CCD66301EC"
 				client     	@510
 				supplier   	@505
+				vertices   	(list Points
+				    (3754, 517)
+				    (6241, 100))
 				line_style 	0)
 			    (object InheritView "" @587
 				stereotype 	TRUE
@@ -39377,6 +39963,9 @@
 				quidu      	"36CCD66601AB"
 				client     	@511
 				supplier   	@505
+				vertices   	(list Points
+				    (9084, 526)
+				    (6686, 103))
 				line_style 	0)
 			    (object InheritView "" @588
 				stereotype 	TRUE
@@ -39384,6 +39973,9 @@
 				quidu      	"36CCD6680230"
 				client     	@512
 				supplier   	@505
+				vertices   	(list Points
+				    (1188, 529)
+				    (6241, 82))
 				line_style 	0)
 			    (object InheritView "" @589
 				stereotype 	TRUE
@@ -39391,6 +39983,9 @@
 				quidu      	"36CCD6680276"
 				client     	@513
 				supplier   	@505
+				vertices   	(list Points
+				    (379, 517)
+				    (6241, 79))
 				line_style 	0)
 			    (object InheritView "" @590
 				stereotype 	TRUE
@@ -39398,6 +39993,9 @@
 				quidu      	"36CCD6680320"
 				client     	@514
 				supplier   	@505
+				vertices   	(list Points
+				    (798, 515)
+				    (6241, 80))
 				line_style 	0)
 			    (object InheritView "" @591
 				stereotype 	TRUE
@@ -39405,6 +40003,9 @@
 				quidu      	"36CCD6680370"
 				client     	@515
 				supplier   	@505
+				vertices   	(list Points
+				    (2853, 528)
+				    (6241, 92))
 				line_style 	0)
 			    (object InheritView "" @592
 				stereotype 	TRUE
@@ -39412,6 +40013,9 @@
 				quidu      	"36CCD66803A2"
 				client     	@516
 				supplier   	@505
+				vertices   	(list Points
+				    (3290, 523)
+				    (6241, 95))
 				line_style 	0)
 			    (object InheritView "" @593
 				stereotype 	TRUE
@@ -39419,6 +40023,9 @@
 				quidu      	"36CCD66803D4"
 				client     	@517
 				supplier   	@505
+				vertices   	(list Points
+				    (4204, 515)
+				    (6241, 108))
 				line_style 	0)
 			    (object InheritView "" @594
 				stereotype 	TRUE
@@ -39426,6 +40033,9 @@
 				quidu      	"36CCD6690050"
 				client     	@518
 				supplier   	@505
+				vertices   	(list Points
+				    (6993, 482)
+				    (6547, 130))
 				line_style 	0)
 			    (object InheritView "" @595
 				stereotype 	TRUE
@@ -39433,6 +40043,9 @@
 				quidu      	"36CCD6690169"
 				client     	@519
 				supplier   	@505
+				vertices   	(list Points
+				    (5445, 494)
+				    (6306, 130))
 				line_style 	0)
 			    (object InheritView "" @596
 				stereotype 	TRUE
@@ -39440,6 +40053,9 @@
 				quidu      	"36CCD6690213"
 				client     	@520
 				supplier   	@505
+				vertices   	(list Points
+				    (6241, 482)
+				    (6428, 130))
 				line_style 	0)
 			    (object InheritView "" @597
 				stereotype 	TRUE
@@ -39447,6 +40063,9 @@
 				quidu      	"36CCD66903E0"
 				client     	@521
 				supplier   	@505
+				vertices   	(list Points
+				    (7384, 482)
+				    (6610, 130))
 				line_style 	0)
 			    (object InheritView "" @598
 				stereotype 	TRUE
@@ -39454,6 +40073,9 @@
 				quidu      	"36CCD66A002A"
 				client     	@522
 				supplier   	@505
+				vertices   	(list Points
+				    (8289, 512)
+				    (6686, 118))
 				line_style 	0)
 			    (object InheritView "" @599
 				stereotype 	TRUE
@@ -39461,6 +40083,9 @@
 				quidu      	"36CCD66A0052"
 				client     	@523
 				supplier   	@505
+				vertices   	(list Points
+				    (8690, 517)
+				    (6686, 109))
 				line_style 	0)
 			    (object InheritView "" @600
 				stereotype 	TRUE
@@ -39468,6 +40093,9 @@
 				quidu      	"36CCD66A0084"
 				client     	@524
 				supplier   	@505
+				vertices   	(list Points
+				    (12305, 545)
+				    (6686, 81))
 				line_style 	0)
 			    (object InheritView "" @601
 				stereotype 	TRUE
@@ -39475,6 +40103,9 @@
 				quidu      	"36CCD66A00AC"
 				client     	@525
 				supplier   	@505
+				vertices   	(list Points
+				    (9866, 538)
+				    (6686, 95))
 				line_style 	0)
 			    (object InheritView "" @602
 				stereotype 	TRUE
@@ -39482,6 +40113,9 @@
 				quidu      	"36CCD66A00DE"
 				client     	@526
 				supplier   	@505
+				vertices   	(list Points
+				    (10272, 539)
+				    (6686, 91))
 				line_style 	0)
 			    (object InheritView "" @603
 				stereotype 	TRUE
@@ -39489,6 +40123,9 @@
 				quidu      	"36CCD66A011A"
 				client     	@527
 				supplier   	@505
+				vertices   	(list Points
+				    (10746, 546)
+				    (6686, 88))
 				line_style 	0)
 			    (object InheritView "" @604
 				stereotype 	TRUE
@@ -39496,6 +40133,9 @@
 				quidu      	"36CCD66A0156"
 				client     	@528
 				supplier   	@505
+				vertices   	(list Points
+				    (11138, 545)
+				    (6686, 86))
 				line_style 	0)
 			    (object InheritView "" @605
 				stereotype 	TRUE
@@ -39503,6 +40143,9 @@
 				quidu      	"36CCD66A0188"
 				client     	@529
 				supplier   	@505
+				vertices   	(list Points
+				    (11557, 546)
+				    (6686, 84))
 				line_style 	0)
 			    (object InheritView "" @606
 				stereotype 	TRUE
@@ -39510,6 +40153,9 @@
 				quidu      	"36CCD66A01C4"
 				client     	@530
 				supplier   	@505
+				vertices   	(list Points
+				    (11994, 549)
+				    (6686, 83))
 				line_style 	0)
 			    (object InheritView "" @607
 				stereotype 	TRUE
@@ -39517,6 +40163,9 @@
 				quidu      	"36CCD66A01F6"
 				client     	@531
 				supplier   	@505
+				vertices   	(list Points
+				    (5087, 502)
+				    (6255, 130))
 				line_style 	0)
 			    (object InheritView "" @608
 				stereotype 	TRUE
@@ -39524,6 +40173,9 @@
 				quidu      	"36CCD66A021F"
 				client     	@532
 				supplier   	@505
+				vertices   	(list Points
+				    (2513, 524)
+				    (6241, 89))
 				line_style 	0)
 			    (object InheritView "" @609
 				stereotype 	TRUE
@@ -39531,6 +40183,9 @@
 				quidu      	"36CCD66A0251"
 				client     	@533
 				supplier   	@505
+				vertices   	(list Points
+				    (4689, 503)
+				    (6241, 118))
 				line_style 	0)
 			    (object InheritView "" @610
 				stereotype 	TRUE
@@ -39538,6 +40193,9 @@
 				quidu      	"36CCD66A0283"
 				client     	@534
 				supplier   	@505
+				vertices   	(list Points
+				    (2043, 511)
+				    (6241, 85))
 				line_style 	0)
 			    (object InheritView "" @611
 				stereotype 	TRUE
@@ -39545,6 +40203,9 @@
 				quidu      	"36CCD66903AE"
 				client     	@535
 				supplier   	@505
+				vertices   	(list Points
+				    (6617, 482)
+				    (6487, 130))
 				line_style 	0)
 			    (object InheritView "" @612
 				stereotype 	TRUE
@@ -39552,6 +40213,9 @@
 				quidu      	"36CCD66101FE"
 				client     	@536
 				supplier   	@506
+				vertices   	(list Points
+				    (5074, 898)
+				    (5627, 605))
 				line_style 	0)
 			    (object InheritView "" @613
 				stereotype 	TRUE
@@ -39559,6 +40223,9 @@
 				quidu      	"36CCD661026C"
 				client     	@537
 				supplier   	@506
+				vertices   	(list Points
+				    (5512, 898)
+				    (5703, 605))
 				line_style 	0)
 			    (object InheritView "" @614
 				stereotype 	TRUE
@@ -39566,6 +40233,9 @@
 				quidu      	"36CCD66102DA"
 				client     	@538
 				supplier   	@506
+				vertices   	(list Points
+				    (5934, 898)
+				    (5777, 605))
 				line_style 	0)
 			    (object InheritView "" @615
 				stereotype 	TRUE
@@ -39573,6 +40243,9 @@
 				quidu      	"36CCD661033E"
 				client     	@539
 				supplier   	@506
+				vertices   	(list Points
+				    (6386, 898)
+				    (5855, 605))
 				line_style 	0)
 			    (object InheritView "" @616
 				stereotype 	TRUE
@@ -39580,6 +40253,9 @@
 				quidu      	"36CCD6620231"
 				client     	@540
 				supplier   	@508
+				vertices   	(list Points
+				    (1114, 882)
+				    (1396, 589))
 				line_style 	0)
 			    (object InheritView "" @617
 				stereotype 	TRUE
@@ -39587,6 +40263,9 @@
 				quidu      	"36CCD662026D"
 				client     	@541
 				supplier   	@508
+				vertices   	(list Points
+				    (1428, 882)
+				    (1451, 589))
 				line_style 	0)
 			    (object InheritView "" @618
 				stereotype 	TRUE
@@ -39594,6 +40273,9 @@
 				quidu      	"36CCD66202A9"
 				client     	@542
 				supplier   	@508
+				vertices   	(list Points
+				    (2029, 882)
+				    (1555, 589))
 				line_style 	0)
 			    (object InheritView "" @619
 				stereotype 	TRUE
@@ -39601,6 +40283,9 @@
 				quidu      	"36CCD6620317"
 				client     	@543
 				supplier   	@508
+				vertices   	(list Points
+				    (2317, 882)
+				    (1602, 587))
 				line_style 	0)
 			    (object InheritView "" @620
 				stereotype 	TRUE
@@ -39608,6 +40293,9 @@
 				quidu      	"36CCD6620368"
 				client     	@544
 				supplier   	@508
+				vertices   	(list Points
+				    (1714, 882)
+				    (1500, 589))
 				line_style 	0)
 			    (object InheritView "" @621
 				stereotype 	TRUE
@@ -39615,6 +40303,9 @@
 				quidu      	"36CCD6630048"
 				client     	@545
 				supplier   	@509
+				vertices   	(list Points
+				    (7936, 898)
+				    (7936, 605))
 				line_style 	0)
 			    (object InheritView "" @622
 				stereotype 	TRUE
@@ -39622,6 +40313,9 @@
 				quidu      	"36CCD66400DF"
 				client     	@546
 				supplier   	@510
+				vertices   	(list Points
+				    (3463, 898)
+				    (3576, 605))
 				line_style 	0)
 			    (object InheritView "" @623
 				stereotype 	TRUE
@@ -39629,6 +40323,9 @@
 				quidu      	"36CCD6650362"
 				client     	@547
 				supplier   	@510
+				vertices   	(list Points
+				    (3913, 898)
+				    (3654, 605))
 				line_style 	0)
 			    (object InheritView "" @624
 				stereotype 	TRUE
@@ -39636,6 +40333,9 @@
 				quidu      	"36CCD66503C6"
 				client     	@548
 				supplier   	@510
+				vertices   	(list Points
+				    (4351, 898)
+				    (3730, 605))
 				line_style 	0)
 			    (object InheritView "" @625
 				stereotype 	TRUE
@@ -39643,6 +40343,9 @@
 				quidu      	"36CCD66603D1"
 				client     	@549
 				supplier   	@511
+				vertices   	(list Points
+				    (9432, 818)
+				    (9239, 605))
 				line_style 	0)
 			    (object InheritView "" @626
 				stereotype 	TRUE
@@ -39650,6 +40353,9 @@
 				quidu      	"36CCD667029C"
 				client     	@550
 				supplier   	@511
+				vertices   	(list Points
+				    (9027, 818)
+				    (9148, 605))
 				line_style 	0)
 			    (object InheritView "" @627
 				stereotype 	TRUE
@@ -39657,6 +40363,9 @@
 				quidu      	"36CCD66802BC"
 				client     	@551
 				supplier   	@513
+				vertices   	(list Points
+				    (256, 882)
+				    (256, 586))
 				line_style 	0)
 			    (object InheritView "" @628
 				stereotype 	TRUE
@@ -39664,6 +40373,9 @@
 				quidu      	"36CCD66A02B5"
 				client     	@552
 				supplier   	@514
+				vertices   	(list Points
+				    (656, 882)
+				    (656, 589))
 				line_style 	0)
 			    (object InheritView "" @629
 				stereotype 	TRUE
@@ -39671,6 +40383,9 @@
 				quidu      	"36CCD66900D3"
 				client     	@553
 				supplier   	@518
+				vertices   	(list Points
+				    (6976, 898)
+				    (7055, 605))
 				line_style 	0)
 			    (object InheritView "" @630
 				stereotype 	TRUE
@@ -39678,6 +40393,9 @@
 				quidu      	"36CCD6690119"
 				client     	@554
 				supplier   	@518
+				vertices   	(list Points
+				    (7317, 898)
+				    (7114, 605))
 				line_style 	0)
 			    (object InheritView "" @631
 				stereotype 	TRUE
@@ -39685,6 +40403,9 @@
 				quidu      	"36CCD66200AB"
 				client     	@555
 				supplier   	@539
+				vertices   	(list Points
+				    (6496, 1202)
+				    (6496, 1021))
 				line_style 	0)
 			    (object InheritView "" @632
 				stereotype 	TRUE
@@ -39692,6 +40413,9 @@
 				quidu      	"36CCD6640220"
 				client     	@556
 				supplier   	@546
+				vertices   	(list Points
+				    (1306, 1257)
+				    (3263, 984))
 				line_style 	0)
 			    (object InheritView "" @633
 				stereotype 	TRUE
@@ -39699,6 +40423,9 @@
 				quidu      	"36CCD6640266"
 				client     	@557
 				supplier   	@546
+				vertices   	(list Points
+				    (1690, 1253)
+				    (3263, 989))
 				line_style 	0)
 			    (object InheritView "" @634
 				stereotype 	TRUE
@@ -39706,6 +40433,9 @@
 				quidu      	"36CCD66402B6"
 				client     	@558
 				supplier   	@546
+				vertices   	(list Points
+				    (2166, 1233)
+				    (3263, 997))
 				line_style 	0)
 			    (object InheritView "" @635
 				stereotype 	TRUE
@@ -39713,6 +40443,9 @@
 				quidu      	"36CCD66402FC"
 				client     	@559
 				supplier   	@546
+				vertices   	(list Points
+				    (2554, 1232)
+				    (3263, 1014))
 				line_style 	0)
 			    (object InheritView "" @636
 				stereotype 	TRUE
@@ -39720,6 +40453,9 @@
 				quidu      	"36CCD66403C5"
 				client     	@560
 				supplier   	@546
+				vertices   	(list Points
+				    (3069, 1202)
+				    (3345, 1021))
 				line_style 	0)
 			    (object InheritView "" @637
 				stereotype 	TRUE
@@ -39727,6 +40463,9 @@
 				quidu      	"36CCD66502D6"
 				client     	@561
 				supplier   	@546
+				vertices   	(list Points
+				    (3414, 1186)
+				    (3433, 1021))
 				line_style 	0)
 			    (object InheritView "" @638
 				stereotype 	TRUE
@@ -39734,6 +40473,9 @@
 				quidu      	"36CCD6650326"
 				client     	@562
 				supplier   	@546
+				vertices   	(list Points
+				    (3729, 1186)
+				    (3518, 1021))
 				line_style 	0)
 			    (object InheritView "" @639
 				stereotype 	TRUE
@@ -39741,6 +40483,9 @@
 				quidu      	"36CCD6660042"
 				client     	@563
 				supplier   	@548
+				vertices   	(list Points
+				    (4480, 1186)
+				    (4480, 1021))
 				line_style 	0)
 			    (object InheritView "" @640
 				stereotype 	TRUE
@@ -39748,6 +40493,9 @@
 				quidu      	"36CCD667009E"
 				client     	@564
 				supplier   	@549
+				vertices   	(list Points
+				    (9220, 1186)
+				    (9434, 941))
 				line_style 	0)
 			    (object InheritView "" @641
 				stereotype 	TRUE
@@ -39755,6 +40503,9 @@
 				quidu      	"36CCD667010C"
 				client     	@565
 				supplier   	@549
+				vertices   	(list Points
+				    (9447, 1186)
+				    (9479, 941))
 				line_style 	0)
 			    (object InheritView "" @642
 				stereotype 	TRUE
@@ -39762,6 +40513,9 @@
 				quidu      	"36CCD6670166"
 				client     	@566
 				supplier   	@549
+				vertices   	(list Points
+				    (9714, 1186)
+				    (9533, 941))
 				line_style 	0)
 			    (object InheritView "" @643
 				stereotype 	TRUE
@@ -39769,6 +40523,9 @@
 				quidu      	"36CCD66701E8"
 				client     	@567
 				supplier   	@549
+				vertices   	(list Points
+				    (9981, 1186)
+				    (9586, 941))
 				line_style 	0)
 			    (object InheritView "" @644
 				stereotype 	TRUE
@@ -39776,6 +40533,9 @@
 				quidu      	"36CCD66703DD"
 				client     	@568
 				supplier   	@550
+				vertices   	(list Points
+				    (8831, 1186)
+				    (8959, 941))
 				line_style 	0)
 			    (object InheritView "" @645
 				stereotype 	TRUE
@@ -39783,6 +40543,9 @@
 				quidu      	"36CCD665009B"
 				client     	@569
 				supplier   	@560
+				vertices   	(list Points
+				    (909, 1691)
+				    (2821, 1295))
 				line_style 	0)
 			    (object InheritView "" @646
 				stereotype 	TRUE
@@ -39790,6 +40553,9 @@
 				quidu      	"36CCD66500D7"
 				client     	@570
 				supplier   	@560
+				vertices   	(list Points
+				    (1502, 1666)
+				    (2821, 1305))
 				line_style 	0)
 			    (object InheritView "" @647
 				stereotype 	TRUE
@@ -39797,6 +40563,9 @@
 				quidu      	"36CCD6650113"
 				client     	@571
 				supplier   	@560
+				vertices   	(list Points
+				    (2059, 1666)
+				    (2835, 1325))
 				line_style 	0)
 			    (object InheritView "" @648
 				stereotype 	TRUE
@@ -39804,6 +40573,9 @@
 				quidu      	"36CCD665014F"
 				client     	@572
 				supplier   	@560
+				vertices   	(list Points
+				    (2587, 1666)
+				    (2916, 1325))
 				line_style 	0)
 			    (object InheritView "" @649
 				stereotype 	TRUE
@@ -39811,6 +40583,9 @@
 				quidu      	"36CCD6650195"
 				client     	@573
 				supplier   	@560
+				vertices   	(list Points
+				    (2976, 1666)
+				    (2976, 1325))
 				line_style 	0)
 			    (object InheritView "" @650
 				stereotype 	TRUE
@@ -39818,6 +40593,9 @@
 				quidu      	"36CCD66501E5"
 				client     	@574
 				supplier   	@560
+				vertices   	(list Points
+				    (3406, 1666)
+				    (3041, 1325))
 				line_style 	0)
 			    (object InheritView "" @651
 				stereotype 	TRUE
@@ -39825,6 +40603,9 @@
 				quidu      	"36CCD6650253"
 				client     	@575
 				supplier   	@560
+				vertices   	(list Points
+				    (3906, 1666)
+				    (3118, 1325))
 				line_style 	0)
 			    (object InheritView "" @652
 				stereotype 	TRUE
@@ -39832,6 +40613,9 @@
 				quidu      	"36CCD665029A"
 				client     	@576
 				supplier   	@560
+				vertices   	(list Points
+				    (4449, 1667)
+				    (3130, 1305))
 				line_style 	0)
 			    (object InheritView "" @653
 				stereotype 	TRUE
@@ -39839,6 +40623,9 @@
 				quidu      	"36CCD66800B3"
 				client     	@577
 				supplier   	@568
+				vertices   	(list Points
+				    (8184, 1522)
+				    (8666, 1306))
 				line_style 	0)
 			    (object InheritView "" @654
 				stereotype 	TRUE
@@ -39846,6 +40633,9 @@
 				quidu      	"36CCD66800F9"
 				client     	@578
 				supplier   	@568
+				vertices   	(list Points
+				    (9153, 1522)
+				    (8879, 1309))
 				line_style 	0)
 			    (object InheritView "" @655
 				stereotype 	TRUE
@@ -39853,6 +40643,9 @@
 				quidu      	"36CCD668015D"
 				client     	@579
 				supplier   	@568
+				vertices   	(list Points
+				    (8499, 1522)
+				    (8732, 1309))
 				line_style 	0)
 			    (object InheritView "" @656
 				stereotype 	TRUE
@@ -39860,6 +40653,9 @@
 				quidu      	"36CCD66801FE"
 				client     	@580
 				supplier   	@568
+				vertices   	(list Points
+				    (8826, 1522)
+				    (8805, 1309))
 				line_style 	0)
 			    (object InheritView "" @657
 				stereotype 	TRUE
@@ -39867,6 +40663,9 @@
 				quidu      	"36CCD6650221"
 				client     	@581
 				supplier   	@573
+				vertices   	(list Points
+				    (2976, 1986)
+				    (2976, 1789))
 				line_style 	0)))))
 	    (object Class_Category "Tima"
 		quid       	"422F11CB02B8"
@@ -40826,6 +41625,90 @@
 				result     	"bool"
 				concurrency 	"Sequential"
 				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "SaveLoadItem"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"VC++"
+					name       	"Inline"
+					value      	TRUE))
+				quid       	"4231975501E4"
+				parameters 	(list Parameters
+				    (object Parameter "szName"
+					quid       	"4231975501E5"
+					type       	"LPCTSTR")
+				    (object Parameter "Variable"
+					quid       	"4231975501F4"
+					type       	"CColorRef&")
+				    (object Parameter "bSave"
+					quid       	"4231975501F5"
+					type       	"bool"))
+				result     	"bool"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "SaveLoadItem"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"VC++"
+					name       	"Inline"
+					value      	TRUE))
+				quid       	"4231975501F6"
+				parameters 	(list Parameters
+				    (object Parameter "szName"
+					quid       	"423197550203"
+					type       	"LPCTSTR")
+				    (object Parameter "Variable"
+					quid       	"423197550213"
+					type       	"POINT&")
+				    (object Parameter "bSave"
+					quid       	"423197550214"
+					type       	"bool"))
+				result     	"bool"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "SaveLoadItem"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"VC++"
+					name       	"Inline"
+					value      	TRUE))
+				quid       	"423197550215"
+				parameters 	(list Parameters
+				    (object Parameter "szName"
+					quid       	"423197550216"
+					type       	"LPCTSTR")
+				    (object Parameter "Variable"
+					quid       	"423197550222"
+					type       	"SIZE&")
+				    (object Parameter "bSave"
+					quid       	"423197550232"
+					type       	"bool"))
+				result     	"bool"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "SaveLoadItem"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"VC++"
+					name       	"Inline"
+					value      	TRUE))
+				quid       	"423197550233"
+				parameters 	(list Parameters
+				    (object Parameter "szName"
+					quid       	"423197550234"
+					type       	"LPCTSTR")
+				    (object Parameter "Variable"
+					quid       	"423197550235"
+					type       	"RECT&")
+				    (object Parameter "bSave"
+					quid       	"423197550242"
+					type       	"bool"))
+				result     	"bool"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
 				uid        	0))
 			class_attributes 	(list class_attribute_list
 			    (object ClassAttribute "m_IniFileName[MAX_PATH]"
@@ -41618,6 +42501,164 @@
 				result     	"bool"
 				concurrency 	"Sequential"
 				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "SaveLoadItem"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"VC++"
+					name       	"Inline"
+					value      	FALSE))
+				quid       	"42319756008C"
+				stereotype 	"abstract"
+				parameters 	(list Parameters
+				    (object Parameter "szName"
+					quid       	"4231975600BB"
+					type       	"LPCTSTR")
+				    (object Parameter "Variable"
+					quid       	"4231975600CB"
+					type       	"POINT&")
+				    (object Parameter "bSave"
+					quid       	"4231975600CC"
+					type       	"bool"))
+				result     	"bool"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "SaveLoadItem"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"VC++"
+					name       	"Inline"
+					value      	FALSE))
+				quid       	"4231975600DA"
+				stereotype 	"abstract"
+				parameters 	(list Parameters
+				    (object Parameter "szName"
+					quid       	"4231975600EB"
+					type       	"LPCTSTR")
+				    (object Parameter "Variable"
+					quid       	"4231975600EC"
+					type       	"SIZE&")
+				    (object Parameter "bSave"
+					quid       	"4231975600FA"
+					type       	"bool"))
+				result     	"bool"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "SaveLoadItem"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"VC++"
+					name       	"Inline"
+					value      	FALSE))
+				quid       	"423197560109"
+				stereotype 	"abstract"
+				parameters 	(list Parameters
+				    (object Parameter "szName"
+					quid       	"423197560129"
+					type       	"LPCTSTR")
+				    (object Parameter "Variable"
+					quid       	"423197560138"
+					type       	"RECT&")
+				    (object Parameter "bSave"
+					quid       	"423197560139"
+					type       	"bool"))
+				result     	"bool"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "SaveLoadItem"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"VC++"
+					name       	"Inline"
+					value      	FALSE))
+				quid       	"423197560167"
+				stereotype 	"abstract"
+				parameters 	(list Parameters
+				    (object Parameter "szName"
+					quid       	"423197560169"
+					type       	"LPCTSTR")
+				    (object Parameter "Variable"
+					quid       	"423197560177"
+					type       	"CColorRef&"
+					quidu      	"423197550280")
+				    (object Parameter "bSave"
+					quid       	"423197560186"
+					type       	"bool"))
+				result     	"bool"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "SaveLoadItem"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"VC++"
+					name       	"Inline"
+					value      	TRUE))
+				quid       	"423197560196"
+				stereotype 	"virtual"
+				parameters 	(list Parameters
+				    (object Parameter "szName"
+					quid       	"423197560198"
+					type       	"LPCTSTR")
+				    (object Parameter "Variable"
+					quid       	"4231975601A5"
+					type       	"CPoint&"
+					quidu      	"365C7A7A0020")
+				    (object Parameter "bSave"
+					quid       	"4231975601A6"
+					type       	"bool"))
+				result     	"bool"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "SaveLoadItem"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"VC++"
+					name       	"Inline"
+					value      	TRUE))
+				quid       	"4231975601B5"
+				stereotype 	"virtual"
+				parameters 	(list Parameters
+				    (object Parameter "szName"
+					quid       	"4231975601C6"
+					type       	"LPCTSTR")
+				    (object Parameter "Variable"
+					quid       	"4231975601D4"
+					type       	"CSize&"
+					quidu      	"365C7A7A008E")
+				    (object Parameter "bSave"
+					quid       	"4231975601E4"
+					type       	"bool"))
+				result     	"bool"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "SaveLoadItem"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"VC++"
+					name       	"Inline"
+					value      	TRUE))
+				quid       	"4231975601F4"
+				stereotype 	"virtual"
+				parameters 	(list Parameters
+				    (object Parameter "szName"
+					quid       	"423197560204"
+					type       	"LPCTSTR")
+				    (object Parameter "Variable"
+					quid       	"423197560213"
+					type       	"CRect&"
+					quidu      	"365C7A7A0052")
+				    (object Parameter "bSave"
+					quid       	"423197560222"
+					type       	"bool"))
+				result     	"bool"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
 				uid        	0))
 			class_attributes 	(list class_attribute_list
 			    (object ClassAttribute "m_ItemName[16]"
@@ -41786,22 +42827,19 @@
 			class_attributes 	(list class_attribute_list
 			    (object ClassAttribute "Size"
 				quid       	"422F290C01EB"
-				type       	"CSize"
-				quidu      	"365C7A7A008E"
+				type       	"SIZE"
 				exportControl 	"Public")
 			    (object ClassAttribute "BGColor"
 				quid       	"422F1AAD0045"
-				type       	"COLORREF"
+				type       	"CColorRef"
 				exportControl 	"Public")
 			    (object ClassAttribute "Frames[_fp_count][_fs_count]"
 				quid       	"422F1B9E02A6"
-				type       	"CRect"
-				quidu      	"365C7A7A0052"
+				type       	"RECT"
 				exportControl 	"Public")
 			    (object ClassAttribute "Buttons[_wbp_count][_bs_count]"
 				quid       	"422F241703C0"
-				type       	"CRect"
-				quidu      	"365C7A7A0052"
+				type       	"RECT"
 				exportControl 	"Public"))
 			module     	"Component View::Tima"
 			quidu      	"422F116802C6"
@@ -41988,16 +43026,6 @@
 				client_cardinality 	(value cardinality "1..1")
 				friend     	TRUE))
 			operations 	(list Operations
-			    (object Operation "Load"
-				attributes 	(list Attribute_Set
-				    (object Attribute
-					tool       	"VC++"
-					name       	"Inline"
-					value      	FALSE))
-				quid       	"422F2FED0381"
-				concurrency 	"Sequential"
-				opExportControl 	"Public"
-				uid        	0)
 			    (object Operation "Save"
 				attributes 	(list Attribute_Set
 				    (object Attribute
@@ -42060,7 +43088,39 @@
 				stereotype 	"virtual"
 				concurrency 	"Sequential"
 				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "Load"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"VC++"
+					name       	"Inline"
+					value      	FALSE))
+				quid       	"423197540399"
+				parameters 	(list Parameters
+				    (object Parameter "szPath"
+					quid       	"4231975403C8"
+					type       	"LPCTSTR"))
+				result     	"int"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
 				uid        	0))
+			class_attributes 	(list class_attribute_list
+			    (object ClassAttribute "defaultSkinConfigFile[]"
+				quid       	"42319754030D"
+				type       	"const TCHAR"
+				initv      	
+|_T("skincfg.ini")
+				
+				exportControl 	"Public"
+				static     	TRUE)
+			    (object ClassAttribute "defaultSkinSection[]"
+				quid       	"42319754035B"
+				type       	"const TCHAR"
+				initv      	
+|_T("")
+				
+				exportControl 	"Public"
+				static     	TRUE))
 			module     	"Component View::Tima"
 			quidu      	"422F116802C6"
 			language   	"VC++")
@@ -42108,11 +43168,10 @@
 					name       	"Inline"
 					value      	FALSE))
 				quid       	"422F02EE01AC"
-				result     	"CString"
+				result     	"CPath"
 				concurrency 	"Sequential"
 				opExportControl 	"Public"
-				uid        	0
-				quidu      	"365C7A7A00C0")
+				uid        	0)
 			    (object Operation "GetCurrentSkin"
 				attributes 	(list Attribute_Set
 				    (object Attribute
@@ -42136,12 +43195,94 @@
 				result     	"class CSkinManager*"
 				concurrency 	"Sequential"
 				opExportControl 	"Private"
+				uid        	0)
+			    (object Operation "SetSkinRoot"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"VC++"
+					name       	"Inline"
+					value      	FALSE))
+				quid       	"4231975303B9"
+				parameters 	(list Parameters
+				    (object Parameter "szPath"
+					quid       	"423197540000"
+					type       	"LPCTSTR"))
+				result     	"BOOL"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "GetAllSkinFolder"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"VC++"
+					name       	"Inline"
+					value      	FALSE))
+				quid       	"42319754004E"
+				parameters 	(list Parameters
+				    (object Parameter "skinFolders"
+					quid       	"42319754007D"
+					type       	"CStringArray&"
+					quidu      	"365C7A700198"))
+				result     	"BOOL"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "GetSkinInfo"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"VC++"
+					name       	"Inline"
+					value      	FALSE))
+				quid       	"4231975400DA"
+				parameters 	(list Parameters
+				    (object Parameter "szSkinFolder"
+					quid       	"423197540119"
+					type       	"LPCTSTR")
+				    (object Parameter "setting"
+					quid       	"423197540167"
+					type       	"CSkinInfo&"
+					quidu      	"42319753007E"))
+				result     	"BOOL"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "LoadSkin"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"VC++"
+					name       	"Inline"
+					value      	FALSE))
+				quid       	"4231975401C5"
+				parameters 	(list Parameters
+				    (object Parameter "szSkinFolder"
+					quid       	"423197540203"
+					type       	"LPCTSTR"
+					initv      	"defaultSkinFolder"))
+				result     	"int"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
 				uid        	0))
 			class_attributes 	(list class_attribute_list
 			    (object ClassAttribute "s_instance"
 				quid       	"422EFAF70391"
 				type       	"CSkinManager"
 				quidu      	"422ED2D7015E"
+				static     	TRUE)
+			    (object ClassAttribute "defaultSkinRootName[]"
+				quid       	"4231975302FD"
+				type       	"const TCHAR"
+				initv      	
+|_T("skin")
+				
+				exportControl 	"Public"
+				static     	TRUE)
+			    (object ClassAttribute "defaultSkinFolder[]"
+				quid       	"42319753037A"
+				type       	"const TCHAR"
+				initv      	
+|_T("default")
+				
+				exportControl 	"Public"
 				static     	TRUE))
 			module     	"Component View::Tima"
 			quidu      	"422F116802C6"
@@ -42162,41 +43303,6 @@
 				quid       	"422F12A800B2"
 				supplier   	"Logical View::Tima::CSettings"
 				quidu      	"422F11CC01EB"))
-			class_attributes 	(list class_attribute_list
-			    (object ClassAttribute "Version"
-				quid       	"422F18CC0026"
-				type       	"DWORD"
-				exportControl 	"Public")
-			    (object ClassAttribute "Name"
-				quid       	"422F19D603DF"
-				type       	"CString"
-				quidu      	"365C7A7A00C0"
-				exportControl 	"Public")
-			    (object ClassAttribute "Maker"
-				quid       	"422F19DC0391"
-				type       	"CString"
-				quidu      	"365C7A7A00C0"
-				exportControl 	"Public")
-			    (object ClassAttribute "Time"
-				quid       	"422F19FF0297"
-				type       	"CString"
-				quidu      	"365C7A7A00C0"
-				exportControl 	"Public")
-			    (object ClassAttribute "SkinImage"
-				quid       	"422FD18A0172"
-				type       	"CString"
-				quidu      	"365C7A7A00C0"
-				exportControl 	"Public")
-			    (object ClassAttribute "PreviewImage"
-				quid       	"422F1A0702E5"
-				type       	"CString"
-				quidu      	"365C7A7A00C0"
-				exportControl 	"Public")
-			    (object ClassAttribute "Remark"
-				quid       	"422F1A440352"
-				type       	"CString"
-				quidu      	"365C7A7A00C0"
-				exportControl 	"Public"))
 			module     	"Component View::Tima"
 			quidu      	"422F116802C6"
 			language   	"VC++")
@@ -42215,13 +43321,11 @@
 			class_attributes 	(list class_attribute_list
 			    (object ClassAttribute "TextRect"
 				quid       	"422F2A0D03CF"
-				type       	"CRect"
-				quidu      	"365C7A7A0052"
+				type       	"RECT"
 				exportControl 	"Public")
 			    (object ClassAttribute "States[_bs_count]"
 				quid       	"422F29BB0239"
-				type       	"CRect"
-				quidu      	"365C7A7A0052"
+				type       	"RECT"
 				exportControl 	"Public"))
 			module     	"Component View::Tima"
 			quidu      	"422F116802C6"
@@ -42241,8 +43345,7 @@
 			class_attributes 	(list class_attribute_list
 			    (object ClassAttribute "Picture"
 				quid       	"422F299902B6"
-				type       	"CRect"
-				quidu      	"365C7A7A0052"
+				type       	"RECT"
 				exportControl 	"Public"))
 			module     	"Component View::Tima"
 			quidu      	"422F116802C6"
@@ -42538,7 +43641,7 @@
 			class_attributes 	(list class_attribute_list
 			    (object ClassAttribute "ColorKey"
 				quid       	"422FD2760307"
-				type       	"COLORREF"
+				type       	"CColorRef"
 				exportControl 	"Public")
 			    (object ClassAttribute "FontName"
 				quid       	"422FD29102A9"
@@ -42740,6 +43843,194 @@
 			module     	"Component View::Tima"
 			quidu      	"422F116802C6"
 			language   	"VC++")
+		    (object Class "CColorRef"
+			attributes 	(list Attribute_Set
+			    (object Attribute
+				tool       	"VC++"
+				name       	"AppliedPattern"
+				value      	"none")
+			    (object Attribute
+				tool       	"VC++"
+				name       	"AfxSupportMacro"
+				value      	""))
+			quid       	"423197550280"
+			operations 	(list Operations
+			    (object Operation "CColorRef"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"VC++"
+					name       	"Inline"
+					value      	TRUE))
+				quid       	"423197550290"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "CColorRef"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"VC++"
+					name       	"Inline"
+					value      	TRUE))
+				quid       	"423197550291"
+				parameters 	(list Parameters
+				    (object Parameter "r"
+					quid       	"42319755029F"
+					type       	"BYTE")
+				    (object Parameter "g"
+					quid       	"4231975502A0"
+					type       	"BYTE")
+				    (object Parameter "b"
+					quid       	"4231975502A1"
+					type       	"BYTE"))
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "CColorRef"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"VC++"
+					name       	"Inline"
+					value      	TRUE))
+				quid       	"4231975502A2"
+				parameters 	(list Parameters
+				    (object Parameter "clr"
+					quid       	"4231975502A3"
+					type       	"const COLORREF&"
+					const      	TRUE))
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "operator COLORREF"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"VC++"
+					name       	"Inline"
+					value      	TRUE))
+				quid       	"4231975502A4"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "operator="
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"VC++"
+					name       	"Inline"
+					value      	TRUE))
+				quid       	"4231975502AF"
+				parameters 	(list Parameters
+				    (object Parameter "clr"
+					quid       	"4231975502B0"
+					type       	"const COLORREF&"
+					const      	TRUE))
+				result     	"void"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "operator LPCOLORREF"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"VC++"
+					name       	"Inline"
+					value      	TRUE))
+				quid       	"4231975502B1"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "r"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"VC++"
+					name       	"Inline"
+					value      	TRUE))
+				quid       	"4231975502BF"
+				result     	"inline BYTE"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "g"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"VC++"
+					name       	"Inline"
+					value      	TRUE))
+				quid       	"4231975502C0"
+				result     	"inline BYTE"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "b"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"VC++"
+					name       	"Inline"
+					value      	TRUE))
+				quid       	"4231975502C1"
+				result     	"inline BYTE"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0))
+			class_attributes 	(list class_attribute_list
+			    (object ClassAttribute "color"
+				quid       	"4231975502C2"
+				type       	"COLORREF"
+				exportControl 	"Public"))
+			module     	"Component View::Tima"
+			quidu      	"422F116802C6"
+			language   	"VC++")
+		    (object Class "CSkinInfo"
+			attributes 	(list Attribute_Set
+			    (object Attribute
+				tool       	"VC++"
+				name       	"AppliedPattern"
+				value      	"none")
+			    (object Attribute
+				tool       	"VC++"
+				name       	"AfxSupportMacro"
+				value      	""))
+			quid       	"42319753007E"
+			superclasses 	(list inheritance_relationship_list
+			    (object Inheritance_Relationship
+				quid       	"42319753008C"
+				supplier   	"Logical View::Tima::CSettings"
+				quidu      	"422F11CC01EB"))
+			class_attributes 	(list class_attribute_list
+			    (object ClassAttribute "Version"
+				quid       	"4231975300BB"
+				type       	"DWORD"
+				exportControl 	"Public")
+			    (object ClassAttribute "Name"
+				quid       	"4231975300CB"
+				type       	"CString"
+				quidu      	"365C7A7A00C0"
+				exportControl 	"Public")
+			    (object ClassAttribute "Maker"
+				quid       	"4231975300DA"
+				type       	"CString"
+				quidu      	"365C7A7A00C0"
+				exportControl 	"Public")
+			    (object ClassAttribute "Time"
+				quid       	"4231975300DB"
+				type       	"CString"
+				quidu      	"365C7A7A00C0"
+				exportControl 	"Public")
+			    (object ClassAttribute "SkinImage"
+				quid       	"4231975300FA"
+				type       	"CString"
+				quidu      	"365C7A7A00C0"
+				exportControl 	"Public")
+			    (object ClassAttribute "PreviewImage"
+				quid       	"423197530109"
+				type       	"CString"
+				quidu      	"365C7A7A00C0"
+				exportControl 	"Public")
+			    (object ClassAttribute "Remark"
+				quid       	"423197530119"
+				type       	"CString"
+				quidu      	"365C7A7A00C0"
+				exportControl 	"Public"))
+			module     	"Component View::Tima"
+			quidu      	"422F116802C6"
+			language   	"VC++")
 		    (object Association "$UNNAMED$0"
 			quid       	"422F11CB03A1"
 			roles      	(list role_list
@@ -42845,7 +44136,8 @@
 			    (object Role "$UNNAMED$15"
 				quid       	"422F2DDC00F3"
 				supplier   	"Logical View::Tima::CSkin"
-				quidu      	"422ED2AF0120")))
+				quidu      	"422ED2AF0120"
+				is_aggregate 	TRUE)))
 		    (object Association "$UNNAMED$16"
 			quid       	"422F2E3E03DF"
 			roles      	(list role_list
@@ -42948,19 +44240,62 @@
 				quidu      	"422FE1A003E1"
 				Containment 	"By Reference")))
 		    (object Association "$UNNAMED$30"
-			quid       	"423013C8025B"
+			quid       	"4231975301E4"
 			roles      	(list role_list
-			    (object Role "m_pSkin"
-				quid       	"423013C8026A"
-				label      	"m_pSkin"
+			    (object Role "SkinInfo"
+				quid       	"423197530203"
+				label      	"SkinInfo"
+				supplier   	"Logical View::Tima::CSkinInfo"
+				quidu      	"42319753007E"
+				is_navigable 	TRUE)
+			    (object Role "$UNNAMED$31"
+				quid       	"423197530232"
+				supplier   	"Logical View::Tima::CSkinSettings"
+				quidu      	"422F06C10343"
+				is_aggregate 	TRUE)))
+		    (object Association "$UNNAMED$32"
+			quid       	"42319753029F"
+			roles      	(list role_list
+			    (object Role "m_skin"
+				quid       	"4231975302A0"
+				label      	"m_skin"
 				supplier   	"Logical View::Tima::CSkin"
 				quidu      	"422ED2AF0120"
 				exportControl 	"Protected"
 				is_navigable 	TRUE)
-			    (object Role "$UNNAMED$31"
-				quid       	"423013C8026C"
+			    (object Role "$UNNAMED$33"
+				quid       	"4231975302A2"
 				supplier   	"Logical View::Tima::CSkinManager"
-				quidu      	"422ED2D7015E"))))
+				quidu      	"422ED2D7015E"
+				is_aggregate 	TRUE)))
+		    (object Association "$UNNAMED$34"
+			quid       	"4231975302CE"
+			roles      	(list role_list
+			    (object Role "m_pthSkinRoot"
+				quid       	"4231975302DE"
+				label      	"m_pthSkinRoot"
+				supplier   	"CPath"
+				exportControl 	"Protected"
+				is_navigable 	TRUE)
+			    (object Role "$UNNAMED$35"
+				quid       	"4231975302EF"
+				supplier   	"Logical View::Tima::CSkinManager"
+				quidu      	"422ED2D7015E"
+				is_aggregate 	TRUE)))
+		    (object Association "$UNNAMED$36"
+			quid       	"4231975402FD"
+			roles      	(list role_list
+			    (object Role "m_pthSkin"
+				quid       	"4231975402FE"
+				label      	"m_pthSkin"
+				supplier   	"CPath"
+				exportControl 	"Protected"
+				is_navigable 	TRUE)
+			    (object Role "$UNNAMED$37"
+				quid       	"423197540300"
+				supplier   	"Logical View::Tima::CSkin"
+				quidu      	"422ED2AF0120"
+				is_aggregate 	TRUE))))
 		logical_presentations 	(list unit_reference_list
 		    (object ClassDiagram "Main"
 			quid       	"422ED29F0084"
@@ -42968,14 +44303,14 @@
 			zoom       	100
 			max_height 	28350
 			max_width  	21600
-			origin_x   	2132
-			origin_y   	1772
+			origin_x   	2032
+			origin_y   	2185
 			items      	(list diagram_item_list
 			    (object ClassView "Class" "Logical View::Tima::CSettings" @658
 				ShowCompartmentStereotypes 	TRUE
 				IncludeAttribute 	TRUE
 				IncludeOperation 	TRUE
-				location   	(2224, 368)
+				location   	(3280, 1280)
 				font       	(object Font
 				    size       	10
 				    face       	"Arial"
@@ -42987,7 +44322,7 @@
 				    default_color 	TRUE)
 				label      	(object ItemLabel
 				    Parent_View 	@658
-				    location   	(1846, 137)
+				    location   	(2902, 1049)
 				    fill_color 	13434879
 				    nlines     	1
 				    max_width  	756
@@ -42999,7 +44334,7 @@
 				quidu      	"422F11CC01EB"
 				compartment 	(object Compartment
 				    Parent_View 	@658
-				    location   	(1846, 198)
+				    location   	(2902, 1110)
 				    font       	(object Font
 					size       	10
 					face       	"Arial"
@@ -43022,7 +44357,7 @@
 				ShowCompartmentStereotypes 	TRUE
 				IncludeAttribute 	TRUE
 				IncludeOperation 	TRUE
-				location   	(4032, 2688)
+				location   	(3728, 3216)
 				font       	(object Font
 				    size       	10
 				    face       	"Arial"
@@ -43034,7 +44369,7 @@
 				    default_color 	TRUE)
 				label      	(object ItemLabel
 				    Parent_View 	@659
-				    location   	(3689, 2582)
+				    location   	(3385, 3110)
 				    fill_color 	16777215
 				    nlines     	1
 				    max_width  	686
@@ -43046,7 +44381,7 @@
 				quidu      	"422F16D302B6"
 				compartment 	(object Compartment
 				    Parent_View 	@659
-				    location   	(3689, 2643)
+				    location   	(3385, 3171)
 				    font       	(object Font
 					size       	10
 					face       	"Arial"
@@ -43070,7 +44405,7 @@
 				SuppressOperation 	TRUE
 				IncludeAttribute 	TRUE
 				IncludeOperation 	TRUE
-				location   	(1552, 3248)
+				location   	(1168, 3776)
 				font       	(object Font
 				    size       	10
 				    face       	"Arial"
@@ -43082,19 +44417,19 @@
 				    default_color 	TRUE)
 				label      	(object ItemLabel
 				    Parent_View 	@660
-				    location   	(1357, 3014)
+				    location   	(1002, 3542)
 				    fill_color 	13434879
 				    nlines     	1
-				    max_width  	390
+				    max_width  	332
 				    justify    	0
 				    label      	"FramePart")
 				stereotype 	(object ItemLabel
 				    Parent_View 	@660
-				    location   	(1357, 2964)
+				    location   	(1002, 3492)
 				    fill_color 	13434879
 				    anchor     	10
 				    nlines     	1
-				    max_width  	390
+				    max_width  	332
 				    justify    	0
 				    label      	"<<enum>>")
 				icon_style 	"Icon"
@@ -43103,7 +44438,7 @@
 				quidu      	"422F231C0318"
 				compartment 	(object Compartment
 				    Parent_View 	@660
-				    location   	(1357, 3075)
+				    location   	(1002, 3603)
 				    font       	(object Font
 					size       	10
 					face       	"Arial"
@@ -43118,7 +44453,7 @@
 				    anchor     	2
 				    nlines     	9
 				    max_width  	328)
-				width      	408
+				width      	350
 				height     	592
 				annotation 	8
 				autoResize 	TRUE)
@@ -43127,7 +44462,7 @@
 				SuppressOperation 	TRUE
 				IncludeAttribute 	TRUE
 				IncludeOperation 	TRUE
-				location   	(2144, 3248)
+				location   	(1776, 3776)
 				font       	(object Font
 				    size       	10
 				    face       	"Arial"
@@ -43139,19 +44474,19 @@
 				    default_color 	TRUE)
 				label      	(object ItemLabel
 				    Parent_View 	@661
-				    location   	(1974, 3139)
+				    location   	(1632, 3667)
 				    fill_color 	13434879
 				    nlines     	1
-				    max_width  	340
+				    max_width  	288
 				    justify    	0
 				    label      	"FrameState")
 				stereotype 	(object ItemLabel
 				    Parent_View 	@661
-				    location   	(1974, 3089)
+				    location   	(1632, 3617)
 				    fill_color 	13434879
 				    anchor     	10
 				    nlines     	1
-				    max_width  	340
+				    max_width  	288
 				    justify    	0
 				    label      	"<<enum>>")
 				icon_style 	"Icon"
@@ -43160,7 +44495,7 @@
 				quidu      	"422F25500258"
 				compartment 	(object Compartment
 				    Parent_View 	@661
-				    location   	(1974, 3200)
+				    location   	(1632, 3728)
 				    font       	(object Font
 					size       	10
 					face       	"Arial"
@@ -43174,8 +44509,8 @@
 				    fill_color 	13434879
 				    anchor     	2
 				    nlines     	4
-				    max_width  	293)
-				width      	358
+				    max_width  	285)
+				width      	306
 				height     	342
 				annotation 	8
 				autoResize 	TRUE)
@@ -43184,7 +44519,7 @@
 				SuppressOperation 	TRUE
 				IncludeAttribute 	TRUE
 				IncludeOperation 	TRUE
-				location   	(2752, 3248)
+				location   	(2368, 3776)
 				font       	(object Font
 				    size       	10
 				    face       	"Arial"
@@ -43196,19 +44531,19 @@
 				    default_color 	TRUE)
 				label      	(object ItemLabel
 				    Parent_View 	@662
-				    location   	(2509, 3064)
+				    location   	(2161, 3592)
 				    fill_color 	13434879
 				    nlines     	1
-				    max_width  	486
+				    max_width  	414
 				    justify    	0
 				    label      	"WindowButtonPart")
 				stereotype 	(object ItemLabel
 				    Parent_View 	@662
-				    location   	(2509, 3014)
+				    location   	(2161, 3542)
 				    fill_color 	13434879
 				    anchor     	10
 				    nlines     	1
-				    max_width  	486
+				    max_width  	414
 				    justify    	0
 				    label      	"<<enum>>")
 				icon_style 	"Icon"
@@ -43217,7 +44552,7 @@
 				quidu      	"422F26C402E5"
 				compartment 	(object Compartment
 				    Parent_View 	@662
-				    location   	(2509, 3125)
+				    location   	(2161, 3653)
 				    font       	(object Font
 					size       	10
 					face       	"Arial"
@@ -43231,8 +44566,8 @@
 				    fill_color 	13434879
 				    anchor     	2
 				    nlines     	7
-				    max_width  	418)
-				width      	504
+				    max_width  	410)
+				width      	432
 				height     	492
 				annotation 	8
 				autoResize 	TRUE)
@@ -43241,7 +44576,7 @@
 				SuppressOperation 	TRUE
 				IncludeAttribute 	TRUE
 				IncludeOperation 	TRUE
-				location   	(3344, 3248)
+				location   	(2976, 3776)
 				font       	(object Font
 				    size       	10
 				    face       	"Arial"
@@ -43253,19 +44588,19 @@
 				    default_color 	TRUE)
 				label      	(object ItemLabel
 				    Parent_View 	@663
-				    location   	(3162, 3114)
+				    location   	(2821, 3642)
 				    fill_color 	13434879
 				    nlines     	1
-				    max_width  	364
+				    max_width  	310
 				    justify    	0
 				    label      	"ButtonState")
 				stereotype 	(object ItemLabel
 				    Parent_View 	@663
-				    location   	(3162, 3064)
+				    location   	(2821, 3592)
 				    fill_color 	13434879
 				    anchor     	10
 				    nlines     	1
-				    max_width  	364
+				    max_width  	310
 				    justify    	0
 				    label      	"<<enum>>")
 				icon_style 	"Icon"
@@ -43274,7 +44609,7 @@
 				quidu      	"422F278C013F"
 				compartment 	(object Compartment
 				    Parent_View 	@663
-				    location   	(3162, 3175)
+				    location   	(2821, 3703)
 				    font       	(object Font
 					size       	10
 					face       	"Arial"
@@ -43288,14 +44623,14 @@
 				    fill_color 	13434879
 				    anchor     	2
 				    nlines     	5
-				    max_width  	315)
-				width      	382
+				    max_width  	307)
+				width      	328
 				height     	392
 				annotation 	8
 				autoResize 	TRUE)
 			    (object ClassView "Class" "Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Dialog Boxes::CDialog" @664
 				ShowCompartmentStereotypes 	TRUE
-				location   	(2896, 1616)
+				location   	(2304, 2208)
 				font       	(object Font
 				    size       	10
 				    face       	"Arial"
@@ -43307,25 +44642,25 @@
 				    default_color 	TRUE)
 				label      	(object ItemLabel
 				    Parent_View 	@664
-				    location   	(2725, 1542)
+				    location   	(2159, 2134)
 				    fill_color 	13434879
 				    nlines     	1
-				    max_width  	342
+				    max_width  	290
 				    justify    	0
 				    label      	"CDialog")
 				icon_style 	"Icon"
 				line_color 	3342489
 				fill_color 	14671839
 				quidu      	"365C7A7500B1"
-				width      	360
+				width      	308
 				height     	172
 				annotation 	8
 				autoResize 	TRUE)
-			    (object ClassView "Class" "Logical View::Tima::CGenericSettings" @665
+			    (object ClassView "Class" "Logical View::Tima::CSkinDialog" @665
 				ShowCompartmentStereotypes 	TRUE
 				IncludeAttribute 	TRUE
 				IncludeOperation 	TRUE
-				location   	(352, 1616)
+				location   	(1856, 2768)
 				font       	(object Font
 				    size       	10
 				    face       	"Arial"
@@ -43337,115 +44672,7 @@
 				    default_color 	TRUE)
 				label      	(object ItemLabel
 				    Parent_View 	@665
-				    location   	(71, 1460)
-				    fill_color 	13434879
-				    nlines     	2
-				    max_width  	562
-				    justify    	0
-				    label      	"CGenericSettings")
-				icon_style 	"Icon"
-				line_color 	3342489
-				fill_color 	13434879
-				quidu      	"422FD25500A6"
-				compartment 	(object Compartment
-				    Parent_View 	@665
-				    location   	(71, 1521)
-				    font       	(object Font
-					size       	10
-					face       	"Arial"
-					bold       	FALSE
-					italics    	FALSE
-					underline  	FALSE
-					strike     	FALSE
-					color      	0
-					default_color 	TRUE)
-				    icon_style 	"Icon"
-				    fill_color 	13434879
-				    anchor     	2
-				    nlines     	4
-				    max_width  	484)
-				width      	580
-				height     	336
-				annotation 	8
-				autoResize 	TRUE)
-			    (object InheritView "" @666
-				stereotype 	TRUE
-				line_color 	3342489
-				quidu      	"422FD2E400B5"
-				client     	@665
-				supplier   	@658
-				line_style 	0)
-			    (object ClassView "Class" "Logical View::Tima::CWindowSettings" @667
-				ShowCompartmentStereotypes 	TRUE
-				IncludeAttribute 	TRUE
-				IncludeOperation 	TRUE
-				location   	(2000, 1616)
-				font       	(object Font
-				    size       	10
-				    face       	"Arial"
-				    bold       	FALSE
-				    italics    	FALSE
-				    underline  	FALSE
-				    strike     	FALSE
-				    color      	0
-				    default_color 	TRUE)
-				label      	(object ItemLabel
-				    Parent_View 	@667
-				    location   	(1532, 1460)
-				    fill_color 	13434879
-				    nlines     	1
-				    max_width  	936
-				    justify    	0
-				    label      	"CWindowSettings")
-				icon_style 	"Icon"
-				line_color 	3342489
-				fill_color 	13434879
-				quidu      	"422F06970110"
-				compartment 	(object Compartment
-				    Parent_View 	@667
-				    location   	(1532, 1521)
-				    font       	(object Font
-					size       	10
-					face       	"Arial"
-					bold       	FALSE
-					italics    	FALSE
-					underline  	FALSE
-					strike     	FALSE
-					color      	0
-					default_color 	TRUE)
-				    icon_style 	"Icon"
-				    fill_color 	16777215
-				    anchor     	2
-				    nlines     	5
-				    max_width  	796)
-				width      	954
-				height     	336
-				annotation 	8
-				autoResize 	TRUE)
-			    (object InheritView "" @668
-				stereotype 	TRUE
-				line_color 	3342489
-				quidu      	"422F12A90278"
-				client     	@667
-				supplier   	@658
-				line_style 	0)
-			    (object ClassView "Class" "Logical View::Tima::CSkinDialog" @669
-				ShowCompartmentStereotypes 	TRUE
-				IncludeAttribute 	TRUE
-				IncludeOperation 	TRUE
-				location   	(2448, 2192)
-				font       	(object Font
-				    size       	10
-				    face       	"Arial"
-				    bold       	FALSE
-				    italics    	FALSE
-				    underline  	FALSE
-				    strike     	FALSE
-				    color      	0
-				    default_color 	TRUE)
-				label      	(object ItemLabel
-				    Parent_View 	@669
-				    location   	(2085, 2036)
+				    location   	(1493, 2612)
 				    fill_color 	13434879
 				    nlines     	1
 				    max_width  	726
@@ -43456,8 +44683,8 @@
 				fill_color 	13434879
 				quidu      	"422ED2DF015E"
 				compartment 	(object Compartment
-				    Parent_View 	@669
-				    location   	(2085, 2097)
+				    Parent_View 	@665
+				    location   	(1493, 2673)
 				    font       	(object Font
 					size       	10
 					face       	"Arial"
@@ -43476,29 +44703,329 @@
 				height     	336
 				annotation 	8
 				autoResize 	TRUE)
-			    (object RealizeView "" @670
+			    (object RealizeView "" @666
 				stereotype 	TRUE
 				line_color 	3342489
 				quidu      	"422F2FBB0352"
-				client     	@669
+				client     	@665
 				supplier   	@659
+				vertices   	(list Points
+				    (2228, 2857)
+				    (3375, 3131))
 				line_style 	0)
-			    (object InheritView "" @671
+			    (object InheritView "" @667
 				stereotype 	TRUE
 				line_color 	3342489
 				quidu      	"422F30BB02B6"
-				client     	@669
+				client     	@665
 				supplier   	@664
+				vertices   	(list Points
+				    (1990, 2599)
+				    (2234, 2294))
 				line_style 	0)
-			    (object AssociationViewNew "$UNNAMED$24" @672
-				location   	(2223, 1903)
+			    (object ClassView "Class" "Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Controls::CButton" @668
+				ShowCompartmentStereotypes 	TRUE
+				location   	(4400, 2208)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object ItemLabel
+				    Parent_View 	@668
+				    location   	(4293, 2133)
+				    fill_color 	13434879
+				    nlines     	1
+				    max_width  	214
+				    justify    	0
+				    label      	"CButton")
+				icon_style 	"Icon"
+				line_color 	3342489
+				fill_color 	14671839
+				quidu      	"365C7A7700A9"
+				width      	232
+				height     	174
+				annotation 	8
+				autoResize 	TRUE)
+			    (object ClassView "Class" "Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::CWnd" @669
+				ShowCompartmentStereotypes 	TRUE
+				location   	(5600, 2208)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object ItemLabel
+				    Parent_View 	@669
+				    location   	(5432, 2133)
+				    fill_color 	13434879
+				    nlines     	1
+				    max_width  	336
+				    justify    	0
+				    label      	"CWnd")
+				icon_style 	"Icon"
+				line_color 	3342489
+				fill_color 	14671839
+				quidu      	"365C7A74001A"
+				width      	354
+				height     	174
+				annotation 	8
+				autoResize 	TRUE)
+			    (object ClassView "Class" "Logical View::Tima::CSkinButton" @670
+				ShowCompartmentStereotypes 	TRUE
+				IncludeAttribute 	TRUE
+				IncludeOperation 	TRUE
+				location   	(3728, 2768)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object ItemLabel
+				    Parent_View 	@670
+				    location   	(3336, 2662)
+				    fill_color 	13434879
+				    nlines     	1
+				    max_width  	784
+				    justify    	0
+				    label      	"CSkinButton")
+				icon_style 	"Icon"
+				line_color 	3342489
+				fill_color 	13434879
+				quidu      	"422FE1980364"
+				compartment 	(object Compartment
+				    Parent_View 	@670
+				    location   	(3336, 2723)
+				    font       	(object Font
+					size       	10
+					face       	"Arial"
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    icon_style 	"Icon"
+				    fill_color 	13434879
+				    anchor     	2
+				    nlines     	3
+				    max_width  	675)
+				width      	802
+				height     	236
+				annotation 	8
+				autoResize 	TRUE)
+			    (object InheritView "" @671
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"422FE24E027A"
+				client     	@670
+				supplier   	@668
+				vertices   	(list Points
+				    (3868, 2649)
+				    (4295, 2295))
+				line_style 	0)
+			    (object ClassView "Class" "Logical View::Tima::CSkinPicture" @672
+				ShowCompartmentStereotypes 	TRUE
+				IncludeAttribute 	TRUE
+				IncludeOperation 	TRUE
+				location   	(5296, 2768)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object ItemLabel
+				    Parent_View 	@672
+				    location   	(4904, 2662)
+				    fill_color 	13434879
+				    nlines     	1
+				    max_width  	784
+				    justify    	0
+				    label      	"CSkinPicture")
+				icon_style 	"Icon"
+				line_color 	3342489
+				fill_color 	13434879
+				quidu      	"422FE1A003E1"
+				compartment 	(object Compartment
+				    Parent_View 	@672
+				    location   	(4904, 2723)
+				    font       	(object Font
+					size       	10
+					face       	"Arial"
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    icon_style 	"Icon"
+				    fill_color 	13434879
+				    anchor     	2
+				    nlines     	3
+				    max_width  	675)
+				width      	802
+				height     	236
+				annotation 	8
+				autoResize 	TRUE)
+			    (object RealizeView "" @673
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"422FE29D02B9"
+				client     	@670
+				supplier   	@659
+				vertices   	(list Points
+				    (3728, 2886)
+				    (3728, 3097))
+				line_style 	0)
+			    (object RealizeView "" @674
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"422FE2A1022C"
+				client     	@672
+				supplier   	@659
+				vertices   	(list Points
+				    (4894, 2882)
+				    (4080, 3115))
+				line_style 	0)
+			    (object ClassView "Class" "Logical View::Tima::CGenericSettings" @675
+				ShowCompartmentStereotypes 	TRUE
+				IncludeAttribute 	TRUE
+				IncludeOperation 	TRUE
+				location   	(352, 2208)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object ItemLabel
+				    Parent_View 	@675
+				    location   	(71, 2052)
+				    fill_color 	13434879
+				    nlines     	2
+				    max_width  	562
+				    justify    	0
+				    label      	"CGenericSettings")
+				icon_style 	"Icon"
+				line_color 	3342489
+				fill_color 	13434879
+				quidu      	"422FD25500A6"
+				compartment 	(object Compartment
+				    Parent_View 	@675
+				    location   	(71, 2113)
+				    font       	(object Font
+					size       	10
+					face       	"Arial"
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    icon_style 	"Icon"
+				    fill_color 	13434879
+				    anchor     	2
+				    nlines     	4
+				    max_width  	484)
+				width      	580
+				height     	336
+				annotation 	8
+				autoResize 	TRUE)
+			    (object InheritView "" @676
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"422FD2E400B5"
+				client     	@675
+				supplier   	@658
+				vertices   	(list Points
+				    (642, 2115)
+				    (2892, 1402))
+				line_style 	0)
+			    (object ClassView "Class" "Logical View::Tima::CWindowSettings" @677
+				ShowCompartmentStereotypes 	TRUE
+				IncludeAttribute 	TRUE
+				IncludeOperation 	TRUE
+				location   	(1408, 2208)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object ItemLabel
+				    Parent_View 	@677
+				    location   	(940, 2052)
+				    fill_color 	13434879
+				    nlines     	1
+				    max_width  	936
+				    justify    	0
+				    label      	"CWindowSettings")
+				icon_style 	"Icon"
+				line_color 	3342489
+				fill_color 	13434879
+				quidu      	"422F06970110"
+				compartment 	(object Compartment
+				    Parent_View 	@677
+				    location   	(940, 2113)
+				    font       	(object Font
+					size       	10
+					face       	"Arial"
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    icon_style 	"Icon"
+				    fill_color 	16777215
+				    anchor     	2
+				    nlines     	5
+				    max_width  	803)
+				width      	954
+				height     	336
+				annotation 	8
+				autoResize 	TRUE)
+			    (object InheritView "" @678
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"422F12A90278"
+				client     	@677
+				supplier   	@658
+				vertices   	(list Points
+				    (1746, 2039)
+				    (2892, 1470))
+				line_style 	0)
+			    (object AssociationViewNew "$UNNAMED$24" @679
+				location   	(1631, 2487)
 				stereotype 	TRUE
 				line_color 	3342489
 				quidu      	"422FE0CB0384"
 				roleview_list 	(list RoleViews
-				    (object RoleView "m_settings" @673
-					Parent_View 	@672
-					location   	(1295, -257)
+				    (object RoleView "m_settings" @680
+					Parent_View 	@679
+					location   	(703, 327)
 					font       	(object Font
 					    size       	10
 					    face       	"Arial"
@@ -43508,9 +45035,9 @@
 					    strike     	FALSE
 					    color      	0
 					    default_color 	TRUE)
-					label      	(object SegLabel @674
-					    Parent_View 	@673
-					    location   	(2118, 1834)
+					label      	(object SegLabel @681
+					    Parent_View 	@680
+					    location   	(1528, 2424)
 					    font       	(object Font
 						size       	10
 						face       	"Arial"
@@ -43532,79 +45059,29 @@
 					stereotype 	TRUE
 					line_color 	3342489
 					quidu      	"422FE0CC02F7"
-					client     	@672
-					supplier   	@667
+					client     	@679
+					supplier   	@677
+					vertices   	(list Points
+					    (1631, 2487)
+					    (1542, 2376))
 					line_style 	0)
-				    (object RoleView "$UNNAMED$25" @675
-					Parent_View 	@672
-					location   	(1295, -257)
+				    (object RoleView "$UNNAMED$25" @682
+					Parent_View 	@679
+					location   	(703, 327)
 					stereotype 	TRUE
 					line_color 	3342489
 					quidu      	"422FE0CC02F9"
-					client     	@672
-					supplier   	@669
+					client     	@679
+					supplier   	@665
+					vertices   	(list Points
+					    (1631, 2487)
+					    (1721, 2599))
 					line_style 	0)))
-			    (object ClassView "Class" "Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Controls::CButton" @676
-				ShowCompartmentStereotypes 	TRUE
-				location   	(4400, 1616)
-				font       	(object Font
-				    size       	10
-				    face       	"Arial"
-				    bold       	FALSE
-				    italics    	FALSE
-				    underline  	FALSE
-				    strike     	FALSE
-				    color      	0
-				    default_color 	TRUE)
-				label      	(object ItemLabel
-				    Parent_View 	@676
-				    location   	(4273, 1541)
-				    fill_color 	13434879
-				    nlines     	1
-				    max_width  	254
-				    justify    	0
-				    label      	"CButton")
-				icon_style 	"Icon"
-				line_color 	3342489
-				fill_color 	14671839
-				quidu      	"365C7A7700A9"
-				width      	272
-				height     	174
-				annotation 	8
-				autoResize 	TRUE)
-			    (object ClassView "Class" "Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::CWnd" @677
-				ShowCompartmentStereotypes 	TRUE
-				location   	(5600, 1616)
-				font       	(object Font
-				    size       	10
-				    face       	"Arial"
-				    bold       	FALSE
-				    italics    	FALSE
-				    underline  	FALSE
-				    strike     	FALSE
-				    color      	0
-				    default_color 	TRUE)
-				label      	(object ItemLabel
-				    Parent_View 	@677
-				    location   	(5402, 1541)
-				    fill_color 	13434879
-				    nlines     	1
-				    max_width  	396
-				    justify    	0
-				    label      	"CWnd")
-				icon_style 	"Icon"
-				line_color 	3342489
-				fill_color 	14671839
-				quidu      	"365C7A74001A"
-				width      	414
-				height     	174
-				annotation 	8
-				autoResize 	TRUE)
-			    (object ClassView "Class" "Logical View::Tima::CButtonSettings" @678
+			    (object ClassView "Class" "Logical View::Tima::CButtonSettings" @683
 				ShowCompartmentStereotypes 	TRUE
 				IncludeAttribute 	TRUE
 				IncludeOperation 	TRUE
-				location   	(3648, 1616)
+				location   	(3056, 2208)
 				font       	(object Font
 				    size       	10
 				    face       	"Arial"
@@ -43615,8 +45092,8 @@
 				    color      	0
 				    default_color 	TRUE)
 				label      	(object ItemLabel
-				    Parent_View 	@678
-				    location   	(3332, 1513)
+				    Parent_View 	@683
+				    location   	(2740, 2105)
 				    fill_color 	13434879
 				    nlines     	1
 				    max_width  	632
@@ -43627,8 +45104,8 @@
 				fill_color 	13434879
 				quidu      	"422F163D01FB"
 				compartment 	(object Compartment
-				    Parent_View 	@678
-				    location   	(3332, 1574)
+				    Parent_View 	@683
+				    location   	(2740, 2166)
 				    font       	(object Font
 					size       	10
 					face       	"Arial"
@@ -43647,76 +45124,25 @@
 				height     	231
 				annotation 	8
 				autoResize 	TRUE)
-			    (object InheritView "" @679
+			    (object InheritView "" @684
 				stereotype 	TRUE
 				line_color 	3342489
 				quidu      	"422F16B002C6"
-				client     	@678
+				client     	@683
 				supplier   	@658
+				vertices   	(list Points
+				    (3084, 2092)
+				    (3220, 1523))
 				line_style 	0)
-			    (object ClassView "Class" "Logical View::Tima::CSkinButton" @680
-				ShowCompartmentStereotypes 	TRUE
-				IncludeAttribute 	TRUE
-				IncludeOperation 	TRUE
-				location   	(4032, 2192)
-				font       	(object Font
-				    size       	10
-				    face       	"Arial"
-				    bold       	FALSE
-				    italics    	FALSE
-				    underline  	FALSE
-				    strike     	FALSE
-				    color      	0
-				    default_color 	TRUE)
-				label      	(object ItemLabel
-				    Parent_View 	@680
-				    location   	(3640, 2086)
-				    fill_color 	13434879
-				    nlines     	1
-				    max_width  	784
-				    justify    	0
-				    label      	"CSkinButton")
-				icon_style 	"Icon"
-				line_color 	3342489
-				fill_color 	13434879
-				quidu      	"422FE1980364"
-				compartment 	(object Compartment
-				    Parent_View 	@680
-				    location   	(3640, 2147)
-				    font       	(object Font
-					size       	10
-					face       	"Arial"
-					bold       	FALSE
-					italics    	FALSE
-					underline  	FALSE
-					strike     	FALSE
-					color      	0
-					default_color 	TRUE)
-				    icon_style 	"Icon"
-				    fill_color 	13434879
-				    anchor     	2
-				    nlines     	3
-				    max_width  	675)
-				width      	802
-				height     	236
-				annotation 	8
-				autoResize 	TRUE)
-			    (object InheritView "" @681
-				stereotype 	TRUE
-				line_color 	3342489
-				quidu      	"422FE24E027A"
-				client     	@680
-				supplier   	@676
-				line_style 	0)
-			    (object AssociationViewNew "$UNNAMED$26" @682
-				location   	(3839, 1902)
+			    (object AssociationViewNew "$UNNAMED$26" @685
+				location   	(3390, 2486)
 				stereotype 	TRUE
 				line_color 	3342489
 				quidu      	"422FE25F020D"
 				roleview_list 	(list RoleViews
-				    (object RoleView "m_settings" @683
-					Parent_View 	@682
-					location   	(1839, 110)
+				    (object RoleView "m_settings" @686
+					Parent_View 	@685
+					location   	(1390, 694)
 					font       	(object Font
 					    size       	10
 					    face       	"Arial"
@@ -43726,9 +45152,9 @@
 					    strike     	FALSE
 					    color      	0
 					    default_color 	TRUE)
-					label      	(object SegLabel @684
-					    Parent_View 	@683
-					    location   	(3714, 1789)
+					label      	(object SegLabel @687
+					    Parent_View 	@686
+					    location   	(3207, 2388)
 					    font       	(object Font
 						size       	10
 						face       	"Arial"
@@ -43750,23 +45176,29 @@
 					stereotype 	TRUE
 					line_color 	3342489
 					quidu      	"422FE2600028"
-					client     	@682
-					supplier   	@678
+					client     	@685
+					supplier   	@683
+					vertices   	(list Points
+					    (3390, 2486)
+					    (3194, 2323))
 					line_style 	0)
-				    (object RoleView "$UNNAMED$27" @685
-					Parent_View 	@682
-					location   	(1839, 110)
+				    (object RoleView "$UNNAMED$27" @688
+					Parent_View 	@685
+					location   	(1390, 694)
 					stereotype 	TRUE
 					line_color 	3342489
 					quidu      	"422FE2600038"
-					client     	@682
-					supplier   	@680
+					client     	@685
+					supplier   	@670
+					vertices   	(list Points
+					    (3390, 2486)
+					    (3586, 2649))
 					line_style 	0)))
-			    (object ClassView "Class" "Logical View::Tima::CPictureSettings" @686
+			    (object ClassView "Class" "Logical View::Tima::CPictureSettings" @689
 				ShowCompartmentStereotypes 	TRUE
 				IncludeAttribute 	TRUE
 				IncludeOperation 	TRUE
-				location   	(5008, 1616)
+				location   	(5008, 2208)
 				font       	(object Font
 				    size       	10
 				    face       	"Arial"
@@ -43777,8 +45209,8 @@
 				    color      	0
 				    default_color 	TRUE)
 				label      	(object ItemLabel
-				    Parent_View 	@686
-				    location   	(4801, 1535)
+				    Parent_View 	@689
+				    location   	(4801, 2127)
 				    fill_color 	13434879
 				    nlines     	1
 				    max_width  	414
@@ -43789,8 +45221,8 @@
 				fill_color 	13434879
 				quidu      	"422F1655016E"
 				compartment 	(object Compartment
-				    Parent_View 	@686
-				    location   	(4801, 1596)
+				    Parent_View 	@689
+				    location   	(4801, 2188)
 				    font       	(object Font
 					size       	10
 					face       	"Arial"
@@ -43809,69 +45241,25 @@
 				height     	186
 				annotation 	8
 				autoResize 	TRUE)
-			    (object InheritView "" @687
+			    (object InheritView "" @690
 				stereotype 	TRUE
 				line_color 	3342489
 				quidu      	"422F16B20229"
-				client     	@686
+				client     	@689
 				supplier   	@658
+				vertices   	(list Points
+				    (4834, 2114)
+				    (3667, 1488))
 				line_style 	0)
-			    (object ClassView "Class" "Logical View::Tima::CSkinPicture" @688
-				ShowCompartmentStereotypes 	TRUE
-				IncludeAttribute 	TRUE
-				IncludeOperation 	TRUE
-				location   	(5296, 2192)
-				font       	(object Font
-				    size       	10
-				    face       	"Arial"
-				    bold       	FALSE
-				    italics    	FALSE
-				    underline  	FALSE
-				    strike     	FALSE
-				    color      	0
-				    default_color 	TRUE)
-				label      	(object ItemLabel
-				    Parent_View 	@688
-				    location   	(4904, 2086)
-				    fill_color 	13434879
-				    nlines     	1
-				    max_width  	784
-				    justify    	0
-				    label      	"CSkinPicture")
-				icon_style 	"Icon"
-				line_color 	3342489
-				fill_color 	13434879
-				quidu      	"422FE1A003E1"
-				compartment 	(object Compartment
-				    Parent_View 	@688
-				    location   	(4904, 2147)
-				    font       	(object Font
-					size       	10
-					face       	"Arial"
-					bold       	FALSE
-					italics    	FALSE
-					underline  	FALSE
-					strike     	FALSE
-					color      	0
-					default_color 	TRUE)
-				    icon_style 	"Icon"
-				    fill_color 	13434879
-				    anchor     	2
-				    nlines     	3
-				    max_width  	675)
-				width      	802
-				height     	236
-				annotation 	8
-				autoResize 	TRUE)
-			    (object AssociationViewNew "$UNNAMED$28" @689
-				location   	(5145, 1891)
+			    (object AssociationViewNew "$UNNAMED$28" @691
+				location   	(5145, 2475)
 				stereotype 	TRUE
 				line_color 	3342489
 				quidu      	"422FE27C0028"
 				roleview_list 	(list RoleViews
-				    (object RoleView "m_settings" @690
-					Parent_View 	@689
-					location   	(2617, 99)
+				    (object RoleView "m_settings" @692
+					Parent_View 	@691
+					location   	(2617, 683)
 					font       	(object Font
 					    size       	10
 					    face       	"Arial"
@@ -43881,9 +45269,9 @@
 					    strike     	FALSE
 					    color      	0
 					    default_color 	TRUE)
-					label      	(object SegLabel @691
-					    Parent_View 	@690
-					    location   	(5036, 1766)
+					label      	(object SegLabel @693
+					    Parent_View 	@692
+					    location   	(5038, 2355)
 					    font       	(object Font
 						size       	10
 						face       	"Arial"
@@ -43905,37 +45293,39 @@
 					stereotype 	TRUE
 					line_color 	3342489
 					quidu      	"422FE27C02C8"
-					client     	@689
-					supplier   	@686
+					client     	@691
+					supplier   	@689
+					vertices   	(list Points
+					    (5145, 2475)
+					    (5056, 2301))
 					line_style 	0)
-				    (object RoleView "$UNNAMED$29" @692
-					Parent_View 	@689
-					location   	(2617, 99)
+				    (object RoleView "$UNNAMED$29" @694
+					Parent_View 	@691
+					location   	(2617, 683)
 					stereotype 	TRUE
 					line_color 	3342489
 					quidu      	"422FE27C02CA"
-					client     	@689
-					supplier   	@688
+					client     	@691
+					supplier   	@672
+					vertices   	(list Points
+					    (5145, 2475)
+					    (5235, 2649))
 					line_style 	0)))
-			    (object RealizeView "" @693
+			    (object InheritView "" @695
 				stereotype 	TRUE
 				line_color 	3342489
-				quidu      	"422FE29D02B9"
-				client     	@680
-				supplier   	@659
+				quidu      	"422FE250026A"
+				client     	@672
+				supplier   	@669
+				vertices   	(list Points
+				    (5359, 2649)
+				    (5552, 2295))
 				line_style 	0)
-			    (object RealizeView "" @694
-				stereotype 	TRUE
-				line_color 	3342489
-				quidu      	"422FE2A1022C"
-				client     	@688
-				supplier   	@659
-				line_style 	0)
-			    (object ClassView "Class" "Logical View::Tima::CSkinSettings" @695
+			    (object ClassView "Class" "Logical View::Tima::CSkinInfo" @696
 				ShowCompartmentStereotypes 	TRUE
 				IncludeAttribute 	TRUE
 				IncludeOperation 	TRUE
-				location   	(1776, 992)
+				location   	(3808, 2208)
 				font       	(object Font
 				    size       	10
 				    face       	"Arial"
@@ -43946,20 +45336,20 @@
 				    color      	0
 				    default_color 	TRUE)
 				label      	(object ItemLabel
-				    Parent_View 	@695
-				    location   	(1499, 761)
+				    Parent_View 	@696
+				    location   	(3573, 1977)
 				    fill_color 	13434879
 				    nlines     	1
-				    max_width  	554
+				    max_width  	470
 				    justify    	0
-				    label      	"CSkinSettings")
+				    label      	"CSkinInfo")
 				icon_style 	"Icon"
 				line_color 	3342489
 				fill_color 	13434879
-				quidu      	"422F06C10343"
+				quidu      	"42319753007E"
 				compartment 	(object Compartment
-				    Parent_View 	@695
-				    location   	(1499, 822)
+				    Parent_View 	@696
+				    location   	(3573, 2038)
 				    font       	(object Font
 					size       	10
 					face       	"Arial"
@@ -43970,30 +45360,63 @@
 					color      	0
 					default_color 	TRUE)
 				    icon_style 	"Icon"
-				    fill_color 	16777215
+				    fill_color 	13434879
 				    anchor     	2
 				    nlines     	8
-				    max_width  	478)
-				width      	572
+				    max_width  	468)
+				width      	488
 				height     	486
 				annotation 	8
 				autoResize 	TRUE)
-			    (object InheritView "" @696
+			    (object ClassView "Class" "Logical View::Tima::CSkinSettings" @697
+				ShowCompartmentStereotypes 	TRUE
+				IncludeAttribute 	TRUE
+				IncludeOperation 	TRUE
+				location   	(2832, 1760)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object ItemLabel
+				    Parent_View 	@697
+				    location   	(2687, 1708)
+				    fill_color 	13434879
+				    nlines     	1
+				    max_width  	290
+				    justify    	0
+				    label      	"CSkinSettings")
+				icon_style 	"Icon"
+				line_color 	3342489
+				fill_color 	13434879
+				quidu      	"422F06C10343"
+				width      	308
+				height     	128
+				annotation 	8
+				autoResize 	TRUE)
+			    (object InheritView "" @698
 				stereotype 	TRUE
 				line_color 	3342489
 				quidu      	"422F12A800B2"
-				client     	@695
+				client     	@697
 				supplier   	@658
+				vertices   	(list Points
+				    (2892, 1695)
+				    (3052, 1523))
 				line_style 	0)
-			    (object AssociationViewNew "$UNNAMED$22" @697
-				location   	(1065, 1301)
+			    (object AssociationViewNew "$UNNAMED$22" @699
+				location   	(1659, 1971)
 				stereotype 	TRUE
 				line_color 	3342489
 				quidu      	"422FD2E900E4"
 				roleview_list 	(list RoleViews
-				    (object RoleView "Generic" @698
-					Parent_View 	@697
-					location   	(-1863, -155)
+				    (object RoleView "Generic" @700
+					Parent_View 	@699
+					location   	(-1269, 515)
 					font       	(object Font
 					    size       	10
 					    face       	"Arial"
@@ -44003,9 +45426,9 @@
 					    strike     	FALSE
 					    color      	0
 					    default_color 	TRUE)
-					label      	(object SegLabel @699
-					    Parent_View 	@698
-					    location   	(744, 1489)
+					label      	(object SegLabel @701
+					    Parent_View 	@700
+					    location   	(852, 2159)
 					    font       	(object Font
 						size       	10
 						face       	"Arial"
@@ -44027,27 +45450,33 @@
 					stereotype 	TRUE
 					line_color 	3342489
 					quidu      	"422FD2E90336"
-					client     	@697
-					supplier   	@665
+					client     	@699
+					supplier   	@675
+					vertices   	(list Points
+					    (1659, 1971)
+					    (642, 2155))
 					line_style 	0)
-				    (object RoleView "$UNNAMED$23" @700
-					Parent_View 	@697
-					location   	(-1863, -155)
+				    (object RoleView "$UNNAMED$23" @702
+					Parent_View 	@699
+					location   	(-1269, 515)
 					stereotype 	TRUE
 					line_color 	3342489
 					quidu      	"422FD2E90338"
-					client     	@697
-					supplier   	@695
+					client     	@699
+					supplier   	@697
+					vertices   	(list Points
+					    (1659, 1971)
+					    (2677, 1788))
 					line_style 	0)))
-			    (object AssociationViewNew "$UNNAMED$16" @701
-				location   	(1901, 1341)
+			    (object AssociationViewNew "$UNNAMED$16" @703
+				location   	(2281, 1932)
 				stereotype 	TRUE
 				line_color 	3342489
 				quidu      	"422F2E3E03DF"
 				roleview_list 	(list RoleViews
-				    (object RoleView "Window" @702
-					Parent_View 	@701
-					location   	(1661, 237)
+				    (object RoleView "Window" @704
+					Parent_View 	@703
+					location   	(2041, 828)
 					font       	(object Font
 					    size       	10
 					    face       	"Arial"
@@ -44057,9 +45486,9 @@
 					    strike     	FALSE
 					    color      	0
 					    default_color 	TRUE)
-					label      	(object SegLabel @703
-					    Parent_View 	@702
-					    location   	(1971, 1412)
+					label      	(object SegLabel @705
+					    Parent_View 	@704
+					    location   	(1977, 2072)
 					    font       	(object Font
 						size       	10
 						face       	"Arial"
@@ -44081,27 +45510,33 @@
 					stereotype 	TRUE
 					line_color 	3342489
 					quidu      	"422F2E3F0239"
-					client     	@701
-					supplier   	@667
+					client     	@703
+					supplier   	@677
+					vertices   	(list Points
+					    (2281, 1932)
+					    (1885, 2057))
 					line_style 	0)
-				    (object RoleView "$UNNAMED$17" @704
-					Parent_View 	@701
-					location   	(1661, 237)
+				    (object RoleView "$UNNAMED$17" @706
+					Parent_View 	@703
+					location   	(2041, 828)
 					stereotype 	TRUE
 					line_color 	3342489
 					quidu      	"422F2E3F023B"
-					client     	@701
-					supplier   	@695
+					client     	@703
+					supplier   	@697
+					vertices   	(list Points
+					    (2281, 1932)
+					    (2677, 1808))
 					line_style 	0)))
-			    (object AssociationViewNew "$UNNAMED$18" @705
-				location   	(2692, 1296)
+			    (object AssociationViewNew "$UNNAMED$18" @707
+				location   	(2931, 1958)
 				stereotype 	TRUE
 				line_color 	3342489
 				quidu      	"422F2EBD012F"
 				roleview_list 	(list RoleViews
-				    (object RoleView "Button" @706
-					Parent_View 	@705
-					location   	(2452, 192)
+				    (object RoleView "Button" @708
+					Parent_View 	@707
+					location   	(2691, 854)
 					font       	(object Font
 					    size       	10
 					    face       	"Arial"
@@ -44111,9 +45546,9 @@
 					    strike     	FALSE
 					    color      	0
 					    default_color 	TRUE)
-					label      	(object SegLabel @707
-					    Parent_View 	@706
-					    location   	(3183, 1504)
+					label      	(object SegLabel @709
+					    Parent_View 	@708
+					    location   	(2948, 2084)
 					    font       	(object Font
 						size       	10
 						face       	"Arial"
@@ -44135,27 +45570,33 @@
 					stereotype 	TRUE
 					line_color 	3342489
 					quidu      	"422F2EBE03DF"
-					client     	@705
-					supplier   	@678
+					client     	@707
+					supplier   	@683
+					vertices   	(list Points
+					    (2931, 1958)
+					    (2998, 2092))
 					line_style 	0)
-				    (object RoleView "$UNNAMED$19" @708
-					Parent_View 	@705
-					location   	(2452, 192)
+				    (object RoleView "$UNNAMED$19" @710
+					Parent_View 	@707
+					location   	(2691, 854)
 					stereotype 	TRUE
 					line_color 	3342489
 					quidu      	"422F2EBF0007"
-					client     	@705
-					supplier   	@695
+					client     	@707
+					supplier   	@697
+					vertices   	(list Points
+					    (2931, 1958)
+					    (2864, 1824))
 					line_style 	0)))
-			    (object AssociationViewNew "$UNNAMED$20" @709
-				location   	(3426, 1309)
+			    (object AssociationViewNew "$UNNAMED$20" @711
+				location   	(3888, 1977)
 				stereotype 	TRUE
 				line_color 	3342489
 				quidu      	"422F2ED30362"
 				roleview_list 	(list RoleViews
-				    (object RoleView "Picture" @710
-					Parent_View 	@709
-					location   	(3186, 205)
+				    (object RoleView "Picture" @712
+					Parent_View 	@711
+					location   	(3648, 873)
 					font       	(object Font
 					    size       	10
 					    face       	"Arial"
@@ -44165,9 +45606,9 @@
 					    strike     	FALSE
 					    color      	0
 					    default_color 	TRUE)
-					label      	(object SegLabel @711
-					    Parent_View 	@710
-					    location   	(4526, 1480)
+					label      	(object SegLabel @713
+					    Parent_View 	@712
+					    location   	(4618, 2086)
 					    font       	(object Font
 						size       	10
 						face       	"Arial"
@@ -44189,71 +45630,130 @@
 					stereotype 	TRUE
 					line_color 	3342489
 					quidu      	"422F2ED500B2"
-					client     	@709
-					supplier   	@686
+					client     	@711
+					supplier   	@689
+					vertices   	(list Points
+					    (3888, 1977)
+					    (4791, 2163))
 					line_style 	0)
-				    (object RoleView "$UNNAMED$21" @712
-					Parent_View 	@709
-					location   	(3186, 205)
+				    (object RoleView "$UNNAMED$21" @714
+					Parent_View 	@711
+					location   	(3648, 873)
 					stereotype 	TRUE
 					line_color 	3342489
 					quidu      	"422F2ED500C2"
-					client     	@709
-					supplier   	@695
+					client     	@711
+					supplier   	@697
+					vertices   	(list Points
+					    (3888, 1977)
+					    (2986, 1791))
 					line_style 	0)))
-			    (object ClassView "Class" "Logical View::Tima::CSkinManager" @713
-				ShowCompartmentStereotypes 	TRUE
-				IncludeAttribute 	TRUE
-				IncludeOperation 	TRUE
-				ShowOperationSignature 	TRUE
-				location   	(1104, 2192)
-				font       	(object Font
-				    size       	10
-				    face       	"Arial"
-				    bold       	FALSE
-				    italics    	FALSE
-				    underline  	FALSE
-				    strike     	FALSE
-				    color      	0
-				    default_color 	TRUE)
-				label      	(object ItemLabel
-				    Parent_View 	@713
-				    location   	(591, 1985)
-				    fill_color 	13434879
-				    nlines     	1
-				    max_width  	1026
-				    justify    	0
-				    label      	"CSkinManager")
-				icon_style 	"Icon"
+			    (object AssociationViewNew "$UNNAMED$30" @715
+				location   	(3267, 1959)
+				stereotype 	TRUE
 				line_color 	3342489
-				fill_color 	13434879
-				quidu      	"422ED2D7015E"
-				compartment 	(object Compartment
-				    Parent_View 	@713
-				    location   	(591, 2046)
-				    font       	(object Font
-					size       	10
-					face       	"Arial"
-					bold       	FALSE
-					italics    	FALSE
-					underline  	FALSE
-					strike     	FALSE
-					color      	0
-					default_color 	TRUE)
-				    icon_style 	"Icon"
-				    fill_color 	13434879
-				    anchor     	2
-				    nlines     	7
-				    max_width  	959)
-				width      	1044
-				height     	438
-				annotation 	8
-				autoResize 	TRUE)
-			    (object ClassView "Class" "Logical View::Tima::CSkin" @714
+				quidu      	"4231975301E4"
+				roleview_list 	(list RoleViews
+				    (object RoleView "$UNNAMED$31" @716
+					Parent_View 	@715
+					location   	(835, -409)
+					font       	(object Font
+					    size       	10
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object SegLabel @717
+					    Parent_View 	@716
+					    location   	(3016, 1890)
+					    font       	(object Font
+						size       	10
+						face       	"Arial"
+						bold       	FALSE
+						italics    	FALSE
+						underline  	FALSE
+						strike     	FALSE
+						color      	0
+						default_color 	TRUE)
+					    hidden     	TRUE
+					    anchor     	1
+					    anchor_loc 	1
+					    nlines     	1
+					    max_width  	450
+					    justify    	0
+					    label      	""
+					    pctDist    	0.800000
+					    height     	42
+					    orientation 	0)
+					stereotype 	TRUE
+					line_color 	3342489
+					quidu      	"423197530232"
+					client     	@715
+					supplier   	@697
+					vertices   	(list Points
+					    (3267, 1959)
+					    (2972, 1824))
+					line_style 	0)
+				    (object RoleView "SkinInfo" @718
+					Parent_View 	@715
+					location   	(835, -409)
+					font       	(object Font
+					    size       	10
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object SegLabel @719
+					    Parent_View 	@718
+					    location   	(3487, 2106)
+					    font       	(object Font
+						size       	10
+						face       	"Arial"
+						bold       	FALSE
+						italics    	FALSE
+						underline  	FALSE
+						strike     	FALSE
+						color      	0
+						default_color 	TRUE)
+					    anchor     	1
+					    anchor_loc 	1
+					    nlines     	1
+					    max_width  	183
+					    justify    	0
+					    label      	"+SkinInfo"
+					    pctDist    	0.800000
+					    height     	42
+					    orientation 	1)
+					stereotype 	TRUE
+					line_color 	3342489
+					quidu      	"423197530203"
+					client     	@715
+					supplier   	@696
+					vertices   	(list Points
+					    (3267, 1959)
+					    (3563, 2095))
+					line_style 	0)))
+			    (object InheritView "" @720
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"42319753008C"
+				client     	@696
+				supplier   	@658
+				vertices   	(list Points
+				    (3669, 1964)
+				    (3418, 1523))
+				line_style 	0)
+			    (object ClassView "Class" "Logical View::Tima::CSkin" @721
 				ShowCompartmentStereotypes 	TRUE
 				IncludeAttribute 	TRUE
 				IncludeOperation 	TRUE
-				location   	(1104, 1616)
+				location   	(2080, 1280)
 				font       	(object Font
 				    size       	10
 				    face       	"Arial"
@@ -44264,11 +45764,11 @@
 				    color      	0
 				    default_color 	TRUE)
 				label      	(object ItemLabel
-				    Parent_View 	@714
-				    location   	(853, 1410)
+				    Parent_View 	@721
+				    location   	(1544, 1024)
 				    fill_color 	13434879
 				    nlines     	1
-				    max_width  	502
+				    max_width  	1072
 				    justify    	0
 				    label      	"CSkin")
 				icon_style 	"Icon"
@@ -44276,8 +45776,8 @@
 				fill_color 	13434879
 				quidu      	"422ED2AF0120"
 				compartment 	(object Compartment
-				    Parent_View 	@714
-				    location   	(853, 1471)
+				    Parent_View 	@721
+				    location   	(1544, 1085)
 				    font       	(object Font
 					size       	10
 					face       	"Arial"
@@ -44290,21 +45790,21 @@
 				    icon_style 	"Icon"
 				    fill_color 	16777215
 				    anchor     	2
-				    nlines     	7
-				    max_width  	434)
-				width      	520
-				height     	436
+				    nlines     	9
+				    max_width  	1070)
+				width      	1090
+				height     	536
 				annotation 	8
 				autoResize 	TRUE)
-			    (object AssociationViewNew "$UNNAMED$14" @715
-				location   	(1425, 1316)
+			    (object AssociationViewNew "$UNNAMED$14" @722
+				location   	(2615, 1621)
 				stereotype 	TRUE
 				line_color 	3342489
 				quidu      	"422F2DDA02A6"
 				roleview_list 	(list RoleViews
-				    (object RoleView "m_settings" @716
-					Parent_View 	@715
-					location   	(-383, 468)
+				    (object RoleView "m_settings" @723
+					Parent_View 	@722
+					location   	(807, 773)
 					font       	(object Font
 					    size       	10
 					    face       	"Arial"
@@ -44314,9 +45814,9 @@
 					    strike     	FALSE
 					    color      	0
 					    default_color 	TRUE)
-					label      	(object SegLabel @717
-					    Parent_View 	@716
-					    location   	(1524, 1282)
+					label      	(object SegLabel @724
+					    Parent_View 	@723
+					    location   	(2685, 1715)
 					    font       	(object Font
 						size       	10
 						face       	"Arial"
@@ -44338,27 +45838,81 @@
 					stereotype 	TRUE
 					line_color 	3342489
 					quidu      	"422F2DDC00F1"
-					client     	@715
-					supplier   	@695
+					client     	@722
+					supplier   	@697
+					vertices   	(list Points
+					    (2615, 1621)
+					    (2731, 1695))
 					line_style 	0)
-				    (object RoleView "$UNNAMED$15" @718
-					Parent_View 	@715
-					location   	(-383, 468)
+				    (object RoleView "$UNNAMED$15" @725
+					Parent_View 	@722
+					location   	(807, 773)
 					stereotype 	TRUE
 					line_color 	3342489
 					quidu      	"422F2DDC00F3"
-					client     	@715
-					supplier   	@714
+					client     	@722
+					supplier   	@721
+					vertices   	(list Points
+					    (2615, 1621)
+					    (2500, 1548))
 					line_style 	0)))
-			    (object AssociationViewNew "$UNNAMED$30" @719
-				location   	(1104, 1903)
+			    (object ClassView "Class" "Logical View::Tima::CSkinManager" @726
+				ShowCompartmentStereotypes 	TRUE
+				IncludeAttribute 	TRUE
+				IncludeOperation 	TRUE
+				ShowOperationSignature 	TRUE
+				location   	(2080, 496)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object ItemLabel
+				    Parent_View 	@726
+				    location   	(1443, 140)
+				    fill_color 	13434879
+				    nlines     	1
+				    max_width  	1274
+				    justify    	0
+				    label      	"CSkinManager")
+				icon_style 	"Icon"
+				line_color 	3342489
+				fill_color 	13434879
+				quidu      	"422ED2D7015E"
+				compartment 	(object Compartment
+				    Parent_View 	@726
+				    location   	(1443, 201)
+				    font       	(object Font
+					size       	10
+					face       	"Arial"
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    icon_style 	"Icon"
+				    fill_color 	13434879
+				    anchor     	2
+				    nlines     	13
+				    max_width  	1272)
+				width      	1292
+				height     	736
+				annotation 	8
+				autoResize 	TRUE)
+			    (object AssociationViewNew "$UNNAMED$32" @727
+				location   	(2080, 937)
 				stereotype 	TRUE
 				line_color 	3342489
-				quidu      	"423013C8025B"
+				quidu      	"42319753029F"
 				roleview_list 	(list RoleViews
-				    (object RoleView "$UNNAMED$31" @720
-					Parent_View 	@719
-					location   	(0, 287)
+				    (object RoleView "$UNNAMED$33" @728
+					Parent_View 	@727
+					location   	(0, 553)
 					font       	(object Font
 					    size       	10
 					    face       	"Arial"
@@ -44368,9 +45922,9 @@
 					    strike     	FALSE
 					    color      	0
 					    default_color 	TRUE)
-					label      	(object SegLabel @721
-					    Parent_View 	@720
-					    location   	(1063, 1957)
+					label      	(object SegLabel @729
+					    Parent_View 	@728
+					    location   	(2122, 879)
 					    font       	(object Font
 						size       	10
 						face       	"Arial"
@@ -44392,13 +45946,16 @@
 					    orientation 	1)
 					stereotype 	TRUE
 					line_color 	3342489
-					quidu      	"423013C8026C"
-					client     	@719
-					supplier   	@713
+					quidu      	"4231975302A2"
+					client     	@727
+					supplier   	@726
+					vertices   	(list Points
+					    (2080, 937)
+					    (2080, 864))
 					line_style 	0)
-				    (object RoleView "m_pSkin" @722
-					Parent_View 	@719
-					location   	(0, 287)
+				    (object RoleView "m_skin" @730
+					Parent_View 	@727
+					location   	(0, 553)
 					font       	(object Font
 					    size       	10
 					    face       	"Arial"
@@ -44408,9 +45965,9 @@
 					    strike     	FALSE
 					    color      	0
 					    default_color 	TRUE)
-					label      	(object SegLabel @723
-					    Parent_View 	@722
-					    location   	(1063, 1849)
+					label      	(object SegLabel @731
+					    Parent_View 	@730
+					    location   	(2122, 996)
 					    font       	(object Font
 						size       	10
 						face       	"Arial"
@@ -44423,25 +45980,21 @@
 					    anchor     	1
 					    anchor_loc 	1
 					    nlines     	1
-					    max_width  	181
+					    max_width  	153
 					    justify    	0
-					    label      	"#m_pSkin"
+					    label      	"#m_skin"
 					    pctDist    	0.800000
 					    height     	42
 					    orientation 	0)
 					stereotype 	TRUE
 					line_color 	3342489
-					quidu      	"423013C8026A"
-					client     	@719
-					supplier   	@714
-					line_style 	0)))
-			    (object InheritView "" @724
-				stereotype 	TRUE
-				line_color 	3342489
-				quidu      	"422FE250026A"
-				client     	@688
-				supplier   	@677
-				line_style 	0)))
+					quidu      	"4231975302A0"
+					client     	@727
+					supplier   	@721
+					vertices   	(list Points
+					    (2080, 937)
+					    (2080, 1011))
+					line_style 	0)))))
 		    (object ClassDiagram "Tima Model Update Overview"
 			quid       	"422F11CD0045"
 			title      	"Tima Model Update Overview"
@@ -44451,7 +46004,7 @@
 			origin_x   	1500
 			origin_y   	0
 			items      	(list diagram_item_list
-			    (object Label @725
+			    (object Label @732
 				font       	(object Font
 				    size       	10
 				    face       	"Arial"
@@ -44468,7 +46021,7 @@
 |This diagram was automatically created by Rational Rose Model Update Tool.
 |2005Äê3ÔÂ9ÈÕ 23:10:05
 				)
-			    (object ClassView "Class" "Logical View::Tima::CSettingsStorageRegistry" @726
+			    (object ClassView "Class" "Logical View::Tima::CSettingsStorageRegistry" @733
 				ShowCompartmentStereotypes 	TRUE
 				location   	(304, 656)
 				font       	(object Font
@@ -44481,7 +46034,7 @@
 				    color      	0
 				    default_color 	TRUE)
 				label      	(object ItemLabel
-				    Parent_View 	@726
+				    Parent_View 	@733
 				    location   	(12, 605)
 				    fill_color 	13434879
 				    nlines     	1
@@ -44496,7 +46049,7 @@
 				height     	126
 				annotation 	8
 				autoResize 	TRUE)
-			    (object ClassView "Class" "Logical View::Tima::CSettingsStorageMSXML" @727
+			    (object ClassView "Class" "Logical View::Tima::CSettingsStorageMSXML" @734
 				ShowCompartmentStereotypes 	TRUE
 				location   	(928, 656)
 				font       	(object Font
@@ -44509,7 +46062,7 @@
 				    color      	0
 				    default_color 	TRUE)
 				label      	(object ItemLabel
-				    Parent_View 	@727
+				    Parent_View 	@734
 				    location   	(641, 605)
 				    fill_color 	13434879
 				    nlines     	1
@@ -44524,7 +46077,7 @@
 				height     	126
 				annotation 	8
 				autoResize 	TRUE)
-			    (object ClassView "Class" "Logical View::Tima::CSettingsStorageMSXMLFile" @728
+			    (object ClassView "Class" "Logical View::Tima::CSettingsStorageMSXMLFile" @735
 				ShowCompartmentStereotypes 	TRUE
 				location   	(928, 928)
 				font       	(object Font
@@ -44537,7 +46090,7 @@
 				    color      	0
 				    default_color 	TRUE)
 				label      	(object ItemLabel
-				    Parent_View 	@728
+				    Parent_View 	@735
 				    location   	(596, 877)
 				    fill_color 	13434879
 				    nlines     	1
@@ -44552,14 +46105,17 @@
 				height     	126
 				annotation 	8
 				autoResize 	TRUE)
-			    (object InheritView "" @729
+			    (object InheritView "" @736
 				stereotype 	TRUE
 				line_color 	3342489
 				quidu      	"422F11CC0140"
-				client     	@728
-				supplier   	@727
+				client     	@735
+				supplier   	@734
+				vertices   	(list Points
+				    (928, 864)
+				    (928, 719))
 				line_style 	0)
-			    (object ClassView "Class" "Logical View::Tima::CSettingsStorageIniFile" @730
+			    (object ClassView "Class" "Logical View::Tima::CSettingsStorageIniFile" @737
 				ShowCompartmentStereotypes 	TRUE
 				location   	(1520, 656)
 				font       	(object Font
@@ -44572,7 +46128,7 @@
 				    color      	0
 				    default_color 	TRUE)
 				label      	(object ItemLabel
-				    Parent_View 	@730
+				    Parent_View 	@737
 				    location   	(1249, 605)
 				    fill_color 	13434879
 				    nlines     	1
@@ -44587,7 +46143,7 @@
 				height     	126
 				annotation 	8
 				autoResize 	TRUE)
-			    (object ClassView "Class" "Logical View::Tima::CSettings" @731
+			    (object ClassView "Class" "Logical View::Tima::CSettings" @738
 				ShowCompartmentStereotypes 	TRUE
 				location   	(1840, 1216)
 				font       	(object Font
@@ -44600,7 +46156,7 @@
 				    color      	0
 				    default_color 	TRUE)
 				label      	(object ItemLabel
-				    Parent_View 	@731
+				    Parent_View 	@738
 				    location   	(1708, 1165)
 				    fill_color 	13434879
 				    nlines     	1
@@ -44615,7 +46171,7 @@
 				height     	126
 				annotation 	8
 				autoResize 	TRUE)
-			    (object ClassView "Class" "Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Dialog Boxes::CDialog" @732
+			    (object ClassView "Class" "Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Dialog Boxes::CDialog" @739
 				ShowCompartmentStereotypes 	TRUE
 				location   	(1616, 320)
 				font       	(object Font
@@ -44628,7 +46184,7 @@
 				    color      	0
 				    default_color 	TRUE)
 				label      	(object ItemLabel
-				    Parent_View 	@732
+				    Parent_View 	@739
 				    location   	(1445, 246)
 				    fill_color 	13434879
 				    nlines     	1
@@ -44643,7 +46199,7 @@
 				height     	172
 				annotation 	8
 				autoResize 	TRUE)
-			    (object ClassView "Class" "Logical View::Tima::CTimaDlg" @733
+			    (object ClassView "Class" "Logical View::Tima::CTimaDlg" @740
 				ShowCompartmentStereotypes 	TRUE
 				location   	(1952, 656)
 				font       	(object Font
@@ -44656,7 +46212,7 @@
 				    color      	0
 				    default_color 	TRUE)
 				label      	(object ItemLabel
-				    Parent_View 	@733
+				    Parent_View 	@740
 				    location   	(1832, 605)
 				    fill_color 	13434879
 				    nlines     	1
@@ -44671,14 +46227,17 @@
 				height     	126
 				annotation 	8
 				autoResize 	TRUE)
-			    (object InheritView "" @734
+			    (object InheritView "" @741
 				stereotype 	TRUE
 				line_color 	3342489
 				quidu      	"422F11CD0007"
-				client     	@733
-				supplier   	@732
+				client     	@740
+				supplier   	@739
+				vertices   	(list Points
+				    (1888, 592)
+				    (1702, 406))
 				line_style 	0)
-			    (object ClassView "Class" "Logical View::MFC 6.0::CObject Classes::Application Architecture::CWinApp" @735
+			    (object ClassView "Class" "Logical View::MFC 6.0::CObject Classes::Application Architecture::CWinApp" @742
 				ShowCompartmentStereotypes 	TRUE
 				location   	(2256, 368)
 				font       	(object Font
@@ -44691,7 +46250,7 @@
 				    color      	0
 				    default_color 	TRUE)
 				label      	(object ItemLabel
-				    Parent_View 	@735
+				    Parent_View 	@742
 				    location   	(1993, 294)
 				    fill_color 	13434879
 				    nlines     	1
@@ -44706,7 +46265,7 @@
 				height     	172
 				annotation 	8
 				autoResize 	TRUE)
-			    (object ClassView "Class" "Logical View::Tima::CTimaApp" @736
+			    (object ClassView "Class" "Logical View::Tima::CTimaApp" @743
 				ShowCompartmentStereotypes 	TRUE
 				location   	(2256, 656)
 				font       	(object Font
@@ -44719,7 +46278,7 @@
 				    color      	0
 				    default_color 	TRUE)
 				label      	(object ItemLabel
-				    Parent_View 	@736
+				    Parent_View 	@743
 				    location   	(2120, 605)
 				    fill_color 	13434879
 				    nlines     	1
@@ -44734,14 +46293,17 @@
 				height     	126
 				annotation 	8
 				autoResize 	TRUE)
-			    (object InheritView "" @737
+			    (object InheritView "" @744
 				stereotype 	TRUE
 				line_color 	3342489
 				quidu      	"422F11CD0035"
-				client     	@736
-				supplier   	@735
+				client     	@743
+				supplier   	@742
+				vertices   	(list Points
+				    (2256, 592)
+				    (2256, 454))
 				line_style 	0)
-			    (object ClassView "Class" "Logical View::Tima::CSettingsStorage" @738
+			    (object ClassView "Class" "Logical View::Tima::CSettingsStorage" @745
 				ShowCompartmentStereotypes 	TRUE
 				location   	(816, 256)
 				font       	(object Font
@@ -44754,7 +46316,7 @@
 				    color      	0
 				    default_color 	TRUE)
 				label      	(object ItemLabel
-				    Parent_View 	@738
+				    Parent_View 	@745
 				    location   	(603, 205)
 				    fill_color 	13434879
 				    nlines     	1
@@ -44769,26 +46331,35 @@
 				height     	126
 				annotation 	8
 				autoResize 	TRUE)
-			    (object InheritView "" @739
+			    (object InheritView "" @746
 				stereotype 	TRUE
 				line_color 	3342489
 				quidu      	"422F11CB02C6"
-				client     	@726
-				supplier   	@738
+				client     	@733
+				supplier   	@745
+				vertices   	(list Points
+				    (385, 592)
+				    (734, 319))
 				line_style 	0)
-			    (object InheritView "" @740
+			    (object InheritView "" @747
 				stereotype 	TRUE
 				line_color 	3342489
 				quidu      	"422F11CB03A0"
-				client     	@727
-				supplier   	@738
+				client     	@734
+				supplier   	@745
+				vertices   	(list Points
+				    (909, 592)
+				    (833, 319))
 				line_style 	0)
-			    (object InheritView "" @741
+			    (object InheritView "" @748
 				stereotype 	TRUE
 				line_color 	3342489
 				quidu      	"422F11CC018D"
-				client     	@730
-				supplier   	@738
+				client     	@737
+				supplier   	@745
+				vertices   	(list Points
+				    (1409, 592)
+				    (928, 319))
 				line_style 	0))))))
 	logical_presentations 	(list unit_reference_list
 	    (object ClassDiagram "Main"
@@ -44800,7 +46371,7 @@
 		origin_x   	509
 		origin_y   	803
 		items      	(list diagram_item_list
-		    (object CategoryView "Logical View::MFC 6.0" @742
+		    (object CategoryView "Logical View::MFC 6.0" @749
 			location   	(464, 432)
 			font       	(object Font
 			    size       	10
@@ -44812,7 +46383,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@742
+			    Parent_View 	@749
 			    location   	(320, 348)
 			    fill_color 	13434879
 			    nlines     	2
@@ -44825,7 +46396,7 @@
 			quidu      	"365C7A6F006A"
 			width      	300
 			height     	180)
-		    (object NoteView @743
+		    (object NoteView @750
 			location   	(1552, 432)
 			font       	(object Font
 			    size       	10
@@ -44837,7 +46408,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@743
+			    Parent_View 	@750
 			    location   	(1030, 273)
 			    fill_color 	13434879
 			    nlines     	6
@@ -44847,11 +46418,14 @@
 			fill_color 	8585215
 			width      	1069
 			height     	331)
-		    (object AttachView "" @744
+		    (object AttachView "" @751
 			stereotype 	TRUE
 			line_color 	3342489
-			client     	@742
-			supplier   	@743
+			client     	@749
+			supplier   	@750
+			vertices   	(list Points
+			    (614, 432)
+			    (1017, 432))
 			line_style 	0)))))
     root_subsystem 	(object SubSystem "Component View"
 	quid       	"365C7A6603BD"
@@ -44959,7 +46533,467 @@
 		quid       	"365C7A6F0060"
 		documentation 	"This component contains the MFC 6.0 classes."
 		stereotype 	""
-		language   	"VC++")
+		language   	"VC++"
+		class      	"Logical View::MFC 6.0::CObject Classes::CObject"
+		quidu      	"365C7A6F009C"
+		class      	"Logical View::MFC 6.0::CObject Classes::Internet Services::CInternetSession"
+		quidu      	"365C7A6F00BC"
+		class      	"Logical View::MFC 6.0::CObject Classes::Internet Services::CInternetConnection"
+		quidu      	"365C7A6F00D8"
+		class      	"Logical View::MFC 6.0::CObject Classes::Internet Services::CFtpConnection"
+		quidu      	"365C7A6F00E5"
+		class      	"Logical View::MFC 6.0::CObject Classes::Internet Services::CGopherConnection"
+		quidu      	"365C7A6F00F8"
+		class      	"Logical View::MFC 6.0::CObject Classes::Internet Services::CHttpConnection"
+		quidu      	"365C7A6F010C"
+		class      	"Logical View::MFC 6.0::CObject Classes::Internet Services::CFileFind"
+		quidu      	"365C7A6F0120"
+		class      	"Logical View::MFC 6.0::CObject Classes::Internet Services::CFtpFileFind"
+		quidu      	"365C7A6F015B"
+		class      	"Logical View::MFC 6.0::CObject Classes::Internet Services::CGopherFileFind"
+		quidu      	"365C7A6F0178"
+		class      	"Logical View::MFC 6.0::CObject Classes::Internet Services::CGopherLocator"
+		quidu      	"365C7A6F01B4"
+		class      	"Logical View::MFC 6.0::CObject Classes::Windows Sockets::CAsyncSocket"
+		quidu      	"365C7A6F01C1"
+		class      	"Logical View::MFC 6.0::CObject Classes::Windows Sockets::CSocket"
+		quidu      	"365C7A6F0207"
+		class      	"Logical View::MFC 6.0::CObject Classes::Maps::CMap"
+		quidu      	"365C7A6F0255"
+		class      	"Logical View::MFC 6.0::CObject Classes::Maps::CMapPtrToPtr"
+		quidu      	"365C7A6F0261"
+		class      	"Logical View::MFC 6.0::CObject Classes::Maps::CMapWordToPtr"
+		quidu      	"365C7A6F0273"
+		class      	"Logical View::MFC 6.0::CObject Classes::Maps::CMapPtrToWord"
+		quidu      	"365C7A6F027D"
+		class      	"Logical View::MFC 6.0::CObject Classes::Maps::CMapWordToOb"
+		quidu      	"365C7A6F0288"
+		class      	"Logical View::MFC 6.0::CObject Classes::Maps::CMapStringToPtr"
+		quidu      	"365C7A6F0292"
+		class      	"Logical View::MFC 6.0::CObject Classes::Maps::CMapStringToOb"
+		quidu      	"365C7A6F02A5"
+		class      	"Logical View::MFC 6.0::CObject Classes::Maps::CMapStringToString"
+		quidu      	"365C7A6F02AF"
+		class      	"Logical View::MFC 6.0::CObject Classes::Synchronization::CSyncObject"
+		quidu      	"365C7A6F02BC"
+		class      	"Logical View::MFC 6.0::CObject Classes::Synchronization::CCriticalSection"
+		quidu      	"365C7A6F02DA"
+		class      	"Logical View::MFC 6.0::CObject Classes::Synchronization::CEvent"
+		quidu      	"365C7A6F02EC"
+		class      	"Logical View::MFC 6.0::CObject Classes::Synchronization::CMutex"
+		quidu      	"365C7A6F02FF"
+		class      	"Logical View::MFC 6.0::CObject Classes::Synchronization::CSemaphore"
+		quidu      	"365C7A6F030B"
+		class      	"Logical View::MFC 6.0::CObject Classes::DAO Database Support::CDaoDatabase"
+		quidu      	"365C7A6F0329"
+		class      	"Logical View::MFC 6.0::CObject Classes::DAO Database Support::CDaoQueryDef"
+		quidu      	"365C7A6F0348"
+		class      	"Logical View::MFC 6.0::CObject Classes::DAO Database Support::CDaoRecordset"
+		quidu      	"365C7A6F0381"
+		class      	"Logical View::MFC 6.0::CObject Classes::DAO Database Support::CDaoTableDef"
+		quidu      	"365C7A700008"
+		class      	"Logical View::MFC 6.0::CObject Classes::DAO Database Support::CDaoWorkspace"
+		quidu      	"365C7A700043"
+		class      	"Logical View::MFC 6.0::CObject Classes::Menus::CMenu"
+		quidu      	"365C7A70006E"
+		class      	"Logical View::MFC 6.0::CObject Classes::ODBC Database Support::CDatabase"
+		quidu      	"365C7A70008E"
+		class      	"Logical View::MFC 6.0::CObject Classes::ODBC Database Support::CRecordset"
+		quidu      	"365C7A7000BD"
+		class      	"Logical View::MFC 6.0::CObject Classes::ODBC Database Support::CLongBinary"
+		quidu      	"365C7A700116"
+		class      	"Logical View::MFC 6.0::CObject Classes::Arrays::CWordArray"
+		quidu      	"365C7A70012E"
+		class      	"Logical View::MFC 6.0::CObject Classes::Arrays::CArray"
+		quidu      	"365C7A70013F"
+		class      	"Logical View::MFC 6.0::CObject Classes::Arrays::CByteArray"
+		quidu      	"365C7A700152"
+		class      	"Logical View::MFC 6.0::CObject Classes::Arrays::CDWordArray"
+		quidu      	"365C7A70015D"
+		class      	"Logical View::MFC 6.0::CObject Classes::Arrays::CObArray"
+		quidu      	"365C7A700171"
+		class      	"Logical View::MFC 6.0::CObject Classes::Arrays::CPtrArray"
+		quidu      	"365C7A700184"
+		class      	"Logical View::MFC 6.0::CObject Classes::Arrays::CStringArray"
+		quidu      	"365C7A700198"
+		class      	"Logical View::MFC 6.0::CObject Classes::Arrays::CUIntArray"
+		quidu      	"365C7A7001A3"
+		class      	"Logical View::MFC 6.0::CObject Classes::Lists::CList"
+		quidu      	"365C7A7001B8"
+		class      	"Logical View::MFC 6.0::CObject Classes::Lists::CPtrList"
+		quidu      	"365C7A7001CB"
+		class      	"Logical View::MFC 6.0::CObject Classes::Lists::CObList"
+		quidu      	"365C7A7001DE"
+		class      	"Logical View::MFC 6.0::CObject Classes::Lists::CStringList"
+		quidu      	"365C7A7001F2"
+		class      	"Logical View::MFC 6.0::CObject Classes::Graphical Drawing Objects::CGdiObject"
+		quidu      	"365C7A700206"
+		class      	"Logical View::MFC 6.0::CObject Classes::Graphical Drawing Objects::CBitmap"
+		quidu      	"365C7A70021B"
+		class      	"Logical View::MFC 6.0::CObject Classes::Graphical Drawing Objects::CBrush"
+		quidu      	"365C7A700242"
+		class      	"Logical View::MFC 6.0::CObject Classes::Graphical Drawing Objects::CFont"
+		quidu      	"365C7A700258"
+		class      	"Logical View::MFC 6.0::CObject Classes::Graphical Drawing Objects::CPalette"
+		quidu      	"365C7A700274"
+		class      	"Logical View::MFC 6.0::CObject Classes::Graphical Drawing Objects::CPen"
+		quidu      	"365C7A700288"
+		class      	"Logical View::MFC 6.0::CObject Classes::Graphical Drawing Objects::CRgn"
+		quidu      	"365C7A70029E"
+		class      	"Logical View::MFC 6.0::CObject Classes::Control Support::CDockState"
+		quidu      	"365C7A7002B3"
+		class      	"Logical View::MFC 6.0::CObject Classes::Control Support::CImageList"
+		quidu      	"365C7A7002CE"
+		class      	"Logical View::MFC 6.0::CObject Classes::Graphical Drawing::CMetaFileDC"
+		quidu      	"365C7A7002ED"
+		class      	"Logical View::MFC 6.0::CObject Classes::Graphical Drawing::CDC"
+		quidu      	"365C7A70033F"
+		class      	"Logical View::MFC 6.0::CObject Classes::Graphical Drawing::CClientDC"
+		quidu      	"365C7A7003B8"
+		class      	"Logical View::MFC 6.0::CObject Classes::Graphical Drawing::CWindowDC"
+		quidu      	"365C7A7003D3"
+		class      	"Logical View::MFC 6.0::CObject Classes::Graphical Drawing::CPaintDC"
+		quidu      	"365C7A7003E9"
+		class      	"Logical View::MFC 6.0::CObject Classes::File Services::CFile"
+		quidu      	"365C7A71001F"
+		class      	"Logical View::MFC 6.0::CObject Classes::File Services::CMemFile"
+		quidu      	"365C7A710072"
+		class      	"Logical View::MFC 6.0::CObject Classes::File Services::CSharedFile"
+		quidu      	"365C7A7100C7"
+		class      	"Logical View::MFC 6.0::CObject Classes::File Services::COleStreamFile"
+		quidu      	"365C7A7100E6"
+		class      	"Logical View::MFC 6.0::CObject Classes::File Services::CMonikerFile"
+		quidu      	"365C7A71012B"
+		class      	"Logical View::MFC 6.0::CObject Classes::File Services::CAsyncMonikerFile"
+		quidu      	"365C7A710167"
+		class      	"Logical View::MFC 6.0::CObject Classes::File Services::CDataPathProperty"
+		quidu      	"365C7A7101FD"
+		class      	"Logical View::MFC 6.0::CObject Classes::File Services::CCachedDataPathProperty"
+		quidu      	"365C7A71023A"
+		class      	"Logical View::MFC 6.0::CObject Classes::File Services::CSocketFile"
+		quidu      	"365C7A710262"
+		class      	"Logical View::MFC 6.0::CObject Classes::File Services::CStdioFile"
+		quidu      	"365C7A7102A8"
+		class      	"Logical View::MFC 6.0::CObject Classes::File Services::CInternetFile"
+		quidu      	"365C7A7102EE"
+		class      	"Logical View::MFC 6.0::CObject Classes::File Services::CGopherFile"
+		quidu      	"365C7A71032A"
+		class      	"Logical View::MFC 6.0::CObject Classes::File Services::CHttpFile"
+		quidu      	"365C7A71034B"
+		class      	"Logical View::MFC 6.0::CObject Classes::File Services::CRecentFileList"
+		quidu      	"365C7A710370"
+		class      	"Logical View::MFC 6.0::CObject Classes::Exceptions::CArchiveException"
+		quidu      	"365C7A710398"
+		class      	"Logical View::MFC 6.0::CObject Classes::Exceptions::CException"
+		quidu      	"365C7A7103B6"
+		class      	"Logical View::MFC 6.0::CObject Classes::Exceptions::CDaoException"
+		quidu      	"365C7A7103D4"
+		class      	"Logical View::MFC 6.0::CObject Classes::Exceptions::CDBException"
+		quidu      	"365C7A72000A"
+		class      	"Logical View::MFC 6.0::CObject Classes::Exceptions::CFileException"
+		quidu      	"365C7A720028"
+		class      	"Logical View::MFC 6.0::CObject Classes::Exceptions::CInternetException"
+		quidu      	"365C7A720049"
+		class      	"Logical View::MFC 6.0::CObject Classes::Exceptions::CMemoryException"
+		quidu      	"365C7A720067"
+		class      	"Logical View::MFC 6.0::CObject Classes::Exceptions::CNotSupportedException"
+		quidu      	"365C7A720082"
+		class      	"Logical View::MFC 6.0::CObject Classes::Exceptions::CUserException"
+		quidu      	"365C7A720097"
+		class      	"Logical View::MFC 6.0::CObject Classes::Exceptions::CResourceException"
+		quidu      	"365C7A7200B4"
+		class      	"Logical View::MFC 6.0::CObject Classes::Exceptions::COleException"
+		quidu      	"365C7A7200C9"
+		class      	"Logical View::MFC 6.0::CObject Classes::Exceptions::COleDispatchException"
+		quidu      	"365C7A7200EA"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::CCmdTarget"
+		quidu      	"365C7A72010F"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::CWinThread"
+		quidu      	"365C7A72014B"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::CWinApp"
+		quidu      	"365C7A720187"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::COleControlModule"
+		quidu      	"365C7A7201CF"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::CDocTemplate"
+		quidu      	"365C7A7201EC"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::CSingleDocTemplate"
+		quidu      	"365C7A72024F"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::CMultiDocTemplate"
+		quidu      	"365C7A72028B"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::COleObjectFactory"
+		quidu      	"365C7A7202BE"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::COleTemplateServer"
+		quidu      	"365C7A7202EF"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::COleDataSource"
+		quidu      	"365C7A720311"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::COleDropSource"
+		quidu      	"365C7A720340"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::COleDropTarget"
+		quidu      	"365C7A720367"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::COleMessageFilter"
+		quidu      	"365C7A7203A5"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::CConnectionPoint"
+		quidu      	"365C7A7203DA"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::CDocument"
+		quidu      	"365C7A730020"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::COleDocument"
+		quidu      	"365C7A730086"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::COleLinkingDoc"
+		quidu      	"365C7A7300F8"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::COleServerDoc"
+		quidu      	"365C7A730142"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::CRichEditDoc"
+		quidu      	"365C7A7301BD"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::CDocItem"
+		quidu      	"365C7A73020A"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::COleClientItem"
+		quidu      	"365C7A73023C"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::CRichEditCntrItem"
+		quidu      	"365C7A7302D3"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::COleServerItem"
+		quidu      	"365C7A730307"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::CDocObjectServerItem"
+		quidu      	"365C7A730373"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::CDocObjectServer"
+		quidu      	"365C7A73039C"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::COleDocObjectItem"
+		quidu      	"365C7A7303CD"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::CWnd"
+		quidu      	"365C7A74001A"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Frame Windows::CFrameWnd"
+		quidu      	"365C7A74009C"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Frame Windows::CMDIChildWnd"
+		quidu      	"365C7A740107"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Frame Windows::CMDIFrameWnd"
+		quidu      	"365C7A740151"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Frame Windows::CMiniFrameWnd"
+		quidu      	"365C7A7401A8"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Frame Windows::COleIPFrameWnd"
+		quidu      	"365C7A7401C8"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Frame Windows::CSplitterWnd"
+		quidu      	"365C7A740220"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Frame Windows::COleDocIPFrameWnd"
+		quidu      	"365C7A7402B6"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Control Bars::CControlBar"
+		quidu      	"365C7A7402EA"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Control Bars::CDialogBar"
+		quidu      	"365C7A74033B"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Control Bars::COleResizeBar"
+		quidu      	"365C7A740364"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Control Bars::CStatusBar"
+		quidu      	"365C7A74038A"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Control Bars::CToolBar"
+		quidu      	"365C7A7403C4"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Control Bars::CReBar"
+		quidu      	"365C7A750018"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Property Sheets::CPropertySheet"
+		quidu      	"365C7A75004C"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Property Sheets::CPropertySheetEx"
+		quidu      	"365C7A750087"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Dialog Boxes::CDialog"
+		quidu      	"365C7A7500B1"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Dialog Boxes::CCommonDialog"
+		quidu      	"365C7A7500F5"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Dialog Boxes::CColorDialog"
+		quidu      	"365C7A750115"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Dialog Boxes::CFileDialog"
+		quidu      	"365C7A750145"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Dialog Boxes::CFindReplaceDialog"
+		quidu      	"365C7A750181"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Dialog Boxes::CFontDialog"
+		quidu      	"365C7A7501A9"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Dialog Boxes::COleDialog"
+		quidu      	"365C7A7501D1"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Dialog Boxes::COleBusyDialog"
+		quidu      	"365C7A7501F1"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Dialog Boxes::COleChangeIconDialog"
+		quidu      	"365C7A750221"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Dialog Boxes::COleChangeSourceDialog"
+		quidu      	"365C7A75025D"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Dialog Boxes::COleConvertDialog"
+		quidu      	"365C7A750287"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Dialog Boxes::COleInsertDialog"
+		quidu      	"365C7A7502B7"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Dialog Boxes::COleLinksDialog"
+		quidu      	"365C7A7502DF"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Dialog Boxes::COleUpdateDialog"
+		quidu      	"365C7A750312"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Dialog Boxes::COlePasteSpecialDialog"
+		quidu      	"365C7A75033A"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Dialog Boxes::COlePropertiesDialog"
+		quidu      	"365C7A75036C"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Dialog Boxes::CPageSetupDialog"
+		quidu      	"365C7A75039E"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Dialog Boxes::CPrintDialog"
+		quidu      	"365C7A7503D3"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Dialog Boxes::COlePropertyPage"
+		quidu      	"365C7A76001A"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Dialog Boxes::CPropertyPage"
+		quidu      	"365C7A76004C"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Dialog Boxes::CPropertyPageEx"
+		quidu      	"365C7A760094"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Views::CView"
+		quidu      	"365C7A7600C5"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Views::CCtrlView"
+		quidu      	"365C7A760146"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Views::CEditView"
+		quidu      	"365C7A760178"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Views::CListView"
+		quidu      	"365C7A7601D3"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Views::CRichEditView"
+		quidu      	"365C7A760205"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Views::CTreeView"
+		quidu      	"365C7A760289"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Views::CScrollView"
+		quidu      	"365C7A7602B9"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Views::CFormView"
+		quidu      	"365C7A7602F7"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Views::CDaoRecordView"
+		quidu      	"365C7A76033D"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Views::CRecordView"
+		quidu      	"365C7A760377"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Views::CHtmlView"
+		quidu      	"365C7A7603B3"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Views::COleDBRecordView"
+		quidu      	"365C7A77004D"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Controls::CAnimateCtrl"
+		quidu      	"365C7A770082"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Controls::CButton"
+		quidu      	"365C7A7700A9"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Controls::CBitmapButton"
+		quidu      	"365C7A7700DF"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Controls::CComboBox"
+		quidu      	"365C7A77010F"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Controls::CEdit"
+		quidu      	"365C7A77014B"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Controls::CHeaderCtrl"
+		quidu      	"365C7A77017A"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Controls::CHotKeyCtrl"
+		quidu      	"365C7A7701AC"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Controls::CListBox"
+		quidu      	"365C7A7701D4"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Controls::CCheckListBox"
+		quidu      	"365C7A77021A"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Controls::CDragListBox"
+		quidu      	"365C7A77026A"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Controls::CListCtrl"
+		quidu      	"365C7A7702B0"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Controls::COleControl"
+		quidu      	"365C7A7702E3"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Controls::CRichEditCtrl"
+		quidu      	"365C7A780082"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Controls::CScrollBar"
+		quidu      	"365C7A7800BD"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Controls::CSliderCtrl"
+		quidu      	"365C7A7800F9"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Controls::CSpinButtonCtrl"
+		quidu      	"365C7A780149"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Controls::CStatic"
+		quidu      	"365C7A78017C"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Controls::CStatusBarCtrl"
+		quidu      	"365C7A7801AF"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Controls::CTabCtrl"
+		quidu      	"365C7A7801FD"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Controls::CToolBarCtrl"
+		quidu      	"365C7A78024E"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Controls::CToolTipCtrl"
+		quidu      	"365C7A78028A"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Controls::CTreeCtrl"
+		quidu      	"365C7A7802C6"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Controls::CReBarCtrl"
+		quidu      	"365C7A7802F8"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Controls::CMonthCalCtrl"
+		quidu      	"365C7A78032B"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Controls::CIPAddressCtrl"
+		quidu      	"365C7A780366"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Controls::CDateTimeCtrl"
+		quidu      	"365C7A780398"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Controls::CComboBoxEx"
+		quidu      	"365C7A7803CA"
+		class      	"Logical View::MFC 6.0::CObject Classes::Application Architecture::Window Support::Controls::CProgressCtrl"
+		quidu      	"365C7A780059"
+		class      	"Logical View::MFC 6.0::CObject Classes::Command Line::CCommandLineInfo"
+		quidu      	"365C7A790016"
+		class      	"Logical View::MFC 6.0::Non-CObject Classes::Internet Server API::CHtmlStream"
+		quidu      	"365C7A790054"
+		class      	"Logical View::MFC 6.0::Non-CObject Classes::Internet Server API::CHttpFilter"
+		quidu      	"365C7A7900AA"
+		class      	"Logical View::MFC 6.0::Non-CObject Classes::Internet Server API::CHttpFilterContext"
+		quidu      	"365C7A7900FE"
+		class      	"Logical View::MFC 6.0::Non-CObject Classes::Internet Server API::CHttpServer"
+		quidu      	"365C7A790137"
+		class      	"Logical View::MFC 6.0::Non-CObject Classes::Internet Server API::CHttpServerContext"
+		quidu      	"365C7A7901A5"
+		class      	"Logical View::MFC 6.0::Non-CObject Classes::OLE Automation Types::COleCurrency"
+		quidu      	"365C7A7901D9"
+		class      	"Logical View::MFC 6.0::Non-CObject Classes::OLE Automation Types::COleVariant"
+		quidu      	"365C7A790213"
+		class      	"Logical View::MFC 6.0::Non-CObject Classes::OLE Automation Types::COleDateTime"
+		quidu      	"365C7A79024F"
+		class      	"Logical View::MFC 6.0::Non-CObject Classes::OLE Automation Types::COleDateTimeSpan"
+		quidu      	"365C7A79028B"
+		class      	"Logical View::MFC 6.0::Non-CObject Classes::OLE Type Wrappers::CFontHolder"
+		quidu      	"365C7A7902BF"
+		class      	"Logical View::MFC 6.0::Non-CObject Classes::OLE Type Wrappers::CPictureHolder"
+		quidu      	"365C7A7902F9"
+		class      	"Logical View::MFC 6.0::Non-CObject Classes::Run-time Object Model Support::CArchive"
+		quidu      	"365C7A79032D"
+		class      	"Logical View::MFC 6.0::Non-CObject Classes::Run-time Object Model Support::CDumpContext"
+		quidu      	"365C7A79037B"
+		class      	"Logical View::MFC 6.0::Non-CObject Classes::Run-time Object Model Support::CRuntimeClass"
+		quidu      	"365C7A7903AE"
+		class      	"Logical View::MFC 6.0::Non-CObject Classes::Simple Value Types::CPoint"
+		quidu      	"365C7A7A0020"
+		class      	"Logical View::MFC 6.0::Non-CObject Classes::Simple Value Types::CRect"
+		quidu      	"365C7A7A0052"
+		class      	"Logical View::MFC 6.0::Non-CObject Classes::Simple Value Types::CSize"
+		quidu      	"365C7A7A008E"
+		class      	"Logical View::MFC 6.0::Non-CObject Classes::Simple Value Types::CString"
+		quidu      	"365C7A7A00C0"
+		class      	"Logical View::MFC 6.0::Non-CObject Classes::Simple Value Types::CTime"
+		quidu      	"365C7A7A00FC"
+		class      	"Logical View::MFC 6.0::Non-CObject Classes::Simple Value Types::CTimeSpan"
+		quidu      	"365C7A7A012E"
+		class      	"Logical View::MFC 6.0::Non-CObject Classes::Structures::CCreateContext"
+		quidu      	"365C7A7A016C"
+		class      	"Logical View::MFC 6.0::Non-CObject Classes::Structures::CMemoryState"
+		quidu      	"365C7A7A01B0"
+		class      	"Logical View::MFC 6.0::Non-CObject Classes::Structures::COleSafeArray"
+		quidu      	"365C7A7A0200"
+		class      	"Logical View::MFC 6.0::Non-CObject Classes::Structures::CPrintInfo"
+		quidu      	"365C7A7A0232"
+		class      	"Logical View::MFC 6.0::Non-CObject Classes::Support Classes::CCmdUI"
+		quidu      	"365C7A7A028F"
+		class      	"Logical View::MFC 6.0::Non-CObject Classes::Support Classes::COleCmdUI"
+		quidu      	"365C7A7A02DD"
+		class      	"Logical View::MFC 6.0::Non-CObject Classes::Support Classes::CDaoFieldExchange"
+		quidu      	"365C7A7A0327"
+		class      	"Logical View::MFC 6.0::Non-CObject Classes::Support Classes::CDataExchange"
+		quidu      	"365C7A7A035F"
+		class      	"Logical View::MFC 6.0::Non-CObject Classes::Support Classes::CDBVariant"
+		quidu      	"365C7A7A03B9"
+		class      	"Logical View::MFC 6.0::Non-CObject Classes::Support Classes::CFieldExchange"
+		quidu      	"365C7A7B002B"
+		class      	"Logical View::MFC 6.0::Non-CObject Classes::Support Classes::COleDataObject"
+		quidu      	"365C7A7B0099"
+		class      	"Logical View::MFC 6.0::Non-CObject Classes::Support Classes::COleDispatchDriver"
+		quidu      	"365C7A7B0111"
+		class      	"Logical View::MFC 6.0::Non-CObject Classes::Support Classes::CPropExchange"
+		quidu      	"365C7A7B0162"
+		class      	"Logical View::MFC 6.0::Non-CObject Classes::Support Classes::CRectTracker"
+		quidu      	"365C7A7B01BC"
+		class      	"Logical View::MFC 6.0::Non-CObject Classes::Support Classes::CWaitCursor"
+		quidu      	"365C7A7B0216"
+		class      	"Logical View::MFC 6.0::Non-CObject Classes::Synchronization::CMultiLock"
+		quidu      	"365C7A7B029A"
+		class      	"Logical View::MFC 6.0::Non-CObject Classes::Synchronization::CSingleLock"
+		quidu      	"365C7A7B02DE"
+		class      	"Logical View::MFC 6.0::Non-CObject Classes::Typed Template Collections::CTypedPtrArray"
+		quidu      	"365C7A7B0326"
+		class      	"Logical View::MFC 6.0::Non-CObject Classes::Typed Template Collections::CTypedPtrList"
+		quidu      	"365C7A7B036A"
+		class      	"Logical View::MFC 6.0::Non-CObject Classes::Typed Template Collections::CTypedPtrMap"
+		quidu      	"365C7A7B03A8")
 	    (object module "Tima" "NotAModuleType" "NotAModulePart"
 		attributes 	(list Attribute_Set
 		    (object Attribute
@@ -45046,7 +47080,57 @@
 			value      	"Tima"))
 		quid       	"422F116802C6"
 		stereotype 	""
-		language   	"VC++"))
+		language   	"VC++"
+		class      	"Logical View::Tima::CSettingsStorageRegistry"
+		quidu      	"422F11CB02BA"
+		class      	"Logical View::Tima::CSettingsStorageMSXML"
+		quidu      	"422F11CB0391"
+		class      	"Logical View::Tima::CSettingsStorageMSXMLFile"
+		quidu      	"422F11CC013F"
+		class      	"Logical View::Tima::CSettingsStorageIniFile"
+		quidu      	"422F11CC017E"
+		class      	"Logical View::Tima::CSettings"
+		quidu      	"422F11CC01EB"
+		class      	"Logical View::Tima::CSettingsStorage"
+		quidu      	"422F11CC0287"
+		class      	"Logical View::Tima::CTimaDlg"
+		quidu      	"422F11CC03DF"
+		class      	"Logical View::Tima::CTimaApp"
+		quidu      	"422F11CD0029"
+		class      	"Logical View::Tima::CWindowSettings"
+		quidu      	"422F06970110"
+		class      	"Logical View::Tima::CSkinDialog"
+		quidu      	"422ED2DF015E"
+		class      	"Logical View::Tima::CSkin"
+		quidu      	"422ED2AF0120"
+		class      	"Logical View::Tima::CSkinManager"
+		quidu      	"422ED2D7015E"
+		class      	"Logical View::Tima::CSkinSettings"
+		quidu      	"422F06C10343"
+		class      	"Logical View::Tima::CButtonSettings"
+		quidu      	"422F163D01FB"
+		class      	"Logical View::Tima::CPictureSettings"
+		quidu      	"422F1655016E"
+		class      	"Logical View::Tima::ISkinComponent"
+		quidu      	"422F16D302B6"
+		class      	"Logical View::Tima::FramePart"
+		quidu      	"422F231C0318"
+		class      	"Logical View::Tima::FrameState"
+		quidu      	"422F25500258"
+		class      	"Logical View::Tima::WindowButtonPart"
+		quidu      	"422F26C402E5"
+		class      	"Logical View::Tima::ButtonState"
+		quidu      	"422F278C013F"
+		class      	"Logical View::Tima::CGenericSettings"
+		quidu      	"422FD25500A6"
+		class      	"Logical View::Tima::CSkinButton"
+		quidu      	"422FE1980364"
+		class      	"Logical View::Tima::CSkinPicture"
+		quidu      	"422FE1A003E1"
+		class      	"Logical View::Tima::CColorRef"
+		quidu      	"423197550280"
+		class      	"Logical View::Tima::CSkinInfo"
+		quidu      	"42319753007E"))
 	physical_presentations 	(list unit_reference_list
 	    (object Module_Diagram "Main"
 		quid       	"365C7A6603D8"
@@ -45056,7 +47140,9 @@
 		max_width  	21600
 		origin_x   	0
 		origin_y   	0
-		items      	(list diagram_item_list))))
+		items      	(list diagram_item_list)))
+	category   	"Logical View"
+	quidu      	"4231773A0252")
     process_structure 	(object Processes
 	quid       	"365C7A6603BE"
 	ProcsNDevs 	(list
@@ -52501,7 +54587,23 @@
 		    (object Attribute
 			tool       	"VC++"
 			name       	"DefaultBody"
-			value      	(value Text ""))))
+			value      	(value Text ""))
+		    (object Attribute
+			tool       	"VC++"
+			name       	"GenerateSet"
+			value      	(list Attribute_Set
+			    (object Attribute
+				tool       	"VC++"
+				name       	"DoNotGenerate"
+				value      	400)
+			    (object Attribute
+				tool       	"VC++"
+				name       	"DeclareAndDefine"
+				value      	401)
+			    (object Attribute
+				tool       	"VC++"
+				name       	"DeclareOnly"
+				value      	402)))))
 	    (object Attribute
 		tool       	"VC++"
 		name       	"HiddenTool"
