@@ -62,6 +62,24 @@ namespace Mortimer
 
 //========================================================================================
 
+class CColorRef
+{
+public:
+	CColorRef() throw() {};
+	CColorRef(BYTE r, BYTE g, BYTE b) throw() { color = RGB(r, g, b); }
+	CColorRef(const COLORREF& clr) throw() { color = clr; }
+
+	operator COLORREF() throw() { return color; }
+	void operator=(const COLORREF& clr) throw() { color = clr; }
+	operator LPCOLORREF() throw() { return &color; }
+
+	inline BYTE r() { return GetRValue(color); }
+	inline BYTE g() { return GetGValue(color); }
+	inline BYTE b() { return GetBValue(color); }
+
+	COLORREF color;
+};
+
 class CSettingsStorage;
 
 /// Settings base class.
@@ -162,6 +180,10 @@ public:
 	/// @name Extended types
 	/// The derived class must implement them.
 	//@{
+
+	virtual bool SaveLoadItem(LPCTSTR szName, POINT& Variable, bool bSave) = 0;
+	virtual bool SaveLoadItem(LPCTSTR szName, SIZE& Variable, bool bSave) = 0;
+	virtual bool SaveLoadItem(LPCTSTR szName, RECT& Variable, bool bSave) = 0;
 
 	/// Strings.
 	/// When saving, \a size contains the length of the string. This function can ignore it. \n
@@ -413,6 +435,23 @@ public:
 	}
 
 #if defined(_MFC_VER) || defined(_WTL_USE_CSTRING)
+	virtual bool SaveLoadItem(LPCTSTR szName, CColorRef& Variable, bool bSave) = 0;
+
+	virtual bool SaveLoadItem(LPCTSTR szName, CPoint& Variable, bool bSave)
+	{
+		return SaveLoadItem(szName, (POINT)Variable, bSave);
+	}
+
+	virtual bool SaveLoadItem(LPCTSTR szName, CSize& Variable, bool bSave)
+	{
+		return SaveLoadItem(szName, (SIZE)Variable, bSave);
+	}
+
+	virtual bool SaveLoadItem(LPCTSTR szName, CRect& Variable, bool bSave)
+	{
+		return SaveLoadItem(szName, (RECT)Variable, bSave);
+	}
+
 	virtual bool SaveLoadItem(LPCTSTR szName, CString& Variable, bool bSave)
 	{
 		if(bSave)

@@ -131,6 +131,78 @@ public:
 		}
 	}
 
+	// COLORREF
+	inline bool SaveLoadItem(LPCTSTR szName, CColorRef& Variable, bool bSave)
+	{
+		TCHAR Value[MAX_PATH];
+		TCHAR token[] = _T("#%6X");
+		if (bSave) {
+			_stprintf(Value, token, Variable.color);
+
+			return WritePrivateProfileString(m_SectionName, szName, Value, m_IniFileName);
+		} else {
+			TCHAR Null = 0;
+			if (0 == GetPrivateProfileString(m_SectionName, szName, &Null, Value, MAX_PATH, m_IniFileName))
+				return false;
+
+			return 1 == _stscanf(Value, token, &(Variable.color));
+		}
+	}
+
+	// POINT
+	inline bool SaveLoadItem(LPCTSTR szName, POINT& Variable, bool bSave)
+	{
+		TCHAR Value[MAX_PATH];
+		TCHAR token[] = _T("%d,%d");
+		if (bSave) {
+			_stprintf(Value, token, Variable.x, Variable.y);
+
+			return WritePrivateProfileString(m_SectionName, szName, Value, m_IniFileName);
+		} else {
+			TCHAR Null = 0;
+			if (0 == GetPrivateProfileString(m_SectionName, szName, &Null, Value, MAX_PATH, m_IniFileName))
+				return false;
+
+			return 1 == _stscanf(Value, token, &(Variable.x), &(Variable.y));
+		}
+	}
+
+	// SIZE
+	inline bool SaveLoadItem(LPCTSTR szName, SIZE& Variable, bool bSave)
+	{
+		TCHAR Value[MAX_PATH];
+		TCHAR token[] = _T("%d,%d");
+		if (bSave) {
+			_stprintf(Value, token, Variable.cx, Variable.cy);
+
+			return WritePrivateProfileString(m_SectionName, szName, Value, m_IniFileName);
+		} else {
+			TCHAR Null = 0;
+			if (0 == GetPrivateProfileString(m_SectionName, szName, &Null, Value, MAX_PATH, m_IniFileName))
+				return false;
+
+			return 1 == _stscanf(Value, token, &(Variable.cx), &(Variable.cy));
+		}
+	}
+
+	// RECT
+	inline bool SaveLoadItem(LPCTSTR szName, RECT& Variable, bool bSave)
+	{
+		TCHAR Value[MAX_PATH];
+		TCHAR token[] = _T("%d,%d,%d,%d");
+		if (bSave) {
+			_stprintf(Value, token, Variable.left, Variable.top, Variable.right, Variable.bottom);
+
+			return WritePrivateProfileString(m_SectionName, szName, Value, m_IniFileName);
+		} else {
+			TCHAR Null = 0;
+			if (0 == GetPrivateProfileString(m_SectionName, szName, &Null, Value, MAX_PATH, m_IniFileName))
+				return false;
+
+			return 1 == _stscanf(Value, token, &(Variable.left), &(Variable.top), &(Variable.right), &(Variable.bottom));
+		}
+	}
+
 	// TCHAR*
 	inline bool SaveLoadItem(LPCTSTR szName, TCHAR* Variable, ULONG& Size, bool bSave)
 	{
