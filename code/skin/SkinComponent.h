@@ -2,13 +2,15 @@
 
 #pragma once
 
-class CSettings;
+#include "..\include\settingsstorage\msettingsstorage.h"
+using Mortimer::CSettings;
+
+#include "SkinTypes.h"
 
 class ISkinComponent
 {
 public:
-	virtual BOOL SetSkinInfo(CSettings& info) = 0;
-
-	virtual void SkinChanged() = 0;
-
+	virtual UINT GetID() = 0;
+	virtual ESkinControl GetType() = 0;
+	virtual BOOL SetSkinInfo(CSettings* info) = 0;
 };

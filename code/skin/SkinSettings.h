@@ -14,11 +14,13 @@ static const UINT		DEFAULT_FONTSIZE		= 8;
 static const COLORREF	DEFAULT_BGCOLOR			= RGB(255, 255, 255);
 static const SIZE		DEFAULT_NULLSIZE		= {0, 0};
 static const RECT		DEFAULT_NULLRECT		= {0, 0, 0, 0};
-static const CString	DEFAULT_EMPTYSTR		= _T("<empty>");
+static const CString	DEFAULT_EMPTYSTR		= _T("");
 
 class CSkinInfo : public CSettings
 {
 public:
+	static const TCHAR defaultSectionName[];
+
 	DWORD Version;
 	CString Name;
 	CString Maker;
@@ -41,6 +43,8 @@ public:
 class CGenericSettings : public CSettings
 {
 public:
+	static const TCHAR defaultSectionName[];
+
 	CColorRef ColorKey;
 	CString FontName;
 	UINT FontSize;
@@ -54,24 +58,31 @@ public:
 
 class CWindowSettings : public CSettings
 {
+	const CWindowSettings* const m_pModel;
+
 public:
+	static const TCHAR defaultSectionName[];
+
+	CWindowSettings(const CWindowSettings* const pModel = NULL) : m_pModel(pModel) {};
+	virtual ~CWindowSettings() {};
+
 	SIZE Size;
 	CColorRef BGColor;
 	RECT Frames[_fp_count][_fs_count];
 	RECT Buttons[_wbp_count][_bs_count];
 
-	BEGIN_SETTING_MAP(CWindowSettings)
-		SETTING_ITEM_DEFAULT(Size, DEFAULT_NULLSIZE)
-		SETTING_ITEM_DEFAULT(BGColor, DEFAULT_BGCOLOR)
+	BEGIN_SETTING_MAP_NOCTOR(CWindowSettings)
+		SETTING_ITEM_DEFAULT_EX(Size, DEFAULT_NULLSIZE, m_pModel)
+		SETTING_ITEM_DEFAULT_EX(BGColor, DEFAULT_BGCOLOR, m_pModel)
 		//
-		SETTING_ITEM_DEFAULT(Frames[FPTopLeft][FSActive], DEFAULT_NULLRECT)
-		SETTING_ITEM_DEFAULT(Frames[FPTop][FSActive], DEFAULT_NULLRECT)
-		SETTING_ITEM_DEFAULT(Frames[FPTopRight][FSActive], DEFAULT_NULLRECT)
-		SETTING_ITEM_DEFAULT(Frames[FPRight][FSActive], DEFAULT_NULLRECT)
-		SETTING_ITEM_DEFAULT(Frames[FPBottomRight][FSActive], DEFAULT_NULLRECT)
-		SETTING_ITEM_DEFAULT(Frames[FPBottom][FSActive], DEFAULT_NULLRECT)
-		SETTING_ITEM_DEFAULT(Frames[FPBottomLeft][FSActive], DEFAULT_NULLRECT)
-		SETTING_ITEM_DEFAULT(Frames[FPLeft][FSActive], DEFAULT_NULLRECT)
+		SETTING_ITEM_DEFAULT_EX(Frames[FPTopLeft][FSActive], DEFAULT_NULLRECT, m_pModel)
+		SETTING_ITEM_DEFAULT_EX(Frames[FPTop][FSActive], DEFAULT_NULLRECT, m_pModel)
+		SETTING_ITEM_DEFAULT_EX(Frames[FPTopRight][FSActive], DEFAULT_NULLRECT, m_pModel)
+		SETTING_ITEM_DEFAULT_EX(Frames[FPRight][FSActive], DEFAULT_NULLRECT, m_pModel)
+		SETTING_ITEM_DEFAULT_EX(Frames[FPBottomRight][FSActive], DEFAULT_NULLRECT, m_pModel)
+		SETTING_ITEM_DEFAULT_EX(Frames[FPBottom][FSActive], DEFAULT_NULLRECT, m_pModel)
+		SETTING_ITEM_DEFAULT_EX(Frames[FPBottomLeft][FSActive], DEFAULT_NULLRECT, m_pModel)
+		SETTING_ITEM_DEFAULT_EX(Frames[FPLeft][FSActive], DEFAULT_NULLRECT, m_pModel)
 
 		SETTING_ITEM_DEFAULT(Frames[FPTopLeft][FSInactive], Frames[FPTopLeft][FSActive])
 		SETTING_ITEM_DEFAULT(Frames[FPTop][FSInactive], Frames[FPTop][FSActive])
@@ -124,6 +135,8 @@ public:
 class CButtonSettings : public CSettings
 {
 public:
+	static const TCHAR defaultSectionName[];
+
 	RECT TextRect;
 	RECT States[_bs_count];
 
@@ -140,24 +153,28 @@ public:
 class CPictureSettings : public CSettings
 {
 public:
-	RECT Picture;
+	static const TCHAR defaultSectionName[];
+
+	RECT Background;
 
 	BEGIN_SETTING_MAP(CPictureSettings)
-		SETTING_ITEM_REQUIRE(Picture)
+		SETTING_ITEM_REQUIRE(Background)
 	END_SETTING_MAP()
 };
 
 class CSkinSettings : public CSettings
 {
 public:
-	CSkinInfo SkinInfo;
+	static const TCHAR defaultSectionName[];
+
+	CSkinInfo Info;
 	CGenericSettings Generic;
 	CWindowSettings Window;
 	CButtonSettings Button;
 	CPictureSettings Picture;
 
 	BEGIN_SETTING_MAP(CSkinSettings)
-		SETTING_ITEM_SUBITEM(SkinInfo)
+		SETTING_ITEM_SUBITEM(Info)
 		SETTING_ITEM_SUBITEM(Generic)
 		SETTING_ITEM_SUBITEM(Window)
 		SETTING_ITEM_SUBITEM(Button)

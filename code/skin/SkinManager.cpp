@@ -15,7 +15,7 @@ const TCHAR CSkinManager::defaultSkinFolder[] = _T("default");
 CSkinManager::CSkinManager(void)
 {
 	TCHAR szPath[MAX_PATH + 1] = _T("");
-	if (::GetModuleFileName((HMODULE)::GetCurrentProcess(), szPath, MAX_PATH))
+	if (::GetModuleFileName(NULL, szPath, MAX_PATH))
 	{
 		CPath pthTmp = szPath;
 
