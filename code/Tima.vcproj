@@ -210,9 +210,6 @@ makehm /h /a afxhh.h IDW_,HIDW_,0x50000 &quot;$(InputFileName)&quot; &gt;&gt; &q
 			<File
 				RelativePath=".\TimaDlg.h">
 			</File>
-			<File
-				RelativePath=".\types.h">
-			</File>
 		</Filter>
 		<Filter
 			Name="资源文件"
@@ -301,6 +298,49 @@ echo.
 				RelativePath=".\include\SettingsStorage\MSettingsStorageRegistry.h">
 			</File>
 		</Filter>
+		<Filter
+			Name="Skin"
+			Filter="">
+			<File
+				RelativePath=".\skin\Skin.cpp">
+			</File>
+			<File
+				RelativePath=".\skin\Skin.h">
+			</File>
+			<File
+				RelativePath=".\skin\SkinButton.cpp">
+			</File>
+			<File
+				RelativePath=".\skin\SkinButton.h">
+			</File>
+			<File
+				RelativePath=".\skin\SkinComponent.h">
+			</File>
+			<File
+				RelativePath=".\skin\SkinDialog.cpp">
+			</File>
+			<File
+				RelativePath=".\skin\SkinDialog.h">
+			</File>
+			<File
+				RelativePath=".\skin\SkinManager.cpp">
+			</File>
+			<File
+				RelativePath=".\skin\SkinManager.h">
+			</File>
+			<File
+				RelativePath=".\skin\SkinPicture.cpp">
+			</File>
+			<File
+				RelativePath=".\skin\SkinPicture.h">
+			</File>
+			<File
+				RelativePath=".\skin\SkinSettings.h">
+			</File>
+			<File
+				RelativePath=".\skin\SkinTypes.h">
+			</File>
+		</Filter>
 		<File
 			RelativePath=".\ReadMe.txt">
 		</File>
@@ -309,5 +349,8 @@ echo.
 		</File>
 	</Files>
 	<Globals>
+		<Global
+			Name="RESOURCE_FILE"
+			Value="Tima.rc"/>
 	</Globals>
 </VisualStudioProject>

@@ -9,19 +9,13 @@
 #define new DEBUG_NEW
 #endif
 
-
 // CTimaDlg dialog
-
-
-
-//##ModelId=422F11CD0008
 CTimaDlg::CTimaDlg(CWnd* pParent /*=NULL*/)
 	: CDialog(CTimaDlg::IDD, pParent)
 {
 	m_hIcon = AfxGetApp()->LoadIcon(IDR_MAINFRAME);
 }
 
-//##ModelId=422F11CD000A
 void CTimaDlg::DoDataExchange(CDataExchange* pDX)
 {
 	CDialog::DoDataExchange(pDX);
@@ -30,13 +24,11 @@ void CTimaDlg::DoDataExchange(CDataExchange* pDX)
 BEGIN_MESSAGE_MAP(CTimaDlg, CDialog)
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
+	
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 
-
 // CTimaDlg message handlers
-
-//##ModelId=422F11CD0017
 BOOL CTimaDlg::OnInitDialog()
 {
 	CDialog::OnInitDialog();
@@ -54,8 +46,6 @@ BOOL CTimaDlg::OnInitDialog()
 // If you add a minimize button to your dialog, you will need the code below
 //  to draw the icon.  For MFC applications using the document/view model,
 //  this is automatically done for you by the framework.
-
-//##ModelId=422F11CD0019
 void CTimaDlg::OnPaint() 
 {
 	if (IsIconic())
@@ -83,13 +73,8 @@ void CTimaDlg::OnPaint()
 
 // The system calls this function to obtain the cursor to display while the user drags
 //  the minimized window.
-//##ModelId=422F11CD0027
 HCURSOR CTimaDlg::OnQueryDragIcon()
 {
 	return static_cast<HCURSOR>(m_hIcon);
 }
 
-BEGIN_MESSAGE_MAP(CTimaDlg, CDialog)
-	//{{AFX_MSG_MAP(CTimaDlg)
-	//}}AFX_MSG_MAP
-END_MESSAGE_MAP()

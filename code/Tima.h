@@ -13,17 +13,13 @@
 // CTimaApp:
 // See Tima.cpp for the implementation of this class
 //
-
-//##ModelId=422F11CD0029
 class CTimaApp : public CWinApp
 {
 public:
-	//##ModelId=422F11CD0036
 	CTimaApp();
 
 // Overrides
 	public:
-	//##ModelId=422F11CD0037
 	virtual BOOL InitInstance();
 
 // Implementation

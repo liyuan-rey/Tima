@@ -5,6 +5,8 @@
 #include "Tima.h"
 #include "TimaDlg.h"
 
+#include "skin\SkinManager.h"
+
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
@@ -18,8 +20,6 @@ END_MESSAGE_MAP()
 
 
 // CTimaApp construction
-
-//##ModelId=422F11CD0036
 CTimaApp::CTimaApp()
 {
 	EnableHtmlHelp();
@@ -28,15 +28,10 @@ CTimaApp::CTimaApp()
 	// Place all significant initialization in InitInstance
 }
 
-
 // The one and only CTimaApp object
-
 CTimaApp theApp;
 
-
 // CTimaApp initialization
-
-//##ModelId=422F11CD0037
 BOOL CTimaApp::InitInstance()
 {
 	// InitCommonControls() is required on Windows XP if an application
@@ -48,28 +43,32 @@ BOOL CTimaApp::InitInstance()
 
 	AfxEnableControlContainer();
 
-	// Standard initialization
-	// If you are not using these features and wish to reduce the size
-	// of your final executable, you should remove from the following
-	// the specific initialization routines you do not need
-	// Change the registry key under which our settings are stored
-	// TODO: You should modify this string to be something appropriate
-	// such as the name of your company or organization
-	SetRegistryKey(_T("Local AppWizard-Generated Applications"));
+	// Initialize skin configration
+	int nResult = SkinManager()->LoadSkin();
+	CString strInfo;
+	if (nResult < 0)
+	{
+		AfxMessageBox(IDS_LOADSKINFAILED);
+		return FALSE;
+	}
+	else if (nResult > 0)
+	{
+		AfxMessageBox(IDS_LOADSKININERROR);
+	}
 
 	CTimaDlg dlg;
 	m_pMainWnd = &dlg;
 	INT_PTR nResponse = dlg.DoModal();
-	if (nResponse == IDOK)
-	{
-		// TODO: Place code here to handle when the dialog is
-		//  dismissed with OK
-	}
-	else if (nResponse == IDCANCEL)
-	{
-		// TODO: Place code here to handle when the dialog is
-		//  dismissed with Cancel
-	}
+//	if (nResponse == IDOK)
+//	{
+//		// TODO: Place code here to handle when the dialog is
+//		//  dismissed with OK
+//	}
+//	else if (nResponse == IDCANCEL)
+//	{
+//		// TODO: Place code here to handle when the dialog is
+//		//  dismissed with Cancel
+//	}
 
 	// Since the dialog has been closed, return FALSE so that we exit the
 	//  application, rather than start the application's message pump.
