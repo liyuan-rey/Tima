@@ -11,27 +11,26 @@
 
 // CTimaDlg dialog
 CTimaDlg::CTimaDlg(CWnd* pParent /*=NULL*/)
-	: CDialog(CTimaDlg::IDD, pParent)
+	: CSkinDialog(CTimaDlg::IDD, pParent)
 {
 	m_hIcon = AfxGetApp()->LoadIcon(IDR_MAINFRAME);
 }
 
 void CTimaDlg::DoDataExchange(CDataExchange* pDX)
 {
-	CDialog::DoDataExchange(pDX);
+	CSkinDialog::DoDataExchange(pDX);
 }
 
-BEGIN_MESSAGE_MAP(CTimaDlg, CDialog)
-	ON_WM_PAINT()
+BEGIN_MESSAGE_MAP(CTimaDlg, CSkinDialog)
+// 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
-	
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 
 // CTimaDlg message handlers
 BOOL CTimaDlg::OnInitDialog()
 {
-	CDialog::OnInitDialog();
+	CSkinDialog::OnInitDialog();
 
 	// Set the icon for this dialog.  The framework does this automatically
 	//  when the application's main window is not a dialog
@@ -67,7 +66,7 @@ void CTimaDlg::OnPaint()
 	}
 	else
 	{
-		CDialog::OnPaint();
+		CSkinDialog::OnPaint();
 	}
 }
 

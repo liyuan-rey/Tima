@@ -56,6 +56,7 @@ BOOL CTimaApp::InitInstance()
 		AfxMessageBox(IDS_LOADSKININERROR);
 	}
 
+
 	CTimaDlg dlg;
 	m_pMainWnd = &dlg;
 	INT_PTR nResponse = dlg.DoModal();

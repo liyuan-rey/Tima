@@ -75,6 +75,7 @@ STRINGTABLE
 BEGIN
     IDS_LOADSKINFAILED      "Loading skin failed, application will exit."
     IDS_LOADSKININERROR     "Loading skin with error, application may not function cerect."
+    IDS_BINDINGSKINERROR    "Binding skin info error, application may not function cerect."
 END
 
 #endif    // 中文(中华人民共和国) resources

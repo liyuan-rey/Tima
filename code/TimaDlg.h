@@ -3,9 +3,11 @@
 
 #pragma once
 
+#include "skin\skindialog.h"
+
 
 // CTimaDlg dialog
-class CTimaDlg : public CDialog
+class CTimaDlg : public CSkinDialog
 {
 // Construction
 public:
@@ -13,6 +15,7 @@ public:
 
 // Dialog Data
 	enum { IDD = IDD_TIMA_DIALOG };
+	virtual UINT GetDialogSkinID() { return IDD; }
 
 	protected:
 	virtual void DoDataExchange(CDataExchange* pDX);	// DDX/DDV support

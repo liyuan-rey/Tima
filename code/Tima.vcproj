@@ -20,11 +20,13 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
+				AdditionalIncludeDirectories="D:\3rdLib\cximage599c_full\CxImage"
 				PreprocessorDefinitions="WIN32;_WINDOWS;_DEBUG"
 				MinimalRebuild="TRUE"
 				BasicRuntimeChecks="3"
 				RuntimeLibrary="3"
 				TreatWChar_tAsBuiltInType="TRUE"
+				RuntimeTypeInfo="TRUE"
 				UsePrecompiledHeader="3"
 				WarningLevel="3"
 				Detect64BitPortabilityProblems="TRUE"
@@ -33,7 +35,9 @@
 				Name="VCCustomBuildTool"/>
 			<Tool
 				Name="VCLinkerTool"
+				AdditionalDependencies="zlibd.lib pngD.lib cximaged.lib"
 				LinkIncremental="2"
+				AdditionalLibraryDirectories="D:\3rdLib\cximage599c_full\bin"
 				GenerateDebugInformation="TRUE"
 				SubSystem="2"
 				TargetMachine="1"/>
@@ -72,6 +76,7 @@
 			CharacterSet="2">
 			<Tool
 				Name="VCCLCompilerTool"
+				AdditionalIncludeDirectories="D:\3rdLib\cximage599c_full\CxImage"
 				PreprocessorDefinitions="WIN32;_WINDOWS;NDEBUG"
 				MinimalRebuild="FALSE"
 				RuntimeLibrary="2"
@@ -84,7 +89,9 @@
 				Name="VCCustomBuildTool"/>
 			<Tool
 				Name="VCLinkerTool"
+				AdditionalDependencies="zlib.lib png.lib cximage.lib"
 				LinkIncremental="1"
+				AdditionalLibraryDirectories="D:\3rdLib\cximage599c_full\bin"
 				GenerateDebugInformation="TRUE"
 				SubSystem="2"
 				OptimizeReferences="2"
@@ -335,10 +342,23 @@ echo.
 				RelativePath=".\skin\SkinPicture.h">
 			</File>
 			<File
+				RelativePath=".\skin\SkinSettings.cpp">
+			</File>
+			<File
 				RelativePath=".\skin\SkinSettings.h">
 			</File>
 			<File
+				RelativePath=".\skin\SkinTypes.cpp">
+			</File>
+			<File
 				RelativePath=".\skin\SkinTypes.h">
+			</File>
+		</Filter>
+		<Filter
+			Name="OOEnum"
+			Filter="">
+			<File
+				RelativePath=".\include\OOEnum\Enumeration.h">
 			</File>
 		</Filter>
 		<File

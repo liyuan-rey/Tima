@@ -5,8 +5,8 @@
 #define IDD_TIMA_DIALOG                 102
 #define IDR_MAINFRAME                   128
 #define IDS_LOADSKINFAILED              129
-#define IDS_STRING130                   130
 #define IDS_LOADSKININERROR             130
+#define IDS_BINDINGSKINERROR            131
 
 // Next default values for new objects
 // 
