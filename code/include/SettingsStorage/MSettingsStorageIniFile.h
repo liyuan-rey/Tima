@@ -145,7 +145,11 @@ public:
 			if (0 == GetPrivateProfileString(m_SectionName, szName, &Null, Value, MAX_PATH, m_IniFileName))
 				return false;
 
-			return 1 == _stscanf(Value, token, &(Variable.color));
+			DWORD dwClr;
+			bool bRet = (1 == _stscanf(Value, token, &dwClr));
+			Variable.color = RGB(dwClr>>16, (dwClr<<16)>>24, (dwClr<<24)>>24);
+
+			return bRet;
 		}
 	}
 

@@ -92,6 +92,10 @@ class CSettingsStorage;
 ///		SETTING_ITEM_REQUIRE()		\n
 class CSettings
 {
+public:
+	CSettings() {};
+	virtual ~CSettings() {};
+
 protected:
 	/// @name Overrideables
 	/// These are called before and after the load or save operations inside Load() and Save().
