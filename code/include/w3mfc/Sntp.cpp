@@ -24,6 +24,8 @@ History: PJN / 16-11-1998 1. m_nOriginateTime was getting set incorrectly in the
                           allows the priviledge code to also be excluded on desktop versions of
                           Windows if so desired.  
                           5. Reviewed and updated all the TRACE statements for correctness.
+         PJN / 04-04-2005 1. Fix for a bug in the calculation of the m_RoundTripDelay value. Thanks
+                          to Euan Lee for reporting this bug.
 
 
 Copyright (c) 1998 - 2005 by PJ Naughter.  (Web: www.naughter.com, Email: pjna@naughter.com)
