@@ -8,6 +8,7 @@
  
 // ¶Ô»°¿ò(IDD_*) 
 #define HIDD_TIMA_DIALOG                        0x20066
+#define HIDD_ATOMICCLOCK                        0x20082
  
 // ¿ò¼Ü¿Ø¼þ(IDW_*) 
 // This is a part of the Microsoft Foundation Classes C++ library.

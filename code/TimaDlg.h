@@ -4,7 +4,11 @@
 #pragma once
 
 #include "skin\skindialog.h"
+#include "skin\skinbutton.h"
+#include "skin\skinpicture.h"
+#include "d:\working\tima\code\skin\skinpicture.h"
 
+class CDlgAtomicClock;
 
 // CTimaDlg dialog
 class CTimaDlg : public CSkinDialog
@@ -25,15 +29,37 @@ public:
 protected:
 	HICON m_hIcon;
 
+	CSkinPicture m_pic1;
+	CSkinPicture m_pic2;
+	CSkinPicture m_pic3;
+	CSkinButton m_rbnAtomicClock;
+	CSkinButton m_rbnTrayClock;
+	CSkinButton m_rbnWeather;
+	CSkinButton m_rbnReminder;
+	CSkinButton m_rbnCalender;
+	CSkinButton m_rbnStopWatch;
+	CSkinButton m_rbnSettings;
+	CSkinButton m_rbnAbout;
+
+	int m_nActivedPanel;
+
+	CDlgAtomicClock* m_pdlgAtomicClock;
+	void ApplySkin();
+
+protected:
 	virtual BOOL OnInitDialog();
+	virtual void OnOK() {};
+	virtual void OnCancel() { CSkinDialog::OnCancel(); }
 
 	// Generated message map functions
 protected:
 	//{{AFX_MSG(CTimaDlg)
 	afx_msg void OnPaint();
 	afx_msg HCURSOR OnQueryDragIcon();
+	afx_msg void OnChangePanel(UINT id);
 	//}}AFX_MSG
+
 	DECLARE_MESSAGE_MAP()
 public:
-	CButton m_btnTest;
+	afx_msg void OnDestroy();
 };

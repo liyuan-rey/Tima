@@ -30,7 +30,6 @@ public:
 public:
 	//{{AFX_VIRTUAL(CSkinDialog)
 	virtual BOOL OnInitDialog();
-	virtual void PostNcDestroy();
 	//}}AFX_VIRTUAL
 
 	// Implement of ISkinComponent

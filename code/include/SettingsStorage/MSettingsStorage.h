@@ -52,6 +52,9 @@
 #ifndef __MORTIMER_SETTINGSSTORAGE_H__
 #define __MORTIMER_SETTINGSSTORAGE_H__
 
+#pragma warning (push)
+#pragma warning (disable : 4244)
+
 //========================================================================================
 // encapsulate these classes in a namespace
 
@@ -1008,5 +1011,6 @@ inline bool CSettings::Save(CSettingsStorage &Storage)
 				if (!Continue) return false; \
 				bResult = false;}
 
+#pragma warning (pop)
 
 #endif // __MORTIMER_SETTINGSSTORAGE_H__

@@ -78,8 +78,3 @@ int CSkinManager::LoadSkin(LPCTSTR szSkinFolder)
 {
 	return m_skin.Load(m_pthSkinRoot += szSkinFolder);
 }
-
-CSkin* CSkinManager::GetCurrentSkin()
-{
-	return &m_skin;
-}

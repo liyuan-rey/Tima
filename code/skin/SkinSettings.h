@@ -74,6 +74,7 @@ public:
 	SIZE CaptionSize;
 	POINT IconPos;
 	RECT IconRect;
+
 	RECT Frames[_fp_count][_fs_count];
 	RECT Buttons[_wbp_count][_bs_count];
 	POINT ButtonsPos[_wbp_count];
@@ -170,10 +171,10 @@ public:
 		SETTING_ITEM_DEFAULT_EX(IconRect, DEFAULT_NULLRECT, m_pModel)
 		SETTING_ITEM_DEFAULT_EX(TextRect, DEFAULT_NULLRECT, m_pModel)
 
-		SETTING_ITEM_DEFAULT(States[BSNormal], DEFAULT_NULLRECT)
-		SETTING_ITEM_DEFAULT(States[BSHot], States[BSNormal])
-		SETTING_ITEM_DEFAULT(States[BSPushed], States[BSNormal])
-		SETTING_ITEM_DEFAULT(States[BSDisabled], States[BSNormal])
+		SETTING_ITEM_DEFAULT_EX(States[BSNormal], DEFAULT_NULLRECT, m_pModel)
+		SETTING_ITEM_DEFAULT_EX(States[BSHot], States[BSNormal], m_pModel)
+		SETTING_ITEM_DEFAULT_EX(States[BSPushed], States[BSNormal], m_pModel)
+		SETTING_ITEM_DEFAULT_EX(States[BSDisabled], States[BSNormal], m_pModel)
 	END_SETTING_MAP()
 };
 
@@ -183,9 +184,11 @@ public:
 	static const TCHAR defaultSectionName[];
 
 	RECT Background;
+	RECT Area;
 
 	BEGIN_SETTING_MAP(CPictureSettings)
-		SETTING_ITEM_REQUIRE(Background)
+		SETTING_ITEM_DEFAULT(Background, DEFAULT_NULLRECT)
+		SETTING_ITEM_DEFAULT(Area, DEFAULT_NULLRECT)
 	END_SETTING_MAP()
 };
 
@@ -200,11 +203,15 @@ public:
 	CButtonSettings Button;
 	CPictureSettings Picture;
 
+	CArray<RECT> CustomRects;
+
 	BEGIN_SETTING_MAP(CSkinSettings)
 		SETTING_ITEM_SUBITEM(Info)
 		SETTING_ITEM_SUBITEM(Generic)
 		SETTING_ITEM_SUBITEM(Window)
 		SETTING_ITEM_SUBITEM(Button)
 		SETTING_ITEM_SUBITEM(Picture)
+
+		SETTING_ITEM_ALONE_ARRAY(CustomRects, RECT);
 	END_SETTING_MAP()
 };

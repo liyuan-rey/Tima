@@ -140,6 +140,13 @@ CSettings* CSkin::FindSetting(ISkinComponent* pComp)
 		}
 	case ESkinControl::Picture:
 		{
+			pSettings = new CPictureSettings();
+
+			UINT id = pComp->GetID();
+			strSection.Format(_T("%s.%s.%d"), CSkinSettings::defaultSectionName,
+				CPictureSettings::defaultSectionName, id);
+
+			break;
 		}
 	default:
 		ATLTRACE(_T("*** SkinDebug ***: Unexcepted skin control used.\n"));
@@ -179,7 +186,34 @@ CSettings* CSkin::FindSetting(ISkinComponent* pComp)
 	return pSettings;
 }
 
-CxImage* CSkin::GetSkinImage()
+BOOL CSkin::GetCustomSetting(GCSType type, UINT id, void* pData)
 {
-	return m_imgSkin.IsValid() ? &m_imgSkin : NULL;
+	if (!pData)
+	{
+		ATLASSERT(0);
+		return FALSE;
+	}
+
+	BOOL bRet = FALSE;
+	UINT count = 0;
+
+	switch (type)
+	{
+	case GCSNothing:
+		break;
+	case GCSRect:
+		count = (UINT)m_settings.CustomRects.GetCount();
+		if (count > id)
+		{
+			const RECT& rcData = m_settings.CustomRects.GetAt(id);
+			memcpy(pData, &rcData, sizeof(RECT));
+			bRet = TRUE;
+		}
+
+		break;
+	default:
+		ATLASSERT(0); // maybe need support more types
+	}
+
+	return bRet;
 }

@@ -42,5 +42,21 @@ public:
 
 	BOOL BindSkinInfo(ISkinComponent* pComp);
 	CSettings* FindSetting(ISkinComponent* pComp);
-	CxImage* GetSkinImage();
+
+	AFX_INLINE BOOL DrawRect(const CRect& rcSrc, CDC* pDestDC, long xDest=0, long yDest=0, long cxDest = -1, long cyDest = -1) {
+		if (m_imgSkin.IsValid() && !rcSrc.IsRectEmpty())
+		{
+			CxImage imgTmp;
+			m_imgSkin.Crop(rcSrc, &imgTmp);
+			return imgTmp.Draw2(pDestDC->m_hDC, xDest, yDest, cxDest, cyDest);
+		}
+
+		return FALSE;
+	}
+
+	enum GCSType {
+		GCSNothing = 0,
+		GCSRect
+	};
+	BOOL GetCustomSetting(GCSType nType, UINT id, void* pData);
 };

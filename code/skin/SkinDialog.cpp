@@ -138,8 +138,9 @@ BOOL CSkinDialog::OnInitDialog()
 
 		rcTmp.MoveToXY(m_pSettings->ButtonsPos[i]);
 		pButton = new CSkinButton();
-		pButton->Create(_T(""), WS_CHILD | WS_VISIBLE | BS_PUSHBUTTON | BS_OWNERDRAW/* | WS_GROUP | WS_TABSTOP*/,
+		pButton->Create(_T(""), WS_CHILD | WS_VISIBLE,
 					rcTmp, this, IDC_SKIN_BASE + i);
+		pButton->ApplySkin();
 		m_arrButtons.Add(pButton);
 	}
 
@@ -151,13 +152,6 @@ BOOL CSkinDialog::OnInitDialog()
 		SWP_FRAMECHANGED | SWP_NOACTIVATE | SWP_NOMOVE | SWP_NOSIZE | SWP_NOZORDER);
 
 	return bRet;
-}
-
-void CSkinDialog::PostNcDestroy()
-{
-	// ToDo: Add your specialized code here or after the call to base class
-	
-	CWnd::PostNcDestroy();
 }
 
 UINT CSkinDialog::GetID()
@@ -196,8 +190,8 @@ void CSkinDialog::OnPaint()
 {
 	CPaintDC dc(this); // device context for painting
 
-	CxImage* pImage = SkinManager()->GetCurrentSkin()->GetSkinImage();
-	if (!pImage || !pImage->IsValid() || !m_pSettings)
+	CSkin* pSkin = SkinManager()->GetCurrentSkin();
+	if (!m_pSettings || !pSkin)
 		return;
 
 	CMemDC memDC(&dc);
@@ -213,69 +207,35 @@ void CSkinDialog::OnPaint()
 	memDC.FillSolidRect(rcClient, m_pSettings->BGColor);
 
 	// Draw border
-	CxImage imgTmp;
-
 	CRect rcTmp = m_pSettings->Frames[FPLeft][fs];
-	if (!rcTmp.IsRectEmpty())
-	{
-		pImage->Crop(rcTmp, &imgTmp);
-		imgTmp.Draw2(memDC.m_hDC, rcClient.left, rcClient.top, rcTmp.Width(),
+	pSkin->DrawRect(rcTmp, &memDC, rcClient.left, rcClient.top, rcTmp.Width(),
 			rcClient.Height());
-	}
 
 	rcTmp = m_pSettings->Frames[FPRight][fs];
-	if (!rcTmp.IsRectEmpty())
-	{
-		pImage->Crop(rcTmp, &imgTmp);
-		imgTmp.Draw2(memDC.m_hDC, rcClient.right - rcTmp.Width(), rcClient.top,
-				rcTmp.Width(), rcClient.Height());
-	}
+	pSkin->DrawRect(rcTmp, &memDC, rcClient.right - rcTmp.Width(), rcClient.top,
+			rcTmp.Width(), rcClient.Height());
 
 	rcTmp = m_pSettings->Frames[FPBottom][fs];
-	if (!rcTmp.IsRectEmpty())
-	{
-		pImage->Crop(rcTmp, &imgTmp);
-		imgTmp.Draw2(memDC.m_hDC, rcClient.left, rcClient.bottom - rcTmp.Height(),
-				rcClient.Width(), rcTmp.Height());
-	}
+	pSkin->DrawRect(rcTmp, &memDC, rcClient.left, rcClient.bottom - rcTmp.Height(),
+			rcClient.Width(), rcTmp.Height());
 
 	rcTmp = m_pSettings->Frames[FPTop][fs];
-	if (!rcTmp.IsRectEmpty())
-	{
-		pImage->Crop(rcTmp, &imgTmp);
-		imgTmp.Draw2(memDC.m_hDC, rcClient.left, rcClient.top, rcClient.Width(),
+	pSkin->DrawRect(rcTmp, &memDC, rcClient.left, rcClient.top, rcClient.Width(),
 				rcTmp.Height());
-	}
 
 	// Draw corner
 	rcTmp = m_pSettings->Frames[FPTopLeft][fs];
-	if (!rcTmp.IsRectEmpty())
-	{
-		pImage->Crop(rcTmp, &imgTmp);
-		imgTmp.Draw2(memDC.m_hDC, rcClient.left, rcClient.top);
-	}
+	pSkin->DrawRect(rcTmp, &memDC, rcClient.left, rcClient.top);
 
 	rcTmp = m_pSettings->Frames[FPTopRight][fs];
-	if (!rcTmp.IsRectEmpty())
-	{
-		pImage->Crop(rcTmp, &imgTmp);
-		imgTmp.Draw2(memDC.m_hDC, rcClient.right - rcTmp.Width(), rcClient.top);
-	}
+	pSkin->DrawRect(rcTmp, &memDC, rcClient.right - rcTmp.Width(), rcClient.top);
 
 	rcTmp = m_pSettings->Frames[FPBottomLeft][fs];
-	if (!rcTmp.IsRectEmpty())
-	{
-		pImage->Crop(rcTmp, &imgTmp);
-		imgTmp.Draw2(memDC.m_hDC, rcClient.left, rcClient.bottom - rcTmp.Height());
-	}
+	pSkin->DrawRect(rcTmp, &memDC, rcClient.left, rcClient.bottom - rcTmp.Height());
 
 	rcTmp = m_pSettings->Frames[FPBottomRight][fs];
-	if (!rcTmp.IsRectEmpty())
-	{
-		pImage->Crop(rcTmp, &imgTmp);
-		imgTmp.Draw2(memDC.m_hDC, rcClient.right - rcTmp.Width(), 
+	pSkin->DrawRect(rcTmp, &memDC, rcClient.right - rcTmp.Width(), 
 				rcClient.bottom - rcTmp.Height());
-	}
 }
 
 UINT CSkinDialog::OnNcHitTest(CPoint point)

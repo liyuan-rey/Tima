@@ -13,6 +13,111 @@
 #undef APSTUDIO_READONLY_SYMBOLS
 
 /////////////////////////////////////////////////////////////////////////////
+// 非特定语言(默认) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEUD)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_DEFAULT
+#pragma code_page(936)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_TIMA_DIALOG DIALOGEX 0, 0, 320, 200
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | 
+    WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Tima"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_PICT_1,"Static",SS_LEFTNOWORDWRAP | SS_SUNKEN | 
+                    WS_GROUP,7,7,306,8
+    CTEXT           "",IDC_PICT_2,7,17,93,176,SS_SUNKEN
+    CONTROL         "",IDC_PICT_3,"Static",SS_LEFTNOWORDWRAP | SS_SUNKEN | 
+                    WS_GROUP,7,130,82,8
+    CONTROL         "Atomic Clock",IDC_RBN_ATOMICCLOCK,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,7,19,56,10
+    CONTROL         "Tray Clock",IDC_RBN_TRAYCLOCK,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,7,39,49,10
+    CONTROL         "Weather",IDC_RBN_WEATHER,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,7,59,44,10
+    CONTROL         "Reminder",IDC_RBN_REMINDER,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,7,79,46,10
+    CONTROL         "Calendar",IDC_RBN_CALENDER,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,7,95,45,10
+    CONTROL         "StopWatch",IDC_RBN_STOPWATCH,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,7,115,51,10
+    CONTROL         "Settings",IDC_RBN_SETTINGS,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,7,144,42,10
+    CONTROL         "About Tima",IDC_RBN_ABOUT,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,7,162,52,10
+    PUSHBUTTON      "&Help",ID_HELP,74,177,50,16
+END
+
+IDD_ATOMICCLOCK DIALOGEX 0, 0, 271, 202
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+EXSTYLE WS_EX_TRANSPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Button2",IDC_BUTTON2,79,39,50,14
+    LTEXT           "静态",IDC_STATIC,113,87,17,8
+    CONTROL         "单选1",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON,30,129,36,
+                    10
+    COMBOBOX        IDC_COMBO1,117,127,48,30,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "选中1",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    35,167,36,10
+    EDITTEXT        IDC_EDIT2,159,57,40,14,ES_AUTOHSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_TIMA_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 193
+    END
+
+    IDD_ATOMICCLOCK, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 264
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 195
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_LOADSKINFAILED      "Loading skin failed, application will exit."
+    IDS_LOADSKININERROR     "Loading skin with error, application may not function cerect."
+    IDS_BINDINGSKINERROR    "Binding skin info error, application may not function cerect."
+END
+
+#endif    // 非特定语言(默认) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
 // 中文(中华人民共和国) resources
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
@@ -65,19 +170,6 @@ END
 // Icon with lowest ID value placed first to ensure application icon
 // remains consistent on all systems.
 IDR_MAINFRAME           ICON                    "res\\Tima.ico"
-
-/////////////////////////////////////////////////////////////////////////////
-//
-// String Table
-//
-
-STRINGTABLE 
-BEGIN
-    IDS_LOADSKINFAILED      "Loading skin failed, application will exit."
-    IDS_LOADSKININERROR     "Loading skin with error, application may not function cerect."
-    IDS_BINDINGSKINERROR    "Binding skin info error, application may not function cerect."
-END
-
 #endif    // 中文(中华人民共和国) resources
 /////////////////////////////////////////////////////////////////////////////
 
@@ -90,27 +182,6 @@ END
 LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
 #pragma code_page(1252)
 #endif //_WIN32
-
-/////////////////////////////////////////////////////////////////////////////
-//
-// Dialog
-//
-
-IDD_TIMA_DIALOG DIALOGEX 0, 0, 320, 200
-STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | 
-    WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-EXSTYLE WS_EX_APPWINDOW
-CAPTION "Tima"
-FONT 8, "MS Shell Dlg", 0, 0, 0x1
-BEGIN
-    DEFPUSHBUTTON   "OK",IDOK,263,7,50,16
-    PUSHBUTTON      "Cancel",IDCANCEL,263,25,50,16
-    PUSHBUTTON      "&Help",ID_HELP,263,44,50,16
-    CTEXT           "TODO: Place dialog controls here.",IDC_STATIC,10,96,300,
-                    8
-    PUSHBUTTON      "Button1",IDC_BUTTON1,15,25,80,45
-END
-
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -149,25 +220,6 @@ BEGIN
         VALUE "Translation", 0x409, 1252
     END
 END
-
-
-/////////////////////////////////////////////////////////////////////////////
-//
-// DESIGNINFO
-//
-
-#ifdef APSTUDIO_INVOKED
-GUIDELINES DESIGNINFO 
-BEGIN
-    IDD_TIMA_DIALOG, DIALOG
-    BEGIN
-        LEFTMARGIN, 7
-        RIGHTMARGIN, 313
-        TOPMARGIN, 7
-        BOTTOMMARGIN, 193
-    END
-END
-#endif    // APSTUDIO_INVOKED
 
 #endif    // 英语(美国) resources
 /////////////////////////////////////////////////////////////////////////////

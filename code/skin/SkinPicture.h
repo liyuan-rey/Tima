@@ -2,28 +2,46 @@
 
 #pragma once
 
+#include "SkinComponent.h"
+#include "SkinTypes.h"
 
 class CPictureSettings;
 
 // CSkinPicture
 
-class CSkinPicture : public CWnd
+class CSkinPicture : public CStatic, public ISkinComponent
 {
 	DECLARE_DYNAMIC(CSkinPicture)
 
 public:
+	CSkinPicture();
+	virtual ~CSkinPicture();
 
-protected:
-	CPictureSettings* m_settings;
+	// Implement of ISkinComponent
+public:
+	virtual UINT GetID();
+	virtual ESkinControl GetType();
+	virtual BOOL SetSkinInfo(CSettings* info);
+	virtual ISkinComponent* GetSkinParent();
 
-	DECLARE_MESSAGE_MAP()
+	void ApplySkin() throw();
+
 	//{{AFX_VIRTUAL(CSkinPicture)
-	public:
-	virtual void PreSubclassWindow();
-
-	virtual BOOL OnWndMsg(UINT message, WPARAM wParam, LPARAM lParam, LRESULT* pResult);
 	//}}AFX_VIRTUAL
 
+protected:
+	CPictureSettings* m_pSettings;
+
+public:
+	//{{AFX_MSG(CSkinPicture)
+	afx_msg BOOL OnEraseBkgnd(CDC* pDC);
+	//}}AFX_MSG
+
+	DECLARE_MESSAGE_MAP()
+protected:
+	virtual void PreSubclassWindow();
+public:
+	virtual void DrawItem(LPDRAWITEMSTRUCT /*lpDrawItemStruct*/);
 };
 
 

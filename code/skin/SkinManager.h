@@ -32,7 +32,9 @@ public:
 	BOOL GetSkinInfo(LPCTSTR szSkinFolder, CSkinInfo& setting);
 	int LoadSkin(LPCTSTR szSkinFolder = defaultSkinFolder);
 
-	CSkin* GetCurrentSkin();
+	AFX_INLINE CSkin* GetCurrentSkin() {
+		return &m_skin;
+	}
 };
 
 AFX_INLINE CSkinManager* SkinManager() { 
