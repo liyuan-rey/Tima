@@ -13,4 +13,5 @@ public:
 	virtual UINT GetID() = 0;
 	virtual ESkinControl GetType() = 0;
 	virtual BOOL SetSkinInfo(CSettings* info) = 0;
+	virtual ISkinComponent* GetSkinParent() = 0;
 };

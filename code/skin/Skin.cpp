@@ -8,6 +8,7 @@
 #include "SkinManager.h"
 #include "SkinSettings.h"
 #include "SkinComponent.h"
+#include "SkinDialog.h"
 
 #include "..\include\SettingsStorage\MSettingsStorageIniFile.h"
 using Mortimer::CSettingsStorageIniFile;
@@ -20,11 +21,24 @@ CSkin::CSkin()
 
 CSkin::~CSkin()
 {
+	POSITION pos = m_mapComponents.GetStartPosition();
+	ISkinComponent* pComp = NULL;
+	CSettings* pSettings = NULL;
+	while (pos != NULL)
+	{
+		m_mapComponents.GetNextAssoc(pos, pComp, pSettings);
+		delete pSettings;
+	}
+
+	m_mapComponents.RemoveAll();
 }
 
 
 int CSkin::Load(LPCTSTR szPath)
 {
+	if (!m_pthSkin.m_strPath.IsEmpty())
+		return -1; // Not support dynamic reload skin currently
+
 	CPath pthTmp = szPath;
 	pthTmp.AddBackslash();
 	pthTmp += defaultSkinConfigFile;
@@ -116,6 +130,13 @@ CSettings* CSkin::FindSetting(ISkinComponent* pComp)
 		}
 	case ESkinControl::Button:
 		{
+			pSettings = new CButtonSettings(&(m_settings.Button));
+
+			UINT id = pComp->GetID();
+			strSection.Format(_T("%s.%s.%d"), CSkinSettings::defaultSectionName,
+				CButtonSettings::defaultSectionName, id);
+
+			break;
 		}
 	case ESkinControl::Picture:
 		{
@@ -130,6 +151,29 @@ CSettings* CSkin::FindSetting(ISkinComponent* pComp)
 		stg.SetIniFileName(m_pthSkin, strSection);
 
 		pSettings->Load(stg) ? NULL : AfxMessageBox(IDS_LOADSKININERROR);
+
+		// crack for window inner button
+		UINT id = pComp->GetID();
+		if (id >= IDC_SKIN_BASE && id-IDC_SKIN_BASE < _wbp_count)
+		{
+			ISkinComponent* pSkinParent = pComp->GetSkinParent();
+			if (pSkinParent)
+			{
+				CSettings* pParentSettings = NULL;
+				bFound = m_mapComponents.Lookup(pSkinParent, pParentSettings);
+				if (bFound && pParentSettings)
+				{
+					WindowButtonPart wbp = static_cast<WindowButtonPart>(id-IDC_SKIN_BASE);
+					((CButtonSettings*)pSettings)->Position = 
+						((CWindowSettings*)pParentSettings)->ButtonsPos[wbp];
+					for (int i = 0; i < _bs_count; i++)
+						((CButtonSettings*)pSettings)->States[i] = 
+						((CWindowSettings*)pParentSettings)->Buttons[wbp][i];
+				}
+			}
+		}
+
+		m_mapComponents.SetAt(pComp, pSettings);
 	}
 
 	return pSettings;

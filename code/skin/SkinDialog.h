@@ -2,10 +2,15 @@
 
 #pragma once
 
+#include <afxtempl.h>
+
 #include "SkinComponent.h"
 
 class CSkinManager;
 class CWindowSettings;
+class CSkinButton;
+
+#define IDC_SKIN_BASE				3001
 
 // CSkinDialog
 
@@ -24,9 +29,8 @@ public:
 
 public:
 	//{{AFX_VIRTUAL(CSkinDialog)
-	virtual void PreInitDialog();
+	virtual BOOL OnInitDialog();
 	virtual void PostNcDestroy();
-	virtual BOOL OnWndMsg(UINT message, WPARAM wParam, LPARAM lParam, LRESULT* pResult);
 	//}}AFX_VIRTUAL
 
 	// Implement of ISkinComponent
@@ -34,17 +38,23 @@ public:
 	virtual UINT GetID();
 	virtual ESkinControl GetType();
 	virtual BOOL SetSkinInfo(CSettings* info);
+	virtual ISkinComponent* GetSkinParent();
 
 	// Generated message map functions
 public:
 	//{{AFX_MSG(CSkinDialog)
 	afx_msg void OnPaint();
 	afx_msg BOOL OnEraseBkgnd(CDC* pDC);
+	afx_msg UINT OnNcHitTest(CPoint point);
 	//}}AFX_MSG
+	afx_msg void OnSysBtnClicked(UINT nCmdID);
 	DECLARE_MESSAGE_MAP()
 
 protected:
 	CWindowSettings* m_pSettings;
+	CRect m_rcCaption;
+
+	CArray<CSkinButton*> m_arrButtons;
 };
 
 

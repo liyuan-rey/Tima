@@ -32,8 +32,7 @@ enum FrameState {
 };
 
 enum WindowButtonPart {
-	WBPSysButton = 0,
-	WBPHelpButton,
+	WBPHelpButton = 0,
 	WBPMinButton,
 	WBPRestoreButton,
 	WBPMaxButton,

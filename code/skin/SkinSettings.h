@@ -12,6 +12,7 @@ static const COLORREF	DEFAULT_COLORKEY		= RGB(255, 0, 255);
 static const TCHAR*		DEFAULT_FONTNAME		= _T("MS Shell Dlg");
 static const UINT		DEFAULT_FONTSIZE		= 8;
 static const COLORREF	DEFAULT_BGCOLOR			= RGB(255, 255, 255);
+static const POINT		DEFAULT_NULLPOINT		= {0, 0};
 static const SIZE		DEFAULT_NULLSIZE		= {0, 0};
 static const RECT		DEFAULT_NULLRECT		= {0, 0, 0, 0};
 static const CString	DEFAULT_EMPTYSTR		= _T("");
@@ -63,17 +64,26 @@ class CWindowSettings : public CSettings
 public:
 	static const TCHAR defaultSectionName[];
 
-	CWindowSettings(const CWindowSettings* const pModel = NULL) : m_pModel(pModel) {};
+	CWindowSettings(const CWindowSettings* const pModel = NULL) : m_pModel(pModel) {
+		InternalSaveLoad(true, NULL, false, true);
+	};
 	virtual ~CWindowSettings() {};
 
 	SIZE Size;
 	CColorRef BGColor;
+	SIZE CaptionSize;
+	POINT IconPos;
+	RECT IconRect;
 	RECT Frames[_fp_count][_fs_count];
 	RECT Buttons[_wbp_count][_bs_count];
+	POINT ButtonsPos[_wbp_count];
 
 	BEGIN_SETTING_MAP_NOCTOR(CWindowSettings)
-		SETTING_ITEM_DEFAULT_EX(Size, DEFAULT_NULLSIZE, m_pModel)
+		SETTING_ITEM_DEFAULT(Size, DEFAULT_NULLSIZE)
 		SETTING_ITEM_DEFAULT_EX(BGColor, DEFAULT_BGCOLOR, m_pModel)
+		SETTING_ITEM_DEFAULT(CaptionSize, DEFAULT_NULLSIZE)
+		SETTING_ITEM_DEFAULT_EX(IconPos, DEFAULT_NULLPOINT, m_pModel)
+		SETTING_ITEM_DEFAULT_EX(IconRect, DEFAULT_NULLRECT, m_pModel)
 		//
 		SETTING_ITEM_DEFAULT_EX(Frames[FPTopLeft][FSActive], DEFAULT_NULLRECT, m_pModel)
 		SETTING_ITEM_DEFAULT_EX(Frames[FPTop][FSActive], DEFAULT_NULLRECT, m_pModel)
@@ -102,46 +112,63 @@ public:
 		SETTING_ITEM_DEFAULT(Frames[FPBottomLeft][FSDisabled], Frames[FPBottomLeft][FSInactive])
 		SETTING_ITEM_DEFAULT(Frames[FPLeft][FSDisabled], Frames[FPLeft][FSInactive])
 		//
-		SETTING_ITEM_DEFAULT(Buttons[WBPSysButton][BSNormal], DEFAULT_NULLRECT)
-		SETTING_ITEM_DEFAULT(Buttons[WBPHelpButton][BSNormal], DEFAULT_NULLRECT)
-		SETTING_ITEM_DEFAULT(Buttons[WBPMinButton][BSNormal], DEFAULT_NULLRECT)
-		SETTING_ITEM_DEFAULT(Buttons[WBPRestoreButton][BSNormal], DEFAULT_NULLRECT)
-		SETTING_ITEM_DEFAULT(Buttons[WBPMaxButton][BSNormal], DEFAULT_NULLRECT)
-		SETTING_ITEM_DEFAULT(Buttons[WBPCloseButton][BSNormal], DEFAULT_NULLRECT)
+		SETTING_ITEM_DEFAULT_EX(Buttons[WBPHelpButton][BSNormal], DEFAULT_NULLRECT, m_pModel)
+		SETTING_ITEM_DEFAULT_EX(Buttons[WBPMinButton][BSNormal], DEFAULT_NULLRECT, m_pModel)
+		SETTING_ITEM_DEFAULT_EX(Buttons[WBPRestoreButton][BSNormal], DEFAULT_NULLRECT, m_pModel)
+		SETTING_ITEM_DEFAULT_EX(Buttons[WBPMaxButton][BSNormal], DEFAULT_NULLRECT, m_pModel)
+		SETTING_ITEM_DEFAULT_EX(Buttons[WBPCloseButton][BSNormal], DEFAULT_NULLRECT, m_pModel)
 
-		SETTING_ITEM_DEFAULT(Buttons[WBPSysButton][BSHot], Buttons[WBPSysButton][BSNormal])
-		SETTING_ITEM_DEFAULT(Buttons[WBPHelpButton][BSHot], Buttons[WBPHelpButton][BSNormal])
-		SETTING_ITEM_DEFAULT(Buttons[WBPMinButton][BSHot], Buttons[WBPMinButton][BSNormal])
-		SETTING_ITEM_DEFAULT(Buttons[WBPRestoreButton][BSHot], Buttons[WBPRestoreButton][BSNormal])
-		SETTING_ITEM_DEFAULT(Buttons[WBPMaxButton][BSHot], Buttons[WBPMaxButton][BSNormal])
-		SETTING_ITEM_DEFAULT(Buttons[WBPCloseButton][BSHot], Buttons[WBPCloseButton][BSNormal])
+		SETTING_ITEM_DEFAULT_EX(Buttons[WBPHelpButton][BSHot], Buttons[WBPHelpButton][BSNormal], m_pModel)
+		SETTING_ITEM_DEFAULT_EX(Buttons[WBPMinButton][BSHot], Buttons[WBPMinButton][BSNormal], m_pModel)
+		SETTING_ITEM_DEFAULT_EX(Buttons[WBPRestoreButton][BSHot], Buttons[WBPRestoreButton][BSNormal], m_pModel)
+		SETTING_ITEM_DEFAULT_EX(Buttons[WBPMaxButton][BSHot], Buttons[WBPMaxButton][BSNormal], m_pModel)
+		SETTING_ITEM_DEFAULT_EX(Buttons[WBPCloseButton][BSHot], Buttons[WBPCloseButton][BSNormal], m_pModel)
 
-		SETTING_ITEM_DEFAULT(Buttons[WBPSysButton][BSPushed], Buttons[WBPSysButton][BSNormal])
-		SETTING_ITEM_DEFAULT(Buttons[WBPHelpButton][BSPushed], Buttons[WBPHelpButton][BSNormal])
-		SETTING_ITEM_DEFAULT(Buttons[WBPMinButton][BSPushed], Buttons[WBPMinButton][BSNormal])
-		SETTING_ITEM_DEFAULT(Buttons[WBPRestoreButton][BSPushed], Buttons[WBPRestoreButton][BSNormal])
-		SETTING_ITEM_DEFAULT(Buttons[WBPMaxButton][BSPushed], Buttons[WBPMaxButton][BSNormal])
-		SETTING_ITEM_DEFAULT(Buttons[WBPCloseButton][BSPushed], Buttons[WBPCloseButton][BSNormal])
+		SETTING_ITEM_DEFAULT_EX(Buttons[WBPHelpButton][BSPushed], Buttons[WBPHelpButton][BSNormal], m_pModel)
+		SETTING_ITEM_DEFAULT_EX(Buttons[WBPMinButton][BSPushed], Buttons[WBPMinButton][BSNormal], m_pModel)
+		SETTING_ITEM_DEFAULT_EX(Buttons[WBPRestoreButton][BSPushed], Buttons[WBPRestoreButton][BSNormal], m_pModel)
+		SETTING_ITEM_DEFAULT_EX(Buttons[WBPMaxButton][BSPushed], Buttons[WBPMaxButton][BSNormal], m_pModel)
+		SETTING_ITEM_DEFAULT_EX(Buttons[WBPCloseButton][BSPushed], Buttons[WBPCloseButton][BSNormal], m_pModel)
 
-		SETTING_ITEM_DEFAULT(Buttons[WBPSysButton][BSDisabled], Buttons[WBPSysButton][BSNormal])
-		SETTING_ITEM_DEFAULT(Buttons[WBPHelpButton][BSDisabled], Buttons[WBPHelpButton][BSNormal])
-		SETTING_ITEM_DEFAULT(Buttons[WBPMinButton][BSDisabled], Buttons[WBPMinButton][BSNormal])
-		SETTING_ITEM_DEFAULT(Buttons[WBPRestoreButton][BSDisabled], Buttons[WBPRestoreButton][BSNormal])
-		SETTING_ITEM_DEFAULT(Buttons[WBPMaxButton][BSDisabled], Buttons[WBPMaxButton][BSNormal])
-		SETTING_ITEM_DEFAULT(Buttons[WBPCloseButton][BSDisabled], Buttons[WBPCloseButton][BSNormal])
+		SETTING_ITEM_DEFAULT_EX(Buttons[WBPHelpButton][BSDisabled], Buttons[WBPHelpButton][BSNormal], m_pModel)
+		SETTING_ITEM_DEFAULT_EX(Buttons[WBPMinButton][BSDisabled], Buttons[WBPMinButton][BSNormal], m_pModel)
+		SETTING_ITEM_DEFAULT_EX(Buttons[WBPRestoreButton][BSDisabled], Buttons[WBPRestoreButton][BSNormal], m_pModel)
+		SETTING_ITEM_DEFAULT_EX(Buttons[WBPMaxButton][BSDisabled], Buttons[WBPMaxButton][BSNormal], m_pModel)
+		SETTING_ITEM_DEFAULT_EX(Buttons[WBPCloseButton][BSDisabled], Buttons[WBPCloseButton][BSNormal], m_pModel)
+		//
+		SETTING_ITEM_DEFAULT_EX(ButtonsPos[WBPHelpButton], DEFAULT_NULLPOINT, m_pModel)
+		SETTING_ITEM_DEFAULT_EX(ButtonsPos[WBPMinButton], DEFAULT_NULLPOINT, m_pModel)
+		SETTING_ITEM_DEFAULT_EX(ButtonsPos[WBPRestoreButton], DEFAULT_NULLPOINT, m_pModel)
+		SETTING_ITEM_DEFAULT_EX(ButtonsPos[WBPMaxButton], DEFAULT_NULLPOINT, m_pModel)
+		SETTING_ITEM_DEFAULT_EX(ButtonsPos[WBPCloseButton], DEFAULT_NULLPOINT, m_pModel)
 	END_SETTING_MAP()
 };
 
 class CButtonSettings : public CSettings
 {
+	const CButtonSettings* const m_pModel;
+
 public:
 	static const TCHAR defaultSectionName[];
 
+	CButtonSettings(const CButtonSettings* const pModel = NULL) : m_pModel(pModel) {
+		InternalSaveLoad(true, NULL, false, true);
+	};
+	virtual ~CButtonSettings() {
+		int i =0;
+	};
+
+	POINT Position;
+	POINT IconPos;
+	RECT IconRect;
 	RECT TextRect;
 	RECT States[_bs_count];
 
-	BEGIN_SETTING_MAP(CButtonSettings)
-		SETTING_ITEM_DEFAULT(TextRect, DEFAULT_NULLRECT)
+	BEGIN_SETTING_MAP_NOCTOR(CButtonSettings)
+		SETTING_ITEM_DEFAULT_EX(Position, DEFAULT_NULLPOINT, m_pModel)
+		SETTING_ITEM_DEFAULT_EX(IconPos, DEFAULT_NULLPOINT, m_pModel)
+		SETTING_ITEM_DEFAULT_EX(IconRect, DEFAULT_NULLRECT, m_pModel)
+		SETTING_ITEM_DEFAULT_EX(TextRect, DEFAULT_NULLRECT, m_pModel)
 
 		SETTING_ITEM_DEFAULT(States[BSNormal], DEFAULT_NULLRECT)
 		SETTING_ITEM_DEFAULT(States[BSHot], States[BSNormal])
