@@ -23,6 +23,7 @@ CHtmlLite::~CHtmlLite()
 BEGIN_MESSAGE_MAP(CHtmlLite, CWnd)
 	ON_WM_ERASEBKGND()
 	ON_WM_PAINT()
+	ON_MESSAGE(WM_SETTEXT, OnSetText)
 END_MESSAGE_MAP()
 
 
@@ -72,6 +73,13 @@ void CHtmlLite::OnPaint()
 	CRect rcOutput;
 	GetClientRect(rcOutput);
 
+//	if (dc.m_ps.fErase)
+	{
+		HBRUSH hbr = (HBRUSH)GetParent()->SendMessage(WM_CTLCOLORSTATIC,
+						(WPARAM)dc.m_hDC, (LPARAM)m_hWnd);
+		::FillRect(dc.m_hDC, rcOutput, hbr);
+	}
+
 	DWORD dwStyle = GetStyle();
 	if ((dwStyle & HS_BORDER) == HS_BORDER)
 	{
@@ -97,4 +105,12 @@ void CHtmlLite::OnPaint()
 	}
 
 	m_drawer.DrawPreparedOutput(&dc, strHtml, rcOutput);
+}
+
+LRESULT CHtmlLite::OnSetText(WPARAM wp, LPARAM lp)
+{
+	LRESULT lRet = DefWindowProc(WM_SETTEXT, wp, lp);
+	Invalidate(TRUE);
+
+	return lRet;
 }
