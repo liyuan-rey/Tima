@@ -41,7 +41,7 @@ void CTimaDlg::DoDataExchange(CDataExchange* pDX)
 }
 
 BEGIN_MESSAGE_MAP(CTimaDlg, CSkinDialog)
-//	ON_WM_PAINT()
+	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
 	//}}AFX_MSG_MAP
 	ON_CONTROL_RANGE(BN_CLICKED, IDC_RBN_ATOMICCLOCK, IDC_RBN_ABOUT, OnChangePanel)
@@ -115,6 +115,10 @@ void CTimaDlg::OnPaint()
 
 		// Draw the icon
 		dc.DrawIcon(x, y, m_hIcon);
+	}
+	else
+	{
+		CSkinDialog::OnPaint();
 	}
 }
 

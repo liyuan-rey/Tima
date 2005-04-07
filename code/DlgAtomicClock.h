@@ -1,7 +1,17 @@
 #pragma once
+
+#include "include\w3mfc\sntp.h"
+
+#include "skin\skindialog.h"
 #include "htmllite\htmllite.h"
 #include "skin\skinpicture.h"
+#include "afxwin.h"
 
+
+#define APP_MSG_BASE				100
+#define WM_TIMA_NTPRESPONSED		WM_APP + APP_MSG_BASE + 1
+
+#define TIMA_THREAD_TIMEOUT			15000
 
 // CDlgAtomicClock 对话框
 
@@ -15,21 +25,34 @@ public:
 
 // 对话框数据
 	enum { IDD = IDD_ATOMICCLOCK };
+	virtual UINT GetDialogSkinID() { return IDD; }
 
 private:
+	HBRUSH GetBgBrush();
 	CBrush m_bgBrush;
 
 protected:
 	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV 支持
+	virtual void OnOK() {};
+	virtual void OnCancel() {};
 
 	DECLARE_MESSAGE_MAP()
 public:
 	afx_msg BOOL OnEraseBkgnd(CDC* pDC);
 	virtual BOOL OnInitDialog();
 	afx_msg HBRUSH OnCtlColor(CDC* pDC, CWnd* pWnd, UINT nCtlColor);
+	afx_msg void OnDestroy();
+	afx_msg void OnBnClickedBtnACCheck();
+	afx_msg void OnBnClickedBtnACAdjust();
+	afx_msg LRESULT OnNtpResponsed(WPARAM, LPARAM);
+	afx_msg void UpdateCtrls();
 
+	DECLARE_HTMLTEMPL_MAP();
 protected:
 	void ApplySkin(void);
+	BOOL CheckSpinRange(const CSpinButtonCtrl& ctlSpin);
+	void CheckTime(BOOL bAdjust);
+	BOOL m_bNeedAdjust;
 
 	CHtmlLite m_htmAC1;
 	CHtmlLite m_htmAC2;
@@ -44,6 +67,9 @@ protected:
 	CSkinPicture m_picAC2;
 	CSkinPicture m_picAC3;
 	CSkinPicture m_picAC4;
+
+	CButton m_btnCheck;
+	CButton m_btnAdjust;
 
 	CButton m_chkStart;
 	CButton m_chkEstab;
@@ -63,9 +89,14 @@ protected:
 	CEdit m_edtOffMS;
 	CSpinButtonCtrl m_spnOffMS;
 
+	typedef struct {
+		HWND hWnd;
+		NtpServerResponse ntpResponse;
+	} NtpThreadContext;
 
-	DECLARE_HTMLTEMPL_MAP();
-//	CString GetHtmlTempl(UINT idRes) throw();
+	CWinThread* m_pNtpThread;
+	static UINT NtpClientProc(LPVOID pParam);
+	NtpThreadContext m_ntpThreadContext;
+
 public:
-	afx_msg void OnBnClickedBtnAccheck();
 };

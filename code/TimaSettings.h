@@ -30,12 +30,12 @@ public:
 
 	DWORD LastAdjustAt;
 	int ManualAdjustInterval;
-	bool AdjustOnStart;
-	bool AdjustOnConnect;
-	bool AdjustEvery;
+	int AdjustOnStart;
+	int AdjustOnConnect;
+	int AdjustEvery;
 	int AdjustEveryNum;
 	int AdjustEveryUnit;
-	bool UserOffset;
+	int UserOffset;
 	int OffsetSign;
 	int OffsetHour;
 	int OffsetMin;

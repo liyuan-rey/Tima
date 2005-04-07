@@ -15,6 +15,7 @@ class CSkinManager;
 class ISkinComponent;
 class ESkinControl;
 
+//TODO 优化绘制代码
 class CSkin
 {
 	friend class CSkinManager;

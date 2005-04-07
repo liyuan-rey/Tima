@@ -35,7 +35,7 @@ public:
 	static const TCHAR defaultSettingsFolder[];
 	static const TCHAR defaultSettingsFile[];
 
-	inline const CTimaSettings* const GetSettings() const {
+	inline CTimaSettings* GetSettings() {
 		return &m_settings;
 	}
 
