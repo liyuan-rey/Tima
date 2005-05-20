@@ -62,11 +62,11 @@ BOOL CTimaDlg::OnInitDialog()
 	ApplySkin();
 
 	// create sub dlg
-	CSkin* pSkin = SkinManager()->GetCurrentSkin();
-	ATLASSERT(pSkin);
+	CSkinPtr spSkin = SkinManager::Instance().GetCurrentSkin();
+	ATLASSERT(spSkin);
 
 	RECT rcArea = {0};
-	pSkin->GetCustomSetting(CSkin::GCSRect, 1, &rcArea);
+	spSkin->GetCustomSetting(CSkin::GCSRect, 1, &rcArea);
 	ATLASSERT(CRect(rcArea).IsRectEmpty() == FALSE);
 
 	m_pdlgAtomicClock = new CDlgAtomicClock(this);

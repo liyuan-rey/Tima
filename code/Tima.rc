@@ -107,20 +107,20 @@ IDD_ATOMICCLOCK DIALOGEX 0, 0, 295, 264
 STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
 FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
-    PUSHBUTTON      "&Check",IDC_BTN_ACCHECK,92,98,50,14
-    PUSHBUTTON      "&Adjust",IDC_BTN_ACADJUST,148,98,50,14
+    PUSHBUTTON      "&Check",IDC_BTN_ACCHECK,92,94,50,14
+    PUSHBUTTON      "&Adjust",IDC_BTN_ACADJUST,148,94,50,14
     CONTROL         "Adjust on startup",IDC_CHK_ACSTART,"Button",
-                    BS_AUTOCHECKBOX | WS_TABSTOP,25,131,72,10
+                    BS_AUTOCHECKBOX | WS_TABSTOP,14,122,72,10
     CONTROL         "Adjust when connection is established",IDC_CHK_ACESTAB,
-                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,130,131,137,10
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,119,122,137,10
     CONTROL         "Adjust every ",IDC_CHK_ACEVERY,"Button",BS_AUTOCHECKBOX | 
-                    WS_TABSTOP,25,146,59,10
-    EDITTEXT        IDC_EDT_ACEVERYNUM,86,145,40,13,ES_RIGHT | 
+                    WS_TABSTOP,14,136,59,10
+    EDITTEXT        IDC_EDT_ACEVERYNUM,75,135,40,13,ES_RIGHT | 
                     ES_AUTOHSCROLL | ES_NUMBER | WS_GROUP
     CONTROL         "",IDC_SPN_ACEVERYNUM,"msctls_updown32",UDS_SETBUDDYINT | 
                     UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | 
-                    UDS_HOTTRACK,116,145,11,13
-    COMBOBOX        IDC_CMB_ACEVERYUNIT,129,145,44,30,CBS_DROPDOWNLIST | 
+                    UDS_HOTTRACK,105,135,11,13
+    COMBOBOX        IDC_CMB_ACEVERYUNIT,118,135,44,30,CBS_DROPDOWNLIST | 
                     WS_VSCROLL | WS_GROUP | WS_TABSTOP
     CONTROL         "",IDC_LST_ACSERVER,"SysListView32",LVS_REPORT | 
                     LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_TABSTOP,11,177,
@@ -152,24 +152,24 @@ BEGIN
     LTEXT           "Adjust system clock via several internet server and auto-update by user specified time interval.",
                     IDC_STATIC,36,17,252,16
     CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,7,36,281,1
-    RTEXT           "System time:",IDC_STATIC,14,46,42,8
-    CONTROL         "",IDC_HTMCTL_ACSYSTIME,"HtmlLite",0x12,60,43,137,14
-    RTEXT           "Atomic time:",IDC_STATIC,14,64,42,8
-    CONTROL         "",IDC_HTMCTL_ACSVRTIME,"HtmlLite",0x12,60,61,137,14
-    RTEXT           "Difference:",IDC_STATIC,14,82,42,8
-    CONTROL         "",IDC_HTMCTL_ACDIFFTIME,"HtmlLite",0x12,60,79,137,14
-    CONTROL         "",IDC_HTMCTL_ACSTATUS,"HtmlLite",0x0,201,43,87,50
-    LTEXT           "",IDC_PICT_AC2,11,114,10,10
+    RTEXT           "System time:",IDC_STATIC,14,44,42,8
+    CONTROL         "",IDC_HTMCTL_ACSYSTIME,"HtmlLite",0x12,60,41,137,14
+    RTEXT           "Atomic time:",IDC_STATIC,14,62,42,8
+    CONTROL         "",IDC_HTMCTL_ACSVRTIME,"HtmlLite",0x12,60,59,137,14
+    RTEXT           "Difference:",IDC_STATIC,14,80,42,8
+    CONTROL         "",IDC_HTMCTL_ACDIFFTIME,"HtmlLite",0x12,60,77,137,14
+    CONTROL         "",IDC_HTMCTL_ACLASTSTATUS,"HtmlLite",0x0,201,41,87,24
+    LTEXT           "",IDC_PICT_AC2,11,109,10,10
     CONTROL         "<b>Auto Adjust</b>",IDC_HTMCTL_AC2,"HtmlLite",0x0,26,
-                    115,52,8
-    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,83,119,205,1
-    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,99,167,189,1
+                    110,52,8
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,83,114,205,1
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,99,168,189,1
     CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,120,238,168,1
     CONTROL         "<b>Active Servers</b>",IDC_HTMCTL_AC3,"HtmlLite",0x0,26,
-                    163,68,8
+                    164,68,8
     CONTROL         "<b>User-defined offset</b>",IDC_HTMCTL_AC4,"HtmlLite",
                     0x0,26,234,89,8
-    LTEXT           "",IDC_PICT_AC3,11,162,10,10
+    LTEXT           "",IDC_PICT_AC3,11,163,10,10
     LTEXT           "",IDC_PICT_AC4,11,233,10,10
     LTEXT           "hours",IDC_STATIC,118,247,19,8
     LTEXT           "min",IDC_STATIC,176,248,12,8
@@ -179,6 +179,10 @@ BEGIN
                     WS_VSCROLL | WS_TABSTOP
     CONTROL         "Offset:",IDC_CHK_ACOFFSET,"Button",BS_AUTOCHECKBOX | 
                     WS_TABSTOP,15,249,34,10
+    CONTROL         "Adjust minutes and seconds only (Check this if your daylight settings are incorrect)",
+                    IDC_CHK_ACONLY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,14,
+                    150,281,10
+    CONTROL         "",IDC_HTMCTL_ACNEXTSTATUS,"HtmlLite",0x0,201,67,87,24
 END
 
 IDD_TRAYCLOCK DIALOGEX 0, 0, 295, 264
@@ -409,6 +413,8 @@ END
 
 IDD_ATOMICCLOCK DLGINIT
 BEGIN
+    IDC_CMB_ACEVERYUNIT, 0x403, 5, 0
+0x6164, 0x7379, "\000" 
     IDC_CMB_ACEVERYUNIT, 0x403, 6, 0
 0x6f68, 0x7275, 0x0073, 
     IDC_CMB_ACEVERYUNIT, 0x403, 8, 0
@@ -447,6 +453,14 @@ BEGIN
     IDS_BINDINGSKINERROR    "Binding skin info error, application may not function cerect."
     IDS_LOADSETTINGSFAILED  "Loading application's settings failed, application will exit."
     IDS_LOADSETTINGSWITHERROR "Loading application's settings with error."
+    IDS_SETTIMER_ERROR      "Timer can not be create normally, application may not function cerect."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_AC_NEXTESTAB        "done on connected"
+    IDS_AC_NEXTSTART        "done on next startup"
+    IDS_AC_NEXTMANUAL       "done manually"
 END
 
 #endif    // 非特定语言(默认) resources

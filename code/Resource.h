@@ -15,6 +15,11 @@
 #define IDS_BINDINGSKINERROR            132
 #define IDS_LOADSETTINGSFAILED          133
 #define IDS_LOADSETTINGSWITHERROR       134
+#define IDS_SETTIMER_ERROR              135
+#define IDS_AC_NEXTESTAB                200
+#define IDS_AC_NEXTSTART                201
+#define IDS_AC_NEXTDONE_3               202
+#define IDS_AC_NEXTMANUAL               202
 #define IDC_PICT_1                      1001
 #define IDC_PICT_2                      1002
 #define IDC_PICT_3                      1003
@@ -84,7 +89,7 @@
 #define IDC_PICT_AC2                    1041
 #define IDC_PICT_AC3                    1042
 #define IDC_PICT_AC4                    1043
-#define IDC_HTMCTL_ACSTATUS             1044
+#define IDC_HTMCTL_ACLASTSTATUS         1044
 #define IDC_HTMCTL_ACSYSTIME            1045
 #define IDC_HTMCTL_ACSVRTIME            1046
 #define IDC_HTMCTL_ACDIFFTIME           1047
@@ -99,6 +104,8 @@
 #define IDC_LST_ACSERVER                1056
 #define IDC_BTN_ACSELECT                1057
 #define IDC_CHK_ACOFFSET                1058
+#define IDC_CHK_ACONLY                  1059
+#define IDC_HTMCTL_ACNEXTSTATUS         1060
 
 // Next default values for new objects
 // 
@@ -106,7 +113,7 @@
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_NEXT_RESOURCE_VALUE        132
 #define _APS_NEXT_COMMAND_VALUE         32771
-#define _APS_NEXT_CONTROL_VALUE         1059
+#define _APS_NEXT_CONTROL_VALUE         1060
 #define _APS_NEXT_SYMED_VALUE           101
 #endif
 #endif

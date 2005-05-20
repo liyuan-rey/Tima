@@ -7,10 +7,8 @@
 #include "..\include\SettingsStorage\MSettingsStorageIniFile.h"
 using Mortimer::CSettingsStorageIniFile;
 
-CSkinManager CSkinManager::s_instance;
-
-const TCHAR CSkinManager::defaultSkinRootName[] = _T("skin");
-const TCHAR CSkinManager::defaultSkinFolder[] = _T("default");
+const TCHAR CSkinManager::defaultSkinRoot[] = _T("skin");
+const TCHAR CSkinManager::defaultSkinName[] = _T("default");
 
 CSkinManager::CSkinManager(void)
 {
@@ -21,11 +19,10 @@ CSkinManager::CSkinManager(void)
 
 		pthTmp.RemoveFileSpec();
 		pthTmp.AddBackslash();
-		pthTmp += defaultSkinRootName;
+		pthTmp += defaultSkinRoot;
 		pthTmp.AddBackslash();
 
-		if (pthTmp.FileExists())
-			m_pthSkinRoot = pthTmp;
+		SetSkinRoot(pthTmp);
 	}
 }
 
@@ -33,16 +30,18 @@ CSkinManager::~CSkinManager(void)
 {
 }
 
-BOOL CSkinManager::SetSkinRoot(LPCTSTR szPath)
+BOOL CSkinManager::SetSkinRoot(const CPath& path)
 {
-	CPath pthTmp = szPath;
-	if (pthTmp.IsDirectory() && pthTmp.FileExists())
+	if (path.IsDirectory() && path.FileExists())
 	{
-		m_pthSkinRoot = pthTmp;
+		m_pthSkinRoot = path;
 		return TRUE;
 	}
-
-	return FALSE;
+	else
+	{
+		ATLTRACE(_T("#Warning: SetSkinRoot failed, maybe specified path not exist.\n"));
+		return FALSE;
+	}
 }
 
 CPath CSkinManager::GetSkinRoot()
@@ -50,31 +49,48 @@ CPath CSkinManager::GetSkinRoot()
 	return m_pthSkinRoot;
 }
 
-BOOL CSkinManager::GetAllSkinFolder(CStringArray& skinFolders)
+BOOL CSkinManager::GetAllSkins(CStringArray& arrSkinNames)
 {
 	return FALSE;
 }
 
-BOOL CSkinManager::GetSkinInfo(LPCTSTR szSkinFolder, CSkinInfo& setting)
+BOOL CSkinManager::GetSkinInfo(LPCTSTR szSkinName, CSkinInfo& si)
 {
 	if (m_pthSkinRoot.FileExists())
 	{
-		m_pthSkinRoot += szSkinFolder;
-		m_pthSkinRoot.AddBackslash();
-		m_pthSkinRoot += (LPCTSTR)CSkin::defaultSkinConfigFile;
+		CPath pthSkinCfgFile = m_pthSkinRoot;
+		pthSkinCfgFile += szSkinName;
+		pthSkinCfgFile.AddBackslash();
+		pthSkinCfgFile += CSkin::defaultSkinConfigFile;
 
-		if (m_pthSkinRoot.FileExists())
+		if (pthSkinCfgFile.FileExists())
 		{
 			CSettingsStorageIniFile stg;
-			stg.SetIniFileName(m_pthSkinRoot, _T("SkinInfo"));
-			return setting.Load(stg);
+			stg.SetIniFileName(pthSkinCfgFile, _T("SkinInfo"));
+
+			return si.Load(stg);
 		}
 	}
 
 	return FALSE;
 }
 
-int CSkinManager::LoadSkin(LPCTSTR szSkinFolder)
+int CSkinManager::LoadSkin(LPCTSTR szSkinName/* = defaultSkinName*/)
 {
-	return m_skin.Load(m_pthSkinRoot += szSkinFolder);
+	CPath pthSkin = m_pthSkinRoot;
+	pthSkin += szSkinName;
+
+	if (pthSkin.FileExists())
+	{
+		if (m_spCurrentSkin != NULL)
+		{
+			ATLTRACE(_T("#Warning: We are not support dynamic change skin for now."));
+			return FALSE; // 
+		}
+
+		m_spCurrentSkin = new CSkin();
+		return m_spCurrentSkin->Load(pthSkin);
+	}
+
+	return FALSE;
 }

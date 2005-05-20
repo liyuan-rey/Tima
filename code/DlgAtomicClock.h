@@ -9,9 +9,12 @@
 
 
 #define APP_MSG_BASE				100
-#define WM_TIMA_NTPRESPONSED		WM_APP + APP_MSG_BASE + 1
+#define WM_TIMA_NTPRESPONSED		(WM_APP + APP_MSG_BASE + 1)
 
 #define TIMA_THREAD_TIMEOUT			15000
+
+#define TIMA_TIMERID_BASE			500
+#define TIMA_TIMERID_ACEVERY		(TIMA_TIMERID_BASE + 1)
 
 // CDlgAtomicClock ¶Ô»°¿ò
 
@@ -42,23 +45,30 @@ public:
 	virtual BOOL OnInitDialog();
 	afx_msg HBRUSH OnCtlColor(CDC* pDC, CWnd* pWnd, UINT nCtlColor);
 	afx_msg void OnDestroy();
+	afx_msg void OnTimer(UINT nIDEvent);
 	afx_msg void OnBnClickedBtnACCheck();
 	afx_msg void OnBnClickedBtnACAdjust();
+	afx_msg void OnBnClickedChkACEvery();
 	afx_msg LRESULT OnNtpResponsed(WPARAM, LPARAM);
 	afx_msg void UpdateCtrls();
+	afx_msg void UpdateNextTime();
 
 	DECLARE_HTMLTEMPL_MAP();
 protected:
 	void ApplySkin(void);
 	BOOL CheckSpinRange(const CSpinButtonCtrl& ctlSpin);
 	void CheckTime(BOOL bAdjust);
+	void SetACEveryTimer();
+	void ShowNextAdjustInfo(const SYSTEMTIME& stLast);
+
 	BOOL m_bNeedAdjust;
 
 	CHtmlLite m_htmAC1;
 	CHtmlLite m_htmAC2;
 	CHtmlLite m_htmAC3;
 	CHtmlLite m_htmAC4;
-	CHtmlLite m_htmStatus;
+	CHtmlLite m_htmLastStatus;
+	CHtmlLite m_htmNextStatus;
 	CHtmlLite m_htmSysTime;
 	CHtmlLite m_htmSvrTime;
 	CHtmlLite m_htmDiffTime;
@@ -74,6 +84,7 @@ protected:
 	CButton m_chkStart;
 	CButton m_chkEstab;
 	CButton m_chkEvery;
+	CButton m_chkOnly;
 	CEdit m_edtEveryNum;
 	CSpinButtonCtrl m_spnEveryNum;
 	CComboBox m_cmbEveryUnit;

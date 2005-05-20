@@ -57,7 +57,7 @@ void CSkinButton::PreSubclassWindow()
 void CSkinButton::ApplySkin()
 {
 	// Binding skin info
-	BOOL bSuccess = SkinManager()->GetCurrentSkin()->BindSkinInfo(this);
+	BOOL bSuccess = SkinManager::Instance().GetCurrentSkin()->BindSkinInfo(this);
 	if (!bSuccess || !m_pSettings)
 	{
 		AfxMessageBox(IDS_BINDINGSKINERROR);
@@ -80,8 +80,8 @@ void CSkinButton::DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct)
 	// TODO: Add your code to draw the specified item
 	ASSERT(lpDrawItemStruct->CtlType == ODT_BUTTON);
 
-	CSkin* pSkin = SkinManager()->GetCurrentSkin();
-	if (!m_pSettings || !pSkin)
+	CSkinPtr spSkin = SkinManager::Instance().GetCurrentSkin();
+	if (!m_pSettings || !spSkin)
 		return;
 
 	ButtonState bs = lpDrawItemStruct->itemState & ODS_DISABLED ? BSDisabled
@@ -100,12 +100,12 @@ void CSkinButton::DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct)
 
 	// Draw background
 	CRect rcTmp = m_pSettings->States[bs];
-	pSkin->DrawRect(rcTmp, &memDC, 0, 0);
+	spSkin->DrawRect(rcTmp, &memDC, 0, 0);
 
 	// Draw icon
 	rcTmp = m_pSettings->IconRect;
 	int nOffset = BSPushed == bs ? 1 : 0;
-	pSkin->DrawRect(rcTmp, &memDC,
+	spSkin->DrawRect(rcTmp, &memDC,
 			m_pSettings->IconPos.x + nOffset, m_pSettings->IconPos.y + nOffset);
 
 	// Draw text

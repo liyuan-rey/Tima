@@ -57,7 +57,7 @@ ISkinComponent* CSkinPicture::GetSkinParent()
 void CSkinPicture::ApplySkin()
 {
 	// Binding skin info
-	BOOL bSuccess = SkinManager()->GetCurrentSkin()->BindSkinInfo(this);
+	BOOL bSuccess = SkinManager::Instance().GetCurrentSkin()->BindSkinInfo(this);
 	if (!bSuccess || !m_pSettings)
 	{
 		AfxMessageBox(IDS_BINDINGSKINERROR);
@@ -96,8 +96,8 @@ void CSkinPicture::DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct)
 {
 	ASSERT(lpDrawItemStruct->CtlType == ODT_STATIC);
 
-	CSkin* pSkin = SkinManager()->GetCurrentSkin();
-	if (!m_pSettings || !pSkin)
+	CSkinPtr spSkin = SkinManager::Instance().GetCurrentSkin();
+	if (!m_pSettings || !spSkin)
 		return;
 
 	CMemDC memDC(CDC::FromHandle(lpDrawItemStruct->hDC));
@@ -107,6 +107,6 @@ void CSkinPicture::DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct)
 	CRect rcClient;
 	GetClientRect(rcClient);
 
-	pSkin->DrawRect(rcTmp, &memDC, rcClient.left, rcClient.top,
+	spSkin->DrawRect(rcTmp, &memDC, rcClient.left, rcClient.top,
 		rcClient.Width(), rcClient.Height());
 }

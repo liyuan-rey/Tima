@@ -69,7 +69,7 @@ BOOL CSkinDialog::OnInitDialog()
 	BOOL bRet = CDialog::OnInitDialog();
 
 	// Binding skin info
-	BOOL bSuccess = SkinManager()->GetCurrentSkin()->BindSkinInfo(this);
+	BOOL bSuccess = SkinManager::Instance().GetCurrentSkin()->BindSkinInfo(this);
 	if (!bSuccess || !m_pSettings)
 	{
 		AfxMessageBox(IDS_BINDINGSKINERROR);
@@ -187,8 +187,8 @@ void CSkinDialog::OnPaint()
 {
 	CPaintDC dc(this); // device context for painting
 
-	CSkin* pSkin = SkinManager()->GetCurrentSkin();
-	if (!m_pSettings || !pSkin)
+	CSkinPtr spSkin = SkinManager::Instance().GetCurrentSkin();
+	if (!m_pSettings || !spSkin)
 		return;
 
 	CMemDC memDC(&dc);
@@ -205,33 +205,33 @@ void CSkinDialog::OnPaint()
 
 	// Draw border
 	CRect rcTmp = m_pSettings->Frames[FPLeft][fs];
-	pSkin->DrawRect(rcTmp, &memDC, rcClient.left, rcClient.top, rcTmp.Width(),
+	spSkin->DrawRect(rcTmp, &memDC, rcClient.left, rcClient.top, rcTmp.Width(),
 			rcClient.Height());
 
 	rcTmp = m_pSettings->Frames[FPRight][fs];
-	pSkin->DrawRect(rcTmp, &memDC, rcClient.right - rcTmp.Width(), rcClient.top,
+	spSkin->DrawRect(rcTmp, &memDC, rcClient.right - rcTmp.Width(), rcClient.top,
 			rcTmp.Width(), rcClient.Height());
 
 	rcTmp = m_pSettings->Frames[FPBottom][fs];
-	pSkin->DrawRect(rcTmp, &memDC, rcClient.left, rcClient.bottom - rcTmp.Height(),
+	spSkin->DrawRect(rcTmp, &memDC, rcClient.left, rcClient.bottom - rcTmp.Height(),
 			rcClient.Width(), rcTmp.Height());
 
 	rcTmp = m_pSettings->Frames[FPTop][fs];
-	pSkin->DrawRect(rcTmp, &memDC, rcClient.left, rcClient.top, rcClient.Width(),
+	spSkin->DrawRect(rcTmp, &memDC, rcClient.left, rcClient.top, rcClient.Width(),
 				rcTmp.Height());
 
 	// Draw corner
 	rcTmp = m_pSettings->Frames[FPTopLeft][fs];
-	pSkin->DrawRect(rcTmp, &memDC, rcClient.left, rcClient.top);
+	spSkin->DrawRect(rcTmp, &memDC, rcClient.left, rcClient.top);
 
 	rcTmp = m_pSettings->Frames[FPTopRight][fs];
-	pSkin->DrawRect(rcTmp, &memDC, rcClient.right - rcTmp.Width(), rcClient.top);
+	spSkin->DrawRect(rcTmp, &memDC, rcClient.right - rcTmp.Width(), rcClient.top);
 
 	rcTmp = m_pSettings->Frames[FPBottomLeft][fs];
-	pSkin->DrawRect(rcTmp, &memDC, rcClient.left, rcClient.bottom - rcTmp.Height());
+	spSkin->DrawRect(rcTmp, &memDC, rcClient.left, rcClient.bottom - rcTmp.Height());
 
 	rcTmp = m_pSettings->Frames[FPBottomRight][fs];
-	pSkin->DrawRect(rcTmp, &memDC, rcClient.right - rcTmp.Width(), 
+	spSkin->DrawRect(rcTmp, &memDC, rcClient.right - rcTmp.Width(), 
 				rcClient.bottom - rcTmp.Height());
 }
 

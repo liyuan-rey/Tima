@@ -5,38 +5,44 @@
 #include <Shlwapi.h>
 #include <atlpath.h>
 
+#include <Singleton.h>
+#include <SmartPtr.h>
+
 #include "skin.h"
+
+typedef Loki::SmartPtr<CSkin> CSkinPtr;
 
 class CSkinManager
 {
-	friend class CSkinManager* SkinManager();
+	friend struct Loki::CreateUsingNew;
 
 public:
-	virtual ~CSkinManager(void);
+	static const TCHAR defaultSkinRoot[]; // SkinRoot is a path to the folder which all skin folders placed in
+	static const TCHAR defaultSkinName[]; // SkinName is the name of the folder which skin's files placed in
+
+	BOOL SetSkinRoot(const CPath& path);
+	CPath GetSkinRoot();
+
+	BOOL GetAllSkins(CStringArray& arrSkinNames);
+	BOOL GetSkinInfo(LPCTSTR szSkinName, CSkinInfo& si); // Skin name is the name of the folder which the skin in
+
+	int LoadSkin(LPCTSTR szSkinName = defaultSkinName);
+
+	AFX_INLINE CSkinPtr GetCurrentSkin() {
+		return m_spCurrentSkin;
+	}
 
 protected:
-	CSkin m_skin;
+	CSkinPtr m_spCurrentSkin;
 	CPath m_pthSkinRoot;
 
 private:
 	CSkinManager(void);
-	static CSkinManager s_instance;
+	virtual ~CSkinManager(void);
 
-public:
-	static const TCHAR defaultSkinRootName[];
-	static const TCHAR defaultSkinFolder[];
-
-	BOOL SetSkinRoot(LPCTSTR szPath);
-	CPath GetSkinRoot();
-	BOOL GetAllSkinFolder(CStringArray& skinFolders);
-	BOOL GetSkinInfo(LPCTSTR szSkinFolder, CSkinInfo& setting);
-	int LoadSkin(LPCTSTR szSkinFolder = defaultSkinFolder);
-
-	AFX_INLINE CSkin* GetCurrentSkin() {
-		return &m_skin;
-	}
+	CSkinManager(const CSkinManager&);
+	CSkinManager& operator=(const CSkinManager&);
+	CSkinManager* operator&(CSkinManager&);
 };
 
-AFX_INLINE CSkinManager* SkinManager() { 
-	return &CSkinManager::s_instance; 
-}
+typedef Loki::SingletonHolder<CSkinManager> SkinManager;

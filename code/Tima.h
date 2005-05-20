@@ -9,6 +9,9 @@
 
 #include "resource.h"		// main symbols
 
+#include "Singleton.h"
+
+#include "skin\skinmanager.h"
 #include "TimaSettings.h"
 
 // CTimaApp:
@@ -35,7 +38,7 @@ public:
 	static const TCHAR defaultSettingsFolder[];
 	static const TCHAR defaultSettingsFile[];
 
-	inline CTimaSettings* GetSettings() {
+	AFX_INLINE CTimaSettings* GetSettings() {
 		return &m_settings;
 	}
 

@@ -47,7 +47,7 @@ BOOL CHtmlLite::RegisterWndClass(void)
 		windowclass.lpfnWndProc = ::DefWindowProc;
 		windowclass.hInstance = hInst;
 //		windowclass.hIcon = NULL;
-//		windowclass.hCursor = AfxGetApp()->LoadStandardCursor(IDC_ARROW);
+		windowclass.hCursor = ::LoadCursor(NULL, IDC_ARROW);
 //		windowclass.hbrBackground = ::GetSysColorBrush(COLOR_WINDOW);
 //		windowclass.lpszMenuName = NULL;
 

@@ -20,7 +20,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="D:\3rdLib\cximage599c_full\CxImage"
+				AdditionalIncludeDirectories="D:\3rdLib\cximage599c_full\CxImage;D:\3rdLib\loki"
 				PreprocessorDefinitions="WIN32;_WINDOWS;_DEBUG"
 				MinimalRebuild="TRUE"
 				BasicRuntimeChecks="3"
@@ -429,6 +429,71 @@ echo.
 			</File>
 			<File
 				RelativePath=".\include\w3mfc\SocMFC.h">
+			</File>
+		</Filter>
+		<Filter
+			Name="Lang"
+			Filter="">
+			<File
+				RelativePath=".\lang\LangManager.cpp">
+			</File>
+			<File
+				RelativePath=".\lang\LangManager.h">
+			</File>
+			<File
+				RelativePath=".\lang\LangSettings.cpp">
+			</File>
+			<File
+				RelativePath=".\lang\LangSettings.h">
+			</File>
+			<File
+				RelativePath=".\lang\Language.cpp">
+			</File>
+			<File
+				RelativePath=".\lang\Language.h">
+			</File>
+		</Filter>
+		<Filter
+			Name="Loki"
+			Filter="">
+			<File
+				RelativePath="..\..\..\3rdLib\loki\Singleton.cpp">
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						UsePrecompiledHeader="0"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						UsePrecompiledHeader="0"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\..\3rdLib\loki\Singleton.h">
+			</File>
+			<File
+				RelativePath="..\..\..\3rdLib\loki\SmallObj.cpp">
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						UsePrecompiledHeader="0"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						UsePrecompiledHeader="0"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\..\3rdLib\loki\SmallObj.h">
+			</File>
+			<File
+				RelativePath="..\..\..\3rdLib\loki\SmartPtr.h">
 			</File>
 		</Filter>
 		<File

@@ -71,7 +71,7 @@ BOOL CTimaApp::InitInstance()
 	}
 
 	// Initialize skin configuration
-	nResult = SkinManager()->LoadSkin();
+	nResult = SkinManager::Instance().LoadSkin();
 	CString strInfo;
 	if (nResult < 0)
 	{

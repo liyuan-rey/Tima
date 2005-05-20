@@ -9,4 +9,4 @@ static const POINT		DEFAULT_NULLPOINT		= {0, 0};
 static const SIZE		DEFAULT_NULLSIZE		= {0, 0};
 static const RECT		DEFAULT_NULLRECT		= {0, 0, 0, 0};
 static const CString	DEFAULT_EMPTYSTR		= _T("");
-
+static const SYSTEMTIME DEFAULT_ZEROTIME		= {0, 0, 0, 0, 0, 0, 0, 0};
