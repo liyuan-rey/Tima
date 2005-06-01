@@ -82,7 +82,7 @@ int CSkinManager::LoadSkin(LPCTSTR szSkinName/* = defaultSkinName*/)
 
 	if (pthSkin.FileExists())
 	{
-		if (m_spCurrentSkin != NULL)
+		if (m_spCurrentSkin)
 		{
 			ATLTRACE(_T("#Warning: We are not support dynamic change skin for now."));
 			return FALSE; // 

@@ -23,6 +23,22 @@ public:
 	END_SETTING_MAP()
 };
 
+class CSntpServer : public CSettings
+{
+public:
+	static const TCHAR defaultSectionName[];
+
+	CString Name;
+	CString URL;
+
+	BEGIN_SETTING_MAP(CSntpServer)
+		SETTING_ITEM(Name)
+		SETTING_ITEM(URL)
+	END_SETTING_MAP()
+};
+
+typedef CArray<CSntpServer, CSntpServer&> CSntpServers;
+
 class CAtomicClockSettings : public CSettings
 {
 public:
@@ -42,7 +58,7 @@ public:
 	int OffsetMin;
 	int OffsetSec;
 	int OffsetMS;
-	CStringArray ActivedServers;
+	CSntpServers ActivedServers;
 
 	BEGIN_SETTING_MAP(CAtomicClockSettings)
 		SETTING_ITEM_BINARY_DEFAULT(LastAdjustAt, sizeof(SYSTEMTIME), &DEFAULT_ZEROTIME)
@@ -59,7 +75,7 @@ public:
 		SETTING_ITEM_DEFAULT(OffsetMin, 0)
 		SETTING_ITEM_DEFAULT(OffsetSec, 0)
 		SETTING_ITEM_DEFAULT(OffsetMS, 0)
-		SETTING_ITEM_ALONE_ARRAY(ActivedServers, CString)
+		SETTING_ITEM_ARRAY(ActivedServers, CSntpServer)
 	END_SETTING_MAP()
 };
 

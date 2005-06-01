@@ -14,8 +14,7 @@
 IMPLEMENT_DYNAMIC(CDlgAtomicClock, CDialog)
 
 CDlgAtomicClock::CDlgAtomicClock(CWnd* pParent /*=NULL*/)
-	: CDialog(CDlgAtomicClock::IDD, pParent),
-	m_pNtpThread(NULL), m_bNeedAdjust(FALSE)
+	: CDialog(CDlgAtomicClock::IDD, pParent), m_bNeedAdjust(FALSE)
 {
 }
 
@@ -60,18 +59,19 @@ void CDlgAtomicClock::DoDataExchange(CDataExchange* pDX)
 	DDX_Control(pDX, IDC_EDT_ACOFFMS, m_edtOffMS);
 	DDX_Control(pDX, IDC_SPN_ACOFFMS, m_spnOffMS);
 	//
-	DDX_Check(pDX, IDC_CHK_ACSTART, theApp.GetSettings()->AtomicClock.AdjustOnStart);
-	DDX_Check(pDX, IDC_CHK_ACESTAB, theApp.GetSettings()->AtomicClock.AdjustOnConnect);
-	DDX_Check(pDX, IDC_CHK_ACEVERY, theApp.GetSettings()->AtomicClock.AdjustEvery);
-	DDX_Text(pDX, IDC_EDT_ACEVERYNUM, theApp.GetSettings()->AtomicClock.AdjustEveryNum);
-	DDX_CBIndex(pDX, IDC_CMB_ACEVERYUNIT, theApp.GetSettings()->AtomicClock.AdjustEveryUnit);
-	DDX_Check(pDX, IDC_CHK_ACONLY, theApp.GetSettings()->AtomicClock.AdjustOnly);
-	DDX_Check(pDX, IDC_CHK_ACOFFSET, theApp.GetSettings()->AtomicClock.UserOffset);
-	DDX_CBIndex(pDX, IDC_CMB_ACOFFSIGN, theApp.GetSettings()->AtomicClock.OffsetSign);
-	DDX_Text(pDX, IDC_EDT_ACOFFHOUR, theApp.GetSettings()->AtomicClock.OffsetHour);
-	DDX_Text(pDX, IDC_EDT_ACOFFMIN, theApp.GetSettings()->AtomicClock.OffsetMin);
-	DDX_Text(pDX, IDC_EDT_ACOFFSEC, theApp.GetSettings()->AtomicClock.OffsetSec);
-	DDX_Text(pDX, IDC_EDT_ACOFFMS, theApp.GetSettings()->AtomicClock.OffsetMS);
+	CTimaSettings& theSettings = theApp.GetSettings();
+	DDX_Check(pDX, IDC_CHK_ACSTART, theSettings.AtomicClock.AdjustOnStart);
+	DDX_Check(pDX, IDC_CHK_ACESTAB, theSettings.AtomicClock.AdjustOnConnect);
+	DDX_Check(pDX, IDC_CHK_ACEVERY, theSettings.AtomicClock.AdjustEvery);
+	DDX_Text(pDX, IDC_EDT_ACEVERYNUM, theSettings.AtomicClock.AdjustEveryNum);
+	DDX_CBIndex(pDX, IDC_CMB_ACEVERYUNIT, theSettings.AtomicClock.AdjustEveryUnit);
+	DDX_Check(pDX, IDC_CHK_ACONLY, theSettings.AtomicClock.AdjustOnly);
+	DDX_Check(pDX, IDC_CHK_ACOFFSET, theSettings.AtomicClock.UserOffset);
+	DDX_CBIndex(pDX, IDC_CMB_ACOFFSIGN, theSettings.AtomicClock.OffsetSign);
+	DDX_Text(pDX, IDC_EDT_ACOFFHOUR, theSettings.AtomicClock.OffsetHour);
+	DDX_Text(pDX, IDC_EDT_ACOFFMIN, theSettings.AtomicClock.OffsetMin);
+	DDX_Text(pDX, IDC_EDT_ACOFFSEC, theSettings.AtomicClock.OffsetSec);
+	DDX_Text(pDX, IDC_EDT_ACOFFMS, theSettings.AtomicClock.OffsetMS);
 }
 
 
@@ -119,18 +119,6 @@ BOOL CDlgAtomicClock::OnEraseBkgnd(CDC* pDC)
 
 void CDlgAtomicClock::OnDestroy()
 {
-	if (m_pNtpThread) // we must insure ntp thread was finished, or PostMessage would failed.
-	{
-		//TODO Add some notify to user
-		if (WAIT_TIMEOUT == WaitForSingleObject(*m_pNtpThread, TIMA_THREAD_TIMEOUT))
-		{
-			TerminateThread(*m_pNtpThread, -1);
-			m_pNtpThread->Delete();
-		}
-
-		m_pNtpThread = NULL;
-	}
-
 	UpdateData(TRUE);
 
 	CDialog::OnDestroy();
@@ -153,6 +141,8 @@ BOOL CDlgAtomicClock::OnInitDialog()
 	m_lstServer.InsertColumn(0, _T("Server"), LVCFMT_LEFT, 160);
 	m_lstServer.InsertColumn(1, _T("Location"), LVCFMT_LEFT, 170);
 
+	UpdateActivedServer();
+
 	// Initial states
 	UpdateCtrls();
 
@@ -162,10 +152,10 @@ BOOL CDlgAtomicClock::OnInitDialog()
 	m_htmDiffTime.SetWindowText(strText);
 
 	//
-	ShowNextAdjustInfo(theApp.GetSettings()->AtomicClock.LastAdjustAt);
+	ShowNextAdjustInfo(theApp.GetSettings().AtomicClock.LastAdjustAt);
 
 	// Adjust time on startup
-	if (m_chkStart.GetCheck() == BST_CHECKED)
+	if (BST_CHECKED == m_chkStart.GetCheck())
 		CheckTime(TRUE);
 
 	// Set auto-adjust timer
@@ -174,14 +164,29 @@ BOOL CDlgAtomicClock::OnInitDialog()
 	return TRUE;
 }
 
+void CDlgAtomicClock::UpdateActivedServer()
+{
+	m_lstServer.DeleteAllItems();
+
+	CSntpServers* pServers = &(theApp.GetSettings().AtomicClock.ActivedServers);
+	INT_PTR nCount = pServers->GetCount();
+	for (int i = 0; i < nCount; i++)
+	{
+		m_lstServer.InsertItem(i, pServers->GetAt(i).URL);
+		m_lstServer.SetItemText(i, 1, pServers->GetAt(i).Name);
+
+		m_TimeServer.AddServer(pServers->GetAt(i).URL);
+	}
+}
+
 void CDlgAtomicClock::UpdateCtrls()
 {
-	BOOL bEnable = (m_chkEvery.GetCheck() == BST_CHECKED);
+	BOOL bEnable = (BST_CHECKED == m_chkEvery.GetCheck());
 	m_edtEveryNum.EnableWindow(bEnable);
 	m_spnEveryNum.EnableWindow(bEnable);
 	m_cmbEveryUnit.EnableWindow(bEnable);
 
-	bEnable = (m_chkOffset.GetCheck() == BST_CHECKED);
+	bEnable = (BST_CHECKED == m_chkOffset.GetCheck());
 	m_cmbOffSign.EnableWindow(bEnable);
 	m_edtOffHour.EnableWindow(bEnable);
 	m_spnOffHour.EnableWindow(bEnable);
@@ -232,7 +237,7 @@ void CDlgAtomicClock::SetACEveryTimer()
 	{
 		// get passed time since we last adjust
 		COleDateTime odtSysTime = COleDateTime::GetCurrentTime();
-		COleDateTime odtLastAdjustTime(theApp.GetSettings()->AtomicClock.LastAdjustAt);
+		COleDateTime odtLastAdjustTime(theApp.GetSettings().AtomicClock.LastAdjustAt);
 
 		COleDateTimeSpan spanSys = std::max<COleDateTimeSpan>(
 									odtLastAdjustTime - odtSysTime,
@@ -246,12 +251,12 @@ void CDlgAtomicClock::SetACEveryTimer()
 		int nSelected = m_cmbEveryUnit.GetCurSel();
 		int nNum = GetDlgItemInt(IDC_EDT_ACEVERYNUM);
 		COleDateTimeSpan spanUser(
-			nSelected == 0 ? nNum : 0,
-			nSelected == 1 ? nNum : 0,
-			nSelected == 2 ? nNum : 0,
-			nSelected == 3 ? nNum : 0);
+			0 == nSelected ? nNum : 0,
+			1 == nSelected ? nNum : 0,
+			2 == nSelected ? nNum : 0,
+			3 == nSelected ? nNum : 0);
 
-		// allready over user-defined time span, adjust immediately
+		// already over user-defined time span, adjust immediately
 		if (spanSys >= spanUser)
 		{
 			CheckTime(TRUE);
@@ -313,7 +318,7 @@ HBRUSH CDlgAtomicClock::OnCtlColor(CDC* pDC, CWnd* pWnd, UINT nCtlColor)
 void CDlgAtomicClock::OnTimer(UINT nIDEvent)
 {
 	// TODO: 在此添加消息处理程序代码和/或调用默认值
-	if (nIDEvent == TIMA_TIMERID_ACEVERY)
+	if (TIMA_TIMERID_ACEVERY == nIDEvent)
 	{
 		CheckTime(TRUE);
 	}
@@ -327,19 +332,6 @@ void CDlgAtomicClock::ApplySkin(void)
 	m_picAC2.ApplySkin();
 	m_picAC3.ApplySkin();
 	m_picAC4.ApplySkin();
-}
-
-UINT CDlgAtomicClock::NtpClientProc(LPVOID pParam)
-{
-	ATLASSERT(pParam);
-	NtpThreadContext* pContext = static_cast<NtpThreadContext*>(pParam);
-
-	CSNTPClient sntp;
-	BOOL bSuccess = sntp.GetServerTime(_T("time.windows.com"), pContext->ntpResponse);//clock.isc.org
-
-	::PostMessage(pContext->hWnd, WM_TIMA_NTPRESPONSED,	(WPARAM)bSuccess, NULL);
-
-	return 0;
 }
 
 void CDlgAtomicClock::OnBnClickedBtnACCheck()
@@ -356,7 +348,7 @@ void CDlgAtomicClock::OnBnClickedChkACEvery()
 {
 	UpdateCtrls();
 
-	if (m_chkEvery.GetCheck() == BST_UNCHECKED)
+	if (BST_UNCHECKED == m_chkEvery.GetCheck())
 		KillTimer(TIMA_TIMERID_ACEVERY);
 	else
 		SetACEveryTimer();
@@ -366,35 +358,34 @@ void CDlgAtomicClock::OnBnClickedChkACEvery()
 
 void CDlgAtomicClock::UpdateNextTime()
 {
-	ShowNextAdjustInfo(theApp.GetSettings()->AtomicClock.LastAdjustAt);
+	ShowNextAdjustInfo(theApp.GetSettings().AtomicClock.LastAdjustAt);
 }
 
 void CDlgAtomicClock::CheckTime(BOOL bAdjust)
 {
-	// should not check time again when m_pNtpThread running
-	if (NULL == m_pNtpThread)
+	// should not check time again when TimeServer running
+	if (m_TimeServer.IsReady())
 	{
 		m_bNeedAdjust = bAdjust;
 		m_btnCheck.EnableWindow(FALSE);
 		m_btnAdjust.EnableWindow(FALSE);
 
+		//TODO: clear exist time info and show wait msg
+
 		//
-		m_ntpThreadContext.hWnd = GetSafeHwnd();
-		m_pNtpThread = AfxBeginThread(CDlgAtomicClock::NtpClientProc, &m_ntpThreadContext);
+		m_TimeServer.StartCheck(GetSafeHwnd());
 	}
 
 	//TODO: 帮助文件增加 Windows 时间服务器指南
 	//TODO: 增加国内服务器列表
 }
 
-LRESULT CDlgAtomicClock::OnNtpResponsed(WPARAM wp, LPARAM lp)
+LRESULT CDlgAtomicClock::OnNtpResponsed(WPARAM, LPARAM)
 {
-	ATLASSERT(m_pNtpThread);
+	double dDiff = 0;
+	BOOL bSucceed = m_TimeServer.GetDifference(dDiff);
 
-	WaitForSingleObject(*m_pNtpThread, INFINITE);
-	m_pNtpThread = NULL;
-
-	if (!wp) // No success get time info
+	if (!bSucceed) // No success get time info
 	{
 		CString strHtml;
 		strHtml.Format(GetHtmlTempl(IDC_HTMCTL_ACSYSTIME), 
@@ -411,29 +402,41 @@ LRESULT CDlgAtomicClock::OnNtpResponsed(WPARAM wp, LPARAM lp)
 	}
 	else
 	{
-		// Set time diff info to ui
-		double dDiff = m_ntpThreadContext.ntpResponse.m_LocalClockOffset;
-
-		CNtpTime ntTmp(CNtpTime::GetCurrentTime());
-		SYSTEMTIME stLocal = ntTmp;
-		SYSTEMTIME stServer = ntTmp + dDiff;
-
 		// local time
+		SYSTEMTIME stLocal;
+		GetLocalTime(&stLocal);
+
 		COleDateTime odtLocal = stLocal;
 
 		CString strTmp;
 		strTmp.Format(_T("%s.%03d"), odtLocal.Format(LOCALE_NOUSEROVERRIDE, LOCALE_SYSTEM_DEFAULT), stLocal.wMilliseconds);
-
-//		CString strTime;
-//		GetTimeFormat(LOCALE_USER_DEFAULT, LOCALE_NOUSEROVERRIDE, &stLocal, NULL, strTime.GetBuffer(MAX_PATH), MAX_PATH);
-//		strTime.ReleaseBuffer();
 
 		CString strHtml;
 		strHtml.Format(GetHtmlTempl(IDC_HTMCTL_ACSYSTIME), strTmp);
 
 		m_htmSysTime.SetWindowText(strHtml);
 
+		// diff
+		CString strTmp2;
+		if (BST_CHECKED == m_chkOffset.GetCheck())
+		{
+			double dOffset = GetDlgItemInt(IDC_EDT_ACOFFHOUR) * 3600
+								+ GetDlgItemInt(IDC_EDT_ACOFFMIN) * 60
+								+ GetDlgItemInt(IDC_EDT_ACOFFSEC)
+								+ GetDlgItemInt(IDC_EDT_ACOFFMS) / 1000;
+
+			dDiff = m_cmbOffSign.GetCurSel() ? (dDiff - dOffset) : (dDiff + dOffset);
+			
+			strTmp2 = _T("(with user offset)");
+		}
+
+		strTmp.Format(_T("%.3f %s"), dDiff, strTmp2);
+		strHtml.Format(GetHtmlTempl(IDC_HTMCTL_ACDIFFTIME), strTmp);
+
+		m_htmDiffTime.SetWindowText(strHtml);
+
 		// server time
+		SYSTEMTIME stServer = CNtpTime(stLocal) + dDiff;
 		COleDateTime odtServer = stServer;
 
 		strTmp.Format(_T("%s.%03d"), odtServer.Format(LOCALE_NOUSEROVERRIDE, LANG_USER_DEFAULT), stServer.wMilliseconds);
@@ -441,30 +444,19 @@ LRESULT CDlgAtomicClock::OnNtpResponsed(WPARAM wp, LPARAM lp)
 
 		m_htmSvrTime.SetWindowText(strHtml);
 
-		// diff
-		strTmp.Format(_T("%.3f"), dDiff);
-
-		if (m_chkOffset.GetCheck() == BST_CHECKED)
-		{
-			strTmp += _T(" (with user offset)");
-		}
-
-		strHtml.Format(GetHtmlTempl(IDC_HTMCTL_ACDIFFTIME), strTmp);
-
-		m_htmDiffTime.SetWindowText(strHtml);
-
-		//TODO adjust system time
+		// adjust system time
 		if (m_bNeedAdjust)
 		{
 			// check if we has wrong daylight settings with system
-			if (dDiff >= 3600 && m_chkOnly.GetCheck() == 0)
+			if (fabs(dDiff) >= (3600-15) && BST_UNCHECKED == m_chkOnly.GetCheck())
 			{
-				int nRet = AfxMessageBox(_T("Tima detected your system has more than 1 hour diffrence with atomic server, if \n")
+				int nRet = AfxMessageBox(_T("Tima detected your system has about 1 hour diffrence with atomic server, if \n")
 							_T("your system has wrong daylight settings, use \"adjust minutes and seconds only\" option \n")
-							_T("to avoid wrong time adjustting. Would you like to proceed?\n\n")
-							_T("  Yes    - only adjust time with minutes and seconds\n")
-							_T("  No     - adjust time acoording with atomic server\n")
-							_T("  Cancel - cancel time adjustment this time"), MB_ICONQUESTION | MB_YESNOCANCEL);
+							_T("to avoid wrong time adjustting.\n\n")
+							_T("Would you like to proceed?\n")
+							_T("   Yes\t- only adjust time with minutes and seconds\n")
+							_T("   No\t- adjust time acoording with atomic server\n")
+							_T("   Cancel\t- cancel time adjustment this time"), MB_ICONQUESTION | MB_YESNOCANCEL);
 
 				if (IDYES == nRet)
 					m_chkOnly.SetCheck(BST_CHECKED);
@@ -481,7 +473,7 @@ LRESULT CDlgAtomicClock::OnNtpResponsed(WPARAM wp, LPARAM lp)
 			}
 
 			// Fix diff time when only adjust minutes and seconds
-			if (m_chkOnly.GetCheck())
+			if (BST_CHECKED == m_chkOnly.GetCheck())
 			{
 				while (fabs(dDiff) >= 3600)
 				{
@@ -497,7 +489,7 @@ LRESULT CDlgAtomicClock::OnNtpResponsed(WPARAM wp, LPARAM lp)
 			CSNTPClient sntp;
 			if (sntp.SetClientTime(newTime))
 			{
-				theApp.GetSettings()->AtomicClock.LastAdjustAt = newTime;
+				theApp.GetSettings().AtomicClock.LastAdjustAt = newTime;
 
 				strTmp = _T("System time adjusted.");
 
@@ -529,26 +521,26 @@ void CDlgAtomicClock::ShowNextAdjustInfo(const SYSTEMTIME& stLast)
 
 	// next time
 	CString strNext;
-	if (m_chkEvery.GetCheck() == BST_CHECKED)
+	if (BST_CHECKED == m_chkEvery.GetCheck())
 	{
 		int nSelected = m_cmbEveryUnit.GetCurSel();
 		int nNum = GetDlgItemInt(IDC_EDT_ACEVERYNUM);
 		COleDateTimeSpan oleSpan(
-			nSelected == 0 ? nNum : 0,
-			nSelected == 1 ? nNum : 0,
-			nSelected == 2 ? nNum : 0,
-			nSelected == 3 ? nNum : 0);
+			0 == nSelected ? nNum : 0,
+			1 == nSelected ? nNum : 0,
+			2 == nSelected ? nNum : 0,
+			3 == nSelected ? nNum : 0);
 
 		COleDateTime odtNext(stLast);
 		odtNext += oleSpan;
 
 		strNext = odtNext.Format(LOCALE_NOUSEROVERRIDE, LANG_USER_DEFAULT);
 	}
-	else if (m_chkEstab.GetCheck() == BST_CHECKED)
+	else if (BST_CHECKED == m_chkEstab.GetCheck())
 	{
 		strNext.LoadString(IDS_AC_NEXTESTAB);
 	}
-	else if (m_chkStart.GetCheck() == BST_CHECKED)
+	else if (BST_CHECKED == m_chkStart.GetCheck())
 	{
 		strNext.LoadString(IDS_AC_NEXTSTART);
 	}

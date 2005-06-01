@@ -78,7 +78,7 @@ BOOL CSkinButton::OnEraseBkgnd(CDC* pDC)
 void CSkinButton::DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct)
 {
 	// TODO: Add your code to draw the specified item
-	ASSERT(lpDrawItemStruct->CtlType == ODT_BUTTON);
+	ATLASSERT( ODT_BUTTON == lpDrawItemStruct->CtlType );
 
 	CSkinPtr spSkin = SkinManager::Instance().GetCurrentSkin();
 	if (!m_pSettings || !spSkin)
@@ -200,9 +200,9 @@ void CSkinButton::OnLButtonUp(UINT nFlags, CPoint point)
 			::ClientToScreen(m_hWnd, &p2);
 			HWND mouse_wnd = ::WindowFromPoint(p2);
 			if (mouse_wnd == m_hWnd){ // mouse is in button
-				if (m_nStyle==BS_CHECKBOX)
+				if (BS_CHECKBOX == m_nStyle)
 					SetCheck(m_nChecked ? BST_UNCHECKED : BST_CHECKED);
-				else if (m_nStyle==BS_RADIOBUTTON)
+				else if (BS_RADIOBUTTON == m_nStyle)
 					SetCheck(BST_CHECKED);
 			}
 		}
@@ -213,11 +213,11 @@ void CSkinButton::OnLButtonUp(UINT nFlags, CPoint point)
 
 void CSkinButton::OnKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags) 
 {
-	if (BS_PUSHBUTTON != m_nStyle && nChar == _T(' '))
+	if (BS_PUSHBUTTON != m_nStyle && _T(' ') == nChar)
 	{// needed stuff for check & radio buttons
-		if (m_nStyle == BS_CHECKBOX)
+		if (BS_CHECKBOX == m_nStyle)
 			SetCheck(m_nChecked ? BST_CHECKED : BST_CHECKED);
-		else if (m_nStyle == BS_RADIOBUTTON)
+		else if (BS_RADIOBUTTON == m_nStyle)
 			SetCheck(BST_CHECKED);
 	}
 
@@ -239,7 +239,7 @@ LRESULT CSkinButton::OnBMSetCheck(WPARAM wparam, LPARAM)
 				for( ; ; ){	//scan the buttons within the group
 					hwnd2 = ::GetNextDlgGroupItem(hpwnd, hwnd2, 0);
 					//until we reach again this button
-					if ((hwnd2 == hthis)||(hwnd2 == NULL))
+					if ((hwnd2 == hthis) || (NULL == hwnd2))
 						break;
 
 					//post the uncheck message
@@ -251,7 +251,7 @@ LRESULT CSkinButton::OnBMSetCheck(WPARAM wparam, LPARAM)
 		break;
 	case BS_PUSHBUTTON:
 		m_nChecked = false;
-		ASSERT(false); // Must be a Check or Radio button to use this function
+		ATLASSERT(false); // Must be a Check or Radio button to use this function
 	}
 
 	Invalidate();

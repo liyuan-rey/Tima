@@ -84,9 +84,9 @@ BOOL CSkinDialog::OnInitDialog()
 
 	// Pre-calculate caption area
 	m_rcCaption = rcWindow;
-	if (m_pSettings->CaptionSize.cx != -1)
+	if (-1 != m_pSettings->CaptionSize.cx)
 		m_rcCaption.right = m_rcCaption.left + m_pSettings->CaptionSize.cx;
-	if (m_pSettings->CaptionSize.cy != -1)
+	if (-1 != m_pSettings->CaptionSize.cy)
 		m_rcCaption.bottom = m_rcCaption.top + m_pSettings->CaptionSize.cy;
 
 	// Apply round window region

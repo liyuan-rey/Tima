@@ -27,6 +27,7 @@ protected:
 	CSkin();
 	CSkinSettings m_settings;
 	CPath m_pthSkin;
+	//TODO: Try to using CSimpleMap and remove include directive in stdafx.h
 	CTypedPtrMap<CMapPtrToPtr, ISkinComponent*, CSettings*> m_mapComponents;
 	CxImage m_imgSkin;
 

@@ -24,7 +24,7 @@ CSkin::~CSkin()
 	POSITION pos = m_mapComponents.GetStartPosition();
 	ISkinComponent* pComp = NULL;
 	CSettings* pSettings = NULL;
-	while (pos != NULL)
+	while (NULL != pos)
 	{
 		m_mapComponents.GetNextAssoc(pos, pComp, pSettings);
 		delete pSettings;

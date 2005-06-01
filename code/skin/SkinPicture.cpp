@@ -94,7 +94,7 @@ BOOL CSkinPicture::OnEraseBkgnd(CDC* pDC)
 
 void CSkinPicture::DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct)
 {
-	ASSERT(lpDrawItemStruct->CtlType == ODT_STATIC);
+	ATLASSERT( ODT_STATIC == lpDrawItemStruct->CtlType );
 
 	CSkinPtr spSkin = SkinManager::Instance().GetCurrentSkin();
 	if (!m_pSettings || !spSkin)

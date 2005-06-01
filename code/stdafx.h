@@ -47,5 +47,8 @@
 #include <Shlwapi.h>
 #include <atlpath.h>
 #include <ATLComTime.h>
+#include <atlsimpcoll.h>
 
 #include <math.h>
+
+#include "global.h"

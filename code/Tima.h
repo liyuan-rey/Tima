@@ -38,8 +38,8 @@ public:
 	static const TCHAR defaultSettingsFolder[];
 	static const TCHAR defaultSettingsFile[];
 
-	AFX_INLINE CTimaSettings* GetSettings() {
-		return &m_settings;
+	AFX_INLINE CTimaSettings& GetSettings() {
+		return m_settings;
 	}
 
 	CPath GetSettingsPath();

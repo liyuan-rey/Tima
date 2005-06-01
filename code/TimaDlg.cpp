@@ -67,7 +67,7 @@ BOOL CTimaDlg::OnInitDialog()
 
 	RECT rcArea = {0};
 	spSkin->GetCustomSetting(CSkin::GCSRect, 1, &rcArea);
-	ATLASSERT(CRect(rcArea).IsRectEmpty() == FALSE);
+	ATLASSERT( FALSE == CRect(rcArea).IsRectEmpty() );
 
 	m_pdlgAtomicClock = new CDlgAtomicClock(this);
 	m_pdlgAtomicClock->Create(CDlgAtomicClock::IDD, this);

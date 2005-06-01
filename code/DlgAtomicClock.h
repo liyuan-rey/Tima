@@ -5,16 +5,8 @@
 #include "skin\skindialog.h"
 #include "htmllite\htmllite.h"
 #include "skin\skinpicture.h"
-#include "afxwin.h"
 
-
-#define APP_MSG_BASE				100
-#define WM_TIMA_NTPRESPONSED		(WM_APP + APP_MSG_BASE + 1)
-
-#define TIMA_THREAD_TIMEOUT			15000
-
-#define TIMA_TIMERID_BASE			500
-#define TIMA_TIMERID_ACEVERY		(TIMA_TIMERID_BASE + 1)
+#include "TimeServer.h"
 
 // CDlgAtomicClock ¶Ô»°¿ò
 
@@ -56,6 +48,7 @@ public:
 	DECLARE_HTMLTEMPL_MAP();
 protected:
 	void ApplySkin(void);
+	void UpdateActivedServer();
 	BOOL CheckSpinRange(const CSpinButtonCtrl& ctlSpin);
 	void CheckTime(BOOL bAdjust);
 	void SetACEveryTimer();
@@ -100,14 +93,7 @@ protected:
 	CEdit m_edtOffMS;
 	CSpinButtonCtrl m_spnOffMS;
 
-	typedef struct {
-		HWND hWnd;
-		NtpServerResponse ntpResponse;
-	} NtpThreadContext;
-
-	CWinThread* m_pNtpThread;
-	static UINT NtpClientProc(LPVOID pParam);
-	NtpThreadContext m_ntpThreadContext;
+	CTimeServer m_TimeServer;
 
 public:
 };
