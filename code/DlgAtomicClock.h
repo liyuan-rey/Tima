@@ -27,6 +27,7 @@ private:
 	CBrush m_bgBrush;
 
 protected:
+	virtual BOOL OnInitDialog();
 	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV Ö§³Ö
 	virtual void OnOK() {};
 	virtual void OnCancel() {};
@@ -34,12 +35,13 @@ protected:
 	DECLARE_MESSAGE_MAP()
 public:
 	afx_msg BOOL OnEraseBkgnd(CDC* pDC);
-	virtual BOOL OnInitDialog();
 	afx_msg HBRUSH OnCtlColor(CDC* pDC, CWnd* pWnd, UINT nCtlColor);
 	afx_msg void OnDestroy();
 	afx_msg void OnTimer(UINT nIDEvent);
 	afx_msg void OnBnClickedBtnACCheck();
 	afx_msg void OnBnClickedBtnACAdjust();
+	afx_msg void OnBnClickedBtnACSelect();
+	afx_msg void OnBnClickedBtnACRemove();
 	afx_msg void OnBnClickedChkACEvery();
 	afx_msg LRESULT OnNtpResponsed(WPARAM, LPARAM);
 	afx_msg void UpdateCtrls();
@@ -81,7 +83,7 @@ protected:
 	CEdit m_edtEveryNum;
 	CSpinButtonCtrl m_spnEveryNum;
 	CComboBox m_cmbEveryUnit;
-	CListCtrl m_lstServer;
+	CListCtrl m_lvwServer;
 	CButton m_chkOffset;
 	CComboBox m_cmbOffSign;
 	CEdit m_edtOffHour;

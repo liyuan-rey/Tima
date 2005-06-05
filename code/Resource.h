@@ -7,6 +7,7 @@
 #define IDD_TRAYCLOCK                   104
 #define IDD_WEATHER                     105
 #define IDD_CALENDAR                    106
+#define IDD_SELNTPSERVER                107
 #define IDR_MAINFRAME                   128
 #define IDP_SOCKETS_INIT_FAILED         129
 #define IDS_LOADSKINFAILED              130
@@ -44,6 +45,7 @@
 #define IDC_RADIO4                      1019
 #define IDC_EDIT3                       1020
 #define IDC_RADIO6                      1020
+#define IDC_EDT_NTPLOC                  1020
 #define IDC_EDIT4                       1021
 #define IDC_CHECK6                      1021
 #define IDC_RADIO8                      1021
@@ -106,6 +108,14 @@
 #define IDC_CHK_ACOFFSET                1058
 #define IDC_CHK_ACONLY                  1059
 #define IDC_HTMCTL_ACNEXTSTATUS         1060
+#define IDC_LST_NTPSERVER               1060
+#define IDC_BTN_ACSELECT2               1061
+#define IDC_BTN_ACREMOVE                1061
+#define IDC_CHK_NTPCUSTOMSVR            1061
+#define IDC_BTN_AUTOSEL                 1062
+#define IDC_BTN_NTPAUTOSEL              1062
+#define IDC_BTN_NTPADD                  1064
+#define IDC_EDT_NTPSERVER               1065
 
 // Next default values for new objects
 // 
@@ -113,7 +123,7 @@
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_NEXT_RESOURCE_VALUE        132
 #define _APS_NEXT_COMMAND_VALUE         32771
-#define _APS_NEXT_CONTROL_VALUE         1060
+#define _APS_NEXT_CONTROL_VALUE         1066
 #define _APS_NEXT_SYMED_VALUE           101
 #endif
 #endif

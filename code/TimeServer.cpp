@@ -79,9 +79,11 @@ CTimeServer::CNtpContextPtr CTimeServer::GetServerInfo(LPCTSTR szSvrName) const
 
 BOOL CTimeServer::IsReady(int* pnReason/* = NULL*/)
 {
-	INT_PTR nSize = m_mapServer.GetSize();
+	if (pnReason)
+		*pnReason = 0;
 
 	// We need at least one server
+	INT_PTR nSize = m_mapServer.GetSize();
 	if (nSize < 1)
 	{
 		if (pnReason)
@@ -91,7 +93,7 @@ BOOL CTimeServer::IsReady(int* pnReason/* = NULL*/)
 	}
 
 	// Monitor thread needs to be stopped
-	DWORD dwStatus = -2;
+	DWORD dwStatus = 0;
 	::GetExitCodeThread(m_hMonitorThread, &dwStatus);
 	if (STILL_ACTIVE == dwStatus)
 	{
@@ -156,6 +158,17 @@ UINT CTimeServer::NtpMonitorProc(LPVOID pParam)
 		{
 			arrWaitThreadHandle.RemoveAt(dwResult - WAIT_OBJECT_0);
 		}
+		else if (WAIT_FAILED == dwResult)
+		{
+			DWORD dwExitCode;
+			for (int i = 0; i < arrWaitThreadHandle.GetSize(); i++)
+			{
+				dwExitCode = 0;
+				::GetExitCodeThread(arrWaitThreadHandle[i], &dwExitCode);
+				if (STILL_ACTIVE != dwExitCode)
+					arrWaitThreadHandle.RemoveAt(i--);
+			}
+		}
 		else
 			ATLASSERT( FALSE && _T("Should never been here!") );
 	}
@@ -194,7 +207,10 @@ int CTimeServer::AddNtpClientThread(CNtpServerMap& mapServer, int nStartIndex, C
 		pWinThread->ResumeThread();
 
 		if (arrWaitThreadHandle.GetSize() >= MAX_RUNNING_THREAD_NUM)
+		{
+			nCurrentIndex++;
 			break;
+		}
 	}
 
 	return nCurrentIndex;
@@ -216,8 +232,20 @@ UINT CTimeServer::NtpClientProc(LPVOID pParam)
 
 BOOL CTimeServer::GetDifference(double& dDiff)
 {
-	if (!IsReady())
-		return FALSE;
+	// Wait util monitor thread quit
+	int nReason;
+	BOOL bReady = IsReady(&nReason);
+	if (!bReady)
+	{
+		while (2 == nReason)
+		{
+			Sleep(50);
+			bReady = IsReady(&nReason);
+		}
+
+		if (!bReady)
+			return FALSE;
+	}
 
 	dDiff = 0;
 	int nSuccess = 0;

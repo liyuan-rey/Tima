@@ -42,7 +42,7 @@ public:
 		return m_settings;
 	}
 
-	CPath GetSettingsPath();
+	CPath GetSettingsPath(LPCTSTR szSettingsFile = defaultSettingsFile);
 
 protected:
 	int LoadSettings();

@@ -4,8 +4,7 @@
 #include "stdafx.h"
 #include "Tima.h"
 #include "DlgAtomicClock.h"
-
-#include <ATLComTime.h>
+#include "DlgSelNtpServer.h"
 
 #include "skin\skinmanager.h"
 
@@ -47,7 +46,7 @@ void CDlgAtomicClock::DoDataExchange(CDataExchange* pDX)
 	DDX_Control(pDX, IDC_EDT_ACEVERYNUM, m_edtEveryNum);
 	DDX_Control(pDX, IDC_SPN_ACEVERYNUM, m_spnEveryNum);
 	DDX_Control(pDX, IDC_CMB_ACEVERYUNIT, m_cmbEveryUnit);
-	DDX_Control(pDX, IDC_LST_ACSERVER, m_lstServer);
+	DDX_Control(pDX, IDC_LST_ACSERVER, m_lvwServer);
 	DDX_Control(pDX, IDC_CHK_ACOFFSET, m_chkOffset);
 	DDX_Control(pDX, IDC_CMB_ACOFFSIGN, m_cmbOffSign);
 	DDX_Control(pDX, IDC_EDT_ACOFFHOUR, m_edtOffHour);
@@ -82,6 +81,8 @@ BEGIN_MESSAGE_MAP(CDlgAtomicClock, CDialog)
 	ON_WM_TIMER()
 	ON_BN_CLICKED(IDC_BTN_ACCHECK, OnBnClickedBtnACCheck)
 	ON_BN_CLICKED(IDC_BTN_ACADJUST, OnBnClickedBtnACAdjust)
+	ON_BN_CLICKED(IDC_BTN_ACSELECT, OnBnClickedBtnACSelect)
+	ON_BN_CLICKED(IDC_BTN_ACREMOVE, OnBnClickedBtnACRemove)
 	ON_MESSAGE(WM_TIMA_NTPRESPONSED, OnNtpResponsed)
 	//
 	ON_BN_CLICKED(IDC_CHK_ACSTART, UpdateNextTime)
@@ -138,8 +139,10 @@ BOOL CDlgAtomicClock::OnInitDialog()
 	m_spnOffSec.SetRange(0, 59);
 	m_spnOffMS.SetRange(0, 999);
 
-	m_lstServer.InsertColumn(0, _T("Server"), LVCFMT_LEFT, 160);
-	m_lstServer.InsertColumn(1, _T("Location"), LVCFMT_LEFT, 170);
+	m_lvwServer.SetExtendedStyle(m_lvwServer.GetExtendedStyle()
+					| LVS_EX_FULLROWSELECT);
+	m_lvwServer.InsertColumn(0, _T("Server"), LVCFMT_LEFT, 160);
+	m_lvwServer.InsertColumn(1, _T("Location"), LVCFMT_LEFT, 170);
 
 	UpdateActivedServer();
 
@@ -166,16 +169,23 @@ BOOL CDlgAtomicClock::OnInitDialog()
 
 void CDlgAtomicClock::UpdateActivedServer()
 {
-	m_lstServer.DeleteAllItems();
+	m_lvwServer.DeleteAllItems();
+	m_TimeServer.RemoveAllServer();
+
+	CString strURL;
+	CString strName;
 
 	CSntpServers* pServers = &(theApp.GetSettings().AtomicClock.ActivedServers);
 	INT_PTR nCount = pServers->GetCount();
 	for (int i = 0; i < nCount; i++)
 	{
-		m_lstServer.InsertItem(i, pServers->GetAt(i).URL);
-		m_lstServer.SetItemText(i, 1, pServers->GetAt(i).Name);
+		strURL = pServers->GetAt(i).URL.Trim();
+		strName = pServers->GetAt(i).Name.Trim();
 
-		m_TimeServer.AddServer(pServers->GetAt(i).URL);
+		m_lvwServer.InsertItem(i, strURL);
+		m_lvwServer.SetItemText(i, 1, strName);
+
+		m_TimeServer.AddServer(strURL);
 	}
 }
 
@@ -342,6 +352,45 @@ void CDlgAtomicClock::OnBnClickedBtnACCheck()
 void CDlgAtomicClock::OnBnClickedBtnACAdjust()
 {
 	CheckTime(TRUE);
+}
+
+
+void CDlgAtomicClock::OnBnClickedBtnACSelect()
+{
+	CDlgSelNtpServer dlgSel;
+	if (IDOK == dlgSel.DoModal())
+	{
+		//TODO: Add selected server
+	}
+}
+
+void CDlgAtomicClock::OnBnClickedBtnACRemove()
+{
+	POSITION pos = m_lvwServer.GetFirstSelectedItemPosition();
+	if (NULL == pos)
+	{
+		AfxMessageBox(_T("No items were selected!"), MB_ICONINFORMATION);
+		return;
+	}
+
+	// Remove item from end to front
+	UINT nState;
+	CString strURL;
+	int nItem = m_lvwServer.GetItemCount() - 1;
+
+	for (; nItem > 0; nItem--)
+	{
+		nState = m_lvwServer.GetItemState(nItem, LVIS_SELECTED);
+		if ((nState & LVIS_SELECTED) == LVIS_SELECTED)
+		{
+			strURL = m_lvwServer.GetItemText(nItem, 0);
+
+			if (m_TimeServer.RemoveServer(strURL))
+				m_lvwServer.DeleteItem(nItem);
+			else
+				ATLASSERT( FALSE && _T("Can NOT remove data now!") );
+		}
+	}
 }
 
 void CDlgAtomicClock::OnBnClickedChkACEvery()
@@ -512,7 +561,13 @@ LRESULT CDlgAtomicClock::OnNtpResponsed(WPARAM, LPARAM)
 
 void CDlgAtomicClock::ShowNextAdjustInfo(const SYSTEMTIME& stLast)
 {
-	COleDateTime odtLast = stLast;
+	SYSTEMTIME stLocal;
+	SYSTEMTIME stUTC;
+	memcpy(&stUTC, &stLast, sizeof(stUTC));
+
+	SystemTimeToTzSpecificLocalTime(NULL, &stUTC, &stLocal);
+
+	COleDateTime odtLast = stLocal;
 
 	// last time
 	CString strHtml;
@@ -531,7 +586,7 @@ void CDlgAtomicClock::ShowNextAdjustInfo(const SYSTEMTIME& stLast)
 			2 == nSelected ? nNum : 0,
 			3 == nSelected ? nNum : 0);
 
-		COleDateTime odtNext(stLast);
+		COleDateTime odtNext(odtLast);
 		odtNext += oleSpan;
 
 		strNext = odtNext.Format(LOCALE_NOUSEROVERRIDE, LANG_USER_DEFAULT);

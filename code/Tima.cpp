@@ -121,11 +121,11 @@ BOOL CTimaApp::SaveSettings()
 	return m_settings.Save(stg);
 }
 
-CPath CTimaApp::GetSettingsPath()
+CPath CTimaApp::GetSettingsPath(LPCTSTR szSettingsFile/* = defaultSettingsFile*/)
 {
 	CPath pthAppSettings = m_pthAppRoot + defaultSettingsFolder;
 	pthAppSettings.AddBackslash();
-	pthAppSettings += defaultSettingsFile;
+	pthAppSettings += szSettingsFile;
 
 	return pthAppSettings;
 }

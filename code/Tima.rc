@@ -125,7 +125,7 @@ BEGIN
     CONTROL         "",IDC_LST_ACSERVER,"SysListView32",LVS_REPORT | 
                     LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_TABSTOP,11,177,
                     223,50,WS_EX_STATICEDGE
-    PUSHBUTTON      "S&elect...",IDC_BTN_ACSELECT,238,177,50,14
+    PUSHBUTTON      "&Select...",IDC_BTN_ACSELECT,238,177,50,14
     EDITTEXT        IDC_EDT_ACOFFHOUR,81,246,34,13,ES_RIGHT | ES_NUMBER | 
                     WS_GROUP
     CONTROL         "",IDC_SPN_ACOFFHOUR,"msctls_updown32",UDS_SETBUDDYINT | 
@@ -183,6 +183,7 @@ BEGIN
                     IDC_CHK_ACONLY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,14,
                     150,281,10
     CONTROL         "",IDC_HTMCTL_ACNEXTSTATUS,"HtmlLite",0x0,201,67,87,24
+    PUSHBUTTON      "&Remove",IDC_BTN_ACREMOVE,238,195,50,14
 END
 
 IDD_TRAYCLOCK DIALOGEX 0, 0, 295, 264
@@ -315,6 +316,31 @@ BEGIN
                     ES_READONLY | WS_VSCROLL
 END
 
+IDD_SELNTPSERVER DIALOGEX 0, 0, 303, 225
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_FIXEDSYS | WS_POPUP | 
+    WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CONTEXTHELP
+CAPTION "Select Ntp Server"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Please select most reliable NTP server(normally the most close to you). If you don't ensure, use auto select.\nWe are recommend to use 3-5 server for most efficiently and reliably.",
+                    IDC_STATIC,7,7,289,26
+    CONTROL         "",IDC_LST_NTPSERVER,"SysListView32",LVS_REPORT | 
+                    LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_BORDER | 
+                    WS_TABSTOP,7,36,289,112
+    CONTROL         "C&ustom Server >>",IDC_CHK_NTPCUSTOMSVR,"Button",
+                    BS_AUTOCHECKBOX | BS_PUSHLIKE | WS_TABSTOP,7,153,73,14
+    PUSHBUTTON      "&Auto Select",IDC_BTN_NTPAUTOSEL,133,153,50,14
+    PUSHBUTTON      "&Select",IDOK,191,153,50,14
+    PUSHBUTTON      "&Cancel",IDCANCEL,246,153,50,14
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,7,176,289,1
+    LTEXT           "Server",IDC_STATIC,7,179,22,8
+    LTEXT           "Location",IDC_STATIC,110,178,28,8
+    EDITTEXT        IDC_EDT_NTPSERVER,7,189,99,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_NTPLOC,110,189,186,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "A&dd",IDC_BTN_NTPADD,246,206,50,14
+END
+
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -363,6 +389,14 @@ BEGIN
         TOPMARGIN, 7
         BOTTOMMARGIN, 257
     END
+
+    IDD_SELNTPSERVER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 296
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 220
+    END
 END
 #endif    // APSTUDIO_INVOKED
 
@@ -373,8 +407,8 @@ END
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 1,0,0,48
- PRODUCTVERSION 1,0,0,48
+ FILEVERSION 1,0,0,71
+ PRODUCTVERSION 1,0,0,71
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
  FILEFLAGS 0x1L
@@ -391,12 +425,12 @@ BEGIN
         BEGIN
             VALUE "CompanyName", "TODO: <Company name>"
             VALUE "FileDescription", "TODO: <File description>"
-            VALUE "FileVersion", "1.0.0.48"
+            VALUE "FileVersion", "1.0.0.71"
             VALUE "InternalName", "Tima.exe"
             VALUE "LegalCopyright", "TODO: (c) <Company name>.  All rights reserved."
             VALUE "OriginalFilename", "Tima.exe"
             VALUE "ProductName", "TODO: <Product name>"
-            VALUE "ProductVersion", "1.0.0.48"
+            VALUE "ProductVersion", "1.0.0.71"
         END
     END
     BLOCK "VarFileInfo"

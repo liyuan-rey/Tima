@@ -30,10 +30,12 @@ public:
 
 	CString Name;
 	CString URL;
+	CString Ping;
 
 	BEGIN_SETTING_MAP(CSntpServer)
 		SETTING_ITEM(Name)
 		SETTING_ITEM(URL)
+		SETTING_ITEM_DEFAULT(Ping, DEFAULT_EMPTYSTR)
 	END_SETTING_MAP()
 };
 
@@ -90,5 +92,19 @@ public:
 	BEGIN_SETTING_MAP(CTimaSettings)
 		SETTING_ITEM_SUBITEM(Info)
 		SETTING_ITEM_SUBITEM(AtomicClock)
+	END_SETTING_MAP()
+};
+
+// ========================================
+
+class CSntpServerList : public CSettings
+{
+public:
+	static const TCHAR defaultSectionName[];
+
+	CSntpServers Servers;
+
+	BEGIN_SETTING_MAP(CSntpServerList)
+		SETTING_ITEM_ARRAY(Servers, CSntpServer)
 	END_SETTING_MAP()
 };

@@ -34,7 +34,7 @@ public:
 	BOOL RemoveAllServer();
 	CNtpContextPtr GetServerInfo(LPCTSTR szSvrName) const;
 
-	AFX_INLINE const CNtpServerMap& GetServerInfo() {
+	AFX_INLINE const CNtpServerMap& GetServerMap() {
 		return m_mapServer;
 	}
 
