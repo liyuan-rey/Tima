@@ -83,7 +83,6 @@ BEGIN_MESSAGE_MAP(CDlgAtomicClock, CDialog)
 	ON_BN_CLICKED(IDC_BTN_ACADJUST, OnBnClickedBtnACAdjust)
 	ON_BN_CLICKED(IDC_BTN_ACSELECT, OnBnClickedBtnACSelect)
 	ON_BN_CLICKED(IDC_BTN_ACREMOVE, OnBnClickedBtnACRemove)
-	ON_MESSAGE(WM_TIMA_NTPRESPONSED, OnNtpResponsed)
 	//
 	ON_BN_CLICKED(IDC_CHK_ACSTART, UpdateNextTime)
 	ON_BN_CLICKED(IDC_CHK_ACESTAB, UpdateNextTime)
@@ -95,6 +94,8 @@ BEGIN_MESSAGE_MAP(CDlgAtomicClock, CDialog)
 	ON_EN_KILLFOCUS(IDC_EDT_ACOFFMIN, UpdateCtrls)
 	ON_EN_KILLFOCUS(IDC_EDT_ACOFFSEC, UpdateCtrls)
 	ON_EN_KILLFOCUS(IDC_EDT_ACOFFMS, UpdateCtrls)
+	//
+	ON_MESSAGE(WM_TIMA_NTPRESPONSED, OnNtpResponsed)
 END_MESSAGE_MAP()
 
 
@@ -173,17 +174,17 @@ void CDlgAtomicClock::UpdateActivedServer()
 	m_TimeServer.RemoveAllServer();
 
 	CString strURL;
-	CString strName;
+	CString strLocation;
 
 	CSntpServers* pServers = &(theApp.GetSettings().AtomicClock.ActivedServers);
 	INT_PTR nCount = pServers->GetCount();
 	for (int i = 0; i < nCount; i++)
 	{
 		strURL = pServers->GetAt(i).URL.Trim();
-		strName = pServers->GetAt(i).Name.Trim();
+		strLocation = pServers->GetAt(i).Location.Trim();
 
 		m_lvwServer.InsertItem(i, strURL);
-		m_lvwServer.SetItemText(i, 1, strName);
+		m_lvwServer.SetItemText(i, 1, strLocation);
 
 		m_TimeServer.AddServer(strURL);
 	}
@@ -360,7 +361,12 @@ void CDlgAtomicClock::OnBnClickedBtnACSelect()
 	CDlgSelNtpServer dlgSel;
 	if (IDOK == dlgSel.DoModal())
 	{
-		//TODO: Add selected server
+		CSntpServers& arrServers = theApp.GetSettings().AtomicClock.ActivedServers;
+
+		arrServers.RemoveAll();
+		arrServers.Append(dlgSel.m_arrSelServers);
+
+		UpdateActivedServer();
 	}
 }
 

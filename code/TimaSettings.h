@@ -28,12 +28,12 @@ class CSntpServer : public CSettings
 public:
 	static const TCHAR defaultSectionName[];
 
-	CString Name;
+	CString Location;
 	CString URL;
 	CString Ping;
 
 	BEGIN_SETTING_MAP(CSntpServer)
-		SETTING_ITEM(Name)
+		SETTING_ITEM(Location)
 		SETTING_ITEM(URL)
 		SETTING_ITEM_DEFAULT(Ping, DEFAULT_EMPTYSTR)
 	END_SETTING_MAP()

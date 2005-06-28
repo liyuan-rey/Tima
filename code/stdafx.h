@@ -43,6 +43,7 @@
 #include <afxpriv.h>
 #include <afxsock.h>		// MFC socket extensions
 #include <afxtempl.h>
+#include <afxmt.h>
 
 #include <Shlwapi.h>
 #include <atlpath.h>

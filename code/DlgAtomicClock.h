@@ -43,9 +43,10 @@ public:
 	afx_msg void OnBnClickedBtnACSelect();
 	afx_msg void OnBnClickedBtnACRemove();
 	afx_msg void OnBnClickedChkACEvery();
-	afx_msg LRESULT OnNtpResponsed(WPARAM, LPARAM);
 	afx_msg void UpdateCtrls();
 	afx_msg void UpdateNextTime();
+
+	afx_msg LRESULT OnNtpResponsed(WPARAM, LPARAM);
 
 	DECLARE_HTMLTEMPL_MAP();
 protected:

@@ -1,5 +1,6 @@
 #pragma once
 
+#include "TimeServer.h"
 
 // CDlgSelNtpServer 对话框
 
@@ -18,7 +19,6 @@ protected:
 	virtual BOOL OnInitDialog();
 	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV 支持
 	virtual void OnOK();
-	virtual void OnCancel();
 
 	DECLARE_MESSAGE_MAP()
 public:
@@ -27,12 +27,14 @@ public:
 	afx_msg void OnBnClickedNtpAutoSel();
 	afx_msg void OnBnClickedNtpAdd();
 
+	afx_msg LRESULT OnNtpResponsed(WPARAM, LPARAM);
+
 protected:
-	void InitServerList();
-	void GetSelServer(CSntpServers& arrServers);
+	void UpdateServerList();
 	
 public:
 	static const TCHAR defaultSntpServerListFile[];
+	CSntpServers m_arrSelServers;
 
 protected:
 	CListCtrl m_lvwServer;
@@ -40,6 +42,10 @@ protected:
 	CString m_strSvrLoc;
 
 	CSntpServerList m_ServerList;
+	CTimeServer m_TimeServer;
+
+private:
+	BOOL m_bNeedUpdateFile;
 
 public:
 };

@@ -9,12 +9,12 @@ public:
 	class CNtpContext
 	{
 	public:
-		CNtpContext(LPCTSTR szSvrName) : m_strSvrName(szSvrName),
+		CNtpContext(LPCTSTR szSvrUrl) : m_strSvrUrl(szSvrUrl),
 			m_bHasResult(FALSE) {};
 
 		~CNtpContext() {};
 
-		CString m_strSvrName;
+		CString m_strSvrUrl;
 		BOOL m_bHasResult;
 		NtpServerResponse m_ntpResponse;
 	};
@@ -28,11 +28,11 @@ public:
 	virtual ~CTimeServer(void);
 
 public:
-	BOOL IsValidServerName(LPCTSTR szSvrName);
-	BOOL AddServer(LPCTSTR szSvrName);
-	BOOL RemoveServer(LPCTSTR szSvrName);
+	BOOL IsValidServerUrl(LPCTSTR szSvrUrl);
+	BOOL AddServer(LPCTSTR szSvrUrl);
+	BOOL RemoveServer(LPCTSTR szSvrUrl);
 	BOOL RemoveAllServer();
-	CNtpContextPtr GetServerInfo(LPCTSTR szSvrName) const;
+	CNtpContextPtr GetServerInfo(LPCTSTR szSvrUrl) const;
 
 	AFX_INLINE const CNtpServerMap& GetServerMap() {
 		return m_mapServer;
@@ -51,4 +51,5 @@ protected:
 	CNtpServerMap m_mapServer;
 	HANDLE m_hMonitorThread;
 	HWND m_hwndReceiver;
+	CEvent m_evtMonitorContinue;
 };

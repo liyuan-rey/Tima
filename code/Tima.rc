@@ -316,7 +316,7 @@ BEGIN
                     ES_READONLY | WS_VSCROLL
 END
 
-IDD_SELNTPSERVER DIALOGEX 0, 0, 303, 225
+IDD_SELNTPSERVER DIALOGEX 0, 0, 303, 227
 STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_FIXEDSYS | WS_POPUP | 
     WS_CAPTION | WS_SYSMENU
 EXSTYLE WS_EX_CONTEXTHELP
@@ -333,12 +333,13 @@ BEGIN
     PUSHBUTTON      "&Auto Select",IDC_BTN_NTPAUTOSEL,133,153,50,14
     PUSHBUTTON      "&Select",IDOK,191,153,50,14
     PUSHBUTTON      "&Cancel",IDCANCEL,246,153,50,14
-    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,7,176,289,1
-    LTEXT           "Server",IDC_STATIC,7,179,22,8
-    LTEXT           "Location",IDC_STATIC,110,178,28,8
-    EDITTEXT        IDC_EDT_NTPSERVER,7,189,99,14,ES_AUTOHSCROLL
-    EDITTEXT        IDC_EDT_NTPLOC,110,189,186,14,ES_AUTOHSCROLL
-    PUSHBUTTON      "A&dd",IDC_BTN_NTPADD,246,206,50,14
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,7,177,289,1
+    LTEXT           "Server",IDC_STATIC,7,181,22,8
+    LTEXT           "Location",IDC_STATIC,110,180,28,8
+    EDITTEXT        IDC_EDT_NTPSERVER,7,191,99,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_NTPLOC,110,191,186,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "A&dd",IDC_BTN_NTPADD,246,208,50,14
+    CTEXT           "Add Custom Server",IDC_STATIC,15,172,70,8
 END
 
 
@@ -395,7 +396,7 @@ BEGIN
         LEFTMARGIN, 7
         RIGHTMARGIN, 296
         TOPMARGIN, 7
-        BOTTOMMARGIN, 220
+        BOTTOMMARGIN, 222
     END
 END
 #endif    // APSTUDIO_INVOKED
@@ -407,8 +408,8 @@ END
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 1,0,0,71
- PRODUCTVERSION 1,0,0,71
+ FILEVERSION 1,0,0,79
+ PRODUCTVERSION 1,0,0,79
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
  FILEFLAGS 0x1L
@@ -425,12 +426,12 @@ BEGIN
         BEGIN
             VALUE "CompanyName", "TODO: <Company name>"
             VALUE "FileDescription", "TODO: <File description>"
-            VALUE "FileVersion", "1.0.0.71"
+            VALUE "FileVersion", "1.0.0.79"
             VALUE "InternalName", "Tima.exe"
             VALUE "LegalCopyright", "TODO: (c) <Company name>.  All rights reserved."
             VALUE "OriginalFilename", "Tima.exe"
             VALUE "ProductName", "TODO: <Product name>"
-            VALUE "ProductVersion", "1.0.0.71"
+            VALUE "ProductVersion", "1.0.0.79"
         END
     END
     BLOCK "VarFileInfo"

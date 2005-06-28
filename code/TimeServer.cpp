@@ -2,6 +2,7 @@
 #include ".\timeserver.h"
 
 CTimeServer::CTimeServer(void) : m_hwndReceiver(NULL)
+	, m_evtMonitorContinue(TRUE, TRUE)
 {
 }
 
@@ -12,9 +13,11 @@ CTimeServer::~CTimeServer(void)
 	::GetExitCodeThread(m_hMonitorThread, &dwStatus);
 	if (STILL_ACTIVE == dwStatus)
 	{
+		m_evtMonitorContinue.ResetEvent();
+
 		//TODO: Add some notify to user
 
-		if (WAIT_TIMEOUT == ::WaitForSingleObject(m_hMonitorThread, TIMA_THREAD_TIMEOUT))
+		if (WAIT_TIMEOUT == ::WaitForSingleObject(m_hMonitorThread, 2*TIMA_THREAD_TIMEOUT))
 		{
 			ATLASSERT( FALSE && _T("Wait ntp monitor thread timeout!") );
 			::TerminateThread(m_hMonitorThread, -1);
@@ -24,13 +27,13 @@ CTimeServer::~CTimeServer(void)
 	}
 }
 
-BOOL CTimeServer::IsValidServerName(LPCTSTR szSvrName)
+BOOL CTimeServer::IsValidServerUrl(LPCTSTR szSvrUrl)
 {
-	if (NULL == szSvrName)
+	if (NULL == szSvrUrl)
 		return FALSE;
 
 	// Do not allow repeated server
-	CNtpContextPtr spContext = m_mapServer.Lookup(CString(szSvrName));
+	CNtpContextPtr spContext = m_mapServer.Lookup(CString(szSvrUrl));
 	if (spContext)
 		return FALSE;
 
@@ -39,27 +42,27 @@ BOOL CTimeServer::IsValidServerName(LPCTSTR szSvrName)
 	return TRUE;
 }
 
-BOOL CTimeServer::AddServer(LPCTSTR szSvrName)
+BOOL CTimeServer::AddServer(LPCTSTR szSvrUrl)
 {
-	if (!IsValidServerName(szSvrName))
+	if (!IsValidServerUrl(szSvrUrl))
 		return FALSE;
 
 	int nReason = 0;
 	if (!IsReady(&nReason) && (1 != nReason))
 		return FALSE;
 
-	CString strSvrName = szSvrName;
-	CNtpContextPtr spContext = new CNtpContext(strSvrName);
+	CString strSvrUrl = szSvrUrl;
+	CNtpContextPtr spContext = new CNtpContext(strSvrUrl);
 
-	return m_mapServer.Add(strSvrName, spContext);
+	return m_mapServer.Add(strSvrUrl, spContext);
 }
 
-BOOL CTimeServer::RemoveServer(LPCTSTR szSvrName)
+BOOL CTimeServer::RemoveServer(LPCTSTR szSvrUrl)
 {
 	if (!IsReady())
 		return FALSE;
 
-	return m_mapServer.Remove(CString(szSvrName));
+	return m_mapServer.Remove(CString(szSvrUrl));
 }
 
 BOOL CTimeServer::RemoveAllServer()
@@ -72,9 +75,9 @@ BOOL CTimeServer::RemoveAllServer()
 	return TRUE;
 }
 
-CTimeServer::CNtpContextPtr CTimeServer::GetServerInfo(LPCTSTR szSvrName) const
+CTimeServer::CNtpContextPtr CTimeServer::GetServerInfo(LPCTSTR szSvrUrl) const
 {
-	return m_mapServer.Lookup(CString(szSvrName));
+	return m_mapServer.Lookup(CString(szSvrUrl));
 }
 
 BOOL CTimeServer::IsReady(int* pnReason/* = NULL*/)
@@ -118,6 +121,8 @@ BOOL CTimeServer::StartCheck(HWND hwndReceiver)
 
 	m_hwndReceiver = hwndReceiver;
 
+	m_evtMonitorContinue.SetEvent();
+
 	CWinThread* pMonitorThread = AfxBeginThread(CTimeServer::NtpMonitorProc,
 		this, THREAD_PRIORITY_NORMAL, 0, CREATE_SUSPENDED, NULL);
 	ATLASSERT( NULL != pMonitorThread );
@@ -138,6 +143,9 @@ UINT CTimeServer::NtpMonitorProc(LPVOID pParam)
 
 	do
 	{
+		if (WAIT_OBJECT_0 != ::WaitForSingleObject(pTimeServer->m_evtMonitorContinue, 0))
+			break;
+
 		nCurrentIndex = CTimeServer::AddNtpClientThread(
 			pTimeServer->m_mapServer, nCurrentIndex, arrWaitThreadHandle);
 
@@ -174,6 +182,11 @@ UINT CTimeServer::NtpMonitorProc(LPVOID pParam)
 	}
 	while(arrWaitThreadHandle.GetSize() > 0
 			|| pTimeServer->m_mapServer.GetSize() > nCurrentIndex);
+
+	// Ensure no running work thread for the case that breaked from loop
+	int nSize = arrWaitThreadHandle.GetSize();
+	if (nSize > 0)
+		::WaitForMultipleObjects(nSize, arrWaitThreadHandle.GetData(), TRUE, INFINITE);
 
 	// Post Message
 	HWND hwndReceiver = pTimeServer->m_hwndReceiver;
@@ -224,7 +237,7 @@ UINT CTimeServer::NtpClientProc(LPVOID pParam)
 	ATLASSERT( spContext);
 
 	CSNTPClient sntp;
-	spContext->m_bHasResult = sntp.GetServerTime(spContext->m_strSvrName,
+	spContext->m_bHasResult = sntp.GetServerTime(spContext->m_strSvrUrl,
 									spContext->m_ntpResponse);
 
 	return 0L;
