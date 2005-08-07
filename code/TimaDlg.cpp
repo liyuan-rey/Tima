@@ -10,6 +10,7 @@
 #include "skin\Skin.h"
 
 #include "DlgAtomicClock.h"
+#include "DlgTrayClock.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -18,7 +19,8 @@
 // CTimaDlg dialog
 CTimaDlg::CTimaDlg(CWnd* pParent /*=NULL*/)
 	: CSkinDialog(CTimaDlg::IDD, pParent)
-	, m_nActivedPanel(0), m_pdlgAtomicClock(NULL)
+	, m_nActivedPanel(0), m_pWndActivedPanel(NULL), m_pDlgAtomicClock(NULL)
+	, m_pDlgTrayClock(NULL)
 {
 	m_hIcon = AfxGetApp()->LoadIcon(IDR_MAINFRAME);
 }
@@ -62,18 +64,7 @@ BOOL CTimaDlg::OnInitDialog()
 	ApplySkin();
 
 	// create sub dlg
-	CSkinPtr spSkin = SkinManager::Instance().GetCurrentSkin();
-	ATLASSERT(spSkin);
-
-	RECT rcArea = {0};
-	spSkin->GetCustomSetting(CSkin::GCSRect, 1, &rcArea);
-	ATLASSERT( FALSE == CRect(rcArea).IsRectEmpty() );
-
-	m_pdlgAtomicClock = new CDlgAtomicClock(this);
-	m_pdlgAtomicClock->Create(CDlgAtomicClock::IDD, this);
-	ATLASSERT(m_pdlgAtomicClock->GetSafeHwnd());
-	m_pdlgAtomicClock->MoveWindow(&rcArea, FALSE);
-	m_pdlgAtomicClock->ShowWindow(SW_NORMAL);
+	InitPanel();
 
 	return TRUE;  // return TRUE  unless you set the focus to a control
 }
@@ -92,6 +83,30 @@ void CTimaDlg::ApplySkin()
 	m_rbnStopWatch.ApplySkin();
 	m_rbnSettings.ApplySkin();
 	m_rbnAbout.ApplySkin();
+}
+
+void CTimaDlg::InitPanel()
+{
+	CSkinPtr spSkin = SkinManager::Instance().GetCurrentSkin();
+	ATLASSERT(spSkin);
+
+	RECT rcArea = {0};
+	spSkin->GetCustomSetting(CSkin::GCSRect, 1, &rcArea);
+	ATLASSERT( FALSE == CRect(rcArea).IsRectEmpty() );
+
+	ATLASSERT( m_pDlgAtomicClock == NULL );
+	m_pDlgAtomicClock = new CDlgAtomicClock(this);
+	m_pDlgAtomicClock->Create(CDlgAtomicClock::IDD, this);
+	ATLASSERT(m_pDlgAtomicClock->GetSafeHwnd());
+	m_pDlgAtomicClock->MoveWindow(&rcArea, FALSE);
+
+	ATLASSERT( m_pDlgTrayClock == NULL );
+	m_pDlgTrayClock = new CDlgTrayClock(this);
+	m_pDlgTrayClock->Create(CDlgTrayClock::IDD, this);
+	ATLASSERT(m_pDlgTrayClock->GetSafeHwnd());
+	m_pDlgTrayClock->MoveWindow(&rcArea, FALSE);
+
+	OnChangePanel(IDC_RBN_ATOMICCLOCK);
 }
 
 // If you add a minimize button to your dialog, you will need the code below
@@ -131,23 +146,53 @@ HCURSOR CTimaDlg::OnQueryDragIcon()
 
 void CTimaDlg::OnChangePanel(UINT id)
 {
+	if (m_pWndActivedPanel->GetSafeHwnd() && m_nActivedPanel == id)
+		return;
+
 	UpdateData(TRUE);
 
-	if (m_nActivedPanel != id)
+	CWnd* pWndOld = m_pWndActivedPanel;
+
+	switch(id)
 	{
-		CString strMsg;
-		strMsg.Format("To active %d panel.", id);
-		AfxMessageBox(strMsg);
+	case IDC_RBN_ATOMICCLOCK:
+		m_pWndActivedPanel = m_pDlgAtomicClock;
+		m_nActivedPanel = id;
+		break;
+	case IDC_RBN_TRAYCLOCK:
+		m_pWndActivedPanel = m_pDlgTrayClock;
+		m_nActivedPanel = id;
+		break;
+	case IDC_RBN_WEATHER:
+	case IDC_RBN_REMINDER:
+	case IDC_RBN_CALENDER:
+	case IDC_RBN_STOPWATCH:
+	case IDC_RBN_SETTINGS:
+	case IDC_RBN_ABOUT:
+		return;
+	default:
+		ATLASSERT( FALSE && _T("Unknown panel id.") );
+		return;
 	}
+
+	pWndOld->GetSafeHwnd() ? pWndOld->ShowWindow(SW_HIDE) : __noop;
+	m_pWndActivedPanel->ShowWindow(SW_NORMAL);
 }
 
 void CTimaDlg::OnDestroy()
 {
-	if (m_pdlgAtomicClock->GetSafeHwnd())
+	if (m_pDlgAtomicClock->GetSafeHwnd())
 	{
-		m_pdlgAtomicClock->DestroyWindow();
-		delete m_pdlgAtomicClock;
-		m_pdlgAtomicClock = NULL;
+		m_pDlgAtomicClock->DestroyWindow();
+		delete m_pDlgAtomicClock;
+		m_pDlgAtomicClock = NULL;
+	}
+
+	if (m_pDlgTrayClock->GetSafeHwnd())
+	{
+		m_pDlgTrayClock->DestroyWindow();
+		delete m_pDlgTrayClock;
+		m_pDlgTrayClock = NULL;
 	}
 
 	CSkinDialog::OnDestroy();

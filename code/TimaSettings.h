@@ -81,6 +81,38 @@ public:
 	END_SETTING_MAP()
 };
 
+class CTrayClockSettings : public CSettings
+{
+public:
+	static const TCHAR defaultSectionName[];
+
+	CString CurrentSkinName;
+	int Use12HoursFormat;
+	int ShowDate;
+	int ShowWeek;
+	int ShowSeconds;
+	int ShowZero;
+	int BlinkColon;
+	int Shadow;
+	int AlwaysShowTooltip;
+	int TooltipOpacity;
+	int ShowMultiTimeZone;
+
+	BEGIN_SETTING_MAP(CTrayClockSettings)
+		SETTING_ITEM_DEFAULT(CurrentSkinName, DEFAULT_EMPTYSTR)
+		SETTING_ITEM_DEFAULT(Use12HoursFormat, 0)
+		SETTING_ITEM_DEFAULT(ShowDate, 1)
+		SETTING_ITEM_DEFAULT(ShowWeek, 1)
+		SETTING_ITEM_DEFAULT(ShowSeconds, 1)
+		SETTING_ITEM_DEFAULT(ShowZero, 0)
+		SETTING_ITEM_DEFAULT(BlinkColon, 1)
+		SETTING_ITEM_DEFAULT(Shadow, 0)
+		SETTING_ITEM_DEFAULT(AlwaysShowTooltip, 0)
+		SETTING_ITEM_DEFAULT(TooltipOpacity, 0)
+		SETTING_ITEM_DEFAULT(ShowMultiTimeZone, 0)
+	END_SETTING_MAP()
+};
+
 class CTimaSettings : public CSettings
 {
 public:
@@ -88,10 +120,12 @@ public:
 
 	CTimaInfo Info;
 	CAtomicClockSettings AtomicClock;
+	CTrayClockSettings TrayClock;
 
 	BEGIN_SETTING_MAP(CTimaSettings)
 		SETTING_ITEM_SUBITEM(Info)
 		SETTING_ITEM_SUBITEM(AtomicClock)
+		SETTING_ITEM_SUBITEM(TrayClock)
 	END_SETTING_MAP()
 };
 

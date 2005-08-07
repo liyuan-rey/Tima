@@ -4,6 +4,7 @@
 	Version="7.10"
 	Name="Tima"
 	ProjectGUID="{990D28FB-98F9-4EB6-98AF-46C273787A3B}"
+	RootNamespace="Tima"
 	Keyword="MFCProj">
 	<Platforms>
 		<Platform
@@ -139,6 +140,9 @@
 				RelativePath=".\DlgSelNtpServer.cpp">
 			</File>
 			<File
+				RelativePath=".\DlgTrayClock.cpp">
+			</File>
+			<File
 				RelativePath=".\stdafx.cpp">
 				<FileConfiguration
 					Name="Debug|Win32">
@@ -175,6 +179,9 @@
 			</File>
 			<File
 				RelativePath=".\DlgSelNtpServer.h">
+			</File>
+			<File
+				RelativePath=".\DlgTrayClock.h">
 			</File>
 			<File
 				RelativePath=".\global.h">

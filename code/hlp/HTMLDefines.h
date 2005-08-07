@@ -14,6 +14,7 @@
 #define HIDD_WEATHER                            0x20069
 #define HIDD_CALENDAR                           0x2006A
 #define HIDD_SELNTPSERVER                       0x2006B
+#define HIDD_TIMEZONE                           0x20084
  
 // ¿ò¼Ü¿Ø¼þ(IDW_*) 
 // This is a part of the Microsoft Foundation Classes C++ library.

@@ -9,6 +9,7 @@
 #include "d:\working\tima\code\skin\skinpicture.h"
 
 class CDlgAtomicClock;
+class CDlgTrayClock;
 
 // CTimaDlg dialog
 class CTimaDlg : public CSkinDialog
@@ -42,9 +43,13 @@ protected:
 	CSkinButton m_rbnAbout;
 
 	int m_nActivedPanel;
+	CWnd* m_pWndActivedPanel;
 
-	CDlgAtomicClock* m_pdlgAtomicClock;
+	CDlgAtomicClock* m_pDlgAtomicClock;
+	CDlgTrayClock* m_pDlgTrayClock;
+
 	void ApplySkin();
+	void InitPanel();
 
 protected:
 	virtual BOOL OnInitDialog();
@@ -57,9 +62,9 @@ protected:
 	afx_msg void OnPaint();
 	afx_msg HCURSOR OnQueryDragIcon();
 	afx_msg void OnChangePanel(UINT id);
+	afx_msg void OnDestroy();
 	//}}AFX_MSG
 
 	DECLARE_MESSAGE_MAP()
 public:
-	afx_msg void OnDestroy();
 };

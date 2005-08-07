@@ -1,11 +1,5 @@
 #pragma once
 
-#include "include\w3mfc\sntp.h"
-
-#include "skin\skindialog.h"
-#include "htmllite\htmllite.h"
-#include "skin\skinpicture.h"
-
 #include "TimeServer.h"
 
 // CDlgAtomicClock 对话框
@@ -21,10 +15,6 @@ public:
 // 对话框数据
 	enum { IDD = IDD_ATOMICCLOCK };
 	virtual UINT GetDialogSkinID() { return IDD; }
-
-private:
-	HBRUSH GetBgBrush();
-	CBrush m_bgBrush;
 
 protected:
 	virtual BOOL OnInitDialog();
@@ -49,6 +39,7 @@ public:
 	afx_msg LRESULT OnNtpResponsed(WPARAM, LPARAM);
 
 	DECLARE_HTMLTEMPL_MAP();
+
 protected:
 	void ApplySkin(void);
 	void UpdateActivedServer();
@@ -97,6 +88,9 @@ protected:
 	CSpinButtonCtrl m_spnOffMS;
 
 	CTimeServer m_TimeServer;
+
+private:
+	CSkinDlgBgHelper m_bgHelper;
 
 public:
 };

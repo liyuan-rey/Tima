@@ -52,4 +52,6 @@
 
 #include <math.h>
 
+#include <SmartPtr.h>
+
 #include "global.h"

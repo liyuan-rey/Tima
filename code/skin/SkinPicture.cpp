@@ -100,6 +100,12 @@ void CSkinPicture::DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct)
 	if (!m_pSettings || !spSkin)
 		return;
 
+	// Get Background color from parent wnd
+	CWnd* pParentWnd = GetParent();
+	HBRUSH hbrBg = (HBRUSH)pParentWnd->SendMessage(WM_CTLCOLORSTATIC,
+					(WPARAM)lpDrawItemStruct->hDC, (LPARAM)GetSafeHwnd());
+	ATLASSERT( GetLastError() == 0 );
+
 	CMemDC memDC(CDC::FromHandle(lpDrawItemStruct->hDC));
 
 	// Draw background
@@ -107,6 +113,7 @@ void CSkinPicture::DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct)
 	CRect rcClient;
 	GetClientRect(rcClient);
 
+ 	memDC.FillRect(rcClient, CBrush::FromHandle(hbrBg));
 	spSkin->DrawRect(rcTmp, &memDC, rcClient.left, rcClient.top,
 		rcClient.Width(), rcClient.Height());
 }

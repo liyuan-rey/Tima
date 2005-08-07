@@ -13,6 +13,59 @@
 #undef APSTUDIO_READONLY_SYMBOLS
 
 /////////////////////////////////////////////////////////////////////////////
+// 非特定语言 resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(936)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_TIMEZONE DIALOGEX 0, 0, 273, 108
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Edit Time Zone"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LISTBOX         IDC_LIST1,7,8,199,57,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Add...",IDC_BUTTON2,215,7,50,14
+    PUSHBUTTON      "Remove",IDC_BUTTON4,215,24,50,14
+    PUSHBUTTON      "Up",IDC_BUTTON5,215,42,23,14
+    LTEXT           "Time Zone:\nCurrent time is 18:27:58, 2005-03-25\nDTS  start:\nDTS end:",
+                    IDC_STATIC,7,68,197,33
+    PUSHBUTTON      "Down",IDC_BUTTON6,243,42,23,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_TIMEZONE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 266
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 101
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // 非特定语言 resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
 // 非特定语言(默认) resources
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEUD)
@@ -20,53 +73,6 @@
 LANGUAGE LANG_NEUTRAL, SUBLANG_DEFAULT
 #pragma code_page(936)
 #endif //_WIN32
-
-#ifdef APSTUDIO_INVOKED
-/////////////////////////////////////////////////////////////////////////////
-//
-// TEXTINCLUDE
-//
-
-1 TEXTINCLUDE 
-BEGIN
-    "resource.h\0"
-END
-
-2 TEXTINCLUDE 
-BEGIN
-    "#include ""afxres.h""\r\n"
-    "\0"
-END
-
-3 TEXTINCLUDE 
-BEGIN
-    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
-    "#define _AFX_NO_OLE_RESOURCES\r\n"
-    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
-    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
-    "\r\n"
-    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
-    "LANGUAGE 9, 1\r\n"
-    "#pragma code_page(1252)\r\n"
-    "#include ""res\\Tima.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
-    "#include ""afxres.rc""         // Standard components\r\n"
-    "#endif\r\n"
-    "\r\n"
-    "CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST ""res\\\\Tima.manifest""\r\n"
-    "\0"
-END
-
-#endif    // APSTUDIO_INVOKED
-
-
-/////////////////////////////////////////////////////////////////////////////
-//
-// Icon
-//
-
-// Icon with lowest ID value placed first to ensure application icon
-// remains consistent on all systems.
-IDR_MAINFRAME           ICON                    "res\\Tima.ico"
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -104,7 +110,7 @@ BEGIN
 END
 
 IDD_ATOMICCLOCK DIALOGEX 0, 0, 295, 264
-STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
 FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
     PUSHBUTTON      "&Check",IDC_BTN_ACCHECK,92,94,50,14
@@ -187,55 +193,59 @@ BEGIN
 END
 
 IDD_TRAYCLOCK DIALOGEX 0, 0, 295, 264
-STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
-EXSTYLE WS_EX_TRANSPARENT
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
 FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
+    COMBOBOX        IDC_CMB_TCSKINLIST,85,47,161,30,CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    CONTROL         "Use 12-hours format",IDC_CHK_TC12HOURS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,29,84,82,10
+    CONTROL         "Show date",IDC_CHK_TCSHOWDATE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,144,84,50,10
+    CONTROL         "Show day of the week",IDC_CHK_TCSHOWWEEK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,29,100,87,10
+    CONTROL         "Show seconds",IDC_CHK_TCSHOWSECONDS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,144,100,61,10
+    CONTROL         "Show leading zero",IDC_CHK_TCSHOWZERO,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,29,116,74,10
+    CONTROL         "Blink colon",IDC_CHK_TCBLINK,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,144,116,49,10
+    CONTROL         "",IDC_SLD_TCSHADOW,"msctls_trackbar32",TBS_AUTOTICKS | 
+                    TBS_TOOLTIPS | WS_TABSTOP,128,132,129,13
+    CONTROL         "Always show tooltip in desktop",IDC_CHK_TCALWAYSTIP,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,29,167,114,10
+    LTEXT           "Tooltip opacity(Window 2000/XP):",IDC_STATIC,29,183,110,
+                    8
+    CONTROL         "",IDC_SLD_TCOPACITY,"msctls_trackbar32",TBS_AUTOTICKS | 
+                    TBS_TOOLTIPS | WS_TABSTOP,139,182,118,13
+    CONTROL         "Show multiple time zone info",IDC_CHK_TCMUTILZONE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,29,198,106,10
+    LISTBOX         IDC_LST_TCZONELIST,29,213,203,44,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&Add...",IDC_BTN_TCADDZONE,237,213,50,14
+    PUSHBUTTON      "&Remove",IDC_BTN_TCREMOVEZONE,237,228,50,14
+    PUSHBUTTON      "&Up",IDC_BTN_TCZONEUP,237,243,23,14
+    PUSHBUTTON      "&Down",IDC_BTN_TCZONEDOWN,265,243,23,14
     LTEXT           "Tray clock plus replace windows original clock in tray, give you more about date/time with seveval timezone and much more info.",
                     IDC_STATIC,36,17,252,16
-    ICON            IDR_MAINFRAME,IDC_STATIC,10,12,21,20
-    LTEXT           "Tray Clock Plus",IDC_STATIC,36,7,49,8
     CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,7,36,281,1
-    RTEXT           "Scehmer:",IDC_STATIC,29,46,31,8
-    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,50,81,238,1
-    LTEXT           "Content",IDC_STATIC,27,77,27,8
-    CONTROL         "",IDC_STATIC,"Static",SS_WHITEFRAME,12,76,10,10
-    COMBOBOX        IDC_COMBO3,65,44,95,30,CBS_DROPDOWNLIST | CBS_SORT | 
-                    WS_VSCROLL | WS_GROUP | WS_TABSTOP
-    PUSHBUTTON      "&Customs...",IDC_BUTTON1,167,43,50,14
-    CONTROL         "Show Date",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | 
-                    WS_TABSTOP,29,92,51,10
-    CONTROL         "Single line mode",IDC_RADIO1,"Button",
-                    BS_AUTORADIOBUTTON,28,63,67,10
-    CONTROL         "Multiline mode",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,
-                    127,63,61,10
-    CONTROL         "Show day of the week",IDC_CHECK2,"Button",
-                    BS_AUTOCHECKBOX | WS_TABSTOP,128,92,87,10
-    CONTROL         "Show advanced tooltip",IDC_CHECK6,"Button",
-                    BS_AUTOCHECKBOX | WS_TABSTOP,29,137,89,10
-    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,74,156,214,1
-    LTEXT           "Time Zone",IDC_STATIC,30,152,34,8
-    CONTROL         "",IDC_STATIC,"Static",SS_WHITEFRAME,14,151,10,10
-    LISTBOX         IDC_LIST1,29,164,199,57,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
-                    WS_VSCROLL | WS_TABSTOP
-    PUSHBUTTON      "Add...",IDC_BUTTON2,237,163,50,14
-    PUSHBUTTON      "Remove",IDC_BUTTON4,237,180,50,14
-    PUSHBUTTON      "Up",IDC_BUTTON5,237,198,23,14
-    LTEXT           "Time Zone:\nCurrent time is 18:27:58, 2005-03-25\nDTS  start:\nDTS end:",
-                    IDC_STATIC,29,224,197,33
-    PUSHBUTTON      "Down",IDC_BUTTON6,265,198,23,14
-    CONTROL         "Use 12-hours format",IDC_CHECK7,"Button",
-                    BS_AUTOCHECKBOX | WS_TABSTOP,29,107,82,10
-    CONTROL         "Show seconds",IDC_CHECK8,"Button",BS_AUTOCHECKBOX | 
-                    WS_TABSTOP,128,107,61,10
-    CONTROL         "Show other information (such as weather and reminder)",
-                    IDC_CHECK9,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,29,122,
-                    195,10
+    RTEXT           "Select skin:",IDC_STATIC,43,49,37,8
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,99,72,189,1
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,98,155,190,1
+    LTEXT           "Drap shadow of the numbers: ",IDC_STATIC,29,133,98,8
+    LTEXT           "",IDC_PICT_TC1,10,10,21,20
+    CONTROL         "<b>Tray Clock Plus</b>",IDC_HTMCTL_TC1,"HtmlLite",0x0,
+                    36,7,72,8
+    LTEXT           "",IDC_PICT_TC2,12,67,10,10
+    CONTROL         "<b>Content Setting</b>",IDC_HTMCTL_TC2,"HtmlLite",0x0,
+                    27,68,69,8
+    LTEXT           "",IDC_PICT_TC3,12,150,10,10
+    CONTROL         "<b>Tooltip Setting</b>",IDC_HTMCTL_TC3,"HtmlLite",0x0,
+                    27,151,65,8
 END
 
 IDD_WEATHER DIALOGEX 0, 0, 295, 264
-STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
-EXSTYLE WS_EX_TRANSPARENT
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
 FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
     LTEXT           "Quick know about weather in your location.",IDC_STATIC,
@@ -293,8 +303,7 @@ BEGIN
 END
 
 IDD_CALENDAR DIALOGEX 0, 0, 295, 264
-STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
-EXSTYLE WS_EX_TRANSPARENT
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
 FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
     LTEXT           "Use calendar to view information of the days.",-1,36,17,
@@ -402,14 +411,61 @@ END
 #endif    // APSTUDIO_INVOKED
 
 
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""res\\Tima.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\r\n"
+    "CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST ""res\\\\Tima.manifest""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\Tima.ico"
+
 /////////////////////////////////////////////////////////////////////////////
 //
 // Version
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 1,0,0,79
- PRODUCTVERSION 1,0,0,79
+ FILEVERSION 1,0,0,85
+ PRODUCTVERSION 1,0,0,85
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
  FILEFLAGS 0x1L
@@ -426,12 +482,12 @@ BEGIN
         BEGIN
             VALUE "CompanyName", "TODO: <Company name>"
             VALUE "FileDescription", "TODO: <File description>"
-            VALUE "FileVersion", "1.0.0.79"
+            VALUE "FileVersion", "1.0.0.85"
             VALUE "InternalName", "Tima.exe"
             VALUE "LegalCopyright", "TODO: (c) <Company name>.  All rights reserved."
             VALUE "OriginalFilename", "Tima.exe"
             VALUE "ProductName", "TODO: <Product name>"
-            VALUE "ProductVersion", "1.0.0.79"
+            VALUE "ProductVersion", "1.0.0.85"
         END
     END
     BLOCK "VarFileInfo"
@@ -465,11 +521,11 @@ END
 
 IDD_TRAYCLOCK DLGINIT
 BEGIN
-    IDC_COMBO3, 0x403, 6, 0
+    IDC_CMB_TCSKINLIST, 0x403, 6, 0
 0x6f68, 0x7275, 0x0073, 
-    IDC_COMBO3, 0x403, 8, 0
+    IDC_CMB_TCSKINLIST, 0x403, 8, 0
 0x696d, 0x756e, 0x6573, 0x0073, 
-    IDC_COMBO3, 0x403, 8, 0
+    IDC_CMB_TCSKINLIST, 0x403, 8, 0
 0x6573, 0x6f63, 0x646e, 0x0073, 
     0
 END

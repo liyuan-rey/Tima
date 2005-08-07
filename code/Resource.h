@@ -14,6 +14,7 @@
 #define IDS_LOADSKININERROR             131
 #define IDS_LOADSKINWITHERROR           131
 #define IDS_BINDINGSKINERROR            132
+#define IDD_TIMEZONE                    132
 #define IDS_LOADSETTINGSFAILED          133
 #define IDS_LOADSETTINGSWITHERROR       134
 #define IDS_SETTIMER_ERROR              135
@@ -46,6 +47,7 @@
 #define IDC_EDIT3                       1020
 #define IDC_RADIO6                      1020
 #define IDC_EDT_NTPLOC                  1020
+#define IDC_CHECK11                     1020
 #define IDC_EDIT4                       1021
 #define IDC_CHECK6                      1021
 #define IDC_RADIO8                      1021
@@ -83,6 +85,7 @@
 #define IDC_SPN_ACOFFMS                 1033
 #define IDC_MONTHCALENDAR1              1034
 #define IDC_COMBO3                      1035
+#define IDC_CMB_TCSKINLIST              1035
 #define IDC_HTMCTL_AC1                  1036
 #define IDC_HTMCTL_AC2                  1037
 #define IDC_HTMCTL_AC3                  1038
@@ -116,14 +119,35 @@
 #define IDC_BTN_NTPAUTOSEL              1062
 #define IDC_BTN_NTPADD                  1064
 #define IDC_EDT_NTPSERVER               1065
+#define IDC_SLD_TCSHADOW                1066
+#define IDC_SLD_TCOPACITY               1067
+#define IDC_PICT_TC1                    1068
+#define IDC_PICT_TC2                    1069
+#define IDC_PICT_TC3                    1070
+#define IDC_HTMCTL_TC1                  1071
+#define IDC_HTMCTL_TC2                  1072
+#define IDC_HTMCTL_TC3                  1073
+#define IDC_LST_TCZONELIST              1076
+#define IDC_BTN_TCADDZONE               1077
+#define IDC_BTN_TCREMOVEZONE            1078
+#define IDC_BTN_TCZONEUP                1079
+#define IDC_BTN_TCZONEDOWN              1080
+#define IDC_CHK_TC12HOURS               1081
+#define IDC_CHK_TCSHOWDATE              1082
+#define IDC_CHK_TCSHOWWEEK              1083
+#define IDC_CHK_TCSHOWSECONDS           1084
+#define IDC_CHK_TCSHOWZERO              1085
+#define IDC_CHK_TCBLINK                 1086
+#define IDC_CHK_TCALWAYSTIP             1087
+#define IDC_CHK_TCMUTILZONE             1088
 
 // Next default values for new objects
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
-#define _APS_NEXT_RESOURCE_VALUE        132
+#define _APS_NEXT_RESOURCE_VALUE        133
 #define _APS_NEXT_COMMAND_VALUE         32771
-#define _APS_NEXT_CONTROL_VALUE         1066
+#define _APS_NEXT_CONTROL_VALUE         1089
 #define _APS_NEXT_SYMED_VALUE           101
 #endif
 #endif

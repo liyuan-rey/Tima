@@ -6,8 +6,6 @@
 #include "DlgAtomicClock.h"
 #include "DlgSelNtpServer.h"
 
-#include "skin\skinmanager.h"
-
 // CDlgAtomicClock ¶Ô»°¿ò
 
 IMPLEMENT_DYNAMIC(CDlgAtomicClock, CDialog)
@@ -112,11 +110,13 @@ END_HTMLTEMPL_MAP()
 
 BOOL CDlgAtomicClock::OnEraseBkgnd(CDC* pDC)
 {
-	CRect rcClip;
-    pDC->GetClipBox(rcClip);
-	FillRect(pDC->m_hDC, rcClip, GetBgBrush());
+	return m_bgHelper.OnEraseBkgnd(pDC);
+}
 
-	return TRUE;
+HBRUSH CDlgAtomicClock::OnCtlColor(CDC* pDC, CWnd* pWnd, UINT nCtlColor)
+{
+	HBRUSH hbr = CDialog::OnCtlColor(pDC, pWnd, nCtlColor);
+	return m_bgHelper.OnCtlColor(pDC, pWnd, nCtlColor, hbr);
 }
 
 void CDlgAtomicClock::OnDestroy()
@@ -285,45 +285,6 @@ void CDlgAtomicClock::SetACEveryTimer()
 			return;
 		}
 	}
-}
-
-HBRUSH CDlgAtomicClock::GetBgBrush()
-{
-	if (!m_bgBrush.GetSafeHandle())
-	{
-		COLORREF bgclr = SkinManager::Instance().GetCurrentSkin()->GetWindowBgColor();
-		m_bgBrush.CreateSolidBrush(bgclr);
-	}
-
-	return m_bgBrush;
-}
-
-HBRUSH CDlgAtomicClock::OnCtlColor(CDC* pDC, CWnd* pWnd, UINT nCtlColor)
-{
-	HBRUSH hbr = CDialog::OnCtlColor(pDC, pWnd, nCtlColor);
-
-	switch (nCtlColor)
-	{
-	case CTLCOLOR_STATIC:
-		{
-			pDC->SetBkMode(TRANSPARENT);
-			hbr = GetBgBrush();
-
-			break;
-		}
-	case CTLCOLOR_MSGBOX:
-	case CTLCOLOR_EDIT:
-	case CTLCOLOR_LISTBOX:
-	case CTLCOLOR_BTN:
-	case CTLCOLOR_DLG:
-	case CTLCOLOR_SCROLLBAR:
-		break;
-	default:
-		ATLASSERT(0);
-		break;
-	}
-
-	return hbr;
 }
 
 void CDlgAtomicClock::OnTimer(UINT nIDEvent)

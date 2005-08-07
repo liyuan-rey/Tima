@@ -1,6 +1,5 @@
 #pragma once
 
-#include <SmartPtr.h>
 #include "include\w3mfc\sntp.h"
 
 class CTimeServer
