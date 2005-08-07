@@ -30,10 +30,14 @@ public:
 	afx_msg void OnCbnSelChangeSkinList();
 	afx_msg void OnUpdateTrayClock(UINT nCtrlId);
 	afx_msg void OnHScroll(UINT nSBCode, UINT nPos, CScrollBar* pScrollBar);
+	afx_msg void OnBnClickedAddzone();
+	afx_msg void OnBnClickedRemovezone();
 
 protected:
 	void ApplySkin(void);
 	void UpdateCtrls();
+	BOOL InstallTrayClockHook();
+	BOOL UninstallTrayClockHook();
 
 	CHtmlLite m_htmTC1;
 	CHtmlLite m_htmTC2;
@@ -54,6 +58,7 @@ protected:
 
 private:
 	CSkinDlgBgHelper m_bgHelper;
+	HWND m_hWndHook;
 
 public:
 };

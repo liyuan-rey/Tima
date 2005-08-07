@@ -11,7 +11,7 @@
 
 IMPLEMENT_DYNAMIC(CDlgTrayClock, CDialog)
 CDlgTrayClock::CDlgTrayClock(CWnd* pParent /*=NULL*/)
-	: CDialog(CDlgTrayClock::IDD, pParent)
+	: CDialog(CDlgTrayClock::IDD, pParent), m_hWndHook(NULL)
 {
 }
 
@@ -59,6 +59,8 @@ BEGIN_MESSAGE_MAP(CDlgTrayClock, CDialog)
 	ON_CBN_SELCHANGE(IDC_CMB_TCSKINLIST, OnCbnSelChangeSkinList)
 	ON_COMMAND_RANGE(IDC_CHK_TC12HOURS, IDC_CHK_TCMUTILZONE, OnUpdateTrayClock)
 	ON_WM_HSCROLL()
+	ON_BN_CLICKED(IDC_BTN_TCADDZONE, OnBnClickedAddzone)
+	ON_BN_CLICKED(IDC_BTN_TCREMOVEZONE, OnBnClickedRemovezone)
 END_MESSAGE_MAP()
 
 
@@ -141,4 +143,55 @@ void CDlgTrayClock::OnHScroll(UINT nSBCode, UINT nPos, CScrollBar* pScrollBar)
 
 	if (TB_ENDTRACK == nSBCode)
 		OnUpdateTrayClock(pScrollBar->GetDlgCtrlID());
+}
+
+void CDlgTrayClock::OnBnClickedAddZone()
+{
+	InstallTrayClockHook();
+}
+
+void CDlgTrayClock::OnBnClickedRemoveZone()
+{
+	UninstallTrayClockHook();
+}
+
+BOOL CDlgTrayClock::InstallTrayClockHook()
+{
+	if (NULL != m_hWndHook)
+	{
+		ATLASSERT( FALSE && "Tray clock window hook have already set." );
+		return;
+	}
+
+	// Find system tray clock window
+	HWND hWndShellTray = ::FindWindow(_T("Shell_TrayWnd"), _T(""));
+	if (NULL == hWndShellTray)
+	{
+		AfxMessageBox(_T("Could not find shell tray window, tray clock may not function correctly."), MB_ICONWARNING);
+		return;
+	}
+
+	m_hWndHook = ::FindWindowEx(hWndShellTray, NULL, _T("TrayClockWClass"), NULL);
+	if (NULL == m_hWndHook)
+	{
+		AfxMessageBox(_T("Could not find clock tray window, tray clock may not function correctly."), MB_ICONWARNING);
+		return;
+	}
+
+	// 
+	DWORD dwHookedThreadId = ::GetWindowThreadProcessId(m_hWndHook, NULL);
+//	HANDLE hHook = ::SetWindowsHookEx(WH_GETMESSAGE)
+}
+
+BOOL CDlgTrayClock::UninstallTrayClockHook()
+{
+	if (NULL == m_hWndHook)
+	{
+		ATLASSERT( FALSE && "Tray clock window hook is not been set yet." );
+		return;
+	}
+
+	ATLASSERT( ::IsWindow(m_hWndHook) );
+
+
 }
