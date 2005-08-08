@@ -1,5 +1,4 @@
 #pragma once
-#include "afxwin.h"
 
 // CDlgTrayClock ¶Ô»°¿ò
 
@@ -30,14 +29,12 @@ public:
 	afx_msg void OnCbnSelChangeSkinList();
 	afx_msg void OnUpdateTrayClock(UINT nCtrlId);
 	afx_msg void OnHScroll(UINT nSBCode, UINT nPos, CScrollBar* pScrollBar);
-	afx_msg void OnBnClickedAddzone();
-	afx_msg void OnBnClickedRemovezone();
+	afx_msg void OnBnClickedAddZone();
+	afx_msg void OnBnClickedRemoveZone();
 
 protected:
 	void ApplySkin(void);
 	void UpdateCtrls();
-	BOOL InstallTrayClockHook();
-	BOOL UninstallTrayClockHook();
 
 	CHtmlLite m_htmTC1;
 	CHtmlLite m_htmTC2;

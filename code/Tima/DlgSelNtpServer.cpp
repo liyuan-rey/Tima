@@ -6,7 +6,6 @@
 #include "DlgSelNtpServer.h"
 
 #include "include\SettingsStorage\MSettingsStorageIniFile.h"
-#include ".\dlgselntpserver.h"
 using Mortimer::CSettingsStorageIniFile;
 
 // CDlgSelNtpServer ¶Ô»°¿ò

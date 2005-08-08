@@ -1,5 +1,5 @@
 #include "StdAfx.h"
-#include ".\timeserver.h"
+#include "timeserver.h"
 
 CTimeServer::CTimeServer(void) : m_hwndReceiver(NULL)
 	, m_evtMonitorContinue(TRUE, TRUE)

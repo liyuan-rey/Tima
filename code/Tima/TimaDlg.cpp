@@ -4,7 +4,6 @@
 #include "stdafx.h"
 #include "Tima.h"
 #include "TimaDlg.h"
-#include ".\timadlg.h"
 
 #include "skin\SkinManager.h"
 #include "skin\Skin.h"

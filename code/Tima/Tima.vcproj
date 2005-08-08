@@ -482,7 +482,7 @@ echo.
 			Name="Loki"
 			Filter="">
 			<File
-				RelativePath="..\..\..\3rdLib\loki\Singleton.cpp">
+				RelativePath="..\..\..\..\3rdLib\loki\Singleton.cpp">
 				<FileConfiguration
 					Name="Debug|Win32">
 					<Tool
@@ -497,10 +497,10 @@ echo.
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\..\..\3rdLib\loki\Singleton.h">
+				RelativePath="..\..\..\..\3rdLib\loki\Singleton.h">
 			</File>
 			<File
-				RelativePath="..\..\..\3rdLib\loki\SmallObj.cpp">
+				RelativePath="..\..\..\..\3rdLib\loki\SmallObj.cpp">
 				<FileConfiguration
 					Name="Debug|Win32">
 					<Tool
@@ -515,13 +515,13 @@ echo.
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\..\..\3rdLib\loki\SmallObj.h">
+				RelativePath="..\..\..\..\3rdLib\loki\SmallObj.h">
 			</File>
 			<File
-				RelativePath="..\..\..\3rdLib\loki\SmartPtr.h">
+				RelativePath="..\..\..\..\3rdLib\loki\SmartPtr.h">
 			</File>
 			<File
-				RelativePath="..\..\..\3rdLib\loki\Threads.h">
+				RelativePath="..\..\..\..\3rdLib\loki\Threads.h">
 			</File>
 		</Filter>
 		<File

@@ -3,7 +3,14 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Tima", "Tima.vcproj", "{990
 	ProjectSection(ProjectDependencies) = postProject
 	EndProjectSection
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tchk", "..\tchk\tchk.vcproj", "{DC3666A8-BEDB-4749-B8BC-5BF9EFDD3AB5}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
 Global
+	GlobalSection(DPCodeReviewSolutionGUID) = preSolution
+		DPCodeReviewSolutionGUID = {00000000-0000-0000-0000-000000000000}
+	EndGlobalSection
 	GlobalSection(SolutionConfiguration) = preSolution
 		Debug = Debug
 		Release = Release
@@ -13,6 +20,10 @@ Global
 		{990D28FB-98F9-4EB6-98AF-46C273787A3B}.Debug.Build.0 = Debug|Win32
 		{990D28FB-98F9-4EB6-98AF-46C273787A3B}.Release.ActiveCfg = Release|Win32
 		{990D28FB-98F9-4EB6-98AF-46C273787A3B}.Release.Build.0 = Release|Win32
+		{DC3666A8-BEDB-4749-B8BC-5BF9EFDD3AB5}.Debug.ActiveCfg = Debug|Win32
+		{DC3666A8-BEDB-4749-B8BC-5BF9EFDD3AB5}.Debug.Build.0 = Debug|Win32
+		{DC3666A8-BEDB-4749-B8BC-5BF9EFDD3AB5}.Release.ActiveCfg = Release|Win32
+		{DC3666A8-BEDB-4749-B8BC-5BF9EFDD3AB5}.Release.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 	EndGlobalSection

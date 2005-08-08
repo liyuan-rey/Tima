@@ -6,7 +6,6 @@
 #include "skin\skindialog.h"
 #include "skin\skinbutton.h"
 #include "skin\skinpicture.h"
-#include "d:\working\tima\code\skin\skinpicture.h"
 
 class CDlgAtomicClock;
 class CDlgTrayClock;
