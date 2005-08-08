@@ -464,8 +464,8 @@ IDR_MAINFRAME           ICON                    "res\\Tima.ico"
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 1,0,0,124
- PRODUCTVERSION 1,0,0,124
+ FILEVERSION 1,0,0,125
+ PRODUCTVERSION 1,0,0,125
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
  FILEFLAGS 0x1L
@@ -482,12 +482,12 @@ BEGIN
         BEGIN
             VALUE "CompanyName", "TODO: <Company name>"
             VALUE "FileDescription", "TODO: <File description>"
-            VALUE "FileVersion", "1.0.0.124"
+            VALUE "FileVersion", "1.0.0.125"
             VALUE "InternalName", "Tima.exe"
             VALUE "LegalCopyright", "TODO: (c) <Company name>.  All rights reserved."
             VALUE "OriginalFilename", "Tima.exe"
             VALUE "ProductName", "TODO: <Product name>"
-            VALUE "ProductVersion", "1.0.0.124"
+            VALUE "ProductVersion", "1.0.0.125"
         END
     END
     BLOCK "VarFileInfo"
