@@ -8,8 +8,7 @@
 #include "SkinPicture.h"
 #include "SkinSettings.h"
 
-#include "..\include\memdc\memdc.h"
-#include ".\skinpicture.h"
+#include "..\..\include\memdc\memdc.h"
 
 // CSkinPicture
 

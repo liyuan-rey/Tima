@@ -8,8 +8,7 @@
 #include "SkinButton.h"
 #include "SkinSettings.h"
 
-#include "..\include\memdc\memdc.h"
-#include ".\skinbutton.h"
+#include "..\..\include\memdc\memdc.h"
 
 // CSkinButton
 

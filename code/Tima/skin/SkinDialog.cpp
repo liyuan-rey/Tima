@@ -2,10 +2,10 @@
 //
 
 #include "StdAfx.h"
-#include ".\skindialog.h"
-#include "..\resource.h"
+#include "..\Resource.h"
+#include "skindialog.h"
 
-#include "..\include\memdc\memdc.h"
+#include "..\..\include\memdc\memdc.h"
 
 #include "SkinTypes.h"
 #include "SkinManager.h"

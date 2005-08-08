@@ -1,10 +1,10 @@
 //
 
 #include "StdAfx.h"
-#include ".\skinmanager.h"
+#include "skinmanager.h"
 #include "Skin.h"
 
-#include "..\include\SettingsStorage\MSettingsStorageIniFile.h"
+#include "..\..\include\SettingsStorage\MSettingsStorageIniFile.h"
 using Mortimer::CSettingsStorageIniFile;
 
 const TCHAR CSkinManager::defaultSkinRoot[] = _T("skin");

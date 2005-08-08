@@ -1,8 +1,8 @@
 //
 
 #include "StdAfx.h"
-#include "..\resource.h"
-#include ".\skin.h"
+#include "..\Resource.h"
+#include "skin.h"
 
 #include "SkinTypes.h"
 #include "SkinManager.h"
@@ -10,7 +10,7 @@
 #include "SkinComponent.h"
 #include "SkinDialog.h"
 
-#include "..\include\SettingsStorage\MSettingsStorageIniFile.h"
+#include "..\..\include\SettingsStorage\MSettingsStorageIniFile.h"
 using Mortimer::CSettingsStorageIniFile;
 
 const TCHAR CSkin::defaultSkinConfigFile[] = _T("skincfg.ini");
