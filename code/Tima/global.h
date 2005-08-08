@@ -6,13 +6,13 @@
 
 #include "skin\skinmanager.h"
 #include "skin\skindialog.h"
+#include "skin\skindlgbghelper.h"
+#include "skin\skinbutton.h"
 #include "skin\skinpicture.h"
 
 #include "htmllite\htmllite.h"
 
-#include "include\w3mfc\sntp.h"
-
-#include "include\util.h"
+#include "..\include\w3mfc\sntp.h"
 
 //////////////////////////////////////////////////////////////////////////
 

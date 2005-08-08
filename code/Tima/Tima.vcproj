@@ -252,9 +252,6 @@ makehm /h /a afxhh.h IDW_,HIDW_,0x50000 &quot;$(InputFileName)&quot; &gt;&gt; &q
 			<File
 				RelativePath=".\TimeServer.h">
 			</File>
-			<File
-				RelativePath=".\include\util.h">
-			</File>
 		</Filter>
 		<Filter
 			Name="资源文件"
@@ -331,16 +328,10 @@ echo.
 			Name="SettingsStorage"
 			Filter="">
 			<File
-				RelativePath=".\include\SettingsStorage\MSettingsStorage.h">
+				RelativePath="..\include\SettingsStorage\MSettingsStorage.h">
 			</File>
 			<File
-				RelativePath=".\include\SettingsStorage\MSettingsStorageIniFile.h">
-			</File>
-			<File
-				RelativePath=".\include\SettingsStorage\MSettingsStorageMSXML.h">
-			</File>
-			<File
-				RelativePath=".\include\SettingsStorage\MSettingsStorageRegistry.h">
+				RelativePath="..\include\SettingsStorage\MSettingsStorageIniFile.h">
 			</File>
 		</Filter>
 		<Filter
@@ -371,6 +362,9 @@ echo.
 				RelativePath=".\skin\SkinDialog.h">
 			</File>
 			<File
+				RelativePath=".\skin\SkinDlgBgHelper.h">
+			</File>
+			<File
 				RelativePath=".\skin\SkinManager.cpp">
 			</File>
 			<File
@@ -399,7 +393,7 @@ echo.
 			Name="OOEnum"
 			Filter="">
 			<File
-				RelativePath=".\include\OOEnum\Enumeration.h">
+				RelativePath="..\include\OOEnum\Enumeration.h">
 			</File>
 		</Filter>
 		<Filter
@@ -416,44 +410,44 @@ echo.
 			Name="PPHtmlDrawer"
 			Filter="">
 			<File
-				RelativePath=".\include\PPHtmlDrawer\CeXDib.cpp">
+				RelativePath="..\include\PPHtmlDrawer\CeXDib.cpp">
 			</File>
 			<File
-				RelativePath=".\include\PPHtmlDrawer\CeXDib.h">
+				RelativePath="..\include\PPHtmlDrawer\CeXDib.h">
 			</File>
 			<File
-				RelativePath=".\include\PPHtmlDrawer\PPDrawManager.cpp">
+				RelativePath="..\include\PPHtmlDrawer\PPDrawManager.cpp">
 			</File>
 			<File
-				RelativePath=".\include\PPHtmlDrawer\PPDrawManager.h">
+				RelativePath="..\include\PPHtmlDrawer\PPDrawManager.h">
 			</File>
 			<File
-				RelativePath=".\include\PPHtmlDrawer\PPHtmlDrawer.cpp">
+				RelativePath="..\include\PPHtmlDrawer\PPHtmlDrawer.cpp">
 			</File>
 			<File
-				RelativePath=".\include\PPHtmlDrawer\PPHtmlDrawer.h">
+				RelativePath="..\include\PPHtmlDrawer\PPHtmlDrawer.h">
 			</File>
 		</Filter>
 		<Filter
 			Name="w3mfc"
 			Filter="">
 			<File
-				RelativePath=".\include\w3mfc\Base64.cpp">
+				RelativePath="..\include\w3mfc\Base64.cpp">
 			</File>
 			<File
-				RelativePath=".\include\w3mfc\Base64.h">
+				RelativePath="..\include\w3mfc\Base64.h">
 			</File>
 			<File
-				RelativePath=".\include\w3mfc\Sntp.cpp">
+				RelativePath="..\include\w3mfc\Sntp.cpp">
 			</File>
 			<File
-				RelativePath=".\include\w3mfc\Sntp.h">
+				RelativePath="..\include\w3mfc\Sntp.h">
 			</File>
 			<File
-				RelativePath=".\include\w3mfc\SocMFC.cpp">
+				RelativePath="..\include\w3mfc\SocMFC.cpp">
 			</File>
 			<File
-				RelativePath=".\include\w3mfc\SocMFC.h">
+				RelativePath="..\include\w3mfc\SocMFC.h">
 			</File>
 		</Filter>
 		<Filter

@@ -5,7 +5,7 @@
 #include "Tima.h"
 #include "DlgSelNtpServer.h"
 
-#include "include\SettingsStorage\MSettingsStorageIniFile.h"
+#include "..\include\SettingsStorage\MSettingsStorageIniFile.h"
 using Mortimer::CSettingsStorageIniFile;
 
 // CDlgSelNtpServer ¶Ô»°¿ò

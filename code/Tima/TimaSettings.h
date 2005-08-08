@@ -4,7 +4,7 @@
 
 #include "skin\settingutil.h"
 
-#include "include\settingsstorage\msettingsstorage.h"
+#include "..\include\settingsstorage\msettingsstorage.h"
 using Mortimer::CSettings;
 
 static const DWORD TIMA_SETTING_VERSION = 1;

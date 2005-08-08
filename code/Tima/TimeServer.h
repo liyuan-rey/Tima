@@ -1,6 +1,6 @@
 #pragma once
 
-#include "include\w3mfc\sntp.h"
+#include "..\include\w3mfc\sntp.h"
 
 class CTimeServer
 {

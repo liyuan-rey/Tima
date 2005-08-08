@@ -11,7 +11,7 @@
 #define new DEBUG_NEW
 #endif
 
-#include "include\SettingsStorage\MSettingsStorageIniFile.h"
+#include "..\include\SettingsStorage\MSettingsStorageIniFile.h"
 using Mortimer::CSettingsStorageIniFile;
 
 // CTimaApp
