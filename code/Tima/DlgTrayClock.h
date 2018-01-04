@@ -1,38 +1,41 @@
 #pragma once
 
-// CDlgTrayClock ∂‘ª∞øÚ
+// CDlgTrayClock ÂØπËØùÊ°Ü
 
 class CDlgTrayClock : public CDialog
 {
 	DECLARE_DYNAMIC(CDlgTrayClock)
 
-public:
-	CDlgTrayClock(CWnd* pParent = NULL);   // ±Í◊ºππ‘Ï∫Ø ˝
+  public:
+	CDlgTrayClock(CWnd *pParent = NULL); // Ê†áÂáÜÊûÑÈÄ†ÂáΩÊï∞
 	virtual ~CDlgTrayClock();
 
-// ∂‘ª∞øÚ ˝æ›
-	enum { IDD = IDD_TRAYCLOCK };
+	// ÂØπËØùÊ°ÜÊï∞ÊçÆ
+	enum
+	{
+		IDD = IDD_TRAYCLOCK
+	};
 	virtual UINT GetDialogSkinID() { return IDD; }
 
-protected:
+  protected:
 	virtual BOOL OnInitDialog();
-	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV ÷ß≥÷
-	virtual void OnOK() {};
-	virtual void OnCancel() {};
+	virtual void DoDataExchange(CDataExchange *pDX); // DDX/DDV ÊîØÊåÅ
+	virtual void OnOK(){};
+	virtual void OnCancel(){};
 
 	DECLARE_MESSAGE_MAP()
-public:
-	afx_msg BOOL OnEraseBkgnd(CDC* pDC);
-	afx_msg HBRUSH OnCtlColor(CDC* pDC, CWnd* pWnd, UINT nCtlColor);
+  public:
+	afx_msg BOOL OnEraseBkgnd(CDC *pDC);
+	afx_msg HBRUSH OnCtlColor(CDC *pDC, CWnd *pWnd, UINT nCtlColor);
 	afx_msg void OnDestroy();
 
 	afx_msg void OnCbnSelChangeSkinList();
 	afx_msg void OnUpdateTrayClock(UINT nCtrlId);
-	afx_msg void OnHScroll(UINT nSBCode, UINT nPos, CScrollBar* pScrollBar);
+	afx_msg void OnHScroll(UINT nSBCode, UINT nPos, CScrollBar *pScrollBar);
 	afx_msg void OnBnClickedAddZone();
 	afx_msg void OnBnClickedRemoveZone();
 
-protected:
+  protected:
 	void ApplySkin(void);
 	void UpdateCtrls();
 
@@ -53,9 +56,9 @@ protected:
 	CButton m_btnZoneUp;
 	CButton m_btnZoneDown;
 
-private:
+  private:
 	CSkinDlgBgHelper m_bgHelper;
 	HWND m_hWndHook;
 
-public:
+  public:
 };

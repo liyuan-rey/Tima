@@ -1,4 +1,4 @@
-// tchk.cpp : ¶¨Òå DLL µÄ³õÊ¼»¯Àý³Ì¡£
+// tchk.cpp : å®šä¹‰ DLL çš„åˆå§‹åŒ–ä¾‹ç¨‹ã€‚
 //
 
 #include "stdafx.h"
@@ -9,37 +9,37 @@
 #endif
 
 #pragma data_seg(".shared")
-	HHOOK g_hHook = NULL;
-	DWORD g_dwTimaThreadId = 0;
+HHOOK g_hHook = NULL;
+DWORD g_dwTimaThreadId = 0;
 #pragma data_seg()
 
 #pragma comment(linker, "/section:.shared,rws")
 
 //
-//	×¢Òâ£¡
+//	æ³¨æ„ï¼
 //
-//		Èç¹û´Ë DLL ¶¯Ì¬Á´½Óµ½ MFC
-//		DLL£¬´Ó´Ë DLL µ¼³ö²¢
-//		µ÷Èë MFC µÄÈÎºÎº¯ÊýÔÚº¯ÊýµÄ×îÇ°Ãæ
-//		¶¼±ØÐëÌí¼Ó AFX_MANAGE_STATE ºê¡£
+//		å¦‚æžœæ­¤ DLL åŠ¨æ€é“¾æŽ¥åˆ° MFC
+//		DLLï¼Œä»Žæ­¤ DLL å¯¼å‡ºå¹¶
+//		è°ƒå…¥ MFC çš„ä»»ä½•å‡½æ•°åœ¨å‡½æ•°çš„æœ€å‰é¢
+//		éƒ½å¿…é¡»æ·»åŠ  AFX_MANAGE_STATE å®ã€‚
 //
-//		ÀýÈç:
+//		ä¾‹å¦‚:
 //
 //		extern "C" BOOL PASCAL EXPORT ExportedFunction()
 //		{
 //			AFX_MANAGE_STATE(AfxGetStaticModuleState());
-//			// ´Ë´¦ÎªÆÕÍ¨º¯ÊýÌå
+//			// æ­¤å¤„ä¸ºæ™®é€šå‡½æ•°ä½“
 //		}
 //
-//		´ËºêÏÈÓÚÈÎºÎ MFC µ÷ÓÃ
-//		³öÏÖÔÚÃ¿¸öº¯ÊýÖÐÊ®·ÖÖØÒª¡£ÕâÒâÎ¶×Å
-//		Ëü±ØÐë×÷Îªº¯ÊýÖÐµÄµÚÒ»¸öÓï¾ä
-//		³öÏÖ£¬ÉõÖÁÏÈÓÚËùÓÐ¶ÔÏó±äÁ¿ÉùÃ÷£¬
-//		ÕâÊÇÒòÎªËüÃÇµÄ¹¹Ôìº¯Êý¿ÉÄÜÉú³É MFC
-//		DLL µ÷ÓÃ¡£
+//		æ­¤å®å…ˆäºŽä»»ä½• MFC è°ƒç”¨
+//		å‡ºçŽ°åœ¨æ¯ä¸ªå‡½æ•°ä¸­ååˆ†é‡è¦ã€‚è¿™æ„å‘³ç€
+//		å®ƒå¿…é¡»ä½œä¸ºå‡½æ•°ä¸­çš„ç¬¬ä¸€ä¸ªè¯­å¥
+//		å‡ºçŽ°ï¼Œç”šè‡³å…ˆäºŽæ‰€æœ‰å¯¹è±¡å˜é‡å£°æ˜Žï¼Œ
+//		è¿™æ˜¯å› ä¸ºå®ƒä»¬çš„æž„é€ å‡½æ•°å¯èƒ½ç”Ÿæˆ MFC
+//		DLL è°ƒç”¨ã€‚
 //
-//		ÓÐ¹ØÆäËûÏêÏ¸ÐÅÏ¢£¬
-//		Çë²ÎÔÄ MFC ¼¼ÊõËµÃ÷ 33 ºÍ 58¡£
+//		æœ‰å…³å…¶ä»–è¯¦ç»†ä¿¡æ¯ï¼Œ
+//		è¯·å‚é˜… MFC æŠ€æœ¯è¯´æ˜Ž 33 å’Œ 58ã€‚
 //
 
 // CtchkApp
@@ -47,22 +47,19 @@
 BEGIN_MESSAGE_MAP(CtchkApp, CWinApp)
 END_MESSAGE_MAP()
 
-
-// CtchkApp ¹¹Ôì
+// CtchkApp æž„é€ 
 
 CtchkApp::CtchkApp() : m_hWndHook(NULL)
 {
-	// TODO: ÔÚ´Ë´¦Ìí¼Ó¹¹Ôì´úÂë£¬
-	// ½«ËùÓÐÖØÒªµÄ³õÊ¼»¯·ÅÖÃÔÚ InitInstance ÖÐ
+	// TODO: åœ¨æ­¤å¤„æ·»åŠ æž„é€ ä»£ç ï¼Œ
+	// å°†æ‰€æœ‰é‡è¦çš„åˆå§‹åŒ–æ”¾ç½®åœ¨ InitInstance ä¸­
 }
 
-
-// Î¨Ò»µÄÒ»¸ö CtchkApp ¶ÔÏó
+// å”¯ä¸€çš„ä¸€ä¸ª CtchkApp å¯¹è±¡
 
 CtchkApp theApp;
 
-
-// CtchkApp ³õÊ¼»¯
+// CtchkApp åˆå§‹åŒ–
 
 BOOL CtchkApp::InitInstance()
 {

@@ -1,11 +1,11 @@
-// Microsoft Visual C++ Éú³ÉµÄ×ÊÔ´½Å±¾¡£
+// Microsoft Visual C++ ç”Ÿæˆçš„èµ„æºè„šæœ¬ã€‚
 //
 #include "resource.h"
 
 #define APSTUDIO_READONLY_SYMBOLS
 /////////////////////////////////////////////////////////////////////////////
 //
-// ´Ó TEXTINCLUDE 2 ×ÊÔ´Éú³É¡£
+// ä» TEXTINCLUDE 2 èµ„æºç”Ÿæˆã€‚
 //
 #include "afxres.h"
 
@@ -39,8 +39,8 @@ BEGIN
 	"#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
 	"LANGUAGE 4, 2\r\n"
 	"#pragma code_page(936)\r\n"
-    "#include ""res\\tchk.rc2""  // ²»ÊÇÓÉ Microsoft Visual C++ ±à¼­¹ıµÄ×ÊÔ´\r\n"
-    "#include ""afxres.rc""  	// ±ê×¼×é¼ş\r\n"
+    "#include ""res\\tchk.rc2""  // ä¸æ˜¯ç”± Microsoft Visual C++ ç¼–è¾‘è¿‡çš„èµ„æº\r\n"
+    "#include ""afxres.rc""  	// æ ‡å‡†ç»„ä»¶\r\n"
     "#endif\r\n"
     "\0"
 END
@@ -55,7 +55,7 @@ LANGUAGE 4, 2
 
 /////////////////////////////////////////////////////////////////////////////
 //
-// °æ±¾
+// ç‰ˆæœ¬
 //
 
 VS_VERSION_INFO     VERSIONINFO
@@ -75,13 +75,13 @@ BEGIN
 	BEGIN
         BLOCK "080403a8"
 		BEGIN 
-            VALUE "CompanyName", "TODO: <¹«Ë¾Ãû>"
-            VALUE "FileDescription", "TODO: <ÎÄ¼şËµÃ÷>"
+            VALUE "CompanyName", "TODO: <å…¬å¸å>"
+            VALUE "FileDescription", "TODO: <æ–‡ä»¶è¯´æ˜>"
 			VALUE "FileVersion",     "1.0.0.1"
 			VALUE "InternalName",    "tchk.dll"
-            VALUE "LegalCopyright", "TODO: (C) <¹«Ë¾Ãû>¡£±£ÁôËùÓĞÈ¨Àû¡£"
+            VALUE "LegalCopyright", "TODO: (C) <å…¬å¸å>ã€‚ä¿ç•™æ‰€æœ‰æƒåˆ©ã€‚"
 			VALUE "OriginalFilename","tchk.dll"
-            VALUE "ProductName", "TODO: <²úÆ·Ãû>"
+            VALUE "ProductName", "TODO: <äº§å“å>"
 			VALUE "ProductVersion",  "1.0.0.1"
 		END
 	END
@@ -96,7 +96,7 @@ END
 
 /////////////////////////////////////////////////////////////////////////////
 //
-// ´Ó TEXTINCLUDE 3 ×ÊÔ´Éú³É¡£
+// ä» TEXTINCLUDE 3 èµ„æºç”Ÿæˆã€‚
 //
 #define _AFX_NO_SPLITTER_RESOURCES
 #define _AFX_NO_OLE_RESOURCES
@@ -106,10 +106,10 @@ END
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
 LANGUAGE 4, 2
 #pragma code_page(936)
-#include "res\\tchk.rc2"  // ²»ÊÇÓÉ Microsoft Visual C++ ±à¼­¹ıµÄ×ÊÔ´
-#include "afxres.rc"  	// ±ê×¼×é¼ş
+#include "res\\tchk.rc2"  // ä¸æ˜¯ç”± Microsoft Visual C++ ç¼–è¾‘è¿‡çš„èµ„æº
+#include "afxres.rc"  	// æ ‡å‡†ç»„ä»¶
 #endif
 
 /////////////////////////////////////////////////////////////////////////////
-#endif    // ²»ÊÇ APSTUDIO_INVOKED
+#endif    // ä¸æ˜¯ APSTUDIO_INVOKED
 

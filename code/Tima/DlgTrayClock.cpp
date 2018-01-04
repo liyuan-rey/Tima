@@ -1,15 +1,14 @@
-// DlgTrayClock.cpp : ÊµÏÖÎÄ¼þ
+// DlgTrayClock.cpp : å®žçŽ°æ–‡ä»¶
 //
 
 #include "stdafx.h"
 #include "Tima.h"
 #include "DlgTrayClock.h"
 
-
-// CDlgTrayClock ¶Ô»°¿ò
+// CDlgTrayClock å¯¹è¯æ¡†
 
 IMPLEMENT_DYNAMIC(CDlgTrayClock, CDialog)
-CDlgTrayClock::CDlgTrayClock(CWnd* pParent /*=NULL*/)
+CDlgTrayClock::CDlgTrayClock(CWnd *pParent /*=NULL*/)
 	: CDialog(CDlgTrayClock::IDD, pParent), m_hWndHook(NULL)
 {
 }
@@ -18,7 +17,7 @@ CDlgTrayClock::~CDlgTrayClock()
 {
 }
 
-void CDlgTrayClock::DoDataExchange(CDataExchange* pDX)
+void CDlgTrayClock::DoDataExchange(CDataExchange *pDX)
 {
 	CDialog::DoDataExchange(pDX);
 	DDX_Control(pDX, IDC_HTMCTL_TC1, m_htmTC1);
@@ -35,7 +34,7 @@ void CDlgTrayClock::DoDataExchange(CDataExchange* pDX)
 	DDX_Control(pDX, IDC_BTN_TCZONEUP, m_btnZoneUp);
 	DDX_Control(pDX, IDC_BTN_TCZONEDOWN, m_btnZoneDown);
 	//
-	CTimaSettings& theSettings = theApp.GetSettings();
+	CTimaSettings &theSettings = theApp.GetSettings();
 	DDX_CBString(pDX, IDC_CMB_TCSKINLIST, theSettings.TrayClock.CurrentSkinName);
 	DDX_Check(pDX, IDC_CHK_TC12HOURS, theSettings.TrayClock.Use12HoursFormat);
 	DDX_Check(pDX, IDC_CHK_TCSHOWDATE, theSettings.TrayClock.ShowDate);
@@ -50,27 +49,25 @@ void CDlgTrayClock::DoDataExchange(CDataExchange* pDX)
 	DDX_Control(pDX, IDC_CHK_TCMUTILZONE, m_chkMultiZone);
 }
 
-
 BEGIN_MESSAGE_MAP(CDlgTrayClock, CDialog)
-	ON_WM_ERASEBKGND()
-	ON_WM_CTLCOLOR()
-	ON_WM_DESTROY()
-	ON_CBN_SELCHANGE(IDC_CMB_TCSKINLIST, OnCbnSelChangeSkinList)
-	ON_COMMAND_RANGE(IDC_CHK_TC12HOURS, IDC_CHK_TCMUTILZONE, OnUpdateTrayClock)
-	ON_WM_HSCROLL()
-	ON_BN_CLICKED(IDC_BTN_TCADDZONE, OnBnClickedAddZone)
-	ON_BN_CLICKED(IDC_BTN_TCREMOVEZONE, OnBnClickedRemoveZone)
+ON_WM_ERASEBKGND()
+ON_WM_CTLCOLOR()
+ON_WM_DESTROY()
+ON_CBN_SELCHANGE(IDC_CMB_TCSKINLIST, OnCbnSelChangeSkinList)
+ON_COMMAND_RANGE(IDC_CHK_TC12HOURS, IDC_CHK_TCMUTILZONE, OnUpdateTrayClock)
+ON_WM_HSCROLL()
+ON_BN_CLICKED(IDC_BTN_TCADDZONE, OnBnClickedAddZone)
+ON_BN_CLICKED(IDC_BTN_TCREMOVEZONE, OnBnClickedRemoveZone)
 END_MESSAGE_MAP()
 
+// CDlgTrayClock æ¶ˆæ¯å¤„ç†ç¨‹åº
 
-// CDlgTrayClock ÏûÏ¢´¦Àí³ÌÐò
-
-BOOL CDlgTrayClock::OnEraseBkgnd(CDC* pDC)
+BOOL CDlgTrayClock::OnEraseBkgnd(CDC *pDC)
 {
 	return m_bgHelper.OnEraseBkgnd(pDC);
 }
 
-HBRUSH CDlgTrayClock::OnCtlColor(CDC* pDC, CWnd* pWnd, UINT nCtlColor)
+HBRUSH CDlgTrayClock::OnCtlColor(CDC *pDC, CWnd *pWnd, UINT nCtlColor)
 {
 	HBRUSH hbr = CDialog::OnCtlColor(pDC, pWnd, nCtlColor);
 	return m_bgHelper.OnCtlColor(pDC, pWnd, nCtlColor, hbr);
@@ -113,7 +110,7 @@ void CDlgTrayClock::UpdateCtrls(void)
 
 	m_lstTimeZone.EnableWindow(bEnable);
 
-	CWnd* pChildWnd = GetDlgItem(IDC_BTN_TCADDZONE);
+	CWnd *pChildWnd = GetDlgItem(IDC_BTN_TCADDZONE);
 	pChildWnd->EnableWindow(bEnable);
 	pChildWnd = GetDlgItem(IDC_BTN_TCREMOVEZONE);
 	pChildWnd->EnableWindow(bEnable);
@@ -133,10 +130,10 @@ void CDlgTrayClock::OnUpdateTrayClock(UINT nCtrlId)
 	if (IDC_CHK_TCMUTILZONE == nCtrlId)
 		UpdateCtrls();
 
-//AfxMessageBox("");
+	//AfxMessageBox("");
 }
 
-void CDlgTrayClock::OnHScroll(UINT nSBCode, UINT nPos, CScrollBar* pScrollBar)
+void CDlgTrayClock::OnHScroll(UINT nSBCode, UINT nPos, CScrollBar *pScrollBar)
 {
 	CDialog::OnHScroll(nSBCode, nPos, pScrollBar);
 
@@ -170,13 +167,12 @@ void CDlgTrayClock::OnBnClickedAddZone()
 	}
 
 	BOOL bSuccess = InstallTrayClockHook(m_hWndHook);
-	ATLASSERT( bSuccess );
+	ATLASSERT(bSuccess);
 }
 
 void CDlgTrayClock::OnBnClickedRemoveZone()
 {
 	BOOL bSuccess = UninstallTrayClockHook();
-	ATLASSERT( bSuccess );
+	ATLASSERT(bSuccess);
 	m_hWndHook = NULL;
 }
-

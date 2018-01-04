@@ -1,4 +1,4 @@
-// DlgSelNtpServer.cpp : ÊµÏÖÎÄ¼þ
+// DlgSelNtpServer.cpp : å®žçŽ°æ–‡ä»¶
 //
 
 #include "stdafx.h"
@@ -8,13 +8,12 @@
 #include "..\include\SettingsStorage\MSettingsStorageIniFile.h"
 using Mortimer::CSettingsStorageIniFile;
 
-// CDlgSelNtpServer ¶Ô»°¿ò
+// CDlgSelNtpServer å¯¹è¯æ¡†
 const TCHAR CDlgSelNtpServer::defaultSntpServerListFile[] = _T("servlist.ini");
 
 IMPLEMENT_DYNAMIC(CDlgSelNtpServer, CDialog)
-CDlgSelNtpServer::CDlgSelNtpServer(CWnd* pParent /*=NULL*/)
-	: CDialog(CDlgSelNtpServer::IDD, pParent)
-	, m_strSvrUrl(_T("")), m_strSvrLoc(_T("")), m_bNeedUpdateFile(FALSE)
+CDlgSelNtpServer::CDlgSelNtpServer(CWnd *pParent /*=NULL*/)
+	: CDialog(CDlgSelNtpServer::IDD, pParent), m_strSvrUrl(_T("")), m_strSvrLoc(_T("")), m_bNeedUpdateFile(FALSE)
 {
 }
 
@@ -22,7 +21,7 @@ CDlgSelNtpServer::~CDlgSelNtpServer()
 {
 }
 
-void CDlgSelNtpServer::DoDataExchange(CDataExchange* pDX)
+void CDlgSelNtpServer::DoDataExchange(CDataExchange *pDX)
 {
 	CDialog::DoDataExchange(pDX);
 	DDX_Control(pDX, IDC_LST_NTPSERVER, m_lvwServer);
@@ -31,24 +30,22 @@ void CDlgSelNtpServer::DoDataExchange(CDataExchange* pDX)
 }
 
 BEGIN_MESSAGE_MAP(CDlgSelNtpServer, CDialog)
-	ON_BN_CLICKED(IDC_CHK_NTPCUSTOMSVR, OnBnClickedNtpCustomSvr)
-	ON_BN_CLICKED(IDC_BTN_NTPAUTOSEL, OnBnClickedNtpAutoSel)
-	ON_BN_CLICKED(IDC_BTN_NTPADD, OnBnClickedNtpAdd)
-	ON_WM_DESTROY()
-	//
-	ON_MESSAGE(WM_TIMA_NTPRESPONSED, OnNtpResponsed)
+ON_BN_CLICKED(IDC_CHK_NTPCUSTOMSVR, OnBnClickedNtpCustomSvr)
+ON_BN_CLICKED(IDC_BTN_NTPAUTOSEL, OnBnClickedNtpAutoSel)
+ON_BN_CLICKED(IDC_BTN_NTPADD, OnBnClickedNtpAdd)
+ON_WM_DESTROY()
+//
+ON_MESSAGE(WM_TIMA_NTPRESPONSED, OnNtpResponsed)
 END_MESSAGE_MAP()
 
-
-// CDlgSelNtpServer ÏûÏ¢´¦Àí³ÌÐò
+// CDlgSelNtpServer æ¶ˆæ¯å¤„ç†ç¨‹åº
 
 BOOL CDlgSelNtpServer::OnInitDialog()
 {
 	CDialog::OnInitDialog();
 
 	// Init server list
-	m_lvwServer.SetExtendedStyle(m_lvwServer.GetExtendedStyle()
-		| LVS_EX_FULLROWSELECT | LVS_EX_CHECKBOXES);
+	m_lvwServer.SetExtendedStyle(m_lvwServer.GetExtendedStyle() | LVS_EX_FULLROWSELECT | LVS_EX_CHECKBOXES);
 	m_lvwServer.InsertColumn(0, _T("Server"), LVCFMT_LEFT, 150);
 	m_lvwServer.InsertColumn(1, _T("Location"), LVCFMT_LEFT, 200);
 	m_lvwServer.InsertColumn(2, _T("Ping (ms)"), LVCFMT_LEFT, 62);
@@ -94,19 +91,19 @@ void CDlgSelNtpServer::OnBnClickedNtpCustomSvr()
 	const int border_bottom_height = 10;
 
 	//
-	CButton* pBtnCustom = (CButton*)GetDlgItem(IDC_CHK_NTPCUSTOMSVR);
-	ATLASSERT( pBtnCustom->GetSafeHwnd() );
+	CButton *pBtnCustom = (CButton *)GetDlgItem(IDC_CHK_NTPCUSTOMSVR);
+	ATLASSERT(pBtnCustom->GetSafeHwnd());
 
 	CRect rcBtnCustom;
 	pBtnCustom->GetWindowRect(rcBtnCustom);
 
-	CButton* pBtnAdd = (CButton*)GetDlgItem(IDC_BTN_NTPADD);
-	ATLASSERT( pBtnAdd->GetSafeHwnd() );
+	CButton *pBtnAdd = (CButton *)GetDlgItem(IDC_BTN_NTPADD);
+	ATLASSERT(pBtnAdd->GetSafeHwnd());
 
 	CRect rcBtnAdd;
 	pBtnAdd->GetWindowRect(rcBtnAdd);
 
-	// 
+	//
 	CString strText;
 	int nWndHeight;
 
@@ -114,17 +111,17 @@ void CDlgSelNtpServer::OnBnClickedNtpCustomSvr()
 	GetWindowRect(rcWindow);
 
 	int nState = pBtnCustom->GetCheck();
-	if ( BST_UNCHECKED == nState )
+	if (BST_UNCHECKED == nState)
 	{
 		strText = _T("C&ustom Server >>");
 		nWndHeight = rcBtnCustom.bottom - rcWindow.top + border_bottom_height;
 
-		CWnd* pWndControl = GetDlgItem(IDC_EDT_NTPSERVER);
-		ATLASSERT( pWndControl->GetSafeHwnd() );
+		CWnd *pWndControl = GetDlgItem(IDC_EDT_NTPSERVER);
+		ATLASSERT(pWndControl->GetSafeHwnd());
 		pWndControl->EnableWindow(FALSE);
 
 		pWndControl = GetDlgItem(IDC_EDT_NTPLOC);
-		ATLASSERT( pWndControl->GetSafeHwnd() );
+		ATLASSERT(pWndControl->GetSafeHwnd());
 		pWndControl->EnableWindow(FALSE);
 
 		pBtnAdd->EnableWindow(FALSE);
@@ -134,12 +131,12 @@ void CDlgSelNtpServer::OnBnClickedNtpCustomSvr()
 		strText = _T("C&ustom Server <<");
 		nWndHeight = rcBtnAdd.bottom - rcWindow.top + border_bottom_height;
 
-		CWnd* pWndControl = GetDlgItem(IDC_EDT_NTPSERVER);
-		ATLASSERT( pWndControl->GetSafeHwnd() );
+		CWnd *pWndControl = GetDlgItem(IDC_EDT_NTPSERVER);
+		ATLASSERT(pWndControl->GetSafeHwnd());
 		pWndControl->EnableWindow(TRUE);
 
 		pWndControl = GetDlgItem(IDC_EDT_NTPLOC);
-		ATLASSERT( pWndControl->GetSafeHwnd() );
+		ATLASSERT(pWndControl->GetSafeHwnd());
 		pWndControl->EnableWindow(TRUE);
 
 		pBtnAdd->EnableWindow(TRUE);
@@ -172,20 +169,19 @@ void CDlgSelNtpServer::OnBnClickedNtpAutoSel()
 		//
 		m_TimeServer.StartCheck(GetSafeHwnd());
 	}
-
 }
 
-int Compare_CSntpServer(const void* arg1, const void* arg2 )
+int Compare_CSntpServer(const void *arg1, const void *arg2)
 {
-	const CSntpServer* s1 = static_cast<const CSntpServer*>(arg1);
-	const CSntpServer* s2 = static_cast<const CSntpServer*>(arg2);
+	const CSntpServer *s1 = static_cast<const CSntpServer *>(arg1);
+	const CSntpServer *s2 = static_cast<const CSntpServer *>(arg2);
 
 	ATLASSERT(s1 && s2);
 
 	double ping1 = _tstof(s1->Ping);
 	double ping2 = _tstof(s2->Ping);
 
-	return ( ping1 > ping2 ? 1 : (ping1 < ping2 ? -1 : 0) );
+	return (ping1 > ping2 ? 1 : (ping1 < ping2 ? -1 : 0));
 }
 
 LRESULT CDlgSelNtpServer::OnNtpResponsed(WPARAM, LPARAM)
@@ -197,11 +193,10 @@ LRESULT CDlgSelNtpServer::OnNtpResponsed(WPARAM, LPARAM)
 	for (int i = 0; i < nCount; i++)
 	{
 		spNtpContext = m_TimeServer.GetServerInfo(m_ServerList.Servers[i].URL);
-		CSntpServer& sntpServer = m_ServerList.Servers[i];
+		CSntpServer &sntpServer = m_ServerList.Servers[i];
 
 		BOOL flag;
-		if (spNtpContext && spNtpContext->m_bHasResult
-			&& spNtpContext->m_ntpResponse.m_RoundTripDelay > 0)
+		if (spNtpContext && spNtpContext->m_bHasResult && spNtpContext->m_ntpResponse.m_RoundTripDelay > 0)
 		{
 			flag = TRUE;
 			sntpServer.Ping.Format(_T("%.0f"), spNtpContext->m_ntpResponse.m_RoundTripDelay * 1000);
@@ -212,14 +207,14 @@ LRESULT CDlgSelNtpServer::OnNtpResponsed(WPARAM, LPARAM)
 			sntpServer.Ping.Format(_T("%d"), TIMA_THREAD_TIMEOUT);
 		}
 
-//		ATLTRACE("Item %03d [%s]\t: %s\t\t\t\t%s\n", i, flag ? "TRUE" : "FALSE", sntpServer.URL, sntpServer.Ping);
+		//		ATLTRACE("Item %03d [%s]\t: %s\t\t\t\t%s\n", i, flag ? "TRUE" : "FALSE", sntpServer.URL, sntpServer.Ping);
 	}
 
 	//sort
-	void* pData = (void*)&m_ServerList.Servers[0];
+	void *pData = (void *)&m_ServerList.Servers[0];
 	size_t num = nCount;
 	size_t width = sizeof(CSntpServer);
-	
+
 	qsort(pData, num, width, Compare_CSntpServer);
 
 	//update listview
@@ -296,7 +291,7 @@ void CDlgSelNtpServer::OnDestroy()
 	// Save server list
 	if (m_bNeedUpdateFile)
 	{
-		//TODO: Improve efficiency of saving 
+		//TODO: Improve efficiency of saving
 		CPath pthSettings = theApp.GetSettingsPath(defaultSntpServerListFile);
 
 		CSettingsStorageIniFile stg;

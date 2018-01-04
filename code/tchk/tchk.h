@@ -1,34 +1,33 @@
-// tchk.h : tchk DLL µÄÖ÷Í·ÎÄ¼ş
+// tchk.h : tchk DLL çš„ä¸»å¤´æ–‡ä»¶
 //
 
 #pragma once
 
 #ifndef __AFXWIN_H__
-	#error include 'stdafx.h' before including this file for PCH
+#error include 'stdafx.h' before including this file for PCH
 #endif
 
-#include "resource.h"		// Ö÷·ûºÅ
+#include "resource.h" // ä¸»ç¬¦å·
 
 //////////////////////////////////////////////////////////////////////////
-
 
 //////////////////////////////////////////////////////////////////////////
 // CtchkApp
-// ÓĞ¹Ø´ËÀàÊµÏÖµÄĞÅÏ¢£¬Çë²ÎÔÄ tchk.cpp
+// æœ‰å…³æ­¤ç±»å®ç°çš„ä¿¡æ¯ï¼Œè¯·å‚é˜… tchk.cpp
 //
 
 class CtchkApp : public CWinApp
 {
-public:
+  public:
 	CtchkApp();
 
-// ÖØĞ´
-public:
+	// é‡å†™
+  public:
 	virtual BOOL InitInstance();
 
 	DECLARE_MESSAGE_MAP()
 
-public:
+  public:
 	HWND m_hWndHook;
 };
 

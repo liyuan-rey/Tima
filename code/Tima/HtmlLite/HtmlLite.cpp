@@ -1,12 +1,11 @@
-// HtmlLite.cpp : 实现文件
+// HtmlLite.cpp : 瀹炵幇鏂囦欢
 //
 
 #include "stdafx.h"
 #include "HtmlLite.h"
 
-
 // CHtmlLite
-const TCHAR* CHtmlLite::WindowClassName = _T("HtmlLite");
+const TCHAR *CHtmlLite::WindowClassName = _T("HtmlLite");
 
 IMPLEMENT_DYNAMIC(CHtmlLite, CWnd)
 
@@ -19,17 +18,13 @@ CHtmlLite::~CHtmlLite()
 {
 }
 
-
 BEGIN_MESSAGE_MAP(CHtmlLite, CWnd)
-	ON_WM_ERASEBKGND()
-	ON_WM_PAINT()
-	ON_MESSAGE(WM_SETTEXT, OnSetText)
+ON_WM_ERASEBKGND()
+ON_WM_PAINT()
+ON_MESSAGE(WM_SETTEXT, OnSetText)
 END_MESSAGE_MAP()
 
-
-
-// CHtmlLite 消息处理程序
-
+// CHtmlLite 娑堟伅澶勭悊绋嬪簭
 
 BOOL CHtmlLite::RegisterWndClass(void)
 {
@@ -43,13 +38,13 @@ BOOL CHtmlLite::RegisterWndClass(void)
 	{
 		//If not then we have to register the new class
 		windowclass.lpszClassName = WindowClassName;
-		windowclass.style = CS_GLOBALCLASS | CS_SAVEBITS;// CS_DBLCLKS | CS_HREDRAW | CS_VREDRAW;
+		windowclass.style = CS_GLOBALCLASS | CS_SAVEBITS; // CS_DBLCLKS | CS_HREDRAW | CS_VREDRAW;
 		windowclass.lpfnWndProc = ::DefWindowProc;
 		windowclass.hInstance = hInst;
-//		windowclass.hIcon = NULL;
+		//		windowclass.hIcon = NULL;
 		windowclass.hCursor = ::LoadCursor(NULL, IDC_ARROW);
-//		windowclass.hbrBackground = ::GetSysColorBrush(COLOR_WINDOW);
-//		windowclass.lpszMenuName = NULL;
+		//		windowclass.hbrBackground = ::GetSysColorBrush(COLOR_WINDOW);
+		//		windowclass.lpszMenuName = NULL;
 
 		if (!AfxRegisterClass(&windowclass))
 		{
@@ -61,7 +56,7 @@ BOOL CHtmlLite::RegisterWndClass(void)
 	return TRUE;
 }
 
-BOOL CHtmlLite::OnEraseBkgnd(CDC* pDC)
+BOOL CHtmlLite::OnEraseBkgnd(CDC *pDC)
 {
 	return FALSE;
 }
@@ -73,10 +68,10 @@ void CHtmlLite::OnPaint()
 	CRect rcOutput;
 	GetClientRect(rcOutput);
 
-//	if (dc.m_ps.fErase)
+	//	if (dc.m_ps.fErase)
 	{
 		HBRUSH hbr = (HBRUSH)GetParent()->SendMessage(WM_CTLCOLORSTATIC,
-						(WPARAM)dc.m_hDC, (LPARAM)m_hWnd);
+													  (WPARAM)dc.m_hDC, (LPARAM)m_hWnd);
 		::FillRect(dc.m_hDC, rcOutput, hbr);
 	}
 

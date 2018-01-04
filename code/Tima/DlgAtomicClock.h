@@ -2,30 +2,33 @@
 
 #include "TimeServer.h"
 
-// CDlgAtomicClock ∂‘ª∞øÚ
+// CDlgAtomicClock ÂØπËØùÊ°Ü
 
 class CDlgAtomicClock : public CDialog
 {
 	DECLARE_DYNAMIC(CDlgAtomicClock)
 
-public:
-	CDlgAtomicClock(CWnd* pParent = NULL);   // ±Í◊ºππ‘Ï∫Ø ˝
+  public:
+	CDlgAtomicClock(CWnd *pParent = NULL); // Ê†áÂáÜÊûÑÈÄ†ÂáΩÊï∞
 	virtual ~CDlgAtomicClock();
 
-// ∂‘ª∞øÚ ˝æ›
-	enum { IDD = IDD_ATOMICCLOCK };
+	// ÂØπËØùÊ°ÜÊï∞ÊçÆ
+	enum
+	{
+		IDD = IDD_ATOMICCLOCK
+	};
 	virtual UINT GetDialogSkinID() { return IDD; }
 
-protected:
+  protected:
 	virtual BOOL OnInitDialog();
-	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV ÷ß≥÷
-	virtual void OnOK() {};
-	virtual void OnCancel() {};
+	virtual void DoDataExchange(CDataExchange *pDX); // DDX/DDV ÊîØÊåÅ
+	virtual void OnOK(){};
+	virtual void OnCancel(){};
 
 	DECLARE_MESSAGE_MAP()
-public:
-	afx_msg BOOL OnEraseBkgnd(CDC* pDC);
-	afx_msg HBRUSH OnCtlColor(CDC* pDC, CWnd* pWnd, UINT nCtlColor);
+  public:
+	afx_msg BOOL OnEraseBkgnd(CDC *pDC);
+	afx_msg HBRUSH OnCtlColor(CDC *pDC, CWnd *pWnd, UINT nCtlColor);
 	afx_msg void OnDestroy();
 	afx_msg void OnTimer(UINT nIDEvent);
 	afx_msg void OnBnClickedBtnACCheck();
@@ -40,13 +43,13 @@ public:
 
 	DECLARE_HTMLTEMPL_MAP();
 
-protected:
+  protected:
 	void ApplySkin(void);
 	void UpdateActivedServer();
-	BOOL CheckSpinRange(const CSpinButtonCtrl& ctlSpin);
+	BOOL CheckSpinRange(const CSpinButtonCtrl &ctlSpin);
 	void CheckTime(BOOL bAdjust);
 	void SetACEveryTimer();
-	void ShowNextAdjustInfo(const SYSTEMTIME& stLast);
+	void ShowNextAdjustInfo(const SYSTEMTIME &stLast);
 
 	BOOL m_bNeedAdjust;
 
@@ -89,8 +92,8 @@ protected:
 
 	CTimeServer m_TimeServer;
 
-private:
+  private:
 	CSkinDlgBgHelper m_bgHelper;
 
-public:
+  public:
 };

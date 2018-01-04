@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="gb2312"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <VisualStudioProject
 	ProjectType="Visual C++"
 	Version="7.10"
@@ -130,7 +130,7 @@
 	</References>
 	<Files>
 		<Filter
-			Name="Ô´ÎÄ¼þ"
+			Name="æºæ–‡ä»¶"
 			Filter="cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx"
 			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}">
 			<File
@@ -171,7 +171,7 @@
 			</File>
 		</Filter>
 		<Filter
-			Name="Í·ÎÄ¼þ"
+			Name="å¤´æ–‡ä»¶"
 			Filter="h;hpp;hxx;hm;inl;inc;xsd"
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}">
 			<File
@@ -192,22 +192,22 @@
 					Name="Debug|Win32">
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="ÕýÔÚÉú³É°ïÖú±àÒëÆ÷µÄÓ³ÉäÎÄ¼þ..."
-						CommandLine="echo // Éú³ÉµÄ°ïÖúÓ³ÉäÎÄ¼þ¡£Ê¹ÓÃÕßÎªTima.HHP. &gt; &quot;hlp\HTMLDefines.h&quot;
+						Description="æ­£åœ¨ç”Ÿæˆå¸®åŠ©ç¼–è¯‘å™¨çš„æ˜ å°„æ–‡ä»¶..."
+						CommandLine="echo // ç”Ÿæˆçš„å¸®åŠ©æ˜ å°„æ–‡ä»¶ã€‚ä½¿ç”¨è€…ä¸ºTima.HHP. &gt; &quot;hlp\HTMLDefines.h&quot;
 echo. &gt; &quot;hlp\HTMLDefines.h&quot;
-echo // ÃüÁî(ID_* ºÍ IDM_*) &gt;&gt; &quot;hlp\HTMLDefines.h&quot;
+echo // å‘½ä»¤(ID_* å’Œ IDM_*) &gt;&gt; &quot;hlp\HTMLDefines.h&quot;
 makehm /h ID_,HID_,0x10000 IDM_,HIDM_,0x10000 &quot;$(InputFileName)&quot; &gt;&gt; &quot;hlp\HTMLDefines.h&quot;
 echo. &gt;&gt; &quot;hlp\HTMLDefines.h&quot;
-echo // ÌáÊ¾(IDP_*) &gt;&gt; &quot;hlp\HTMLDefines.h&quot;
+echo // æç¤º(IDP_*) &gt;&gt; &quot;hlp\HTMLDefines.h&quot;
 makehm /h IDP_,HIDP_,0x30000 &quot;$(InputFileName)&quot; &gt;&gt; &quot;hlp\HTMLDefines.h&quot;
 echo. &gt;&gt; &quot;hlp\HTMLDefines.h&quot;
-echo // ×ÊÔ´(IDR_*) &gt;&gt; &quot;hlp\HTMLDefines.h&quot;
+echo // èµ„æº(IDR_*) &gt;&gt; &quot;hlp\HTMLDefines.h&quot;
 makehm /h IDR_,HIDR_,0x20000 &quot;$(InputFileName)&quot; &gt;&gt; &quot;hlp\HTMLDefines.h&quot;
 echo. &gt;&gt; &quot;hlp\HTMLDefines.h&quot;
-echo // ¶Ô»°¿ò(IDD_*) &gt;&gt; &quot;hlp\HTMLDefines.h&quot;
+echo // å¯¹è¯æ¡†(IDD_*) &gt;&gt; &quot;hlp\HTMLDefines.h&quot;
 makehm /h IDD_,HIDD_,0x20000 &quot;$(InputFileName)&quot; &gt;&gt; &quot;hlp\HTMLDefines.h&quot;
 echo. &gt;&gt; &quot;hlp\HTMLDefines.h&quot;
-echo // ¿ò¼Ü¿Ø¼þ(IDW_*) &gt;&gt; &quot;hlp\HTMLDefines.h&quot;
+echo // æ¡†æž¶æŽ§ä»¶(IDW_*) &gt;&gt; &quot;hlp\HTMLDefines.h&quot;
 makehm /h /a afxhh.h IDW_,HIDW_,0x50000 &quot;$(InputFileName)&quot; &gt;&gt; &quot;hlp\HTMLDefines.h&quot;
 "
 						Outputs="hlp\HTMLDefines.h"/>
@@ -216,22 +216,22 @@ makehm /h /a afxhh.h IDW_,HIDW_,0x50000 &quot;$(InputFileName)&quot; &gt;&gt; &q
 					Name="Release|Win32">
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="ÕýÔÚÉú³É°ïÖú±àÒëÆ÷µÄÓ³ÉäÎÄ¼þ..."
-						CommandLine="echo // Éú³ÉµÄ°ïÖúÓ³ÉäÎÄ¼þ¡£Ê¹ÓÃÕßÎªTima.HHP. &gt; &quot;hlp\HTMLDefines.h&quot;
+						Description="æ­£åœ¨ç”Ÿæˆå¸®åŠ©ç¼–è¯‘å™¨çš„æ˜ å°„æ–‡ä»¶..."
+						CommandLine="echo // ç”Ÿæˆçš„å¸®åŠ©æ˜ å°„æ–‡ä»¶ã€‚ä½¿ç”¨è€…ä¸ºTima.HHP. &gt; &quot;hlp\HTMLDefines.h&quot;
 echo. &gt; &quot;hlp\HTMLDefines.h&quot;
-echo // ÃüÁî(ID_* ºÍ IDM_*) &gt;&gt; &quot;hlp\HTMLDefines.h&quot;
+echo // å‘½ä»¤(ID_* å’Œ IDM_*) &gt;&gt; &quot;hlp\HTMLDefines.h&quot;
 makehm /h ID_,HID_,0x10000 IDM_,HIDM_,0x10000 &quot;$(InputFileName)&quot; &gt;&gt; &quot;hlp\HTMLDefines.h&quot;
 echo. &gt;&gt; &quot;hlp\HTMLDefines.h&quot;
-echo // ÌáÊ¾(IDP_*) &gt;&gt; &quot;hlp\HTMLDefines.h&quot;
+echo // æç¤º(IDP_*) &gt;&gt; &quot;hlp\HTMLDefines.h&quot;
 makehm /h IDP_,HIDP_,0x30000 &quot;$(InputFileName)&quot; &gt;&gt; &quot;hlp\HTMLDefines.h&quot;
 echo. &gt;&gt; &quot;hlp\HTMLDefines.h&quot;
-echo // ×ÊÔ´(IDR_*) &gt;&gt; &quot;hlp\HTMLDefines.h&quot;
+echo // èµ„æº(IDR_*) &gt;&gt; &quot;hlp\HTMLDefines.h&quot;
 makehm /h IDR_,HIDR_,0x20000 &quot;$(InputFileName)&quot; &gt;&gt; &quot;hlp\HTMLDefines.h&quot;
 echo. &gt;&gt; &quot;hlp\HTMLDefines.h&quot;
-echo // ¶Ô»°¿ò(IDD_*) &gt;&gt; &quot;hlp\HTMLDefines.h&quot;
+echo // å¯¹è¯æ¡†(IDD_*) &gt;&gt; &quot;hlp\HTMLDefines.h&quot;
 makehm /h IDD_,HIDD_,0x20000 &quot;$(InputFileName)&quot; &gt;&gt; &quot;hlp\HTMLDefines.h&quot;
 echo. &gt;&gt; &quot;hlp\HTMLDefines.h&quot;
-echo // ¿ò¼Ü¿Ø¼þ(IDW_*) &gt;&gt; &quot;hlp\HTMLDefines.h&quot;
+echo // æ¡†æž¶æŽ§ä»¶(IDW_*) &gt;&gt; &quot;hlp\HTMLDefines.h&quot;
 makehm /h /a afxhh.h IDW_,HIDW_,0x50000 &quot;$(InputFileName)&quot; &gt;&gt; &quot;hlp\HTMLDefines.h&quot;
 "
 						Outputs="hlp\HTMLDefines.h"/>
@@ -254,7 +254,7 @@ makehm /h /a afxhh.h IDW_,HIDW_,0x50000 &quot;$(InputFileName)&quot; &gt;&gt; &q
 			</File>
 		</Filter>
 		<Filter
-			Name="×ÊÔ´ÎÄ¼þ"
+			Name="èµ„æºæ–‡ä»¶"
 			Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx"
 			UniqueIdentifier="{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}">
 			<File
@@ -268,7 +268,7 @@ makehm /h /a afxhh.h IDW_,HIDW_,0x50000 &quot;$(InputFileName)&quot; &gt;&gt; &q
 			</File>
 		</Filter>
 		<Filter
-			Name="HTML °ïÖúÎÄ¼þ"
+			Name="HTML å¸®åŠ©æ–‡ä»¶"
 			Filter="hhp;hhc;hhk;gif;jpg">
 			<File
 				RelativePath=".\hlp\Tima.hhc">
@@ -282,13 +282,13 @@ makehm /h /a afxhh.h IDW_,HIDW_,0x50000 &quot;$(InputFileName)&quot; &gt;&gt; &q
 					Name="Debug|Win32">
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="ÕýÔÚÉú³É°ïÖúÎÄ¼þ..."
+						Description="æ­£åœ¨ç”Ÿæˆå¸®åŠ©æ–‡ä»¶..."
 						CommandLine="start /wait hhc &quot;hlp\Tima.hhp&quot;
 if not exist &quot;hlp\Tima.chm&quot; goto :HelpError
 copy &quot;hlp\Tima.chm&quot; &quot;$(OutDir)\Tima.chm&quot;
 goto :HelpDone
 :HelpError
-echo hlp\Tima.hhp(1) : error:´´½¨°ïÖúÎÄ¼þÊ±Óöµ½ÎÊÌâ
+echo hlp\Tima.hhp(1) : error:åˆ›å»ºå¸®åŠ©æ–‡ä»¶æ—¶é‡åˆ°é—®é¢˜
 echo.
 :HelpDone
 echo.
@@ -300,13 +300,13 @@ echo.
 					Name="Release|Win32">
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="ÕýÔÚÉú³É°ïÖúÎÄ¼þ..."
+						Description="æ­£åœ¨ç”Ÿæˆå¸®åŠ©æ–‡ä»¶..."
 						CommandLine="start /wait hhc &quot;hlp\Tima.hhp&quot;
 if not exist &quot;hlp\Tima.chm&quot; goto :HelpError
 copy &quot;hlp\Tima.chm&quot; &quot;$(OutDir)\Tima.chm&quot;
 goto :HelpDone
 :HelpError
-echo hlp\Tima.hhp(1) : error:´´½¨°ïÖúÎÄ¼þÊ±Óöµ½ÎÊÌâ
+echo hlp\Tima.hhp(1) : error:åˆ›å»ºå¸®åŠ©æ–‡ä»¶æ—¶é‡åˆ°é—®é¢˜
 echo.
 :HelpDone
 echo.
@@ -317,7 +317,7 @@ echo.
 			</File>
 		</Filter>
 		<Filter
-			Name="HTML °ïÖúÖ÷Ìâ"
+			Name="HTML å¸®åŠ©ä¸»é¢˜"
 			Filter="htm;html">
 			<File
 				RelativePath=".\hlp\HIDD_ROOT_DIALOG.htm"

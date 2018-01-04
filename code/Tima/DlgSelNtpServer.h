@@ -2,26 +2,29 @@
 
 #include "TimeServer.h"
 
-// CDlgSelNtpServer ¶Ô»°¿ò
+// CDlgSelNtpServer å¯¹è¯æ¡†
 
 class CDlgSelNtpServer : public CDialog
 {
 	DECLARE_DYNAMIC(CDlgSelNtpServer)
 
-public:
-	CDlgSelNtpServer(CWnd* pParent = NULL);   // ±ê×¼¹¹Ôìº¯Êı
+  public:
+	CDlgSelNtpServer(CWnd *pParent = NULL); // æ ‡å‡†æ„é€ å‡½æ•°
 	virtual ~CDlgSelNtpServer();
 
-// ¶Ô»°¿òÊı¾İ
-	enum { IDD = IDD_SELNTPSERVER };
+	// å¯¹è¯æ¡†æ•°æ®
+	enum
+	{
+		IDD = IDD_SELNTPSERVER
+	};
 
-protected:
+  protected:
 	virtual BOOL OnInitDialog();
-	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV Ö§³Ö
+	virtual void DoDataExchange(CDataExchange *pDX); // DDX/DDV æ”¯æŒ
 	virtual void OnOK();
 
 	DECLARE_MESSAGE_MAP()
-public:
+  public:
 	afx_msg void OnDestroy();
 	afx_msg void OnBnClickedNtpCustomSvr();
 	afx_msg void OnBnClickedNtpAutoSel();
@@ -29,14 +32,14 @@ public:
 
 	afx_msg LRESULT OnNtpResponsed(WPARAM, LPARAM);
 
-protected:
+  protected:
 	void UpdateServerList();
-	
-public:
+
+  public:
 	static const TCHAR defaultSntpServerListFile[];
 	CSntpServers m_arrSelServers;
 
-protected:
+  protected:
 	CListCtrl m_lvwServer;
 	CString m_strSvrUrl;
 	CString m_strSvrLoc;
@@ -44,8 +47,8 @@ protected:
 	CSntpServerList m_ServerList;
 	CTimeServer m_TimeServer;
 
-private:
+  private:
 	BOOL m_bNeedUpdateFile;
 
-public:
+  public:
 };
